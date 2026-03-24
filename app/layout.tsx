@@ -4,7 +4,7 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://randomanimalgenerator.com';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://randomanimalgenerator.online';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
