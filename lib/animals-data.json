@@ -1,0 +1,1319 @@
+[
+  {
+    "id": "mammal_001",
+    "commonName": "African Elephant",
+    "scientificName": "Loxodonta africana",
+    "category": "mammals",
+    "facts": [
+      "African elephants are the largest land animals on Earth, with males weighing up to 6,000 kg.",
+      "They can communicate using infrasound that travels several kilometers through the ground.",
+      "Elephants have excellent memory and can recognize up to 30 relatives by their calls."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=600&q=80&fm=webp",
+    "imageAlt": "African elephant in savanna"
+  },
+  {
+    "id": "mammal_002",
+    "commonName": "Red Panda",
+    "scientificName": "Ailurus fulgens",
+    "category": "mammals",
+    "facts": [
+      "Red pandas are more closely related to raccoons than giant pandas.",
+      "They have a false thumb to help them grip branches while climbing.",
+      "Red pandas can rotate their ankles to descend trees headfirst."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1497752531616-c3afd9760a11?w=600&q=80&fm=webp",
+    "imageAlt": "Red panda in tree"
+  },
+  {
+    "id": "mammal_003",
+    "commonName": "Bengal Tiger",
+    "scientificName": "Panthera tigris tigris",
+    "category": "mammals",
+    "facts": [
+      "Each tiger's stripe pattern is unique, like human fingerprints.",
+      "Tigers can leap distances of up to 10 meters in a single bound.",
+      "They are excellent swimmers and often cool off in water during hot days."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?w=600&q=80&fm=webp",
+    "imageAlt": "Bengal tiger"
+  },
+  {
+    "id": "mammal_004",
+    "commonName": "Giant Panda",
+    "scientificName": "Ailuropoda melanoleuca",
+    "category": "mammals",
+    "facts": [
+      "Pandas spend 12-16 hours a day eating bamboo, consuming up to 38 kg daily.",
+      "Despite being carnivores, 99% of their diet consists of bamboo.",
+      "They have an extra 'thumb' that helps them grip bamboo stems."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1525382455947-f319bc05fb35?w=600&q=80&fm=webp",
+    "imageAlt": "Giant panda eating bamboo"
+  },
+  {
+    "id": "mammal_005",
+    "commonName": "Gray Wolf",
+    "scientificName": "Canis lupus",
+    "category": "mammals",
+    "facts": [
+      "Wolves can travel up to 50 km in a single day while hunting.",
+      "A wolf's howl can be heard from up to 10 km away.",
+      "Wolf packs have a complex social structure led by an alpha pair."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1614027164847-1b28cfe1df60?w=600&q=80&fm=webp",
+    "imageAlt": "Gray wolf in snow"
+  },
+  {
+    "id": "mammal_006",
+    "commonName": "Cheetah",
+    "scientificName": "Acinonyx jubatus",
+    "category": "mammals",
+    "facts": [
+      "Cheetahs are the fastest land animals, reaching speeds up to 120 km/h.",
+      "They can accelerate from 0 to 96 km/h in just 3 seconds.",
+      "Unlike other big cats, cheetahs cannot roar but they can purr."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1551969014-7d2c4cddf0b6?w=600&q=80&fm=webp",
+    "imageAlt": "Cheetah running"
+  },
+  {
+    "id": "mammal_007",
+    "commonName": "Giraffe",
+    "scientificName": "Giraffa camelopardalis",
+    "category": "mammals",
+    "facts": [
+      "Giraffes are the tallest mammals, reaching heights up to 5.5 meters.",
+      "Their tongues can be up to 50 cm long and are prehensile.",
+      "Despite their long necks, giraffes have the same number of neck vertebrae as humans - seven."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1547721064-da6cfb341d50?w=600&q=80&fm=webp",
+    "imageAlt": "Giraffe in savanna"
+  },
+  {
+    "id": "mammal_008",
+    "commonName": "Polar Bear",
+    "scientificName": "Ursus maritimus",
+    "category": "mammals",
+    "facts": [
+      "Polar bears have black skin under their white fur to absorb heat.",
+      "They can swim continuously for days, covering distances over 600 km.",
+      "A polar bear's sense of smell is so acute it can detect seals nearly 1 km away."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1589656966895-2f33e7653819?w=600&q=80&fm=webp",
+    "imageAlt": "Polar bear on ice"
+  },
+  {
+    "id": "mammal_009",
+    "commonName": "Kangaroo",
+    "scientificName": "Macropus rufus",
+    "category": "mammals",
+    "facts": [
+      "Kangaroos can hop at speeds up to 56 km/h and leap 9 meters in a single bound.",
+      "They cannot walk backwards, which is why they're on the Australian coat of arms.",
+      "Female kangaroos can pause their pregnancy if environmental conditions are unfavorable."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1549378725-f9c4e0b0e3f0?w=600&q=80&fm=webp",
+    "imageAlt": "Red kangaroo"
+  },
+  {
+    "id": "mammal_010",
+    "commonName": "Koala",
+    "scientificName": "Phascolarctos cinereus",
+    "category": "mammals",
+    "facts": [
+      "Koalas sleep up to 22 hours a day to conserve energy.",
+      "They have fingerprints that are remarkably similar to human fingerprints.",
+      "Koalas eat only eucalyptus leaves, which are toxic to most other animals."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1459262838948-3e2de6c1ec80?w=600&q=80&fm=webp",
+    "imageAlt": "Koala in eucalyptus tree"
+  }
+,
+  {
+    "id": "mammal_011",
+    "commonName": "Gorilla",
+    "scientificName": "Gorilla gorilla",
+    "category": "mammals",
+    "facts": [
+      "Gorillas share 98.3% of their DNA with humans.",
+      "They can learn sign language and communicate with humans.",
+      "Adult male gorillas can weigh up to 220 kg and are incredibly strong."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1551135049-8a33b5883817?w=600&q=80&fm=webp",
+    "imageAlt": "Mountain gorilla"
+  },
+  {
+    "id": "mammal_012",
+    "commonName": "Orangutan",
+    "scientificName": "Pongo pygmaeus",
+    "category": "mammals",
+    "facts": [
+      "Orangutans are the largest tree-dwelling mammals in the world.",
+      "They have an arm span of up to 2.3 meters, perfect for swinging through trees.",
+      "Orangutans use tools and have been observed making umbrellas from leaves."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1568700942090-19dc36fab0c4?w=600&q=80&fm=webp",
+    "imageAlt": "Orangutan in rainforest"
+  },
+  {
+    "id": "mammal_013",
+    "commonName": "Sloth",
+    "scientificName": "Bradypus variegatus",
+    "category": "mammals",
+    "facts": [
+      "Sloths move so slowly that algae grows on their fur, providing camouflage.",
+      "They only defecate once a week and can lose up to 30% of their body weight.",
+      "Sloths can hold their breath for up to 40 minutes underwater."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1621155346337-1d19476ba7d6?w=600&q=80&fm=webp",
+    "imageAlt": "Three-toed sloth"
+  },
+  {
+    "id": "mammal_014",
+    "commonName": "Hippopotamus",
+    "scientificName": "Hippopotamus amphibius",
+    "category": "mammals",
+    "facts": [
+      "Hippos can hold their breath underwater for up to 5 minutes.",
+      "Despite their bulk, they can run at speeds up to 30 km/h on land.",
+      "Hippos secrete a red, oily substance that acts as sunscreen and antibiotic."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=600&q=80&fm=webp",
+    "imageAlt": "Hippopotamus in water"
+  },
+  {
+    "id": "mammal_015",
+    "commonName": "Zebra",
+    "scientificName": "Equus quagga",
+    "category": "mammals",
+    "facts": [
+      "Each zebra's stripe pattern is unique, like a fingerprint.",
+      "Zebras can run at speeds up to 65 km/h to escape predators.",
+      "Their stripes may help confuse predators and regulate body temperature."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?w=600&q=80&fm=webp",
+    "imageAlt": "Plains zebra"
+  },
+  {
+    "id": "mammal_016",
+    "commonName": "Rhinoceros",
+    "scientificName": "Ceratotherium simum",
+    "category": "mammals",
+    "facts": [
+      "Rhino horns are made of keratin, the same protein found in human hair and nails.",
+      "Despite their size, rhinos can run at speeds up to 50 km/h.",
+      "They have poor eyesight but excellent hearing and sense of smell."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1551969014-7d2c4cddf0b6?w=600&q=80&fm=webp",
+    "imageAlt": "White rhinoceros"
+  },
+  {
+    "id": "mammal_017",
+    "commonName": "Leopard",
+    "scientificName": "Panthera pardus",
+    "category": "mammals",
+    "facts": [
+      "Leopards can drag prey twice their weight up into trees.",
+      "They are excellent swimmers and sometimes hunt fish and crabs.",
+      "Leopards can leap 6 meters horizontally and 3 meters vertically."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1614027164847-1b28cfe1df60?w=600&q=80&fm=webp",
+    "imageAlt": "Leopard in tree"
+  },
+  {
+    "id": "mammal_018",
+    "commonName": "Meerkat",
+    "scientificName": "Suricata suricatta",
+    "category": "mammals",
+    "facts": [
+      "Meerkats live in groups of up to 50 individuals called mobs.",
+      "They have dark patches around their eyes that reduce glare from the sun.",
+      "Meerkats are immune to certain types of venom, including scorpion stings."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1612024782955-49e8f2f4e14f?w=600&q=80&fm=webp",
+    "imageAlt": "Meerkat standing guard"
+  },
+  {
+    "id": "mammal_019",
+    "commonName": "Platypus",
+    "scientificName": "Ornithorhynchus anatinus",
+    "category": "mammals",
+    "facts": [
+      "Platypuses are one of only five species of egg-laying mammals.",
+      "Males have venomous spurs on their hind legs.",
+      "They use electroreception to detect prey underwater with their eyes closed."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=600&q=80&fm=webp",
+    "imageAlt": "Platypus swimming"
+  },
+  {
+    "id": "mammal_020",
+    "commonName": "Raccoon",
+    "scientificName": "Procyon lotor",
+    "category": "mammals",
+    "facts": [
+      "Raccoons have highly dexterous front paws with five fingers.",
+      "They can remember solutions to tasks for up to three years.",
+      "Raccoons 'wash' their food to examine it better, not to clean it."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1497752531616-c3afd9760a11?w=600&q=80&fm=webp",
+    "imageAlt": "Raccoon"
+  },
+  {
+    "id": "bird_001",
+    "commonName": "Bald Eagle",
+    "scientificName": "Haliaeetus leucocephalus",
+    "category": "birds",
+    "facts": [
+      "Bald eagles can see four to seven times farther than humans.",
+      "They can dive at speeds up to 160 km/h when hunting.",
+      "Eagles mate for life and return to the same nest each year."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1611689342806-0863700ce1e4?w=600&q=80&fm=webp",
+    "imageAlt": "Bald eagle in flight"
+  },
+  {
+    "id": "bird_002",
+    "commonName": "Penguin",
+    "scientificName": "Aptenodytes forsteri",
+    "category": "birds",
+    "facts": [
+      "Emperor penguins can dive to depths of over 500 meters.",
+      "They can hold their breath for up to 22 minutes underwater.",
+      "Penguins huddle together to stay warm in temperatures as low as -40°C."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1551986782-d0169b3f8fa7?w=600&q=80&fm=webp",
+    "imageAlt": "Emperor penguin"
+  },
+  {
+    "id": "bird_003",
+    "commonName": "Hummingbird",
+    "scientificName": "Archilochus colubris",
+    "category": "birds",
+    "facts": [
+      "Hummingbirds can flap their wings up to 80 times per second.",
+      "They are the only birds that can fly backwards and upside down.",
+      "Their hearts beat up to 1,200 times per minute during flight."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1570041003321-f80686cd4965?w=600&q=80&fm=webp",
+    "imageAlt": "Ruby-throated hummingbird"
+  },
+  {
+    "id": "bird_004",
+    "commonName": "Owl",
+    "scientificName": "Bubo virginianus",
+    "category": "birds",
+    "facts": [
+      "Owls can rotate their heads up to 270 degrees.",
+      "Their specialized feathers allow them to fly almost silently.",
+      "Owls have three eyelids: one for blinking, one for sleeping, and one for keeping the eye clean."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1568393691622-c7ba131d63b4?w=600&q=80&fm=webp",
+    "imageAlt": "Great horned owl"
+  },
+  {
+    "id": "bird_005",
+    "commonName": "Peacock",
+    "scientificName": "Pavo cristatus",
+    "category": "birds",
+    "facts": [
+      "A peacock's tail can be up to 60% of its total body length.",
+      "The 'eyes' on their tail feathers are called ocelli.",
+      "Only male peafowl are called peacocks; females are called peahens."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1568641389310-145d9b0b5b56?w=600&q=80&fm=webp",
+    "imageAlt": "Peacock displaying feathers"
+  },
+  {
+    "id": "bird_006",
+    "commonName": "Flamingo",
+    "scientificName": "Phoenicopterus roseus",
+    "category": "birds",
+    "facts": [
+      "Flamingos get their pink color from the carotenoids in their diet.",
+      "They can stand on one leg for hours without getting tired.",
+      "Flamingos are born with gray feathers that turn pink as they mature."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80&fm=webp",
+    "imageAlt": "Greater flamingo"
+  },
+  {
+    "id": "bird_007",
+    "commonName": "Parrot",
+    "scientificName": "Ara macao",
+    "category": "birds",
+    "facts": [
+      "Parrots can live for over 80 years in captivity.",
+      "They are one of the few animals that can mimic human speech.",
+      "Parrots use their feet like hands to hold and examine objects."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=600&q=80&fm=webp",
+    "imageAlt": "Scarlet macaw"
+  },
+  {
+    "id": "bird_008",
+    "commonName": "Toucan",
+    "scientificName": "Ramphastos toco",
+    "category": "birds",
+    "facts": [
+      "A toucan's bill can be one-third of its total body length.",
+      "Despite its size, the bill is very light due to its hollow structure.",
+      "Toucans use their bills to regulate body temperature."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1612024782955-49e8f2f4e14f?w=600&q=80&fm=webp",
+    "imageAlt": "Toco toucan"
+  },
+  {
+    "id": "bird_009",
+    "commonName": "Albatross",
+    "scientificName": "Diomedea exulans",
+    "category": "birds",
+    "facts": [
+      "Albatrosses have the largest wingspan of any bird, up to 3.5 meters.",
+      "They can fly for hours without flapping their wings.",
+      "Albatrosses can live for over 50 years and mate for life."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80&fm=webp",
+    "imageAlt": "Wandering albatross"
+  },
+  {
+    "id": "bird_010",
+    "commonName": "Kingfisher",
+    "scientificName": "Alcedo atthis",
+    "category": "birds",
+    "facts": [
+      "Kingfishers can dive into water at speeds up to 40 km/h to catch fish.",
+      "They have excellent vision and can see prey underwater.",
+      "Kingfishers beat their catch against branches to kill it before swallowing."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1568393691622-c7ba131d63b4?w=600&q=80&fm=webp",
+    "imageAlt": "Common kingfisher"
+  }
+,
+  {
+    "id": "reptile_001",
+    "commonName": "Komodo Dragon",
+    "scientificName": "Varanus komodoensis",
+    "category": "reptiles",
+    "facts": [
+      "Komodo dragons are the largest living lizards, growing up to 3 meters long.",
+      "They have venomous bites that prevent blood clotting in their prey.",
+      "Komodo dragons can eat up to 80% of their body weight in one meal."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1551135049-8a33b5883817?w=600&q=80&fm=webp",
+    "imageAlt": "Komodo dragon"
+  },
+  {
+    "id": "reptile_002",
+    "commonName": "Green Sea Turtle",
+    "scientificName": "Chelonia mydas",
+    "category": "reptiles",
+    "facts": [
+      "Green sea turtles can hold their breath for up to 5 hours while resting.",
+      "They can migrate over 2,600 km to reach nesting beaches.",
+      "Sea turtles have been around for over 100 million years."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80&fm=webp",
+    "imageAlt": "Green sea turtle swimming"
+  },
+  {
+    "id": "reptile_003",
+    "commonName": "Chameleon",
+    "scientificName": "Chamaeleo calyptratus",
+    "category": "reptiles",
+    "facts": [
+      "Chameleons can move their eyes independently to look in two directions at once.",
+      "Their tongues can extend to twice their body length in milliseconds.",
+      "They change color based on mood, temperature, and communication, not just camouflage."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1568641389310-145d9b0b5b56?w=600&q=80&fm=webp",
+    "imageAlt": "Veiled chameleon"
+  },
+  {
+    "id": "reptile_004",
+    "commonName": "King Cobra",
+    "scientificName": "Ophiophagus hannah",
+    "category": "reptiles",
+    "facts": [
+      "King cobras are the longest venomous snakes, reaching up to 5.5 meters.",
+      "They can 'stand up' and raise one-third of their body off the ground.",
+      "King cobras are the only snakes that build nests for their eggs."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1551986782-d0169b3f8fa7?w=600&q=80&fm=webp",
+    "imageAlt": "King cobra"
+  },
+  {
+    "id": "reptile_005",
+    "commonName": "Crocodile",
+    "scientificName": "Crocodylus niloticus",
+    "category": "reptiles",
+    "facts": [
+      "Crocodiles have the strongest bite force of any animal, up to 3,700 psi.",
+      "They can hold their breath underwater for up to 2 hours.",
+      "Crocodiles have been around for over 200 million years, surviving the dinosaurs."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1570041003321-f80686cd4965?w=600&q=80&fm=webp",
+    "imageAlt": "Nile crocodile"
+  },
+  {
+    "id": "reptile_006",
+    "commonName": "Iguana",
+    "scientificName": "Iguana iguana",
+    "category": "reptiles",
+    "facts": [
+      "Iguanas can detach their tails to escape predators and regrow them later.",
+      "They have a third eye on top of their head that detects light and movement.",
+      "Iguanas are excellent swimmers and can hold their breath for up to 30 minutes."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=600&q=80&fm=webp",
+    "imageAlt": "Green iguana"
+  },
+  {
+    "id": "reptile_007",
+    "commonName": "Gecko",
+    "scientificName": "Gekko gecko",
+    "category": "reptiles",
+    "facts": [
+      "Geckos can walk on walls and ceilings using millions of tiny hairs on their feet.",
+      "Most geckos don't have eyelids and lick their eyes to keep them clean.",
+      "They can detach their tails when threatened and regrow new ones."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1612024782955-49e8f2f4e14f?w=600&q=80&fm=webp",
+    "imageAlt": "Tokay gecko"
+  },
+  {
+    "id": "reptile_008",
+    "commonName": "Python",
+    "scientificName": "Python reticulatus",
+    "category": "reptiles",
+    "facts": [
+      "Reticulated pythons are the longest snakes in the world, reaching over 6 meters.",
+      "They can go months without eating after consuming a large meal.",
+      "Pythons have heat-sensing pits that help them detect warm-blooded prey."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80&fm=webp",
+    "imageAlt": "Reticulated python"
+  },
+  {
+    "id": "reptile_009",
+    "commonName": "Alligator",
+    "scientificName": "Alligator mississippiensis",
+    "category": "reptiles",
+    "facts": [
+      "Alligators can live for over 50 years in the wild.",
+      "They have 80 teeth that are constantly replaced throughout their lives.",
+      "Alligators can run at speeds up to 35 km/h on land for short distances."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1568393691622-c7ba131d63b4?w=600&q=80&fm=webp",
+    "imageAlt": "American alligator"
+  },
+  {
+    "id": "reptile_010",
+    "commonName": "Tortoise",
+    "scientificName": "Geochelone nigra",
+    "category": "reptiles",
+    "facts": [
+      "Galápagos tortoises can live for over 100 years.",
+      "They can go without food or water for up to a year.",
+      "Tortoises can weigh up to 400 kg, making them the largest tortoises on Earth."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1551135049-8a33b5883817?w=600&q=80&fm=webp",
+    "imageAlt": "Galápagos tortoise"
+  },
+  {
+    "id": "marine_001",
+    "commonName": "Great White Shark",
+    "scientificName": "Carcharodon carcharias",
+    "category": "marine",
+    "facts": [
+      "Great white sharks can detect a single drop of blood in 100 liters of water.",
+      "They can swim at speeds up to 56 km/h in short bursts.",
+      "Great whites can live for over 70 years."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1560275619-4662e36fa65c?w=600&q=80&fm=webp",
+    "imageAlt": "Great white shark"
+  },
+  {
+    "id": "marine_002",
+    "commonName": "Dolphin",
+    "scientificName": "Tursiops truncatus",
+    "category": "marine",
+    "facts": [
+      "Dolphins sleep with one half of their brain at a time.",
+      "They can recognize themselves in mirrors, showing self-awareness.",
+      "Dolphins use echolocation to navigate and hunt in murky water."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1570041003321-f80686cd4965?w=600&q=80&fm=webp",
+    "imageAlt": "Bottlenose dolphin"
+  },
+  {
+    "id": "marine_003",
+    "commonName": "Blue Whale",
+    "scientificName": "Balaenoptera musculus",
+    "category": "marine",
+    "facts": [
+      "Blue whales are the largest animals ever known to have lived on Earth.",
+      "Their hearts can weigh as much as a car and beat only 2 times per minute when diving.",
+      "A blue whale's tongue alone can weigh as much as an elephant."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80&fm=webp",
+    "imageAlt": "Blue whale"
+  },
+  {
+    "id": "marine_004",
+    "commonName": "Octopus",
+    "scientificName": "Octopus vulgaris",
+    "category": "marine",
+    "facts": [
+      "Octopuses have three hearts and blue blood.",
+      "They can change color and texture in milliseconds for camouflage.",
+      "Octopuses are highly intelligent and can solve complex puzzles."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1568641389310-145d9b0b5b56?w=600&q=80&fm=webp",
+    "imageAlt": "Common octopus"
+  },
+  {
+    "id": "marine_005",
+    "commonName": "Jellyfish",
+    "scientificName": "Aurelia aurita",
+    "category": "marine",
+    "facts": [
+      "Jellyfish have been around for over 500 million years.",
+      "They are 95% water and have no brain, heart, or bones.",
+      "Some jellyfish species are biologically immortal."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=600&q=80&fm=webp",
+    "imageAlt": "Moon jellyfish"
+  },
+  {
+    "id": "marine_006",
+    "commonName": "Seahorse",
+    "scientificName": "Hippocampus kuda",
+    "category": "marine",
+    "facts": [
+      "Male seahorses carry and give birth to the babies, not females.",
+      "They can move each eye independently to watch for predators and prey.",
+      "Seahorses mate for life and greet each other every morning with a dance."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1612024782955-49e8f2f4e14f?w=600&q=80&fm=webp",
+    "imageAlt": "Yellow seahorse"
+  },
+  {
+    "id": "marine_007",
+    "commonName": "Manta Ray",
+    "scientificName": "Manta birostris",
+    "category": "marine",
+    "facts": [
+      "Manta rays have the largest brain-to-body ratio of all fish.",
+      "They can grow up to 7 meters wide from fin tip to fin tip.",
+      "Manta rays are filter feeders and eat up to 30 kg of plankton per day."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80&fm=webp",
+    "imageAlt": "Giant manta ray"
+  },
+  {
+    "id": "marine_008",
+    "commonName": "Clownfish",
+    "scientificName": "Amphiprion ocellaris",
+    "category": "marine",
+    "facts": [
+      "Clownfish are immune to sea anemone stings and live among their tentacles.",
+      "All clownfish are born male, and some change to female when needed.",
+      "They form symbiotic relationships with sea anemones for protection."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1568393691622-c7ba131d63b4?w=600&q=80&fm=webp",
+    "imageAlt": "Clownfish in anemone"
+  },
+  {
+    "id": "marine_009",
+    "commonName": "Orca",
+    "scientificName": "Orcinus orca",
+    "category": "marine",
+    "facts": [
+      "Orcas are actually the largest members of the dolphin family.",
+      "They have complex social structures and unique dialects.",
+      "Orcas can swim at speeds up to 56 km/h."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1551135049-8a33b5883817?w=600&q=80&fm=webp",
+    "imageAlt": "Orca whale"
+  },
+  {
+    "id": "marine_010",
+    "commonName": "Starfish",
+    "scientificName": "Asterias rubens",
+    "category": "marine",
+    "facts": [
+      "Starfish can regenerate lost arms and even grow a new body from a severed arm.",
+      "They have no brain or blood, using filtered seawater instead.",
+      "Starfish can push their stomachs out of their mouths to digest food externally."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1570041003321-f80686cd4965?w=600&q=80&fm=webp",
+    "imageAlt": "Common starfish"
+  },
+  {
+    "id": "insect_001",
+    "commonName": "Monarch Butterfly",
+    "scientificName": "Danaus plexippus",
+    "category": "insects",
+    "facts": [
+      "Monarch butterflies migrate up to 4,800 km from Canada to Mexico each year.",
+      "They can taste with their feet to identify plants.",
+      "Monarchs are poisonous to predators due to toxins from milkweed plants."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80&fm=webp",
+    "imageAlt": "Monarch butterfly"
+  },
+  {
+    "id": "insect_002",
+    "commonName": "Honeybee",
+    "scientificName": "Apis mellifera",
+    "category": "insects",
+    "facts": [
+      "Honeybees can visit up to 5,000 flowers in a single day.",
+      "They communicate through a 'waggle dance' to share food locations.",
+      "A single bee produces only 1/12 of a teaspoon of honey in its lifetime."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1568641389310-145d9b0b5b56?w=600&q=80&fm=webp",
+    "imageAlt": "Honeybee on flower"
+  },
+  {
+    "id": "insect_003",
+    "commonName": "Ladybug",
+    "scientificName": "Coccinella septempunctata",
+    "category": "insects",
+    "facts": [
+      "Ladybugs can eat up to 5,000 aphids in their lifetime.",
+      "They secrete a foul-smelling liquid from their legs to deter predators.",
+      "Ladybugs can live for up to 3 years."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=600&q=80&fm=webp",
+    "imageAlt": "Seven-spotted ladybug"
+  },
+  {
+    "id": "insect_004",
+    "commonName": "Dragonfly",
+    "scientificName": "Anax junius",
+    "category": "insects",
+    "facts": [
+      "Dragonflies can fly in any direction, including backwards and sideways.",
+      "They have nearly 360-degree vision with 30,000 lenses in their compound eyes.",
+      "Dragonflies can catch prey with a 95% success rate, the highest of any predator."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1612024782955-49e8f2f4e14f?w=600&q=80&fm=webp",
+    "imageAlt": "Common green darner dragonfly"
+  },
+  {
+    "id": "insect_005",
+    "commonName": "Ant",
+    "scientificName": "Formica rufa",
+    "category": "insects",
+    "facts": [
+      "Ants can lift objects 50 times their own body weight.",
+      "They communicate using chemical signals called pheromones.",
+      "Some ant colonies can have over 20 million individuals."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80&fm=webp",
+    "imageAlt": "Red wood ant"
+  },
+  {
+    "id": "insect_006",
+    "commonName": "Praying Mantis",
+    "scientificName": "Mantis religiosa",
+    "category": "insects",
+    "facts": [
+      "Praying mantises can turn their heads 180 degrees.",
+      "They are the only insects that have stereo vision.",
+      "Female mantises sometimes eat the male after mating."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1568393691622-c7ba131d63b4?w=600&q=80&fm=webp",
+    "imageAlt": "European mantis"
+  },
+  {
+    "id": "insect_007",
+    "commonName": "Firefly",
+    "scientificName": "Photinus pyralis",
+    "category": "insects",
+    "facts": [
+      "Fireflies produce light through a chemical reaction called bioluminescence.",
+      "Their light is the most efficient light in the world, with nearly 100% energy conversion.",
+      "Different species have unique flash patterns to attract mates."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1551135049-8a33b5883817?w=600&q=80&fm=webp",
+    "imageAlt": "Common eastern firefly"
+  },
+  {
+    "id": "insect_008",
+    "commonName": "Grasshopper",
+    "scientificName": "Schistocerca gregaria",
+    "category": "insects",
+    "facts": [
+      "Grasshoppers can jump 20 times their body length.",
+      "They 'hear' through organs on their abdomen, not their heads.",
+      "Some grasshopper species can form devastating locust swarms."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1570041003321-f80686cd4965?w=600&q=80&fm=webp",
+    "imageAlt": "Desert locust"
+  },
+  {
+    "id": "insect_009",
+    "commonName": "Beetle",
+    "scientificName": "Dynastes hercules",
+    "category": "insects",
+    "facts": [
+      "Beetles make up 25% of all known animal species on Earth.",
+      "Hercules beetles can lift 850 times their own weight.",
+      "Some beetles can survive being frozen solid and thaw out alive."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80&fm=webp",
+    "imageAlt": "Hercules beetle"
+  },
+  {
+    "id": "insect_010",
+    "commonName": "Mosquito",
+    "scientificName": "Anopheles gambiae",
+    "category": "insects",
+    "facts": [
+      "Only female mosquitoes bite; males feed on nectar.",
+      "Mosquitoes can detect carbon dioxide from up to 50 meters away.",
+      "They are considered the deadliest animals to humans due to disease transmission."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1568641389310-145d9b0b5b56?w=600&q=80&fm=webp",
+    "imageAlt": "Anopheles mosquito"
+  }
+,
+  {
+    "id": "mammal_021",
+    "commonName": "Chimpanzee",
+    "scientificName": "Pan troglodytes",
+    "category": "mammals",
+    "facts": [
+      "Chimpanzees share 98.8% of their DNA with humans.",
+      "They use over 60 different gestures to communicate.",
+      "Chimps can make and use tools, showing advanced problem-solving skills."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?w=600&q=80&fm=webp",
+    "imageAlt": "Chimpanzee"
+  },
+  {
+    "id": "mammal_022",
+    "commonName": "Lynx",
+    "scientificName": "Lynx lynx",
+    "category": "mammals",
+    "facts": [
+      "Lynx have exceptional hearing and can detect prey under snow.",
+      "Their large paws act like snowshoes in deep snow.",
+      "Lynx are solitary hunters and excellent climbers."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1551135049-8a33b5883817?w=600&q=80&fm=webp",
+    "imageAlt": "Eurasian lynx"
+  },
+  {
+    "id": "mammal_023",
+    "commonName": "Otter",
+    "scientificName": "Lutra lutra",
+    "category": "mammals",
+    "facts": [
+      "Otters have the densest fur of any mammal with up to 1 million hairs per square inch.",
+      "They use rocks as tools to crack open shellfish.",
+      "Otters hold hands while sleeping to avoid drifting apart."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1570041003321-f80686cd4965?w=600&q=80&fm=webp",
+    "imageAlt": "European otter"
+  },
+  {
+    "id": "mammal_024",
+    "commonName": "Bison",
+    "scientificName": "Bison bison",
+    "category": "mammals",
+    "facts": [
+      "Bison can run at speeds up to 56 km/h despite weighing up to 900 kg.",
+      "They can jump vertically up to 1.8 meters.",
+      "Bison are North America's largest land mammals."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80&fm=webp",
+    "imageAlt": "American bison"
+  },
+  {
+    "id": "mammal_025",
+    "commonName": "Moose",
+    "scientificName": "Alces alces",
+    "category": "mammals",
+    "facts": [
+      "Moose are the largest members of the deer family.",
+      "They can dive up to 6 meters underwater to feed on aquatic plants.",
+      "Male moose antlers can span up to 1.8 meters wide."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1568641389310-145d9b0b5b56?w=600&q=80&fm=webp",
+    "imageAlt": "Moose"
+  },
+  {
+    "id": "bird_011",
+    "commonName": "Raven",
+    "scientificName": "Corvus corax",
+    "category": "birds",
+    "facts": [
+      "Ravens are among the most intelligent birds and can solve complex puzzles.",
+      "They can mimic human speech and other sounds.",
+      "Ravens mate for life and can live for over 20 years."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=600&q=80&fm=webp",
+    "imageAlt": "Common raven"
+  },
+  {
+    "id": "bird_012",
+    "commonName": "Woodpecker",
+    "scientificName": "Dryocopus pileatus",
+    "category": "birds",
+    "facts": [
+      "Woodpeckers can peck up to 20 times per second.",
+      "Their skulls have special shock absorbers to protect their brains.",
+      "They have barbed tongues to extract insects from tree bark."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1612024782955-49e8f2f4e14f?w=600&q=80&fm=webp",
+    "imageAlt": "Pileated woodpecker"
+  },
+  {
+    "id": "bird_013",
+    "commonName": "Swan",
+    "scientificName": "Cygnus olor",
+    "category": "birds",
+    "facts": [
+      "Swans mate for life and can live for over 20 years.",
+      "They have over 25,000 feathers on their bodies.",
+      "Swans can fly at speeds up to 95 km/h."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80&fm=webp",
+    "imageAlt": "Mute swan"
+  },
+  {
+    "id": "bird_014",
+    "commonName": "Pelican",
+    "scientificName": "Pelecanus occidentalis",
+    "category": "birds",
+    "facts": [
+      "A pelican's bill pouch can hold up to 11 liters of water.",
+      "They dive from heights up to 20 meters to catch fish.",
+      "Pelicans can live for over 25 years in the wild."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1568393691622-c7ba131d63b4?w=600&q=80&fm=webp",
+    "imageAlt": "Brown pelican"
+  },
+  {
+    "id": "bird_015",
+    "commonName": "Crane",
+    "scientificName": "Grus japonensis",
+    "category": "birds",
+    "facts": [
+      "Cranes perform elaborate courtship dances.",
+      "They can live for over 60 years.",
+      "Cranes migrate thousands of kilometers each year."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1551135049-8a33b5883817?w=600&q=80&fm=webp",
+    "imageAlt": "Red-crowned crane"
+  },
+  {
+    "id": "reptile_011",
+    "commonName": "Anaconda",
+    "scientificName": "Eunectes murinus",
+    "category": "reptiles",
+    "facts": [
+      "Green anacondas are the heaviest snakes in the world, weighing up to 250 kg.",
+      "They can hold their breath underwater for up to 10 minutes.",
+      "Anacondas give birth to live young rather than laying eggs."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1570041003321-f80686cd4965?w=600&q=80&fm=webp",
+    "imageAlt": "Green anaconda"
+  },
+  {
+    "id": "reptile_012",
+    "commonName": "Bearded Dragon",
+    "scientificName": "Pogona vitticeps",
+    "category": "reptiles",
+    "facts": [
+      "Bearded dragons can change color based on temperature and mood.",
+      "They wave their arms to communicate with other dragons.",
+      "Bearded dragons can live for 10-15 years in captivity."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80&fm=webp",
+    "imageAlt": "Central bearded dragon"
+  },
+  {
+    "id": "reptile_013",
+    "commonName": "Monitor Lizard",
+    "scientificName": "Varanus salvator",
+    "category": "reptiles",
+    "facts": [
+      "Monitor lizards are highly intelligent and can count up to six.",
+      "They have forked tongues like snakes to smell their environment.",
+      "Some species can grow over 2 meters long."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1568641389310-145d9b0b5b56?w=600&q=80&fm=webp",
+    "imageAlt": "Water monitor lizard"
+  },
+  {
+    "id": "reptile_014",
+    "commonName": "Rattlesnake",
+    "scientificName": "Crotalus atrox",
+    "category": "reptiles",
+    "facts": [
+      "Rattlesnakes add a new segment to their rattle each time they shed their skin.",
+      "They can sense heat from prey using special pit organs.",
+      "Rattlesnakes can strike at speeds up to 2.4 meters per second."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=600&q=80&fm=webp",
+    "imageAlt": "Western diamondback rattlesnake"
+  },
+  {
+    "id": "reptile_015",
+    "commonName": "Frilled Lizard",
+    "scientificName": "Chlamydosaurus kingii",
+    "category": "reptiles",
+    "facts": [
+      "Frilled lizards can run on their hind legs when threatened.",
+      "Their neck frill can expand to make them appear larger.",
+      "They spend most of their time in trees."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1612024782955-49e8f2f4e14f?w=600&q=80&fm=webp",
+    "imageAlt": "Frilled lizard"
+  },
+  {
+    "id": "marine_011",
+    "commonName": "Sea Otter",
+    "scientificName": "Enhydra lutris",
+    "category": "marine",
+    "facts": [
+      "Sea otters use tools, placing rocks on their chests to crack open shellfish.",
+      "They have the densest fur of any animal.",
+      "Sea otters eat 25% of their body weight in food each day."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80&fm=webp",
+    "imageAlt": "Sea otter"
+  },
+  {
+    "id": "marine_012",
+    "commonName": "Hammerhead Shark",
+    "scientificName": "Sphyrna mokarran",
+    "category": "marine",
+    "facts": [
+      "Hammerhead sharks have 360-degree vision in the vertical plane.",
+      "Their unique head shape helps them detect electrical signals from prey.",
+      "They can grow up to 6 meters in length."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1568393691622-c7ba131d63b4?w=600&q=80&fm=webp",
+    "imageAlt": "Great hammerhead shark"
+  },
+  {
+    "id": "marine_013",
+    "commonName": "Pufferfish",
+    "scientificName": "Tetraodontidae",
+    "category": "marine",
+    "facts": [
+      "Pufferfish can inflate to several times their normal size when threatened.",
+      "They contain tetrodotoxin, one of the most poisonous substances in nature.",
+      "Some species create intricate circular patterns in sand to attract mates."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1551135049-8a33b5883817?w=600&q=80&fm=webp",
+    "imageAlt": "Pufferfish"
+  },
+  {
+    "id": "marine_014",
+    "commonName": "Manatee",
+    "scientificName": "Trichechus manatus",
+    "category": "marine",
+    "facts": [
+      "Manatees are also known as sea cows and are herbivores.",
+      "They can eat up to 10% of their body weight in vegetation daily.",
+      "Manatees can hold their breath for up to 20 minutes."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1570041003321-f80686cd4965?w=600&q=80&fm=webp",
+    "imageAlt": "West Indian manatee"
+  },
+  {
+    "id": "marine_015",
+    "commonName": "Nautilus",
+    "scientificName": "Nautilus pompilius",
+    "category": "marine",
+    "facts": [
+      "Nautiluses have existed for over 500 million years, predating dinosaurs.",
+      "They have up to 90 tentacles without suckers.",
+      "Nautiluses can live for over 20 years."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80&fm=webp",
+    "imageAlt": "Chambered nautilus"
+  },
+  {
+    "id": "insect_011",
+    "commonName": "Tarantula",
+    "scientificName": "Theraphosidae",
+    "category": "insects",
+    "facts": [
+      "Tarantulas can live for over 30 years in captivity.",
+      "They can regenerate lost legs during molting.",
+      "Despite their fearsome appearance, most tarantulas are harmless to humans."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1568641389310-145d9b0b5b56?w=600&q=80&fm=webp",
+    "imageAlt": "Mexican redknee tarantula"
+  },
+  {
+    "id": "insect_012",
+    "commonName": "Scorpion",
+    "scientificName": "Pandinus imperator",
+    "category": "insects",
+    "facts": [
+      "Scorpions glow under ultraviolet light.",
+      "They can survive for a year without food.",
+      "Scorpions have existed for over 400 million years."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=600&q=80&fm=webp",
+    "imageAlt": "Emperor scorpion"
+  },
+  {
+    "id": "insect_013",
+    "commonName": "Stick Insect",
+    "scientificName": "Phasmatodea",
+    "category": "insects",
+    "facts": [
+      "Stick insects are masters of camouflage, resembling twigs and branches.",
+      "Some species can regenerate lost limbs.",
+      "The longest stick insect recorded was over 60 cm long."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1612024782955-49e8f2f4e14f?w=600&q=80&fm=webp",
+    "imageAlt": "Giant stick insect"
+  },
+  {
+    "id": "insect_014",
+    "commonName": "Cicada",
+    "scientificName": "Magicicada septendecim",
+    "category": "insects",
+    "facts": [
+      "Some cicadas spend 17 years underground before emerging.",
+      "They are among the loudest insects, reaching 120 decibels.",
+      "Cicadas emerge in massive synchronized swarms."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80&fm=webp",
+    "imageAlt": "Periodical cicada"
+  },
+  {
+    "id": "insect_015",
+    "commonName": "Atlas Moth",
+    "scientificName": "Attacus atlas",
+    "category": "insects",
+    "facts": [
+      "Atlas moths are among the largest moths with wingspans up to 30 cm.",
+      "Adults don't have functional mouths and live only 1-2 weeks.",
+      "Their wing tips resemble snake heads to deter predators."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1568393691622-c7ba131d63b4?w=600&q=80&fm=webp",
+    "imageAlt": "Atlas moth"
+  }
+,
+  {
+    "id": "mammal_026",
+    "commonName": "Armadillo",
+    "scientificName": "Dasypus novemcinctus",
+    "category": "mammals",
+    "facts": [
+      "Armadillos can hold their breath for up to 6 minutes.",
+      "They always give birth to identical quadruplets.",
+      "Armadillos can jump 1 meter straight up when startled."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1551135049-8a33b5883817?w=600&q=80&fm=webp",
+    "imageAlt": "Nine-banded armadillo"
+  },
+  {
+    "id": "mammal_027",
+    "commonName": "Hedgehog",
+    "scientificName": "Erinaceus europaeus",
+    "category": "mammals",
+    "facts": [
+      "Hedgehogs have about 5,000-7,000 spines on their backs.",
+      "They can run up to 6 km/h.",
+      "Hedgehogs are immune to many snake venoms."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1570041003321-f80686cd4965?w=600&q=80&fm=webp",
+    "imageAlt": "European hedgehog"
+  },
+  {
+    "id": "mammal_028",
+    "commonName": "Capybara",
+    "scientificName": "Hydrochoerus hydrochaeris",
+    "category": "mammals",
+    "facts": [
+      "Capybaras are the world's largest rodents, weighing up to 65 kg.",
+      "They are highly social and live in groups of 10-20 individuals.",
+      "Capybaras can stay underwater for up to 5 minutes."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80&fm=webp",
+    "imageAlt": "Capybara"
+  },
+  {
+    "id": "bird_016",
+    "commonName": "Kiwi",
+    "scientificName": "Apteryx mantelli",
+    "category": "birds",
+    "facts": [
+      "Kiwis are flightless birds native to New Zealand.",
+      "They lay eggs that are 20% of their body weight.",
+      "Kiwis have nostrils at the end of their beaks, unique among birds."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1568641389310-145d9b0b5b56?w=600&q=80&fm=webp",
+    "imageAlt": "North Island brown kiwi"
+  },
+  {
+    "id": "bird_017",
+    "commonName": "Puffin",
+    "scientificName": "Fratercula arctica",
+    "category": "birds",
+    "facts": [
+      "Puffins can carry up to 60 fish in their beaks at once.",
+      "They can flap their wings up to 400 times per minute.",
+      "Puffins mate for life and return to the same burrow each year."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=600&q=80&fm=webp",
+    "imageAlt": "Atlantic puffin"
+  },
+  {
+    "id": "bird_018",
+    "commonName": "Ostrich",
+    "scientificName": "Struthio camelus",
+    "category": "birds",
+    "facts": [
+      "Ostriches are the largest and heaviest birds, weighing up to 150 kg.",
+      "They can run at speeds up to 70 km/h.",
+      "Ostrich eggs are the largest of any bird, weighing up to 1.4 kg."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1612024782955-49e8f2f4e14f?w=600&q=80&fm=webp",
+    "imageAlt": "Common ostrich"
+  },
+  {
+    "id": "reptile_016",
+    "commonName": "Blue-tongued Skink",
+    "scientificName": "Tiliqua scincoides",
+    "category": "reptiles",
+    "facts": [
+      "Blue-tongued skinks stick out their bright blue tongues to scare predators.",
+      "They can live for over 20 years in captivity.",
+      "These lizards give birth to live young rather than laying eggs."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80&fm=webp",
+    "imageAlt": "Eastern blue-tongued skink"
+  },
+  {
+    "id": "reptile_017",
+    "commonName": "Gila Monster",
+    "scientificName": "Heloderma suspectum",
+    "category": "reptiles",
+    "facts": [
+      "Gila monsters are one of only two venomous lizards in North America.",
+      "They can eat up to one-third of their body weight in one meal.",
+      "Gila monsters can go months without eating."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1568393691622-c7ba131d63b4?w=600&q=80&fm=webp",
+    "imageAlt": "Gila monster"
+  },
+  {
+    "id": "marine_016",
+    "commonName": "Walrus",
+    "scientificName": "Odobenus rosmarus",
+    "category": "marine",
+    "facts": [
+      "Walrus tusks can grow up to 1 meter long.",
+      "They can weigh up to 1,700 kg.",
+      "Walruses use their tusks to haul themselves onto ice."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1551135049-8a33b5883817?w=600&q=80&fm=webp",
+    "imageAlt": "Atlantic walrus"
+  },
+  {
+    "id": "marine_017",
+    "commonName": "Lionfish",
+    "scientificName": "Pterois volitans",
+    "category": "marine",
+    "facts": [
+      "Lionfish have venomous spines that can cause painful stings.",
+      "They are invasive species in many parts of the world.",
+      "Lionfish can eat prey up to half their own size."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1570041003321-f80686cd4965?w=600&q=80&fm=webp",
+    "imageAlt": "Red lionfish"
+  },
+  {
+    "id": "marine_018",
+    "commonName": "Cuttlefish",
+    "scientificName": "Sepia officinalis",
+    "category": "marine",
+    "facts": [
+      "Cuttlefish can change color and texture in milliseconds.",
+      "They have W-shaped pupils and can see polarized light.",
+      "Cuttlefish have three hearts and blue-green blood."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80&fm=webp",
+    "imageAlt": "Common cuttlefish"
+  },
+  {
+    "id": "insect_016",
+    "commonName": "Leafcutter Ant",
+    "scientificName": "Atta cephalotes",
+    "category": "insects",
+    "facts": [
+      "Leafcutter ants can carry leaves 50 times their body weight.",
+      "They farm fungus underground for food.",
+      "Colonies can contain over 8 million ants."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1568641389310-145d9b0b5b56?w=600&q=80&fm=webp",
+    "imageAlt": "Leafcutter ant"
+  },
+  {
+    "id": "insect_017",
+    "commonName": "Dung Beetle",
+    "scientificName": "Scarabaeus sacer",
+    "category": "insects",
+    "facts": [
+      "Dung beetles can roll balls of dung 50 times their weight.",
+      "They navigate using the Milky Way.",
+      "Dung beetles are important for soil health and nutrient cycling."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=600&q=80&fm=webp",
+    "imageAlt": "Sacred scarab beetle"
+  },
+  {
+    "id": "insect_018",
+    "commonName": "Termite",
+    "scientificName": "Macrotermes bellicosus",
+    "category": "insects",
+    "facts": [
+      "Termite mounds can reach heights of over 9 meters.",
+      "A termite queen can live for over 50 years.",
+      "Termites digest wood with the help of gut microorganisms."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1612024782955-49e8f2f4e14f?w=600&q=80&fm=webp",
+    "imageAlt": "African termite"
+  },
+  {
+    "id": "insect_019",
+    "commonName": "Walking Stick",
+    "scientificName": "Diapheromera femorata",
+    "category": "insects",
+    "facts": [
+      "Walking sticks can regenerate lost legs.",
+      "They sway back and forth to mimic branches moving in the wind.",
+      "Some species can reproduce without males through parthenogenesis."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80&fm=webp",
+    "imageAlt": "Northern walking stick"
+  },
+  {
+    "id": "insect_020",
+    "commonName": "Bombardier Beetle",
+    "scientificName": "Brachinus crepitans",
+    "category": "insects",
+    "facts": [
+      "Bombardier beetles spray boiling hot chemicals at predators.",
+      "The spray can reach temperatures of 100°C.",
+      "They can aim their spray with remarkable accuracy."
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1568393691622-c7ba131d63b4?w=600&q=80&fm=webp",
+    "imageAlt": "Bombardier beetle"
+  }
+]
