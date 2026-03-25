@@ -97,6 +97,7 @@ export const CURATED_PEXELS_IMAGES: Record<string, string> = {
   "Lion": "https://images.pexels.com/photos/247502/pexels-photo-247502.jpeg?auto=compress&cs=tinysrgb&w=600",
   "Zebra": "https://images.pexels.com/photos/750539/pexels-photo-750539.jpeg?auto=compress&cs=tinysrgb&w=600",
   "Fox": "https://images.pexels.com/photos/2295744/pexels-photo-2295744.jpeg?auto=compress&cs=tinysrgb&w=600",
+  "Raccoon": "https://images.pexels.com/photos/10767665/pexels-photo-10767665.jpeg?auto=compress&cs=tinysrgb&w=600",
   
   // Add more as needed...
 };

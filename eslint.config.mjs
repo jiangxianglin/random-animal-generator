@@ -12,6 +12,9 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Ignore script files (Node.js utilities)
+    "scripts/**",
+    "verify-animals.js",
   ]),
 ]);
 

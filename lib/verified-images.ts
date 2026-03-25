@@ -19,7 +19,7 @@ export const VERIFIED_ANIMAL_IMAGES: Record<string, string> = {
   "Orangutan": "photo-1568393691622-c7ba131d63b4",
   "Zebra": "photo-1526336024174-e58f5cdd8e13",
   "Hippopotamus": "photo-1564349683136-77e08dba1ef7",
-  "Raccoon": "photo-1497752531616-c3afd9760a11",
+  "Raccoon": "photo-1497752531616-c3afd9760a12", // Temporary - will use Pexels
   "Meerkat": "photo-1612024782955-49e8f2df2e6d",
   "Otter": "photo-1580982172477-9373ff52ae43",
   "Fox": "photo-1474511320723-9a56873867b5",

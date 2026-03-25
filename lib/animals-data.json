@@ -9,8 +9,21 @@
       "They can communicate using infrasound that travels several kilometers through the ground.",
       "Elephants have excellent memory and can recognize up to 30 relatives by their calls."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=600&q=80&fm=webp",
-    "imageAlt": "African elephant in savanna"
+    "imageUrl": "https://images.pexels.com/photos/3850526/pexels-photo-3850526.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "African elephant in savanna",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Start with large circular shapes for the body and head, keeping proportions massive and sturdy.",
+      "Draw the trunk as a flexible cylinder with subtle wrinkles, tapering toward the tip.",
+      "Add large fan-shaped ears and thick columnar legs with rounded feet."
+    ],
+    "bodyParts": [
+      "trunk",
+      "large ears",
+      "tusks",
+      "columnar legs",
+      "wrinkled skin"
+    ]
   },
   {
     "id": "mammal_002",
@@ -22,8 +35,21 @@
       "They have a false thumb to help them grip branches while climbing.",
       "Red pandas can rotate their ankles to descend trees headfirst."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1497752531616-c3afd9760a11?w=600&q=80&fm=webp",
-    "imageAlt": "Red panda in tree"
+    "imageUrl": "https://images.pexels.com/photos/148182/pexels-photo-148182.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Red panda in tree",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Begin with a round head and fluffy body, emphasizing the soft, plush appearance.",
+      "Draw the distinctive facial markings with white tear marks and reddish-brown fur patterns.",
+      "Add a long, bushy ringed tail that's almost as long as the body."
+    ],
+    "bodyParts": [
+      "bushy ringed tail",
+      "round ears",
+      "facial markings",
+      "fluffy body",
+      "small paws"
+    ]
   },
   {
     "id": "mammal_003",
@@ -35,8 +61,21 @@
       "Tigers can leap distances of up to 10 meters in a single bound.",
       "They are excellent swimmers and often cool off in water during hot days."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?w=600&q=80&fm=webp",
-    "imageAlt": "Bengal tiger"
+    "imageUrl": "https://images.pexels.com/photos/516541/pexels-photo-516541.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Bengal tiger",
+    "drawingDifficulty": "hard",
+    "drawingTips": [
+      "Sketch the muscular body structure first, showing powerful shoulders and haunches for strength.",
+      "Add distinctive black stripes that follow the body's contours, varying in thickness and spacing.",
+      "Draw the intense facial features with prominent whiskers, rounded ears, and piercing eyes."
+    ],
+    "bodyParts": [
+      "striped fur",
+      "powerful jaw",
+      "long tail",
+      "muscular legs",
+      "rounded ears"
+    ]
   },
   {
     "id": "mammal_004",
@@ -48,8 +87,21 @@
       "Despite being carnivores, 99% of their diet consists of bamboo.",
       "They have an extra 'thumb' that helps them grip bamboo stems."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1525382455947-f319bc05fb35?w=600&q=80&fm=webp",
-    "imageAlt": "Giant panda eating bamboo"
+    "imageUrl": "https://images.pexels.com/photos/3608263/pexels-photo-3608263.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Giant panda eating bamboo",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Start with a round, chubby body and large circular head for that iconic cuddly appearance.",
+      "Draw distinct black patches around the eyes, ears, shoulders, and legs against white fur.",
+      "Add thick, sturdy limbs with large paws perfect for gripping bamboo stalks."
+    ],
+    "bodyParts": [
+      "black eye patches",
+      "round ears",
+      "chubby body",
+      "thick limbs",
+      "short tail"
+    ]
   },
   {
     "id": "mammal_005",
@@ -61,8 +113,21 @@
       "A wolf's howl can be heard from up to 10 km away.",
       "Wolf packs have a complex social structure led by an alpha pair."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1614027164847-1b28cfe1df60?w=600&q=80&fm=webp",
-    "imageAlt": "Gray wolf in snow"
+    "imageUrl": "https://images.pexels.com/photos/69350/pexels-photo-69350.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Gray wolf in snow",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw a lean, athletic body with long legs built for endurance running and hunting.",
+      "Add a thick, bushy tail and dense fur around the neck and shoulders for warmth.",
+      "Capture the alert expression with pointed ears, keen eyes, and a strong muzzle."
+    ],
+    "bodyParts": [
+      "pointed ears",
+      "bushy tail",
+      "long muzzle",
+      "thick fur",
+      "lean legs"
+    ]
   },
   {
     "id": "mammal_006",
@@ -74,8 +139,21 @@
       "They can accelerate from 0 to 96 km/h in just 3 seconds.",
       "Unlike other big cats, cheetahs cannot roar but they can purr."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1551969014-7d2c4cddf0b6?w=600&q=80&fm=webp",
-    "imageAlt": "Cheetah running"
+    "imageUrl": "https://images.pexels.com/photos/9765280/pexels-photo-9765280.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Cheetah running",
+    "drawingDifficulty": "hard",
+    "drawingTips": [
+      "Emphasize the slender, aerodynamic build with long legs and a deep chest for speed.",
+      "Add distinctive black tear marks running from eyes to mouth and spotted coat pattern.",
+      "Draw the small head with high-set eyes and the long tail for balance during sprints."
+    ],
+    "bodyParts": [
+      "spotted coat",
+      "tear marks",
+      "long tail",
+      "slender legs",
+      "small head"
+    ]
   },
   {
     "id": "mammal_007",
@@ -87,8 +165,21 @@
       "Their tongues can be up to 50 cm long and are prehensile.",
       "Despite their long necks, giraffes have the same number of neck vertebrae as humans - seven."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1547721064-da6cfb341d50?w=600&q=80&fm=webp",
-    "imageAlt": "Giraffe in savanna"
+    "imageUrl": "https://images.pexels.com/photos/34098/south-africa-hluhluwe-giraffes-pattern.jpg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Giraffe in savanna",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Start with the extremely long neck, making it about half the total height of the animal.",
+      "Draw the distinctive patch pattern across the body, with irregular polygonal shapes and light borders.",
+      "Add long, slender legs with knobby knees and small hooves, plus short horns called ossicones."
+    ],
+    "bodyParts": [
+      "long neck",
+      "spotted pattern",
+      "ossicones",
+      "long legs",
+      "tufted tail"
+    ]
   },
   {
     "id": "mammal_008",
@@ -100,8 +191,21 @@
       "They can swim continuously for days, covering distances over 600 km.",
       "A polar bear's sense of smell is so acute it can detect seals nearly 1 km away."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1589656966895-2f33e7653819?w=600&q=80&fm=webp",
-    "imageAlt": "Polar bear on ice"
+    "imageUrl": "https://images.pexels.com/photos/598966/pexels-photo-598966.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Polar bear on ice",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw a massive, stocky body with thick fur and a slightly humped back for power.",
+      "Add a long neck and relatively small head with small rounded ears and black nose.",
+      "Show large paws with thick pads and claws, perfect for gripping ice and swimming."
+    ],
+    "bodyParts": [
+      "thick white fur",
+      "large paws",
+      "small ears",
+      "long neck",
+      "black nose"
+    ]
   },
   {
     "id": "mammal_009",
@@ -113,8 +217,21 @@
       "They cannot walk backwards, which is why they're on the Australian coat of arms.",
       "Female kangaroos can pause their pregnancy if environmental conditions are unfavorable."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1549378725-f9c4e0b0e3f0?w=600&q=80&fm=webp",
-    "imageAlt": "Red kangaroo"
+    "imageUrl": "https://images.pexels.com/photos/2560510/pexels-photo-2560510.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Red kangaroo",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw powerful hind legs much larger than the small front arms, showing hopping adaptation.",
+      "Add a long, thick tail that acts as a balance and support when standing upright.",
+      "Sketch the upright posture with alert ears and a gentle face with large eyes."
+    ],
+    "bodyParts": [
+      "powerful hind legs",
+      "long tail",
+      "small front arms",
+      "large ears",
+      "pouch"
+    ]
   },
   {
     "id": "mammal_010",
@@ -126,10 +243,22 @@
       "They have fingerprints that are remarkably similar to human fingerprints.",
       "Koalas eat only eucalyptus leaves, which are toxic to most other animals."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1459262838948-3e2de6c1ec80?w=600&q=80&fm=webp",
-    "imageAlt": "Koala in eucalyptus tree"
-  }
-,
+    "imageUrl": "https://images.pexels.com/photos/146083/pexels-photo-146083.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Koala in eucalyptus tree",
+    "drawingDifficulty": "easy",
+    "drawingTips": [
+      "Start with a round, fluffy body and large round head for that teddy bear appearance.",
+      "Draw large, fluffy ears and a prominent black nose on a flat face.",
+      "Add strong claws on all four paws for gripping tree branches securely."
+    ],
+    "bodyParts": [
+      "fluffy ears",
+      "large black nose",
+      "round body",
+      "strong claws",
+      "gray fur"
+    ]
+  },
   {
     "id": "mammal_011",
     "commonName": "Gorilla",
@@ -140,8 +269,21 @@
       "They can learn sign language and communicate with humans.",
       "Adult male gorillas can weigh up to 220 kg and are incredibly strong."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1551135049-8a33b5883817?w=600&q=80&fm=webp",
-    "imageAlt": "Mountain gorilla"
+    "imageUrl": "https://images.pexels.com/photos/33535/primate-ape-thinking-mimic.jpg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Mountain gorilla",
+    "drawingDifficulty": "hard",
+    "drawingTips": [
+      "Draw a massive, muscular upper body with broad shoulders and long, powerful arms.",
+      "Add expressive facial features with deep-set eyes, prominent brow ridge, and flat nose.",
+      "Show the silverback's distinctive gray-white fur on the back and thick black fur elsewhere."
+    ],
+    "bodyParts": [
+      "broad shoulders",
+      "long arms",
+      "silverback fur",
+      "expressive face",
+      "large hands"
+    ]
   },
   {
     "id": "mammal_012",
@@ -153,8 +295,21 @@
       "They have an arm span of up to 2.3 meters, perfect for swinging through trees.",
       "Orangutans use tools and have been observed making umbrellas from leaves."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1568700942090-19dc36fab0c4?w=600&q=80&fm=webp",
-    "imageAlt": "Orangutan in rainforest"
+    "imageUrl": "https://images.pexels.com/photos/2083277/pexels-photo-2083277.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Orangutan in rainforest",
+    "drawingDifficulty": "hard",
+    "drawingTips": [
+      "Draw extremely long arms that reach below the knees, perfect for brachiation through trees.",
+      "Add shaggy reddish-orange fur that hangs loosely, especially on the arms and body.",
+      "Sketch the intelligent face with small ears, expressive eyes, and distinctive cheek pads on males."
+    ],
+    "bodyParts": [
+      "long arms",
+      "shaggy orange fur",
+      "cheek pads",
+      "expressive face",
+      "grasping hands"
+    ]
   },
   {
     "id": "mammal_013",
@@ -166,8 +321,21 @@
       "They only defecate once a week and can lose up to 30% of their body weight.",
       "Sloths can hold their breath for up to 40 minutes underwater."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1621155346337-1d19476ba7d6?w=600&q=80&fm=webp",
-    "imageAlt": "Three-toed sloth"
+    "imageUrl": "https://images.pexels.com/photos/26690591/pexels-photo-26690591.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Three-toed sloth",
+    "drawingDifficulty": "easy",
+    "drawingTips": [
+      "Draw a small, rounded body with long, curved arms hanging from branches.",
+      "Add a gentle, smiling face with small eyes and a flat nose for that peaceful expression.",
+      "Show long, curved claws on each limb, perfect for gripping branches while hanging."
+    ],
+    "bodyParts": [
+      "long curved claws",
+      "shaggy fur",
+      "small head",
+      "gentle face",
+      "short tail"
+    ]
   },
   {
     "id": "mammal_014",
@@ -179,8 +347,21 @@
       "Despite their bulk, they can run at speeds up to 30 km/h on land.",
       "Hippos secrete a red, oily substance that acts as sunscreen and antibiotic."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=600&q=80&fm=webp",
-    "imageAlt": "Hippopotamus in water"
+    "imageUrl": "https://images.pexels.com/photos/35995/hippo-mammal-wildlife-nature.jpg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Hippopotamus in water",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Start with a massive barrel-shaped body and short, thick legs supporting enormous weight.",
+      "Draw the large head with small ears, eyes on top, and a huge mouth with prominent tusks.",
+      "Add smooth, thick skin with subtle wrinkles and folds, especially around the neck and legs."
+    ],
+    "bodyParts": [
+      "barrel body",
+      "large mouth",
+      "small ears",
+      "thick legs",
+      "smooth skin"
+    ]
   },
   {
     "id": "mammal_015",
@@ -192,8 +373,21 @@
       "Zebras can run at speeds up to 65 km/h to escape predators.",
       "Their stripes may help confuse predators and regulate body temperature."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?w=600&q=80&fm=webp",
-    "imageAlt": "Plains zebra"
+    "imageUrl": "https://images.pexels.com/photos/1524628/pexels-photo-1524628.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Plains zebra",
+    "drawingDifficulty": "hard",
+    "drawingTips": [
+      "Draw a horse-like body with athletic proportions and graceful, powerful legs.",
+      "Add distinctive black and white stripes that follow the body's contours and curves naturally.",
+      "Include the short, upright mane with alternating stripe pattern and tufted tail."
+    ],
+    "bodyParts": [
+      "striped pattern",
+      "upright mane",
+      "long legs",
+      "tufted tail",
+      "rounded ears"
+    ]
   },
   {
     "id": "mammal_016",
@@ -205,8 +399,21 @@
       "Despite their size, rhinos can run at speeds up to 50 km/h.",
       "They have poor eyesight but excellent hearing and sense of smell."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1551969014-7d2c4cddf0b6?w=600&q=80&fm=webp",
-    "imageAlt": "White rhinoceros"
+    "imageUrl": "https://images.pexels.com/photos/631317/pexels-photo-631317.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "White rhinoceros",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw a massive, tank-like body with thick, armor-like skin showing folds and wrinkles.",
+      "Add one or two prominent horns on the nose, with the front horn typically larger.",
+      "Show short, sturdy legs with three-toed feet and small eyes with alert ears."
+    ],
+    "bodyParts": [
+      "horn",
+      "thick skin",
+      "sturdy legs",
+      "small ears",
+      "broad head"
+    ]
   },
   {
     "id": "mammal_017",
@@ -218,8 +425,21 @@
       "They are excellent swimmers and sometimes hunt fish and crabs.",
       "Leopards can leap 6 meters horizontally and 3 meters vertically."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1614027164847-1b28cfe1df60?w=600&q=80&fm=webp",
-    "imageAlt": "Leopard in tree"
+    "imageUrl": "https://images.pexels.com/photos/145939/pexels-photo-145939.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Leopard in tree",
+    "drawingDifficulty": "hard",
+    "drawingTips": [
+      "Draw a sleek, muscular body built for climbing and stealth hunting in trees.",
+      "Add distinctive rosette patterns (flower-shaped spots) across the golden coat, varying in size.",
+      "Show the powerful jaw, alert eyes, and long tail for balance when climbing."
+    ],
+    "bodyParts": [
+      "rosette spots",
+      "long tail",
+      "muscular body",
+      "powerful jaw",
+      "alert eyes"
+    ]
   },
   {
     "id": "mammal_018",
@@ -231,8 +451,21 @@
       "They have dark patches around their eyes that reduce glare from the sun.",
       "Meerkats are immune to certain types of venom, including scorpion stings."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1612024782955-49e8f2f4e14f?w=600&q=80&fm=webp",
-    "imageAlt": "Meerkat standing guard"
+    "imageUrl": "https://images.pexels.com/photos/389962/pexels-photo-389962.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Meerkat standing guard",
+    "drawingDifficulty": "easy",
+    "drawingTips": [
+      "Draw a small, slender body standing upright on hind legs in the characteristic sentinel pose.",
+      "Add dark eye patches and small rounded ears on an alert, pointed face.",
+      "Show the long, thin tail used for balance when standing and small clawed paws."
+    ],
+    "bodyParts": [
+      "upright posture",
+      "dark eye patches",
+      "long tail",
+      "small claws",
+      "pointed face"
+    ]
   },
   {
     "id": "mammal_019",
@@ -244,8 +477,21 @@
       "Males have venomous spurs on their hind legs.",
       "They use electroreception to detect prey underwater with their eyes closed."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=600&q=80&fm=webp",
-    "imageAlt": "Platypus swimming"
+    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Platypus",
+    "imageAlt": "Platypus swimming",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Start with a streamlined, otter-like body with dense brown fur and a flat beaver-like tail.",
+      "Draw the distinctive duck-like bill at the front, soft and leathery in texture.",
+      "Add webbed feet for swimming and show the low-slung body close to the ground."
+    ],
+    "bodyParts": [
+      "duck bill",
+      "beaver tail",
+      "webbed feet",
+      "brown fur",
+      "streamlined body"
+    ]
   },
   {
     "id": "mammal_020",
@@ -257,8 +503,21 @@
       "They can remember solutions to tasks for up to three years.",
       "Raccoons 'wash' their food to examine it better, not to clean it."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1497752531616-c3afd9760a11?w=600&q=80&fm=webp",
-    "imageAlt": "Raccoon"
+    "imageUrl": "https://images.pexels.com/photos/10767665/pexels-photo-10767665.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Raccoon",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw a stocky body with gray-brown fur and a distinctive bushy ringed tail.",
+      "Add the iconic black mask across the eyes and white fur around the face.",
+      "Show dexterous front paws with finger-like digits and alert, rounded ears."
+    ],
+    "bodyParts": [
+      "black mask",
+      "ringed tail",
+      "dexterous paws",
+      "rounded ears",
+      "gray fur"
+    ]
   },
   {
     "id": "bird_001",
@@ -270,8 +529,21 @@
       "They can dive at speeds up to 160 km/h when hunting.",
       "Eagles mate for life and return to the same nest each year."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1611689342806-0863700ce1e4?w=600&q=80&fm=webp",
-    "imageAlt": "Bald eagle in flight"
+    "imageUrl": "https://images.pexels.com/photos/3877512/pexels-photo-3877512.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Bald eagle in flight",
+    "drawingDifficulty": "hard",
+    "drawingTips": [
+      "Draw powerful, broad wings with distinct feather layers and primary flight feathers spread wide.",
+      "Add the distinctive white head and tail contrasting with dark brown body feathers.",
+      "Show the hooked yellow beak and fierce eyes, with strong talons for catching prey."
+    ],
+    "bodyParts": [
+      "white head",
+      "hooked beak",
+      "broad wings",
+      "sharp talons",
+      "white tail"
+    ]
   },
   {
     "id": "bird_002",
@@ -283,8 +555,21 @@
       "They can hold their breath for up to 22 minutes underwater.",
       "Penguins huddle together to stay warm in temperatures as low as -40°C."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1551986782-d0169b3f8fa7?w=600&q=80&fm=webp",
-    "imageAlt": "Emperor penguin"
+    "imageUrl": "https://images.pexels.com/photos/1823704/pexels-photo-1823704.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Emperor penguin",
+    "drawingDifficulty": "easy",
+    "drawingTips": [
+      "Start with an upright, torpedo-shaped body with a white belly and black back.",
+      "Add small flippers on the sides and short legs with webbed feet for waddling.",
+      "Draw the distinctive yellow-orange patches on the neck and cheeks with a pointed beak."
+    ],
+    "bodyParts": [
+      "flippers",
+      "white belly",
+      "yellow neck patches",
+      "webbed feet",
+      "pointed beak"
+    ]
   },
   {
     "id": "bird_003",
@@ -296,8 +581,21 @@
       "They are the only birds that can fly backwards and upside down.",
       "Their hearts beat up to 1,200 times per minute during flight."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1570041003321-f80686cd4965?w=600&q=80&fm=webp",
-    "imageAlt": "Ruby-throated hummingbird"
+    "imageUrl": "https://images.pexels.com/photos/4793432/pexels-photo-4793432.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Ruby-throated hummingbird",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw a tiny body with rapid-motion wings shown as blurred or figure-eight shapes.",
+      "Add a long, thin needle-like beak perfect for reaching into flowers for nectar.",
+      "Show iridescent throat feathers and delicate tail feathers spread for hovering balance."
+    ],
+    "bodyParts": [
+      "long thin beak",
+      "tiny body",
+      "iridescent throat",
+      "rapid wings",
+      "forked tail"
+    ]
   },
   {
     "id": "bird_004",
@@ -309,8 +607,21 @@
       "Their specialized feathers allow them to fly almost silently.",
       "Owls have three eyelids: one for blinking, one for sleeping, and one for keeping the eye clean."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1568393691622-c7ba131d63b4?w=600&q=80&fm=webp",
-    "imageAlt": "Great horned owl"
+    "imageUrl": "https://images.pexels.com/photos/106685/pexels-photo-106685.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Great horned owl",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw a round, fluffy body with large forward-facing eyes for that wise, alert expression.",
+      "Add prominent ear tufts (if applicable) and intricate feather patterns across the body.",
+      "Show sharp, curved talons and a hooked beak partially hidden by facial disc feathers."
+    ],
+    "bodyParts": [
+      "large eyes",
+      "ear tufts",
+      "facial disc",
+      "sharp talons",
+      "hooked beak"
+    ]
   },
   {
     "id": "bird_005",
@@ -322,8 +633,21 @@
       "The 'eyes' on their tail feathers are called ocelli.",
       "Only male peafowl are called peacocks; females are called peahens."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1568641389310-145d9b0b5b56?w=600&q=80&fm=webp",
-    "imageAlt": "Peacock displaying feathers"
+    "imageUrl": "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Peacock displaying feathers",
+    "drawingDifficulty": "hard",
+    "drawingTips": [
+      "Draw the magnificent tail fan with hundreds of elongated feathers displaying eye-spot patterns.",
+      "Add iridescent blue-green neck and body with intricate scale-like feather textures.",
+      "Show the ornate head crest with small feathers and the elegant, curved neck posture."
+    ],
+    "bodyParts": [
+      "tail fan",
+      "eye-spot feathers",
+      "head crest",
+      "iridescent neck",
+      "long train"
+    ]
   },
   {
     "id": "bird_006",
@@ -335,8 +659,21 @@
       "They can stand on one leg for hours without getting tired.",
       "Flamingos are born with gray feathers that turn pink as they mature."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80&fm=webp",
-    "imageAlt": "Greater flamingo"
+    "imageUrl": "https://images.pexels.com/photos/1327405/pexels-photo-1327405.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Greater flamingo",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw an extremely long, curved neck creating an elegant S-shape from body to head.",
+      "Add long, thin legs with backward-bending knees, often shown standing on one leg.",
+      "Show the distinctive downward-bent beak with black tip, perfect for filter feeding."
+    ],
+    "bodyParts": [
+      "long curved neck",
+      "bent beak",
+      "long legs",
+      "pink feathers",
+      "webbed feet"
+    ]
   },
   {
     "id": "bird_007",
@@ -348,8 +685,21 @@
       "They are one of the few animals that can mimic human speech.",
       "Parrots use their feet like hands to hold and examine objects."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=600&q=80&fm=webp",
-    "imageAlt": "Scarlet macaw"
+    "imageUrl": "https://images.pexels.com/photos/1059823/pexels-photo-1059823.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Scarlet macaw",
+    "drawingDifficulty": "hard",
+    "drawingTips": [
+      "Draw vibrant, layered feathers in bold colors like red, blue, yellow, and green.",
+      "Add a large, curved beak perfect for cracking nuts and a distinctive facial patch.",
+      "Show the zygodactyl feet (two toes forward, two back) gripping a perch or branch."
+    ],
+    "bodyParts": [
+      "curved beak",
+      "colorful feathers",
+      "long tail",
+      "zygodactyl feet",
+      "facial patch"
+    ]
   },
   {
     "id": "bird_008",
@@ -361,8 +711,21 @@
       "Despite its size, the bill is very light due to its hollow structure.",
       "Toucans use their bills to regulate body temperature."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1612024782955-49e8f2f4e14f?w=600&q=80&fm=webp",
-    "imageAlt": "Toco toucan"
+    "imageUrl": "https://images.pexels.com/photos/4468188/pexels-photo-4468188.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Toco toucan",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw the enormous, colorful bill that dominates the composition, often orange or yellow with markings.",
+      "Add a compact black body with white throat and bright blue eye ring for contrast.",
+      "Show the bill's lightweight appearance with subtle texture and the small head supporting it."
+    ],
+    "bodyParts": [
+      "large colorful bill",
+      "black body",
+      "white throat",
+      "blue eye ring",
+      "short wings"
+    ]
   },
   {
     "id": "bird_009",
@@ -374,8 +737,21 @@
       "They can fly for hours without flapping their wings.",
       "Albatrosses can live for over 50 years and mate for life."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80&fm=webp",
-    "imageAlt": "Wandering albatross"
+    "imageUrl": "https://images.pexels.com/photos/31307997/pexels-photo-31307997.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Wandering albatross",
+    "drawingDifficulty": "hard",
+    "drawingTips": [
+      "Draw extremely long, narrow wings stretched wide for dynamic soaring over ocean waves.",
+      "Add a streamlined body with white plumage and dark wing tips for contrast.",
+      "Show the large hooked beak and tube-like nostrils characteristic of seabirds."
+    ],
+    "bodyParts": [
+      "long narrow wings",
+      "hooked beak",
+      "streamlined body",
+      "webbed feet",
+      "tube nostrils"
+    ]
   },
   {
     "id": "bird_010",
@@ -387,465 +763,21 @@
       "They have excellent vision and can see prey underwater.",
       "Kingfishers beat their catch against branches to kill it before swallowing."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1568393691622-c7ba131d63b4?w=600&q=80&fm=webp",
-    "imageAlt": "Common kingfisher"
-  }
-,
-  {
-    "id": "reptile_001",
-    "commonName": "Komodo Dragon",
-    "scientificName": "Varanus komodoensis",
-    "category": "reptiles",
-    "facts": [
-      "Komodo dragons are the largest living lizards, growing up to 3 meters long.",
-      "They have venomous bites that prevent blood clotting in their prey.",
-      "Komodo dragons can eat up to 80% of their body weight in one meal."
+    "imageUrl": "https://images.pexels.com/photos/459449/pexels-photo-459449.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Common kingfisher",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw a compact, stocky body with brilliant blue and orange plumage creating striking contrast.",
+      "Add a long, dagger-like beak perfect for spearing fish with precision.",
+      "Show short legs and tail with the bird often perched alert, ready to dive."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1551135049-8a33b5883817?w=600&q=80&fm=webp",
-    "imageAlt": "Komodo dragon"
-  },
-  {
-    "id": "reptile_002",
-    "commonName": "Green Sea Turtle",
-    "scientificName": "Chelonia mydas",
-    "category": "reptiles",
-    "facts": [
-      "Green sea turtles can hold their breath for up to 5 hours while resting.",
-      "They can migrate over 2,600 km to reach nesting beaches.",
-      "Sea turtles have been around for over 100 million years."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80&fm=webp",
-    "imageAlt": "Green sea turtle swimming"
-  },
-  {
-    "id": "reptile_003",
-    "commonName": "Chameleon",
-    "scientificName": "Chamaeleo calyptratus",
-    "category": "reptiles",
-    "facts": [
-      "Chameleons can move their eyes independently to look in two directions at once.",
-      "Their tongues can extend to twice their body length in milliseconds.",
-      "They change color based on mood, temperature, and communication, not just camouflage."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1568641389310-145d9b0b5b56?w=600&q=80&fm=webp",
-    "imageAlt": "Veiled chameleon"
-  },
-  {
-    "id": "reptile_004",
-    "commonName": "King Cobra",
-    "scientificName": "Ophiophagus hannah",
-    "category": "reptiles",
-    "facts": [
-      "King cobras are the longest venomous snakes, reaching up to 5.5 meters.",
-      "They can 'stand up' and raise one-third of their body off the ground.",
-      "King cobras are the only snakes that build nests for their eggs."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1551986782-d0169b3f8fa7?w=600&q=80&fm=webp",
-    "imageAlt": "King cobra"
-  },
-  {
-    "id": "reptile_005",
-    "commonName": "Crocodile",
-    "scientificName": "Crocodylus niloticus",
-    "category": "reptiles",
-    "facts": [
-      "Crocodiles have the strongest bite force of any animal, up to 3,700 psi.",
-      "They can hold their breath underwater for up to 2 hours.",
-      "Crocodiles have been around for over 200 million years, surviving the dinosaurs."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1570041003321-f80686cd4965?w=600&q=80&fm=webp",
-    "imageAlt": "Nile crocodile"
-  },
-  {
-    "id": "reptile_006",
-    "commonName": "Iguana",
-    "scientificName": "Iguana iguana",
-    "category": "reptiles",
-    "facts": [
-      "Iguanas can detach their tails to escape predators and regrow them later.",
-      "They have a third eye on top of their head that detects light and movement.",
-      "Iguanas are excellent swimmers and can hold their breath for up to 30 minutes."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=600&q=80&fm=webp",
-    "imageAlt": "Green iguana"
-  },
-  {
-    "id": "reptile_007",
-    "commonName": "Gecko",
-    "scientificName": "Gekko gecko",
-    "category": "reptiles",
-    "facts": [
-      "Geckos can walk on walls and ceilings using millions of tiny hairs on their feet.",
-      "Most geckos don't have eyelids and lick their eyes to keep them clean.",
-      "They can detach their tails when threatened and regrow new ones."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1612024782955-49e8f2f4e14f?w=600&q=80&fm=webp",
-    "imageAlt": "Tokay gecko"
-  },
-  {
-    "id": "reptile_008",
-    "commonName": "Python",
-    "scientificName": "Python reticulatus",
-    "category": "reptiles",
-    "facts": [
-      "Reticulated pythons are the longest snakes in the world, reaching over 6 meters.",
-      "They can go months without eating after consuming a large meal.",
-      "Pythons have heat-sensing pits that help them detect warm-blooded prey."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80&fm=webp",
-    "imageAlt": "Reticulated python"
-  },
-  {
-    "id": "reptile_009",
-    "commonName": "Alligator",
-    "scientificName": "Alligator mississippiensis",
-    "category": "reptiles",
-    "facts": [
-      "Alligators can live for over 50 years in the wild.",
-      "They have 80 teeth that are constantly replaced throughout their lives.",
-      "Alligators can run at speeds up to 35 km/h on land for short distances."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1568393691622-c7ba131d63b4?w=600&q=80&fm=webp",
-    "imageAlt": "American alligator"
-  },
-  {
-    "id": "reptile_010",
-    "commonName": "Tortoise",
-    "scientificName": "Geochelone nigra",
-    "category": "reptiles",
-    "facts": [
-      "Galápagos tortoises can live for over 100 years.",
-      "They can go without food or water for up to a year.",
-      "Tortoises can weigh up to 400 kg, making them the largest tortoises on Earth."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1551135049-8a33b5883817?w=600&q=80&fm=webp",
-    "imageAlt": "Galápagos tortoise"
-  },
-  {
-    "id": "marine_001",
-    "commonName": "Great White Shark",
-    "scientificName": "Carcharodon carcharias",
-    "category": "marine",
-    "facts": [
-      "Great white sharks can detect a single drop of blood in 100 liters of water.",
-      "They can swim at speeds up to 56 km/h in short bursts.",
-      "Great whites can live for over 70 years."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1560275619-4662e36fa65c?w=600&q=80&fm=webp",
-    "imageAlt": "Great white shark"
-  },
-  {
-    "id": "marine_002",
-    "commonName": "Dolphin",
-    "scientificName": "Tursiops truncatus",
-    "category": "marine",
-    "facts": [
-      "Dolphins sleep with one half of their brain at a time.",
-      "They can recognize themselves in mirrors, showing self-awareness.",
-      "Dolphins use echolocation to navigate and hunt in murky water."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1570041003321-f80686cd4965?w=600&q=80&fm=webp",
-    "imageAlt": "Bottlenose dolphin"
-  },
-  {
-    "id": "marine_003",
-    "commonName": "Blue Whale",
-    "scientificName": "Balaenoptera musculus",
-    "category": "marine",
-    "facts": [
-      "Blue whales are the largest animals ever known to have lived on Earth.",
-      "Their hearts can weigh as much as a car and beat only 2 times per minute when diving.",
-      "A blue whale's tongue alone can weigh as much as an elephant."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80&fm=webp",
-    "imageAlt": "Blue whale"
-  },
-  {
-    "id": "marine_004",
-    "commonName": "Octopus",
-    "scientificName": "Octopus vulgaris",
-    "category": "marine",
-    "facts": [
-      "Octopuses have three hearts and blue blood.",
-      "They can change color and texture in milliseconds for camouflage.",
-      "Octopuses are highly intelligent and can solve complex puzzles."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1568641389310-145d9b0b5b56?w=600&q=80&fm=webp",
-    "imageAlt": "Common octopus"
-  },
-  {
-    "id": "marine_005",
-    "commonName": "Jellyfish",
-    "scientificName": "Aurelia aurita",
-    "category": "marine",
-    "facts": [
-      "Jellyfish have been around for over 500 million years.",
-      "They are 95% water and have no brain, heart, or bones.",
-      "Some jellyfish species are biologically immortal."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=600&q=80&fm=webp",
-    "imageAlt": "Moon jellyfish"
-  },
-  {
-    "id": "marine_006",
-    "commonName": "Seahorse",
-    "scientificName": "Hippocampus kuda",
-    "category": "marine",
-    "facts": [
-      "Male seahorses carry and give birth to the babies, not females.",
-      "They can move each eye independently to watch for predators and prey.",
-      "Seahorses mate for life and greet each other every morning with a dance."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1612024782955-49e8f2f4e14f?w=600&q=80&fm=webp",
-    "imageAlt": "Yellow seahorse"
-  },
-  {
-    "id": "marine_007",
-    "commonName": "Manta Ray",
-    "scientificName": "Manta birostris",
-    "category": "marine",
-    "facts": [
-      "Manta rays have the largest brain-to-body ratio of all fish.",
-      "They can grow up to 7 meters wide from fin tip to fin tip.",
-      "Manta rays are filter feeders and eat up to 30 kg of plankton per day."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80&fm=webp",
-    "imageAlt": "Giant manta ray"
-  },
-  {
-    "id": "marine_008",
-    "commonName": "Clownfish",
-    "scientificName": "Amphiprion ocellaris",
-    "category": "marine",
-    "facts": [
-      "Clownfish are immune to sea anemone stings and live among their tentacles.",
-      "All clownfish are born male, and some change to female when needed.",
-      "They form symbiotic relationships with sea anemones for protection."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1568393691622-c7ba131d63b4?w=600&q=80&fm=webp",
-    "imageAlt": "Clownfish in anemone"
-  },
-  {
-    "id": "marine_009",
-    "commonName": "Orca",
-    "scientificName": "Orcinus orca",
-    "category": "marine",
-    "facts": [
-      "Orcas are actually the largest members of the dolphin family.",
-      "They have complex social structures and unique dialects.",
-      "Orcas can swim at speeds up to 56 km/h."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1551135049-8a33b5883817?w=600&q=80&fm=webp",
-    "imageAlt": "Orca whale"
-  },
-  {
-    "id": "marine_010",
-    "commonName": "Starfish",
-    "scientificName": "Asterias rubens",
-    "category": "marine",
-    "facts": [
-      "Starfish can regenerate lost arms and even grow a new body from a severed arm.",
-      "They have no brain or blood, using filtered seawater instead.",
-      "Starfish can push their stomachs out of their mouths to digest food externally."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1570041003321-f80686cd4965?w=600&q=80&fm=webp",
-    "imageAlt": "Common starfish"
-  },
-  {
-    "id": "insect_001",
-    "commonName": "Monarch Butterfly",
-    "scientificName": "Danaus plexippus",
-    "category": "insects",
-    "facts": [
-      "Monarch butterflies migrate up to 4,800 km from Canada to Mexico each year.",
-      "They can taste with their feet to identify plants.",
-      "Monarchs are poisonous to predators due to toxins from milkweed plants."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80&fm=webp",
-    "imageAlt": "Monarch butterfly"
-  },
-  {
-    "id": "insect_002",
-    "commonName": "Honeybee",
-    "scientificName": "Apis mellifera",
-    "category": "insects",
-    "facts": [
-      "Honeybees can visit up to 5,000 flowers in a single day.",
-      "They communicate through a 'waggle dance' to share food locations.",
-      "A single bee produces only 1/12 of a teaspoon of honey in its lifetime."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1568641389310-145d9b0b5b56?w=600&q=80&fm=webp",
-    "imageAlt": "Honeybee on flower"
-  },
-  {
-    "id": "insect_003",
-    "commonName": "Ladybug",
-    "scientificName": "Coccinella septempunctata",
-    "category": "insects",
-    "facts": [
-      "Ladybugs can eat up to 5,000 aphids in their lifetime.",
-      "They secrete a foul-smelling liquid from their legs to deter predators.",
-      "Ladybugs can live for up to 3 years."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=600&q=80&fm=webp",
-    "imageAlt": "Seven-spotted ladybug"
-  },
-  {
-    "id": "insect_004",
-    "commonName": "Dragonfly",
-    "scientificName": "Anax junius",
-    "category": "insects",
-    "facts": [
-      "Dragonflies can fly in any direction, including backwards and sideways.",
-      "They have nearly 360-degree vision with 30,000 lenses in their compound eyes.",
-      "Dragonflies can catch prey with a 95% success rate, the highest of any predator."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1612024782955-49e8f2f4e14f?w=600&q=80&fm=webp",
-    "imageAlt": "Common green darner dragonfly"
-  },
-  {
-    "id": "insect_005",
-    "commonName": "Ant",
-    "scientificName": "Formica rufa",
-    "category": "insects",
-    "facts": [
-      "Ants can lift objects 50 times their own body weight.",
-      "They communicate using chemical signals called pheromones.",
-      "Some ant colonies can have over 20 million individuals."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80&fm=webp",
-    "imageAlt": "Red wood ant"
-  },
-  {
-    "id": "insect_006",
-    "commonName": "Praying Mantis",
-    "scientificName": "Mantis religiosa",
-    "category": "insects",
-    "facts": [
-      "Praying mantises can turn their heads 180 degrees.",
-      "They are the only insects that have stereo vision.",
-      "Female mantises sometimes eat the male after mating."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1568393691622-c7ba131d63b4?w=600&q=80&fm=webp",
-    "imageAlt": "European mantis"
-  },
-  {
-    "id": "insect_007",
-    "commonName": "Firefly",
-    "scientificName": "Photinus pyralis",
-    "category": "insects",
-    "facts": [
-      "Fireflies produce light through a chemical reaction called bioluminescence.",
-      "Their light is the most efficient light in the world, with nearly 100% energy conversion.",
-      "Different species have unique flash patterns to attract mates."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1551135049-8a33b5883817?w=600&q=80&fm=webp",
-    "imageAlt": "Common eastern firefly"
-  },
-  {
-    "id": "insect_008",
-    "commonName": "Grasshopper",
-    "scientificName": "Schistocerca gregaria",
-    "category": "insects",
-    "facts": [
-      "Grasshoppers can jump 20 times their body length.",
-      "They 'hear' through organs on their abdomen, not their heads.",
-      "Some grasshopper species can form devastating locust swarms."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1570041003321-f80686cd4965?w=600&q=80&fm=webp",
-    "imageAlt": "Desert locust"
-  },
-  {
-    "id": "insect_009",
-    "commonName": "Beetle",
-    "scientificName": "Dynastes hercules",
-    "category": "insects",
-    "facts": [
-      "Beetles make up 25% of all known animal species on Earth.",
-      "Hercules beetles can lift 850 times their own weight.",
-      "Some beetles can survive being frozen solid and thaw out alive."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80&fm=webp",
-    "imageAlt": "Hercules beetle"
-  },
-  {
-    "id": "insect_010",
-    "commonName": "Mosquito",
-    "scientificName": "Anopheles gambiae",
-    "category": "insects",
-    "facts": [
-      "Only female mosquitoes bite; males feed on nectar.",
-      "Mosquitoes can detect carbon dioxide from up to 50 meters away.",
-      "They are considered the deadliest animals to humans due to disease transmission."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1568641389310-145d9b0b5b56?w=600&q=80&fm=webp",
-    "imageAlt": "Anopheles mosquito"
-  }
-,
-  {
-    "id": "mammal_021",
-    "commonName": "Chimpanzee",
-    "scientificName": "Pan troglodytes",
-    "category": "mammals",
-    "facts": [
-      "Chimpanzees share 98.8% of their DNA with humans.",
-      "They use over 60 different gestures to communicate.",
-      "Chimps can make and use tools, showing advanced problem-solving skills."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?w=600&q=80&fm=webp",
-    "imageAlt": "Chimpanzee"
-  },
-  {
-    "id": "mammal_022",
-    "commonName": "Lynx",
-    "scientificName": "Lynx lynx",
-    "category": "mammals",
-    "facts": [
-      "Lynx have exceptional hearing and can detect prey under snow.",
-      "Their large paws act like snowshoes in deep snow.",
-      "Lynx are solitary hunters and excellent climbers."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1551135049-8a33b5883817?w=600&q=80&fm=webp",
-    "imageAlt": "Eurasian lynx"
-  },
-  {
-    "id": "mammal_023",
-    "commonName": "Otter",
-    "scientificName": "Lutra lutra",
-    "category": "mammals",
-    "facts": [
-      "Otters have the densest fur of any mammal with up to 1 million hairs per square inch.",
-      "They use rocks as tools to crack open shellfish.",
-      "Otters hold hands while sleeping to avoid drifting apart."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1570041003321-f80686cd4965?w=600&q=80&fm=webp",
-    "imageAlt": "European otter"
-  },
-  {
-    "id": "mammal_024",
-    "commonName": "Bison",
-    "scientificName": "Bison bison",
-    "category": "mammals",
-    "facts": [
-      "Bison can run at speeds up to 56 km/h despite weighing up to 900 kg.",
-      "They can jump vertically up to 1.8 meters.",
-      "Bison are North America's largest land mammals."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80&fm=webp",
-    "imageAlt": "American bison"
-  },
-  {
-    "id": "mammal_025",
-    "commonName": "Moose",
-    "scientificName": "Alces alces",
-    "category": "mammals",
-    "facts": [
-      "Moose are the largest members of the deer family.",
-      "They can dive up to 6 meters underwater to feed on aquatic plants.",
-      "Male moose antlers can span up to 1.8 meters wide."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1568641389310-145d9b0b5b56?w=600&q=80&fm=webp",
-    "imageAlt": "Moose"
+    "bodyParts": [
+      "long dagger beak",
+      "blue plumage",
+      "orange breast",
+      "short tail",
+      "small feet"
+    ]
   },
   {
     "id": "bird_011",
@@ -857,8 +789,21 @@
       "They can mimic human speech and other sounds.",
       "Ravens mate for life and can live for over 20 years."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=600&q=80&fm=webp",
-    "imageAlt": "Common raven"
+    "imageUrl": "https://images.pexels.com/photos/59850/crow-corvus-frugilegus-rook-raven-bird-59850.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Common raven",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw a large, all-black bird with glossy feathers showing subtle iridescent sheen.",
+      "Add a thick, powerful beak and shaggy throat feathers creating a distinctive ruff.",
+      "Show intelligent eyes and wedge-shaped tail visible in flight or perched posture."
+    ],
+    "bodyParts": [
+      "thick beak",
+      "shaggy throat",
+      "glossy black feathers",
+      "wedge tail",
+      "strong feet"
+    ]
   },
   {
     "id": "bird_012",
@@ -870,8 +815,21 @@
       "Their skulls have special shock absorbers to protect their brains.",
       "They have barbed tongues to extract insects from tree bark."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1612024782955-49e8f2f4e14f?w=600&q=80&fm=webp",
-    "imageAlt": "Pileated woodpecker"
+    "imageUrl": "https://images.pexels.com/photos/4621165/pexels-photo-4621165.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Pileated woodpecker",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw a vertical clinging posture on a tree trunk with stiff tail feathers for support.",
+      "Add a distinctive red crest on the head and bold black-and-white striped pattern.",
+      "Show the strong, chisel-like beak and zygodactyl feet gripping the bark firmly."
+    ],
+    "bodyParts": [
+      "red crest",
+      "chisel beak",
+      "striped pattern",
+      "stiff tail",
+      "clinging feet"
+    ]
   },
   {
     "id": "bird_013",
@@ -883,8 +841,21 @@
       "They have over 25,000 feathers on their bodies.",
       "Swans can fly at speeds up to 95 km/h."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80&fm=webp",
-    "imageAlt": "Mute swan"
+    "imageUrl": "https://images.pexels.com/photos/7372338/pexels-photo-7372338.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Mute swan",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw an elegant, long curved neck creating a graceful S-shape, signature of swans.",
+      "Add pure white plumage with subtle feather texture and a large, rounded body.",
+      "Show the orange bill with black knob (in mute swans) and webbed feet for swimming."
+    ],
+    "bodyParts": [
+      "long curved neck",
+      "white plumage",
+      "orange bill",
+      "large body",
+      "webbed feet"
+    ]
   },
   {
     "id": "bird_014",
@@ -896,8 +867,21 @@
       "They dive from heights up to 20 meters to catch fish.",
       "Pelicans can live for over 25 years in the wild."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1568393691622-c7ba131d63b4?w=600&q=80&fm=webp",
-    "imageAlt": "Brown pelican"
+    "imageUrl": "https://images.pexels.com/photos/61157/pelicans-pelican-water-bird-australian-pelican-61157.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Brown pelican",
+    "drawingDifficulty": "hard",
+    "drawingTips": [
+      "Draw the massive bill with expandable throat pouch, the pelican's most distinctive feature.",
+      "Add a large, heavy body with broad wings and short legs with webbed feet.",
+      "Show the long neck that can fold back and the pouch hanging below the bill."
+    ],
+    "bodyParts": [
+      "large bill",
+      "throat pouch",
+      "broad wings",
+      "webbed feet",
+      "long neck"
+    ]
   },
   {
     "id": "bird_015",
@@ -909,243 +893,21 @@
       "They can live for over 60 years.",
       "Cranes migrate thousands of kilometers each year."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1551135049-8a33b5883817?w=600&q=80&fm=webp",
-    "imageAlt": "Red-crowned crane"
-  },
-  {
-    "id": "reptile_011",
-    "commonName": "Anaconda",
-    "scientificName": "Eunectes murinus",
-    "category": "reptiles",
-    "facts": [
-      "Green anacondas are the heaviest snakes in the world, weighing up to 250 kg.",
-      "They can hold their breath underwater for up to 10 minutes.",
-      "Anacondas give birth to live young rather than laying eggs."
+    "imageUrl": "https://images.pexels.com/photos/45853/grey-crowned-crane-bird-crane-animal-45853.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Red-crowned crane",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw a tall, elegant bird with long legs and neck, often shown in dancing pose.",
+      "Add white plumage with black wing tips and distinctive red crown patch on the head.",
+      "Show the long, pointed beak and graceful posture with wings sometimes spread in display."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1570041003321-f80686cd4965?w=600&q=80&fm=webp",
-    "imageAlt": "Green anaconda"
-  },
-  {
-    "id": "reptile_012",
-    "commonName": "Bearded Dragon",
-    "scientificName": "Pogona vitticeps",
-    "category": "reptiles",
-    "facts": [
-      "Bearded dragons can change color based on temperature and mood.",
-      "They wave their arms to communicate with other dragons.",
-      "Bearded dragons can live for 10-15 years in captivity."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80&fm=webp",
-    "imageAlt": "Central bearded dragon"
-  },
-  {
-    "id": "reptile_013",
-    "commonName": "Monitor Lizard",
-    "scientificName": "Varanus salvator",
-    "category": "reptiles",
-    "facts": [
-      "Monitor lizards are highly intelligent and can count up to six.",
-      "They have forked tongues like snakes to smell their environment.",
-      "Some species can grow over 2 meters long."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1568641389310-145d9b0b5b56?w=600&q=80&fm=webp",
-    "imageAlt": "Water monitor lizard"
-  },
-  {
-    "id": "reptile_014",
-    "commonName": "Rattlesnake",
-    "scientificName": "Crotalus atrox",
-    "category": "reptiles",
-    "facts": [
-      "Rattlesnakes add a new segment to their rattle each time they shed their skin.",
-      "They can sense heat from prey using special pit organs.",
-      "Rattlesnakes can strike at speeds up to 2.4 meters per second."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=600&q=80&fm=webp",
-    "imageAlt": "Western diamondback rattlesnake"
-  },
-  {
-    "id": "reptile_015",
-    "commonName": "Frilled Lizard",
-    "scientificName": "Chlamydosaurus kingii",
-    "category": "reptiles",
-    "facts": [
-      "Frilled lizards can run on their hind legs when threatened.",
-      "Their neck frill can expand to make them appear larger.",
-      "They spend most of their time in trees."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1612024782955-49e8f2f4e14f?w=600&q=80&fm=webp",
-    "imageAlt": "Frilled lizard"
-  },
-  {
-    "id": "marine_011",
-    "commonName": "Sea Otter",
-    "scientificName": "Enhydra lutris",
-    "category": "marine",
-    "facts": [
-      "Sea otters use tools, placing rocks on their chests to crack open shellfish.",
-      "They have the densest fur of any animal.",
-      "Sea otters eat 25% of their body weight in food each day."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80&fm=webp",
-    "imageAlt": "Sea otter"
-  },
-  {
-    "id": "marine_012",
-    "commonName": "Hammerhead Shark",
-    "scientificName": "Sphyrna mokarran",
-    "category": "marine",
-    "facts": [
-      "Hammerhead sharks have 360-degree vision in the vertical plane.",
-      "Their unique head shape helps them detect electrical signals from prey.",
-      "They can grow up to 6 meters in length."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1568393691622-c7ba131d63b4?w=600&q=80&fm=webp",
-    "imageAlt": "Great hammerhead shark"
-  },
-  {
-    "id": "marine_013",
-    "commonName": "Pufferfish",
-    "scientificName": "Tetraodontidae",
-    "category": "marine",
-    "facts": [
-      "Pufferfish can inflate to several times their normal size when threatened.",
-      "They contain tetrodotoxin, one of the most poisonous substances in nature.",
-      "Some species create intricate circular patterns in sand to attract mates."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1551135049-8a33b5883817?w=600&q=80&fm=webp",
-    "imageAlt": "Pufferfish"
-  },
-  {
-    "id": "marine_014",
-    "commonName": "Manatee",
-    "scientificName": "Trichechus manatus",
-    "category": "marine",
-    "facts": [
-      "Manatees are also known as sea cows and are herbivores.",
-      "They can eat up to 10% of their body weight in vegetation daily.",
-      "Manatees can hold their breath for up to 20 minutes."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1570041003321-f80686cd4965?w=600&q=80&fm=webp",
-    "imageAlt": "West Indian manatee"
-  },
-  {
-    "id": "marine_015",
-    "commonName": "Nautilus",
-    "scientificName": "Nautilus pompilius",
-    "category": "marine",
-    "facts": [
-      "Nautiluses have existed for over 500 million years, predating dinosaurs.",
-      "They have up to 90 tentacles without suckers.",
-      "Nautiluses can live for over 20 years."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80&fm=webp",
-    "imageAlt": "Chambered nautilus"
-  },
-  {
-    "id": "insect_011",
-    "commonName": "Tarantula",
-    "scientificName": "Theraphosidae",
-    "category": "insects",
-    "facts": [
-      "Tarantulas can live for over 30 years in captivity.",
-      "They can regenerate lost legs during molting.",
-      "Despite their fearsome appearance, most tarantulas are harmless to humans."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1568641389310-145d9b0b5b56?w=600&q=80&fm=webp",
-    "imageAlt": "Mexican redknee tarantula"
-  },
-  {
-    "id": "insect_012",
-    "commonName": "Scorpion",
-    "scientificName": "Pandinus imperator",
-    "category": "insects",
-    "facts": [
-      "Scorpions glow under ultraviolet light.",
-      "They can survive for a year without food.",
-      "Scorpions have existed for over 400 million years."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=600&q=80&fm=webp",
-    "imageAlt": "Emperor scorpion"
-  },
-  {
-    "id": "insect_013",
-    "commonName": "Stick Insect",
-    "scientificName": "Phasmatodea",
-    "category": "insects",
-    "facts": [
-      "Stick insects are masters of camouflage, resembling twigs and branches.",
-      "Some species can regenerate lost limbs.",
-      "The longest stick insect recorded was over 60 cm long."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1612024782955-49e8f2f4e14f?w=600&q=80&fm=webp",
-    "imageAlt": "Giant stick insect"
-  },
-  {
-    "id": "insect_014",
-    "commonName": "Cicada",
-    "scientificName": "Magicicada septendecim",
-    "category": "insects",
-    "facts": [
-      "Some cicadas spend 17 years underground before emerging.",
-      "They are among the loudest insects, reaching 120 decibels.",
-      "Cicadas emerge in massive synchronized swarms."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80&fm=webp",
-    "imageAlt": "Periodical cicada"
-  },
-  {
-    "id": "insect_015",
-    "commonName": "Atlas Moth",
-    "scientificName": "Attacus atlas",
-    "category": "insects",
-    "facts": [
-      "Atlas moths are among the largest moths with wingspans up to 30 cm.",
-      "Adults don't have functional mouths and live only 1-2 weeks.",
-      "Their wing tips resemble snake heads to deter predators."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1568393691622-c7ba131d63b4?w=600&q=80&fm=webp",
-    "imageAlt": "Atlas moth"
-  }
-,
-  {
-    "id": "mammal_026",
-    "commonName": "Armadillo",
-    "scientificName": "Dasypus novemcinctus",
-    "category": "mammals",
-    "facts": [
-      "Armadillos can hold their breath for up to 6 minutes.",
-      "They always give birth to identical quadruplets.",
-      "Armadillos can jump 1 meter straight up when startled."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1551135049-8a33b5883817?w=600&q=80&fm=webp",
-    "imageAlt": "Nine-banded armadillo"
-  },
-  {
-    "id": "mammal_027",
-    "commonName": "Hedgehog",
-    "scientificName": "Erinaceus europaeus",
-    "category": "mammals",
-    "facts": [
-      "Hedgehogs have about 5,000-7,000 spines on their backs.",
-      "They can run up to 6 km/h.",
-      "Hedgehogs are immune to many snake venoms."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1570041003321-f80686cd4965?w=600&q=80&fm=webp",
-    "imageAlt": "European hedgehog"
-  },
-  {
-    "id": "mammal_028",
-    "commonName": "Capybara",
-    "scientificName": "Hydrochoerus hydrochaeris",
-    "category": "mammals",
-    "facts": [
-      "Capybaras are the world's largest rodents, weighing up to 65 kg.",
-      "They are highly social and live in groups of 10-20 individuals.",
-      "Capybaras can stay underwater for up to 5 minutes."
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80&fm=webp",
-    "imageAlt": "Capybara"
+    "bodyParts": [
+      "long legs",
+      "red crown",
+      "long neck",
+      "white plumage",
+      "black wing tips"
+    ]
   },
   {
     "id": "bird_016",
@@ -1157,8 +919,21 @@
       "They lay eggs that are 20% of their body weight.",
       "Kiwis have nostrils at the end of their beaks, unique among birds."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1568641389310-145d9b0b5b56?w=600&q=80&fm=webp",
-    "imageAlt": "North Island brown kiwi"
+    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Kiwi",
+    "imageAlt": "North Island brown kiwi",
+    "drawingDifficulty": "easy",
+    "drawingTips": [
+      "Draw a round, fuzzy body covered in hair-like feathers with no visible wings.",
+      "Add a long, thin beak with nostrils at the tip for probing the ground.",
+      "Show short, sturdy legs and a small head with tiny eyes, giving a cute appearance."
+    ],
+    "bodyParts": [
+      "fuzzy body",
+      "long thin beak",
+      "short legs",
+      "hair-like feathers",
+      "small head"
+    ]
   },
   {
     "id": "bird_017",
@@ -1170,8 +945,21 @@
       "They can flap their wings up to 400 times per minute.",
       "Puffins mate for life and return to the same burrow each year."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=600&q=80&fm=webp",
-    "imageAlt": "Atlantic puffin"
+    "imageUrl": "https://images.pexels.com/photos/1661536/pexels-photo-1661536.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Atlantic puffin",
+    "drawingDifficulty": "easy",
+    "drawingTips": [
+      "Draw a compact, penguin-like body with black back and white belly for contrast.",
+      "Add the distinctive large, colorful triangular beak with orange, yellow, and red stripes.",
+      "Show bright orange webbed feet and white face with black eye markings."
+    ],
+    "bodyParts": [
+      "colorful beak",
+      "white face",
+      "orange feet",
+      "black back",
+      "compact body"
+    ]
   },
   {
     "id": "bird_018",
@@ -1183,8 +971,411 @@
       "They can run at speeds up to 70 km/h.",
       "Ostrich eggs are the largest of any bird, weighing up to 1.4 kg."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1612024782955-49e8f2f4e14f?w=600&q=80&fm=webp",
-    "imageAlt": "Common ostrich"
+    "imageUrl": "https://images.pexels.com/photos/3551227/pexels-photo-3551227.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Common ostrich",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw extremely long, powerful legs with two-toed feet built for running at high speeds.",
+      "Add a long, flexible neck and small head with large eyes and flat beak.",
+      "Show fluffy black and white plumage on the body with bare legs and neck."
+    ],
+    "bodyParts": [
+      "long legs",
+      "long neck",
+      "small head",
+      "fluffy plumage",
+      "two-toed feet"
+    ]
+  },
+  {
+    "id": "reptile_001",
+    "commonName": "Komodo Dragon",
+    "scientificName": "Varanus komodoensis",
+    "category": "reptiles",
+    "facts": [
+      "Komodo dragons are the largest living lizards, growing up to 3 meters long.",
+      "They have venomous bites that prevent blood clotting in their prey.",
+      "Komodo dragons can eat up to 80% of their body weight in one meal."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/2664272/pexels-photo-2664272.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Komodo dragon",
+    "drawingDifficulty": "hard",
+    "drawingTips": [
+      "Draw a massive, muscular lizard body with thick legs and powerful claws for hunting.",
+      "Add rough, bumpy scales across the body and a long, thick tail for balance.",
+      "Show the large head with forked tongue and alert eyes, conveying predatory power."
+    ],
+    "bodyParts": [
+      "thick tail",
+      "powerful claws",
+      "forked tongue",
+      "bumpy scales",
+      "muscular body"
+    ]
+  },
+  {
+    "id": "reptile_002",
+    "commonName": "Green Sea Turtle",
+    "scientificName": "Chelonia mydas",
+    "category": "reptiles",
+    "facts": [
+      "Green sea turtles can hold their breath for up to 5 hours while resting.",
+      "They can migrate over 2,600 km to reach nesting beaches.",
+      "Sea turtles have been around for over 100 million years."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/847393/pexels-photo-847393.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Green sea turtle swimming",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw a streamlined shell with overlapping scutes in a pattern, perfect for swimming.",
+      "Add large front flippers for propulsion and smaller back flippers for steering.",
+      "Show the gentle face with beak-like mouth and large eyes, capturing peaceful expression."
+    ],
+    "bodyParts": [
+      "patterned shell",
+      "front flippers",
+      "beak mouth",
+      "back flippers",
+      "streamlined body"
+    ]
+  },
+  {
+    "id": "reptile_003",
+    "commonName": "Chameleon",
+    "scientificName": "Chamaeleo calyptratus",
+    "category": "reptiles",
+    "facts": [
+      "Chameleons can move their eyes independently to look in two directions at once.",
+      "Their tongues can extend to twice their body length in milliseconds.",
+      "They change color based on mood, temperature, and communication, not just camouflage."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/45868/chameleon-reptile-lizard-green-45868.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Veiled chameleon",
+    "drawingDifficulty": "hard",
+    "drawingTips": [
+      "Draw the distinctive casque (head crest) and independently moving bulging eyes on turrets.",
+      "Add textured, bumpy skin with color patterns and a long, curled prehensile tail.",
+      "Show the grasping feet with fused toes and the body in a climbing position."
+    ],
+    "bodyParts": [
+      "head casque",
+      "bulging eyes",
+      "curled tail",
+      "grasping feet",
+      "textured skin"
+    ]
+  },
+  {
+    "id": "reptile_004",
+    "commonName": "King Cobra",
+    "scientificName": "Ophiophagus hannah",
+    "category": "reptiles",
+    "facts": [
+      "King cobras are the longest venomous snakes, reaching up to 5.5 meters.",
+      "They can 'stand up' and raise one-third of their body off the ground.",
+      "King cobras are the only snakes that build nests for their eggs."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/7256324/pexels-photo-7256324.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "King cobra",
+    "drawingDifficulty": "hard",
+    "drawingTips": [
+      "Draw the raised hood spread wide when threatened, showing distinctive markings and scales.",
+      "Add a long, sinuous body with smooth scales and subtle banding patterns.",
+      "Show the alert head with fixed gaze and forked tongue, conveying danger and elegance."
+    ],
+    "bodyParts": [
+      "spread hood",
+      "long body",
+      "forked tongue",
+      "smooth scales",
+      "alert head"
+    ]
+  },
+  {
+    "id": "reptile_005",
+    "commonName": "Crocodile",
+    "scientificName": "Crocodylus niloticus",
+    "category": "reptiles",
+    "facts": [
+      "Crocodiles have the strongest bite force of any animal, up to 3,700 psi.",
+      "They can hold their breath underwater for up to 2 hours.",
+      "Crocodiles have been around for over 200 million years, surviving the dinosaurs."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/31591512/pexels-photo-31591512.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Nile crocodile",
+    "drawingDifficulty": "hard",
+    "drawingTips": [
+      "Draw a long, armored body with rows of bony scutes along the back and tail.",
+      "Add a powerful jaw with visible teeth even when closed and eyes on top of the head.",
+      "Show short, muscular legs with webbed feet and the long, powerful tail for swimming."
+    ],
+    "bodyParts": [
+      "armored back",
+      "powerful jaw",
+      "long tail",
+      "webbed feet",
+      "bony scutes"
+    ]
+  },
+  {
+    "id": "reptile_006",
+    "commonName": "Iguana",
+    "scientificName": "Iguana iguana",
+    "category": "reptiles",
+    "facts": [
+      "Iguanas can detach their tails to escape predators and regrow them later.",
+      "They have a third eye on top of their head that detects light and movement.",
+      "Iguanas are excellent swimmers and can hold their breath for up to 30 minutes."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/927497/pexels-photo-927497.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Green iguana",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw a spiny crest running from head to tail along the back and neck.",
+      "Add a large dewlap (throat fan) under the chin and scaly, textured skin.",
+      "Show long toes with sharp claws for climbing and a long, whip-like tail."
+    ],
+    "bodyParts": [
+      "spiny crest",
+      "dewlap",
+      "long tail",
+      "sharp claws",
+      "scaly skin"
+    ]
+  },
+  {
+    "id": "reptile_007",
+    "commonName": "Gecko",
+    "scientificName": "Gekko gecko",
+    "category": "reptiles",
+    "facts": [
+      "Geckos can walk on walls and ceilings using millions of tiny hairs on their feet.",
+      "Most geckos don't have eyelids and lick their eyes to keep them clean.",
+      "They can detach their tails when threatened and regrow new ones."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/5475191/pexels-photo-5475191.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Tokay gecko",
+    "drawingDifficulty": "easy",
+    "drawingTips": [
+      "Draw a small, slender body with large eyes and no visible eyelids for that alert look.",
+      "Add distinctive toe pads with visible lamellae for wall-climbing ability.",
+      "Show spotted or striped patterns on smooth skin and a regenerated tail if desired."
+    ],
+    "bodyParts": [
+      "large eyes",
+      "toe pads",
+      "slender body",
+      "spotted pattern",
+      "long tail"
+    ]
+  },
+  {
+    "id": "reptile_008",
+    "commonName": "Python",
+    "scientificName": "Python reticulatus",
+    "category": "reptiles",
+    "facts": [
+      "Reticulated pythons are the longest snakes in the world, reaching over 6 meters.",
+      "They can go months without eating after consuming a large meal.",
+      "Pythons have heat-sensing pits that help them detect warm-blooded prey."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/1394938/pexels-photo-1394938.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Reticulated python",
+    "drawingDifficulty": "hard",
+    "drawingTips": [
+      "Draw a thick, muscular body coiled or stretched, showing the python's impressive length and girth.",
+      "Add intricate diamond or reticulated patterns across the scales with rich colors and detail.",
+      "Show the triangular head with heat-sensing pits and the body's powerful constricting muscles."
+    ],
+    "bodyParts": [
+      "coiled body",
+      "patterned scales",
+      "triangular head",
+      "thick muscles",
+      "heat pits"
+    ]
+  },
+  {
+    "id": "reptile_009",
+    "commonName": "Alligator",
+    "scientificName": "Alligator mississippiensis",
+    "category": "reptiles",
+    "facts": [
+      "Alligators can live for over 50 years in the wild.",
+      "They have 80 teeth that are constantly replaced throughout their lives.",
+      "Alligators can run at speeds up to 35 km/h on land for short distances."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/326116/pexels-photo-326116.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "American alligator",
+    "drawingDifficulty": "hard",
+    "drawingTips": [
+      "Draw a broad, rounded snout (wider than crocodile) with powerful jaws and visible teeth.",
+      "Add armored skin with osteoderms (bony plates) creating a textured, prehistoric appearance.",
+      "Show short legs with webbed feet and a muscular tail for swimming and defense."
+    ],
+    "bodyParts": [
+      "broad snout",
+      "armored skin",
+      "powerful tail",
+      "webbed feet",
+      "bony plates"
+    ]
+  },
+  {
+    "id": "reptile_010",
+    "commonName": "Tortoise",
+    "scientificName": "Geochelone nigra",
+    "category": "reptiles",
+    "facts": [
+      "Galápagos tortoises can live for over 100 years.",
+      "They can go without food or water for up to a year.",
+      "Tortoises can weigh up to 400 kg, making them the largest tortoises on Earth."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/1201431/pexels-photo-1201431.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Galápagos tortoise",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw a large, domed shell with growth rings and scutes creating a geometric pattern.",
+      "Add thick, elephantine legs with scaly skin and sturdy claws for walking.",
+      "Show the wrinkled neck and wise-looking face with a gentle expression and beak-like mouth."
+    ],
+    "bodyParts": [
+      "domed shell",
+      "thick legs",
+      "wrinkled neck",
+      "beak mouth",
+      "scaly skin"
+    ]
+  },
+  {
+    "id": "reptile_011",
+    "commonName": "Anaconda",
+    "scientificName": "Eunectes murinus",
+    "category": "reptiles",
+    "facts": [
+      "Green anacondas are the heaviest snakes in the world, weighing up to 250 kg.",
+      "They can hold their breath underwater for up to 10 minutes.",
+      "Anacondas give birth to live young rather than laying eggs."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/751691/pexels-photo-751691.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Green anaconda",
+    "drawingDifficulty": "hard",
+    "drawingTips": [
+      "Draw an extremely thick, heavy body showing the anaconda's massive girth and weight.",
+      "Add olive-green coloring with dark oval spots along the back and sides.",
+      "Show the body partially submerged in water with eyes and nostrils on top of the head."
+    ],
+    "bodyParts": [
+      "thick body",
+      "spotted pattern",
+      "eyes on top",
+      "muscular coils",
+      "olive scales"
+    ]
+  },
+  {
+    "id": "reptile_012",
+    "commonName": "Bearded Dragon",
+    "scientificName": "Pogona vitticeps",
+    "category": "reptiles",
+    "facts": [
+      "Bearded dragons can change color based on temperature and mood.",
+      "They wave their arms to communicate with other dragons.",
+      "Bearded dragons can live for 10-15 years in captivity."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/6002806/pexels-photo-6002806.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Central bearded dragon",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw the distinctive spiky beard under the chin that puffs out when threatened or displaying.",
+      "Add rows of spiny scales along the sides and a triangular head with alert eyes.",
+      "Show the stocky body with strong legs and a long tail, often in a basking pose."
+    ],
+    "bodyParts": [
+      "spiky beard",
+      "triangular head",
+      "spiny scales",
+      "strong legs",
+      "long tail"
+    ]
+  },
+  {
+    "id": "reptile_013",
+    "commonName": "Monitor Lizard",
+    "scientificName": "Varanus salvator",
+    "category": "reptiles",
+    "facts": [
+      "Monitor lizards are highly intelligent and can count up to six.",
+      "They have forked tongues like snakes to smell their environment.",
+      "Some species can grow over 2 meters long."
+    ],
+    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Monitor%20Lizard",
+    "imageAlt": "Water monitor lizard",
+    "drawingDifficulty": "hard",
+    "drawingTips": [
+      "Draw a long, muscular body with powerful limbs and sharp claws for climbing and digging.",
+      "Add a long, forked tongue and alert expression showing intelligence and awareness.",
+      "Show the long, whip-like tail and patterned scales across the body."
+    ],
+    "bodyParts": [
+      "forked tongue",
+      "powerful limbs",
+      "long tail",
+      "sharp claws",
+      "patterned scales"
+    ]
+  },
+  {
+    "id": "reptile_014",
+    "commonName": "Rattlesnake",
+    "scientificName": "Crotalus atrox",
+    "category": "reptiles",
+    "facts": [
+      "Rattlesnakes add a new segment to their rattle each time they shed their skin.",
+      "They can sense heat from prey using special pit organs.",
+      "Rattlesnakes can strike at speeds up to 2.4 meters per second."
+    ],
+    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Rattlesnake",
+    "imageAlt": "Western diamondback rattlesnake",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw the distinctive rattle at the tail tip with segmented, interlocking pieces.",
+      "Add diamond-shaped patterns along the back with contrasting colors and borders.",
+      "Show the triangular head with heat-sensing pits and the coiled, ready-to-strike posture."
+    ],
+    "bodyParts": [
+      "segmented rattle",
+      "diamond patterns",
+      "triangular head",
+      "heat pits",
+      "coiled body"
+    ]
+  },
+  {
+    "id": "reptile_015",
+    "commonName": "Frilled Lizard",
+    "scientificName": "Chlamydosaurus kingii",
+    "category": "reptiles",
+    "facts": [
+      "Frilled lizards can run on their hind legs when threatened.",
+      "Their neck frill can expand to make them appear larger.",
+      "They spend most of their time in trees."
+    ],
+    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Frilled%20Lizard",
+    "imageAlt": "Frilled lizard",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw the spectacular neck frill spread wide like an umbrella when displaying or threatened.",
+      "Add a slender body with long legs and tail, often shown in bipedal running pose.",
+      "Show the open mouth and colorful frill with radiating cartilage supports creating the fan shape."
+    ],
+    "bodyParts": [
+      "neck frill",
+      "long legs",
+      "slender body",
+      "long tail",
+      "open mouth"
+    ]
   },
   {
     "id": "reptile_016",
@@ -1196,8 +1387,21 @@
       "They can live for over 20 years in captivity.",
       "These lizards give birth to live young rather than laying eggs."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80&fm=webp",
-    "imageAlt": "Eastern blue-tongued skink"
+    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Blue-tongued%20Skink",
+    "imageAlt": "Eastern blue-tongued skink",
+    "drawingDifficulty": "easy",
+    "drawingTips": [
+      "Draw a stocky, sausage-shaped body with short legs and smooth, shiny scales.",
+      "Add the distinctive bright blue tongue sticking out from the mouth as a warning display.",
+      "Show banded patterns across the body and a short, thick tail."
+    ],
+    "bodyParts": [
+      "blue tongue",
+      "stocky body",
+      "short legs",
+      "banded pattern",
+      "smooth scales"
+    ]
   },
   {
     "id": "reptile_017",
@@ -1209,8 +1413,411 @@
       "They can eat up to one-third of their body weight in one meal.",
       "Gila monsters can go months without eating."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1568393691622-c7ba131d63b4?w=600&q=80&fm=webp",
-    "imageAlt": "Gila monster"
+    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Gila%20Monster",
+    "imageAlt": "Gila monster",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw a heavy, thick body with beaded scales creating a bumpy, textured appearance.",
+      "Add bold black and orange or pink banded patterns across the body and tail.",
+      "Show short, sturdy legs with clawed feet and a thick tail for fat storage."
+    ],
+    "bodyParts": [
+      "beaded scales",
+      "banded pattern",
+      "thick body",
+      "short legs",
+      "fat tail"
+    ]
+  },
+  {
+    "id": "marine_001",
+    "commonName": "Great White Shark",
+    "scientificName": "Carcharodon carcharias",
+    "category": "marine",
+    "facts": [
+      "Great white sharks can detect a single drop of blood in 100 liters of water.",
+      "They can swim at speeds up to 56 km/h in short bursts.",
+      "Great whites can live for over 70 years."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/11179780/pexels-photo-11179780.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Great white shark",
+    "drawingDifficulty": "hard",
+    "drawingTips": [
+      "Draw a torpedo-shaped body with powerful tail fin and distinctive dorsal fin on top.",
+      "Add rows of sharp, triangular teeth visible in the open mouth and gill slits on sides.",
+      "Show the counter-shading with dark gray top and white belly, plus black eyes."
+    ],
+    "bodyParts": [
+      "dorsal fin",
+      "sharp teeth",
+      "torpedo body",
+      "tail fin",
+      "gill slits"
+    ]
+  },
+  {
+    "id": "marine_002",
+    "commonName": "Dolphin",
+    "scientificName": "Tursiops truncatus",
+    "category": "marine",
+    "facts": [
+      "Dolphins sleep with one half of their brain at a time.",
+      "They can recognize themselves in mirrors, showing self-awareness.",
+      "Dolphins use echolocation to navigate and hunt in murky water."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/225869/pexels-photo-225869.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Bottlenose dolphin",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw a streamlined, curved body with a prominent dorsal fin and smiling beak-like snout.",
+      "Add smooth, sleek skin with light gray coloring and a lighter belly for contrast.",
+      "Show the intelligent eyes and playful expression, often depicted jumping or swimming gracefully."
+    ],
+    "bodyParts": [
+      "dorsal fin",
+      "beak snout",
+      "streamlined body",
+      "tail flukes",
+      "pectoral fins"
+    ]
+  },
+  {
+    "id": "marine_003",
+    "commonName": "Blue Whale",
+    "scientificName": "Balaenoptera musculus",
+    "category": "marine",
+    "facts": [
+      "Blue whales are the largest animals ever known to have lived on Earth.",
+      "Their hearts can weigh as much as a car and beat only 2 times per minute when diving.",
+      "A blue whale's tongue alone can weigh as much as an elephant."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/831084/pexels-photo-831084.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Blue whale",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw an enormous, elongated body with a small dorsal fin far back on the body.",
+      "Add throat grooves (pleats) running from chin to belly for expanding while feeding.",
+      "Show the massive tail flukes and tiny eye relative to body size, emphasizing scale."
+    ],
+    "bodyParts": [
+      "throat grooves",
+      "small dorsal fin",
+      "massive body",
+      "tail flukes",
+      "tiny eye"
+    ]
+  },
+  {
+    "id": "marine_004",
+    "commonName": "Octopus",
+    "scientificName": "Octopus vulgaris",
+    "category": "marine",
+    "facts": [
+      "Octopuses have three hearts and blue blood.",
+      "They can change color and texture in milliseconds for camouflage.",
+      "Octopuses are highly intelligent and can solve complex puzzles."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/2902860/pexels-photo-2902860.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Common octopus",
+    "drawingDifficulty": "hard",
+    "drawingTips": [
+      "Draw a bulbous head (mantle) with large, expressive eyes showing intelligence and awareness.",
+      "Add eight flexible arms with two rows of suction cups on each, flowing in different directions.",
+      "Show the soft, boneless body that can squeeze through tight spaces and change texture."
+    ],
+    "bodyParts": [
+      "bulbous head",
+      "eight arms",
+      "suction cups",
+      "large eyes",
+      "flexible body"
+    ]
+  },
+  {
+    "id": "marine_005",
+    "commonName": "Jellyfish",
+    "scientificName": "Aurelia aurita",
+    "category": "marine",
+    "facts": [
+      "Jellyfish have been around for over 500 million years.",
+      "They are 95% water and have no brain, heart, or bones.",
+      "Some jellyfish species are biologically immortal."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/2166916/pexels-photo-2166916.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Moon jellyfish",
+    "drawingDifficulty": "easy",
+    "drawingTips": [
+      "Draw a translucent, umbrella-shaped bell with flowing, graceful movement through water.",
+      "Add long, trailing tentacles hanging below the bell, varying in length and thickness.",
+      "Show the simple, ethereal quality with visible internal structures like gonads creating patterns."
+    ],
+    "bodyParts": [
+      "bell dome",
+      "trailing tentacles",
+      "oral arms",
+      "translucent body",
+      "internal organs"
+    ]
+  },
+  {
+    "id": "marine_006",
+    "commonName": "Seahorse",
+    "scientificName": "Hippocampus kuda",
+    "category": "marine",
+    "facts": [
+      "Male seahorses carry and give birth to the babies, not females.",
+      "They can move each eye independently to watch for predators and prey.",
+      "Seahorses mate for life and greet each other every morning with a dance."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/23459294/pexels-photo-23459294.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Yellow seahorse",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw the distinctive horse-like head with elongated snout and crown-like coronet on top.",
+      "Add a curved, upright body with segmented armor plating and a prehensile curled tail.",
+      "Show tiny fins on the back and sides, with the tail wrapped around coral or seaweed."
+    ],
+    "bodyParts": [
+      "horse head",
+      "coronet",
+      "curled tail",
+      "armor plating",
+      "tiny fins"
+    ]
+  },
+  {
+    "id": "marine_007",
+    "commonName": "Manta Ray",
+    "scientificName": "Manta birostris",
+    "category": "marine",
+    "facts": [
+      "Manta rays have the largest brain-to-body ratio of all fish.",
+      "They can grow up to 7 meters wide from fin tip to fin tip.",
+      "Manta rays are filter feeders and eat up to 30 kg of plankton per day."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/27402085/pexels-photo-27402085.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Giant manta ray",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw massive, wing-like pectoral fins creating a diamond or triangular shape when viewed from above.",
+      "Add cephalic fins (horn-like projections) near the mouth for directing plankton while feeding.",
+      "Show the flat body with distinctive patterns on top and white belly underneath."
+    ],
+    "bodyParts": [
+      "wing-like fins",
+      "cephalic horns",
+      "flat body",
+      "long tail",
+      "wide mouth"
+    ]
+  },
+  {
+    "id": "marine_008",
+    "commonName": "Clownfish",
+    "scientificName": "Amphiprion ocellaris",
+    "category": "marine",
+    "facts": [
+      "Clownfish are immune to sea anemone stings and live among their tentacles.",
+      "All clownfish are born male, and some change to female when needed.",
+      "They form symbiotic relationships with sea anemones for protection."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/6023997/pexels-photo-6023997.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Clownfish in anemone",
+    "drawingDifficulty": "easy",
+    "drawingTips": [
+      "Draw a small, rounded body with bright orange coloring and distinctive white bands with black borders.",
+      "Add rounded fins and a gentle, friendly expression with large eyes.",
+      "Show the fish nestled among anemone tentacles for context and habitat."
+    ],
+    "bodyParts": [
+      "white bands",
+      "rounded body",
+      "orange coloring",
+      "rounded fins",
+      "black borders"
+    ]
+  },
+  {
+    "id": "marine_009",
+    "commonName": "Orca",
+    "scientificName": "Orcinus orca",
+    "category": "marine",
+    "facts": [
+      "Orcas are actually the largest members of the dolphin family.",
+      "They have complex social structures and unique dialects.",
+      "Orcas can swim at speeds up to 56 km/h."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/3695720/pexels-photo-3695720.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Orca whale",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw a powerful, streamlined body with distinctive black and white coloring pattern.",
+      "Add a tall dorsal fin (especially on males) and white eye patch above and behind the eye.",
+      "Show the rounded head with white chin patch and powerful tail flukes for swimming."
+    ],
+    "bodyParts": [
+      "tall dorsal fin",
+      "white eye patch",
+      "black body",
+      "white belly",
+      "powerful flukes"
+    ]
+  },
+  {
+    "id": "marine_010",
+    "commonName": "Starfish",
+    "scientificName": "Asterias rubens",
+    "category": "marine",
+    "facts": [
+      "Starfish can regenerate lost arms and even grow a new body from a severed arm.",
+      "They have no brain or blood, using filtered seawater instead.",
+      "Starfish can push their stomachs out of their mouths to digest food externally."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/9613659/pexels-photo-9613659.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Common starfish",
+    "drawingDifficulty": "easy",
+    "drawingTips": [
+      "Draw five arms radiating from a central disc in a symmetrical star pattern.",
+      "Add textured skin with bumps, spines, or tubercles across the surface.",
+      "Show tube feet on the underside of arms and vary arm thickness from base to tip."
+    ],
+    "bodyParts": [
+      "five arms",
+      "central disc",
+      "tube feet",
+      "textured skin",
+      "arm tips"
+    ]
+  },
+  {
+    "id": "marine_011",
+    "commonName": "Sea Otter",
+    "scientificName": "Enhydra lutris",
+    "category": "marine",
+    "facts": [
+      "Sea otters use tools, placing rocks on their chests to crack open shellfish.",
+      "They have the densest fur of any animal.",
+      "Sea otters eat 25% of their body weight in food each day."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/1661541/pexels-photo-1661541.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Sea otter",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw a streamlined body with thick, fluffy fur and a flat tail for swimming.",
+      "Add small rounded ears, whiskers, and a cute face with intelligent eyes.",
+      "Show the otter floating on its back with paws holding food or a rock on its chest."
+    ],
+    "bodyParts": [
+      "thick fur",
+      "flat tail",
+      "small ears",
+      "dexterous paws",
+      "whiskers"
+    ]
+  },
+  {
+    "id": "marine_012",
+    "commonName": "Hammerhead Shark",
+    "scientificName": "Sphyrna mokarran",
+    "category": "marine",
+    "facts": [
+      "Hammerhead sharks have 360-degree vision in the vertical plane.",
+      "Their unique head shape helps them detect electrical signals from prey.",
+      "They can grow up to 6 meters in length."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/4781942/pexels-photo-4781942.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Great hammerhead shark",
+    "drawingDifficulty": "hard",
+    "drawingTips": [
+      "Draw the distinctive T-shaped or hammer-shaped head (cephalofoil) with eyes on the ends.",
+      "Add a streamlined shark body with dorsal fin, pectoral fins, and powerful tail.",
+      "Show the wide-set eyes and nostrils on the hammer, emphasizing the unique head structure."
+    ],
+    "bodyParts": [
+      "hammer head",
+      "wide-set eyes",
+      "dorsal fin",
+      "streamlined body",
+      "tail fin"
+    ]
+  },
+  {
+    "id": "marine_013",
+    "commonName": "Pufferfish",
+    "scientificName": "Tetraodontidae",
+    "category": "marine",
+    "facts": [
+      "Pufferfish can inflate to several times their normal size when threatened.",
+      "They contain tetrodotoxin, one of the most poisonous substances in nature.",
+      "Some species create intricate circular patterns in sand to attract mates."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/3990830/pexels-photo-3990830.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Pufferfish",
+    "drawingDifficulty": "easy",
+    "drawingTips": [
+      "Draw a round, inflated body covered with spines sticking out in all directions when puffed.",
+      "Add large eyes and a small beak-like mouth with a surprised or defensive expression.",
+      "Show the transformation from normal fish shape to spherical balloon shape with spines extended."
+    ],
+    "bodyParts": [
+      "inflated body",
+      "protective spines",
+      "beak mouth",
+      "large eyes",
+      "round shape"
+    ]
+  },
+  {
+    "id": "marine_014",
+    "commonName": "Manatee",
+    "scientificName": "Trichechus manatus",
+    "category": "marine",
+    "facts": [
+      "Manatees are also known as sea cows and are herbivores.",
+      "They can eat up to 10% of their body weight in vegetation daily.",
+      "Manatees can hold their breath for up to 20 minutes."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/10962931/pexels-photo-10962931.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "West Indian manatee",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw a large, round body with wrinkled gray skin and a gentle, peaceful appearance.",
+      "Add paddle-like flippers and a flat, rounded tail for slow, graceful swimming.",
+      "Show the whiskered snout and small eyes, conveying the manatee's docile, herbivorous nature."
+    ],
+    "bodyParts": [
+      "round body",
+      "paddle flippers",
+      "flat tail",
+      "whiskered snout",
+      "wrinkled skin"
+    ]
+  },
+  {
+    "id": "marine_015",
+    "commonName": "Nautilus",
+    "scientificName": "Nautilus pompilius",
+    "category": "marine",
+    "facts": [
+      "Nautiluses have existed for over 500 million years, predating dinosaurs.",
+      "They have up to 90 tentacles without suckers.",
+      "Nautiluses can live for over 20 years."
+    ],
+    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Nautilus",
+    "imageAlt": "Chambered nautilus",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw the beautiful spiral shell with distinctive striped pattern of orange-brown and white chambers.",
+      "Add multiple tentacles emerging from the shell opening without suction cups.",
+      "Show the chambered interior structure visible through the shell's cross-section if desired."
+    ],
+    "bodyParts": [
+      "spiral shell",
+      "striped pattern",
+      "multiple tentacles",
+      "chambered interior",
+      "shell opening"
+    ]
   },
   {
     "id": "marine_016",
@@ -1222,8 +1829,21 @@
       "They can weigh up to 1,700 kg.",
       "Walruses use their tusks to haul themselves onto ice."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1551135049-8a33b5883817?w=600&q=80&fm=webp",
-    "imageAlt": "Atlantic walrus"
+    "imageUrl": "https://images.pexels.com/photos/3164498/pexels-photo-3164498.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Atlantic walrus",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw a massive, blubbery body with wrinkled brown skin and prominent white tusks.",
+      "Add thick whiskers around the muzzle and small eyes on a large, rounded head.",
+      "Show flippers for swimming and the tusks used for hauling out onto ice."
+    ],
+    "bodyParts": [
+      "long tusks",
+      "thick whiskers",
+      "blubbery body",
+      "wrinkled skin",
+      "flippers"
+    ]
   },
   {
     "id": "marine_017",
@@ -1235,8 +1855,21 @@
       "They are invasive species in many parts of the world.",
       "Lionfish can eat prey up to half their own size."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1570041003321-f80686cd4965?w=600&q=80&fm=webp",
-    "imageAlt": "Red lionfish"
+    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Lionfish",
+    "imageAlt": "Red lionfish",
+    "drawingDifficulty": "hard",
+    "drawingTips": [
+      "Draw elaborate, fan-like pectoral fins and long, separated dorsal spines creating a dramatic display.",
+      "Add bold red, white, and brown striped patterns across the body and fins.",
+      "Show the venomous spines radiating outward and the ornate, flowing fin rays."
+    ],
+    "bodyParts": [
+      "fan-like fins",
+      "venomous spines",
+      "striped pattern",
+      "flowing rays",
+      "elaborate display"
+    ]
   },
   {
     "id": "marine_018",
@@ -1248,8 +1881,619 @@
       "They have W-shaped pupils and can see polarized light.",
       "Cuttlefish have three hearts and blue-green blood."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80&fm=webp",
-    "imageAlt": "Common cuttlefish"
+    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Cuttlefish",
+    "imageAlt": "Common cuttlefish",
+    "drawingDifficulty": "hard",
+    "drawingTips": [
+      "Draw an oval body with undulating fins running along the sides for graceful movement.",
+      "Add eight arms and two longer tentacles with suckers, plus distinctive W-shaped pupils.",
+      "Show the ability to change color and texture with patterns across the skin."
+    ],
+    "bodyParts": [
+      "oval body",
+      "undulating fins",
+      "eight arms",
+      "two tentacles",
+      "W-shaped pupils"
+    ]
+  },
+  {
+    "id": "insect_001",
+    "commonName": "Monarch Butterfly",
+    "scientificName": "Danaus plexippus",
+    "category": "insects",
+    "facts": [
+      "Monarch butterflies migrate up to 4,800 km from Canada to Mexico each year.",
+      "They can taste with their feet to identify plants.",
+      "Monarchs are poisonous to predators due to toxins from milkweed plants."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/2629027/pexels-photo-2629027.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Monarch butterfly",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw four wings with distinctive orange and black pattern with white spots along edges.",
+      "Add delicate wing veins creating a stained-glass effect and symmetrical patterns.",
+      "Show the slender body with antennae and legs, often depicted on a flower."
+    ],
+    "bodyParts": [
+      "orange wings",
+      "black veins",
+      "white spots",
+      "slender body",
+      "antennae"
+    ]
+  },
+  {
+    "id": "insect_002",
+    "commonName": "Honeybee",
+    "scientificName": "Apis mellifera",
+    "category": "insects",
+    "facts": [
+      "Honeybees can visit up to 5,000 flowers in a single day.",
+      "They communicate through a 'waggle dance' to share food locations.",
+      "A single bee produces only 1/12 of a teaspoon of honey in its lifetime."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/3070870/pexels-photo-3070870.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Honeybee on flower",
+    "drawingDifficulty": "easy",
+    "drawingTips": [
+      "Draw a fuzzy, rounded body with yellow and black stripes and transparent wings.",
+      "Add large compound eyes, antennae, and six legs with pollen baskets on hind legs.",
+      "Show the bee in flight or on a flower collecting nectar and pollen."
+    ],
+    "bodyParts": [
+      "striped body",
+      "transparent wings",
+      "compound eyes",
+      "pollen baskets",
+      "fuzzy texture"
+    ]
+  },
+  {
+    "id": "insect_003",
+    "commonName": "Ladybug",
+    "scientificName": "Coccinella septempunctata",
+    "category": "insects",
+    "facts": [
+      "Ladybugs can eat up to 5,000 aphids in their lifetime.",
+      "They secrete a foul-smelling liquid from their legs to deter predators.",
+      "Ladybugs can live for up to 3 years."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/32288295/pexels-photo-32288295.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Seven-spotted ladybug",
+    "drawingDifficulty": "easy",
+    "drawingTips": [
+      "Draw a small, dome-shaped body with bright red or orange wing covers and black spots.",
+      "Add a black head with white markings and six small legs underneath.",
+      "Show the shiny, smooth texture and symmetrical spot pattern on the wing covers."
+    ],
+    "bodyParts": [
+      "dome shell",
+      "black spots",
+      "red wing covers",
+      "small head",
+      "six legs"
+    ]
+  },
+  {
+    "id": "insect_004",
+    "commonName": "Dragonfly",
+    "scientificName": "Anax junius",
+    "category": "insects",
+    "facts": [
+      "Dragonflies can fly in any direction, including backwards and sideways.",
+      "They have nearly 360-degree vision with 30,000 lenses in their compound eyes.",
+      "Dragonflies can catch prey with a 95% success rate, the highest of any predator."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/762941/pexels-photo-762941.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Common green darner dragonfly",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw four long, transparent wings with intricate vein patterns extending from the body.",
+      "Add a long, slender segmented abdomen and large compound eyes on a small head.",
+      "Show the wings spread wide in flight or at rest, emphasizing their delicate structure."
+    ],
+    "bodyParts": [
+      "transparent wings",
+      "long abdomen",
+      "compound eyes",
+      "wing veins",
+      "slender body"
+    ]
+  },
+  {
+    "id": "insect_005",
+    "commonName": "Ant",
+    "scientificName": "Formica rufa",
+    "category": "insects",
+    "facts": [
+      "Ants can lift objects 50 times their own body weight.",
+      "They communicate using chemical signals called pheromones.",
+      "Some ant colonies can have over 20 million individuals."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/12404843/pexels-photo-12404843.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Red wood ant",
+    "drawingDifficulty": "easy",
+    "drawingTips": [
+      "Draw three distinct body segments: head, thorax, and abdomen connected by narrow waists.",
+      "Add six legs attached to the thorax and bent antennae on the head.",
+      "Show the small size and industrious posture, often carrying objects or in a line."
+    ],
+    "bodyParts": [
+      "segmented body",
+      "six legs",
+      "bent antennae",
+      "narrow waist",
+      "small head"
+    ]
+  },
+  {
+    "id": "insect_006",
+    "commonName": "Praying Mantis",
+    "scientificName": "Mantis religiosa",
+    "category": "insects",
+    "facts": [
+      "Praying mantises can turn their heads 180 degrees.",
+      "They are the only insects that have stereo vision.",
+      "Female mantises sometimes eat the male after mating."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/1085542/pexels-photo-1085542.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "European mantis",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw the distinctive folded front legs held in a praying position with spines for catching prey.",
+      "Add a triangular head with large compound eyes and a long, slender body.",
+      "Show the alert, upright posture and leaf-like wings folded along the back."
+    ],
+    "bodyParts": [
+      "folded front legs",
+      "triangular head",
+      "large eyes",
+      "slender body",
+      "leaf wings"
+    ]
+  },
+  {
+    "id": "insect_007",
+    "commonName": "Firefly",
+    "scientificName": "Photinus pyralis",
+    "category": "insects",
+    "facts": [
+      "Fireflies produce light through a chemical reaction called bioluminescence.",
+      "Their light is the most efficient light in the world, with nearly 100% energy conversion.",
+      "Different species have unique flash patterns to attract mates."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/17961741/pexels-photo-17961741.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Common eastern firefly",
+    "drawingDifficulty": "easy",
+    "drawingTips": [
+      "Draw a small beetle body with soft wing covers and a glowing abdomen producing light.",
+      "Add antennae and six legs with the characteristic bioluminescent glow at the tail end.",
+      "Show the firefly in flight with wings visible and the magical glowing effect."
+    ],
+    "bodyParts": [
+      "glowing abdomen",
+      "soft wings",
+      "beetle body",
+      "antennae",
+      "light organ"
+    ]
+  },
+  {
+    "id": "insect_008",
+    "commonName": "Grasshopper",
+    "scientificName": "Schistocerca gregaria",
+    "category": "insects",
+    "facts": [
+      "Grasshoppers can jump 20 times their body length.",
+      "They 'hear' through organs on their abdomen, not their heads.",
+      "Some grasshopper species can form devastating locust swarms."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/17853677/pexels-photo-17853677.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Desert locust",
+    "drawingDifficulty": "easy",
+    "drawingTips": [
+      "Draw powerful hind legs bent and ready for jumping, much larger than front legs.",
+      "Add long antennae, large compound eyes, and folded wings along the back.",
+      "Show the elongated body in a side view, emphasizing the jumping posture."
+    ],
+    "bodyParts": [
+      "powerful hind legs",
+      "long antennae",
+      "folded wings",
+      "compound eyes",
+      "elongated body"
+    ]
+  },
+  {
+    "id": "insect_009",
+    "commonName": "Beetle",
+    "scientificName": "Dynastes hercules",
+    "category": "insects",
+    "facts": [
+      "Beetles make up 25% of all known animal species on Earth.",
+      "Hercules beetles can lift 850 times their own weight.",
+      "Some beetles can survive being frozen solid and thaw out alive."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/53988/stag-beetle-great-stag-beetle-lucanus-cervus-beetle-53988.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Hercules beetle",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw hard wing covers (elytra) meeting in a straight line down the back.",
+      "Add prominent horns or pincers on males, especially in rhinoceros and stag beetles.",
+      "Show the compact, armored body with six legs and antennae, emphasizing strength."
+    ],
+    "bodyParts": [
+      "hard wing covers",
+      "prominent horns",
+      "armored body",
+      "six legs",
+      "antennae"
+    ]
+  },
+  {
+    "id": "insect_010",
+    "commonName": "Mosquito",
+    "scientificName": "Anopheles gambiae",
+    "category": "insects",
+    "facts": [
+      "Only female mosquitoes bite; males feed on nectar.",
+      "Mosquitoes can detect carbon dioxide from up to 50 meters away.",
+      "They are considered the deadliest animals to humans due to disease transmission."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/86722/tiger-mosquito-mosquito-asian-tigermucke-sting-86722.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Anopheles mosquito",
+    "drawingDifficulty": "easy",
+    "drawingTips": [
+      "Draw a tiny, delicate body with long, thin legs and a long proboscis for piercing skin.",
+      "Add narrow wings with scales and a slender abdomen, often shown in profile.",
+      "Show the characteristic hunched posture when landing to feed on blood."
+    ],
+    "bodyParts": [
+      "long proboscis",
+      "thin legs",
+      "narrow wings",
+      "slender abdomen",
+      "small body"
+    ]
+  },
+  {
+    "id": "mammal_021",
+    "commonName": "Chimpanzee",
+    "scientificName": "Pan troglodytes",
+    "category": "mammals",
+    "facts": [
+      "Chimpanzees share 98.8% of their DNA with humans.",
+      "They use over 60 different gestures to communicate.",
+      "Chimps can make and use tools, showing advanced problem-solving skills."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/50582/chimpanzee-monkey-animal-portrait-50582.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Chimpanzee",
+    "drawingDifficulty": "hard",
+    "drawingTips": [
+      "Draw a muscular body with long arms and expressive, human-like hands and face.",
+      "Add prominent ears, expressive eyes, and facial features showing intelligence and emotion.",
+      "Show the dark fur and powerful build, often in a knuckle-walking or sitting posture."
+    ],
+    "bodyParts": [
+      "long arms",
+      "expressive face",
+      "prominent ears",
+      "dark fur",
+      "dexterous hands"
+    ]
+  },
+  {
+    "id": "mammal_022",
+    "commonName": "Lynx",
+    "scientificName": "Lynx lynx",
+    "category": "mammals",
+    "facts": [
+      "Lynx have exceptional hearing and can detect prey under snow.",
+      "Their large paws act like snowshoes in deep snow.",
+      "Lynx are solitary hunters and excellent climbers."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/792381/pexels-photo-792381.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Eurasian lynx",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw a medium-sized cat with distinctive ear tufts and a short, bobbed tail.",
+      "Add thick, spotted fur and large paws with fur between the toes for snow walking.",
+      "Show the alert expression with tufted ears and facial ruff creating a wild appearance."
+    ],
+    "bodyParts": [
+      "ear tufts",
+      "short tail",
+      "large paws",
+      "spotted fur",
+      "facial ruff"
+    ]
+  },
+  {
+    "id": "mammal_023",
+    "commonName": "Otter",
+    "scientificName": "Lutra lutra",
+    "category": "mammals",
+    "facts": [
+      "Otters have the densest fur of any mammal with up to 1 million hairs per square inch.",
+      "They use rocks as tools to crack open shellfish.",
+      "Otters hold hands while sleeping to avoid drifting apart."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/11870769/pexels-photo-11870769.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "European otter",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw a streamlined, playful body with thick fur and a long, tapered tail for swimming.",
+      "Add small rounded ears, whiskers, and webbed feet perfect for aquatic life.",
+      "Show the otter in a playful pose, often floating or holding food with its paws."
+    ],
+    "bodyParts": [
+      "thick fur",
+      "long tail",
+      "webbed feet",
+      "small ears",
+      "whiskers"
+    ]
+  },
+  {
+    "id": "mammal_024",
+    "commonName": "Bison",
+    "scientificName": "Bison bison",
+    "category": "mammals",
+    "facts": [
+      "Bison can run at speeds up to 56 km/h despite weighing up to 900 kg.",
+      "They can jump vertically up to 1.8 meters.",
+      "Bison are North America's largest land mammals."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/158251/bison-animal-wildlife-nature-158251.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "American bison",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw a massive, humped shoulder and thick neck with shaggy fur on the front half.",
+      "Add curved horns, a bearded chin, and powerful legs supporting the enormous weight.",
+      "Show the contrast between the woolly front and smoother hindquarters."
+    ],
+    "bodyParts": [
+      "humped shoulder",
+      "shaggy fur",
+      "curved horns",
+      "bearded chin",
+      "powerful legs"
+    ]
+  },
+  {
+    "id": "mammal_025",
+    "commonName": "Moose",
+    "scientificName": "Alces alces",
+    "category": "mammals",
+    "facts": [
+      "Moose are the largest members of the deer family.",
+      "They can dive up to 6 meters underwater to feed on aquatic plants.",
+      "Male moose antlers can span up to 1.8 meters wide."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Moose",
+    "drawingDifficulty": "hard",
+    "drawingTips": [
+      "Draw massive, palmate antlers (on males) spreading wide like open hands with multiple points.",
+      "Add a long face with overhanging upper lip and a dewlap hanging from the throat.",
+      "Show the humped shoulders, long legs, and dark brown fur creating an imposing silhouette."
+    ],
+    "bodyParts": [
+      "palmate antlers",
+      "long face",
+      "dewlap",
+      "humped shoulders",
+      "long legs"
+    ]
+  },
+  {
+    "id": "mammal_026",
+    "commonName": "Armadillo",
+    "scientificName": "Dasypus novemcinctus",
+    "category": "mammals",
+    "facts": [
+      "Armadillos can hold their breath for up to 6 minutes.",
+      "They always give birth to identical quadruplets.",
+      "Armadillos can jump 1 meter straight up when startled."
+    ],
+    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Armadillo",
+    "imageAlt": "Nine-banded armadillo",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw the distinctive armored shell with banded plates covering the back and sides.",
+      "Add a pointed snout, small eyes, and large ears with a low-slung body.",
+      "Show the strong claws for digging and the segmented, flexible armor allowing movement."
+    ],
+    "bodyParts": [
+      "armored shell",
+      "banded plates",
+      "pointed snout",
+      "strong claws",
+      "large ears"
+    ]
+  },
+  {
+    "id": "mammal_027",
+    "commonName": "Hedgehog",
+    "scientificName": "Erinaceus europaeus",
+    "category": "mammals",
+    "facts": [
+      "Hedgehogs have about 5,000-7,000 spines on their backs.",
+      "They can run up to 6 km/h.",
+      "Hedgehogs are immune to many snake venoms."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/50577/hedgehog-animal-baby-cute-50577.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "European hedgehog",
+    "drawingDifficulty": "easy",
+    "drawingTips": [
+      "Draw a small, round body covered with short spines pointing in all directions.",
+      "Add a pointed snout, small eyes, and tiny ears peeking out from the spines.",
+      "Show the hedgehog curled into a defensive ball or walking with visible feet and face."
+    ],
+    "bodyParts": [
+      "spiny back",
+      "pointed snout",
+      "small eyes",
+      "tiny ears",
+      "round body"
+    ]
+  },
+  {
+    "id": "mammal_028",
+    "commonName": "Capybara",
+    "scientificName": "Hydrochoerus hydrochaeris",
+    "category": "mammals",
+    "facts": [
+      "Capybaras are the world's largest rodents, weighing up to 65 kg.",
+      "They are highly social and live in groups of 10-20 individuals.",
+      "Capybaras can stay underwater for up to 5 minutes."
+    ],
+    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Capybara",
+    "imageAlt": "Capybara",
+    "drawingDifficulty": "easy",
+    "drawingTips": [
+      "Draw a large, barrel-shaped body with short legs and a blunt, square head.",
+      "Add small ears, eyes on top of the head, and webbed feet for swimming.",
+      "Show the calm, friendly expression and reddish-brown fur with a relaxed posture."
+    ],
+    "bodyParts": [
+      "barrel body",
+      "square head",
+      "small ears",
+      "webbed feet",
+      "short legs"
+    ]
+  },
+  {
+    "id": "insect_011",
+    "commonName": "Tarantula",
+    "scientificName": "Theraphosidae",
+    "category": "insects",
+    "facts": [
+      "Tarantulas can live for over 30 years in captivity.",
+      "They can regenerate lost legs during molting.",
+      "Despite their fearsome appearance, most tarantulas are harmless to humans."
+    ],
+    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Tarantula",
+    "imageAlt": "Mexican redknee tarantula",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw a large, hairy body with eight thick legs covered in dense fur or setae.",
+      "Add prominent fangs (chelicerae) and multiple eyes arranged on the front of the head.",
+      "Show the intimidating size and texture with detailed hair patterns and leg segments."
+    ],
+    "bodyParts": [
+      "hairy legs",
+      "large fangs",
+      "multiple eyes",
+      "fuzzy body",
+      "leg segments"
+    ]
+  },
+  {
+    "id": "insect_012",
+    "commonName": "Scorpion",
+    "scientificName": "Pandinus imperator",
+    "category": "insects",
+    "facts": [
+      "Scorpions glow under ultraviolet light.",
+      "They can survive for a year without food.",
+      "Scorpions have existed for over 400 million years."
+    ],
+    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Scorpion",
+    "imageAlt": "Emperor scorpion",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw large pincers (pedipalps) at the front and a segmented tail curving over the back.",
+      "Add eight legs, a flat body, and the venomous stinger at the tail tip.",
+      "Show the armored exoskeleton with textured segments and an aggressive, defensive posture."
+    ],
+    "bodyParts": [
+      "large pincers",
+      "curved tail",
+      "venomous stinger",
+      "eight legs",
+      "segmented body"
+    ]
+  },
+  {
+    "id": "insect_013",
+    "commonName": "Stick Insect",
+    "scientificName": "Phasmatodea",
+    "category": "insects",
+    "facts": [
+      "Stick insects are masters of camouflage, resembling twigs and branches.",
+      "Some species can regenerate lost limbs.",
+      "The longest stick insect recorded was over 60 cm long."
+    ],
+    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Stick%20Insect",
+    "imageAlt": "Giant stick insect",
+    "drawingDifficulty": "easy",
+    "drawingTips": [
+      "Draw an extremely long, thin body resembling a twig with segmented sections.",
+      "Add long, stick-like legs held close to the body for perfect camouflage.",
+      "Show the brown or green coloring and texture mimicking bark or leaves."
+    ],
+    "bodyParts": [
+      "long thin body",
+      "stick-like legs",
+      "segmented sections",
+      "twig texture",
+      "small head"
+    ]
+  },
+  {
+    "id": "insect_014",
+    "commonName": "Cicada",
+    "scientificName": "Magicicada septendecim",
+    "category": "insects",
+    "facts": [
+      "Some cicadas spend 17 years underground before emerging.",
+      "They are among the loudest insects, reaching 120 decibels.",
+      "Cicadas emerge in massive synchronized swarms."
+    ],
+    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Cicada",
+    "imageAlt": "Periodical cicada",
+    "drawingDifficulty": "easy",
+    "drawingTips": [
+      "Draw a stout body with large, transparent wings with prominent veins held tent-like over the back.",
+      "Add large compound eyes, often red or orange, and short antennae.",
+      "Show the robust build and the wings' delicate, membranous quality."
+    ],
+    "bodyParts": [
+      "transparent wings",
+      "large eyes",
+      "stout body",
+      "wing veins",
+      "short antennae"
+    ]
+  },
+  {
+    "id": "insect_015",
+    "commonName": "Atlas Moth",
+    "scientificName": "Attacus atlas",
+    "category": "insects",
+    "facts": [
+      "Atlas moths are among the largest moths with wingspans up to 30 cm.",
+      "Adults don't have functional mouths and live only 1-2 weeks.",
+      "Their wing tips resemble snake heads to deter predators."
+    ],
+    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Atlas%20Moth",
+    "imageAlt": "Atlas moth",
+    "drawingDifficulty": "hard",
+    "drawingTips": [
+      "Draw enormous wings with intricate patterns, including snake-head mimicry at the wing tips.",
+      "Add rich reddish-brown coloring with transparent window-like patches on the wings.",
+      "Show the fuzzy body and the impressive wingspan that makes this moth so distinctive."
+    ],
+    "bodyParts": [
+      "enormous wings",
+      "snake-head tips",
+      "transparent patches",
+      "fuzzy body",
+      "intricate patterns"
+    ]
   },
   {
     "id": "insect_016",
@@ -1261,8 +2505,21 @@
       "They farm fungus underground for food.",
       "Colonies can contain over 8 million ants."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1568641389310-145d9b0b5b56?w=600&q=80&fm=webp",
-    "imageAlt": "Leafcutter ant"
+    "imageUrl": "https://images.pexels.com/photos/12404843/pexels-photo-12404843.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Leafcutter ant",
+    "drawingDifficulty": "easy",
+    "drawingTips": [
+      "Draw a small ant carrying a large leaf piece above its head, showing impressive strength.",
+      "Add the characteristic three body segments and six legs with strong mandibles.",
+      "Show the ant in a line with others, emphasizing their cooperative behavior."
+    ],
+    "bodyParts": [
+      "strong mandibles",
+      "three segments",
+      "six legs",
+      "leaf piece",
+      "small body"
+    ]
   },
   {
     "id": "insect_017",
@@ -1274,8 +2531,21 @@
       "They navigate using the Milky Way.",
       "Dung beetles are important for soil health and nutrient cycling."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=600&q=80&fm=webp",
-    "imageAlt": "Sacred scarab beetle"
+    "imageUrl": "https://images.pexels.com/photos/53988/stag-beetle-great-stag-beetle-lucanus-cervus-beetle-53988.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Sacred scarab beetle",
+    "drawingDifficulty": "easy",
+    "drawingTips": [
+      "Draw a rounded, compact beetle body with a shiny black or metallic exoskeleton.",
+      "Add strong front legs with spines for digging and rolling dung balls.",
+      "Show the beetle pushing a large dung ball, demonstrating its remarkable strength."
+    ],
+    "bodyParts": [
+      "rounded body",
+      "strong front legs",
+      "shiny shell",
+      "spined legs",
+      "compact build"
+    ]
   },
   {
     "id": "insect_018",
@@ -1287,8 +2557,21 @@
       "A termite queen can live for over 50 years.",
       "Termites digest wood with the help of gut microorganisms."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1612024782955-49e8f2f4e14f?w=600&q=80&fm=webp",
-    "imageAlt": "African termite"
+    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Termite",
+    "imageAlt": "African termite",
+    "drawingDifficulty": "easy",
+    "drawingTips": [
+      "Draw a small, pale-colored insect with a soft body and straight antennae.",
+      "Add a large head (in soldiers) with powerful mandibles or a small head in workers.",
+      "Show the simple body structure with six legs and segmented abdomen."
+    ],
+    "bodyParts": [
+      "soft body",
+      "straight antennae",
+      "large mandibles",
+      "six legs",
+      "pale coloring"
+    ]
   },
   {
     "id": "insect_019",
@@ -1300,8 +2583,21 @@
       "They sway back and forth to mimic branches moving in the wind.",
       "Some species can reproduce without males through parthenogenesis."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80&fm=webp",
-    "imageAlt": "Northern walking stick"
+    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Walking%20Stick",
+    "imageAlt": "Northern walking stick",
+    "drawingDifficulty": "easy",
+    "drawingTips": [
+      "Draw an extremely thin, elongated body with long, stick-like legs held at angles.",
+      "Add subtle segmentation and brown or green coloring matching twigs and branches.",
+      "Show the insect in a still pose, perfectly camouflaged as a stick or twig."
+    ],
+    "bodyParts": [
+      "thin body",
+      "stick-like legs",
+      "elongated form",
+      "twig coloring",
+      "segmented sections"
+    ]
   },
   {
     "id": "insect_020",
@@ -1313,7 +2609,540 @@
       "The spray can reach temperatures of 100°C.",
       "They can aim their spray with remarkable accuracy."
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1568393691622-c7ba131d63b4?w=600&q=80&fm=webp",
-    "imageAlt": "Bombardier beetle"
+    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Bombardier%20Beetle",
+    "imageAlt": "Bombardier beetle",
+    "drawingDifficulty": "easy",
+    "drawingTips": [
+      "Draw a small beetle with distinctive orange and black coloring on the body.",
+      "Add the characteristic defensive posture with abdomen raised to spray chemicals.",
+      "Show the hard wing covers and six legs with a compact, armored appearance."
+    ],
+    "bodyParts": [
+      "orange coloring",
+      "black markings",
+      "raised abdomen",
+      "hard wing covers",
+      "six legs"
+    ]
+  },
+  {
+    "id": "mammal_029",
+    "commonName": "Red Fox",
+    "scientificName": "Vulpes vulpes",
+    "category": "mammals",
+    "facts": [
+      "Red foxes can hear a mouse squeaking 100 meters away.",
+      "They use Earth's magnetic field to hunt prey hidden under snow.",
+      "Foxes have whiskers on their legs to help them navigate."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/2295744/pexels-photo-2295744.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Red fox in nature",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw a slender body with reddish-orange fur and a distinctive bushy tail with white tip.",
+      "Add pointed ears, an elongated snout, and alert amber eyes showing intelligence.",
+      "Show the elegant posture with black legs and white chest, emphasizing the fox's graceful build."
+    ],
+    "bodyParts": [
+      "bushy tail",
+      "pointed ears",
+      "elongated snout",
+      "black legs",
+      "reddish fur"
+    ]
+  },
+  {
+    "id": "mammal_030",
+    "commonName": "White-tailed Deer",
+    "scientificName": "Odocoileus virginianus",
+    "category": "mammals",
+    "facts": [
+      "Deer can run at speeds up to 48 km/h and jump 3 meters high.",
+      "Their antlers are made of bone and grow up to 2.5 cm per day.",
+      "White-tailed deer can swim at speeds up to 21 km/h."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/247502/pexels-photo-247502.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "White-tailed deer",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw a graceful body with long, slender legs and the distinctive white underside of the tail.",
+      "Add branching antlers on males with multiple points and large, alert ears.",
+      "Show the gentle face with large dark eyes and the reddish-brown coat in summer."
+    ],
+    "bodyParts": [
+      "branching antlers",
+      "white tail",
+      "slender legs",
+      "large ears",
+      "gentle face"
+    ]
+  },
+  {
+    "id": "mammal_031",
+    "commonName": "Gray Squirrel",
+    "scientificName": "Sciurus carolinensis",
+    "category": "mammals",
+    "facts": [
+      "Squirrels can find buried food under a foot of snow using their sense of smell.",
+      "They plant thousands of trees each year by forgetting where they buried acorns.",
+      "Squirrels can rotate their ankles 180 degrees to climb down trees headfirst."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/47547/squirrel-animal-cute-rodents-47547.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Eastern gray squirrel",
+    "drawingDifficulty": "easy",
+    "drawingTips": [
+      "Draw a small, agile body with a large, bushy tail that curves over the back.",
+      "Add rounded ears, bright eyes, and small paws holding an acorn or nut.",
+      "Show the alert posture with gray fur and white belly, often sitting upright."
+    ],
+    "bodyParts": [
+      "bushy tail",
+      "rounded ears",
+      "small paws",
+      "gray fur",
+      "alert posture"
+    ]
+  },
+  {
+    "id": "mammal_032",
+    "commonName": "Little Brown Bat",
+    "scientificName": "Myotis lucifugus",
+    "category": "mammals",
+    "facts": [
+      "Bats are the only mammals capable of true sustained flight.",
+      "A single bat can eat up to 1,000 mosquitoes in one hour.",
+      "Bats use echolocation to navigate and hunt in complete darkness."
+    ],
+    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Little%20Brown%20Bat",
+    "imageAlt": "Little brown bat",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw large, membranous wings stretched between elongated finger bones and body.",
+      "Add a small, furry body with large ears and a tiny face with open mouth for echolocation.",
+      "Show the bat in flight or hanging upside down with wings folded around the body."
+    ],
+    "bodyParts": [
+      "membranous wings",
+      "large ears",
+      "small body",
+      "elongated fingers",
+      "furry face"
+    ]
+  },
+  {
+    "id": "mammal_033",
+    "commonName": "Dromedary Camel",
+    "scientificName": "Camelus dromedarius",
+    "category": "mammals",
+    "facts": [
+      "Camels can drink up to 135 liters of water in 13 minutes.",
+      "They can survive without water for up to 10 days in the desert.",
+      "A camel's hump stores fat, not water, which can be converted to energy."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/2295746/pexels-photo-2295746.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Dromedary camel",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw a tall body with long legs and a single large hump on the back.",
+      "Add a long, curved neck, large eyes with long lashes, and split upper lip.",
+      "Show the sandy-colored coat and broad, padded feet perfect for walking on sand."
+    ],
+    "bodyParts": [
+      "single hump",
+      "long neck",
+      "long legs",
+      "padded feet",
+      "split lip"
+    ]
+  },
+  {
+    "id": "bird_019",
+    "commonName": "Northern Cardinal",
+    "scientificName": "Cardinalis cardinalis",
+    "category": "birds",
+    "facts": [
+      "Male cardinals are bright red while females are brownish with red accents.",
+      "They can sing over 24 different songs.",
+      "Cardinals mate for life and often sing duets together."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/1661537/pexels-photo-1661537.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Northern cardinal",
+    "drawingDifficulty": "easy",
+    "drawingTips": [
+      "Draw a plump body with brilliant red plumage on males and a distinctive crest on the head.",
+      "Add a thick, cone-shaped orange beak perfect for cracking seeds.",
+      "Show the black mask around the face and eyes, creating a striking contrast with red feathers."
+    ],
+    "bodyParts": [
+      "red plumage",
+      "head crest",
+      "cone-shaped beak",
+      "black mask",
+      "plump body"
+    ]
+  },
+  {
+    "id": "bird_020",
+    "commonName": "Blue Jay",
+    "scientificName": "Cyanocitta cristata",
+    "category": "birds",
+    "facts": [
+      "Blue jays can mimic the calls of hawks to scare other birds away from feeders.",
+      "They are highly intelligent and can use tools.",
+      "Blue jays help plant oak trees by burying acorns and forgetting them."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/1661538/pexels-photo-1661538.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Blue jay",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw vibrant blue plumage with black barring on wings and tail, and white underparts.",
+      "Add a prominent blue crest on the head and a black necklace around the throat.",
+      "Show the strong, pointed beak and alert, intelligent expression with bold markings."
+    ],
+    "bodyParts": [
+      "blue crest",
+      "blue plumage",
+      "black barring",
+      "white underparts",
+      "black necklace"
+    ]
+  },
+  {
+    "id": "bird_021",
+    "commonName": "Great Blue Heron",
+    "scientificName": "Ardea herodias",
+    "category": "birds",
+    "facts": [
+      "Great blue herons can stand motionless for hours waiting for prey.",
+      "They have specialized neck vertebrae that allow them to strike like lightning.",
+      "These birds can fly at speeds up to 48 km/h."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/1661539/pexels-photo-1661539.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Great blue heron",
+    "drawingDifficulty": "hard",
+    "drawingTips": [
+      "Draw a tall, elegant bird with extremely long legs and a long, S-curved neck.",
+      "Add a long, dagger-like yellow beak and blue-gray plumage with black plumes on the head.",
+      "Show the patient hunting stance standing in shallow water or the distinctive flight posture with neck folded."
+    ],
+    "bodyParts": [
+      "long legs",
+      "S-curved neck",
+      "dagger beak",
+      "blue-gray plumage",
+      "head plumes"
+    ]
+  },
+  {
+    "id": "bird_022",
+    "commonName": "Herring Gull",
+    "scientificName": "Larus argentatus",
+    "category": "birds",
+    "facts": [
+      "Seagulls can drink both fresh and salt water.",
+      "They drop shellfish from heights to crack them open.",
+      "Gulls can live for over 30 years in the wild."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/1661540/pexels-photo-1661540.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Herring gull",
+    "drawingDifficulty": "easy",
+    "drawingTips": [
+      "Draw a sturdy body with white head and underparts, gray wings with black tips.",
+      "Add a yellow beak with a red spot on the lower mandible and webbed feet.",
+      "Show the bird in flight with wings spread wide or standing with an upright, confident posture."
+    ],
+    "bodyParts": [
+      "gray wings",
+      "yellow beak",
+      "red spot",
+      "white body",
+      "webbed feet"
+    ]
+  },
+  {
+    "id": "reptile_018",
+    "commonName": "Fire Salamander",
+    "scientificName": "Salamandra salamandra",
+    "category": "reptiles",
+    "facts": [
+      "Fire salamanders can live for over 50 years.",
+      "They secrete toxins from their skin as a defense mechanism.",
+      "These amphibians can regenerate lost limbs and even parts of their heart."
+    ],
+    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Fire%20Salamander",
+    "imageAlt": "Fire salamander",
+    "drawingDifficulty": "easy",
+    "drawingTips": [
+      "Draw a stocky body with smooth, shiny black skin covered in bright yellow or orange spots and stripes.",
+      "Add four short legs with distinct toes and a long tail for balance.",
+      "Show the moist-looking skin and the warning coloration that signals toxicity to predators."
+    ],
+    "bodyParts": [
+      "black skin",
+      "yellow spots",
+      "short legs",
+      "long tail",
+      "smooth texture"
+    ]
+  },
+  {
+    "id": "reptile_019",
+    "commonName": "Eastern Newt",
+    "scientificName": "Notophthalmus viridescens",
+    "category": "reptiles",
+    "facts": [
+      "Newts have a unique three-stage life cycle including an aquatic larva, terrestrial juvenile, and aquatic adult.",
+      "They can regenerate eyes, hearts, and limbs throughout their lives.",
+      "The red eft stage is toxic and brightly colored to warn predators."
+    ],
+    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Eastern%20Newt",
+    "imageAlt": "Eastern newt red eft",
+    "drawingDifficulty": "easy",
+    "drawingTips": [
+      "Draw a small, slender body with bright orange-red coloring in the terrestrial eft stage.",
+      "Add four small legs, a long tail, and small red spots along the back.",
+      "Show the smooth, moist skin and delicate features with tiny eyes and gentle expression."
+    ],
+    "bodyParts": [
+      "orange-red body",
+      "small legs",
+      "long tail",
+      "red spots",
+      "smooth skin"
+    ]
+  },
+  {
+    "id": "reptile_020",
+    "commonName": "Red-eyed Tree Frog",
+    "scientificName": "Agalychnis callidryas",
+    "category": "reptiles",
+    "facts": [
+      "Red-eyed tree frogs have bright red eyes that startle predators.",
+      "They can change their skin color from bright green to dark brown.",
+      "Their toe pads act like suction cups for climbing."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/70069/frog-macro-amphibian-green-70069.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Red-eyed tree frog",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw a bright green body with distinctive large, bulging red eyes that dominate the face.",
+      "Add blue and yellow striped sides, orange toe pads, and long, slender limbs for climbing.",
+      "Show the frog clinging to a leaf or branch with splayed toes and alert posture."
+    ],
+    "bodyParts": [
+      "red eyes",
+      "green body",
+      "striped sides",
+      "orange toe pads",
+      "long limbs"
+    ]
+  },
+  {
+    "id": "marine_019",
+    "commonName": "Harbor Seal",
+    "scientificName": "Phoca vitulina",
+    "category": "marine",
+    "facts": [
+      "Harbor seals can dive to depths of 500 meters and hold their breath for 30 minutes.",
+      "They can sleep underwater and surface to breathe without waking.",
+      "Seals have excellent underwater vision and sensitive whiskers to detect prey."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/105819/pexels-photo-105819.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "Harbor seal",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw a streamlined, torpedo-shaped body with spotted gray or brown fur and a rounded head.",
+      "Add large, dark eyes, whiskers, and small ear openings with no external ear flaps.",
+      "Show the front flippers and hind flippers, often depicted swimming or hauled out on rocks."
+    ],
+    "bodyParts": [
+      "streamlined body",
+      "spotted fur",
+      "large eyes",
+      "whiskers",
+      "flippers"
+    ]
+  },
+  {
+    "id": "marine_020",
+    "commonName": "King Penguin",
+    "scientificName": "Aptenodytes patagonicus",
+    "category": "marine",
+    "facts": [
+      "King penguins can dive to depths of 300 meters to hunt for fish.",
+      "They have the longest breeding cycle of any penguin, taking 14-16 months.",
+      "King penguins don't build nests; they incubate eggs on their feet."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/1661543/pexels-photo-1661543.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "King penguin",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw an upright, elegant body with black back, white belly, and distinctive orange ear patches.",
+      "Add a long, curved beak and orange-yellow coloring on the upper chest and neck.",
+      "Show the streamlined flippers and upright waddling posture with feet visible beneath."
+    ],
+    "bodyParts": [
+      "orange ear patches",
+      "black back",
+      "white belly",
+      "curved beak",
+      "flippers"
+    ]
+  },
+  {
+    "id": "marine_021",
+    "commonName": "American Lobster",
+    "scientificName": "Homarus americanus",
+    "category": "marine",
+    "facts": [
+      "Lobsters can live for over 100 years and continue growing throughout their lives.",
+      "They have blue blood due to copper-based hemocyanin.",
+      "Lobsters can regenerate lost claws, legs, and antennae."
+    ],
+    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=American%20Lobster",
+    "imageAlt": "American lobster",
+    "drawingDifficulty": "hard",
+    "drawingTips": [
+      "Draw a segmented body with a hard exoskeleton, large claws of different sizes, and long antennae.",
+      "Add eight walking legs, a fan-like tail, and the distinctive crusher and cutter claws.",
+      "Show the armored appearance with detailed segments and joints, typically in dark blue-green coloring."
+    ],
+    "bodyParts": [
+      "large claws",
+      "segmented body",
+      "long antennae",
+      "fan tail",
+      "walking legs"
+    ]
+  },
+  {
+    "id": "marine_022",
+    "commonName": "Dungeness Crab",
+    "scientificName": "Metacarcinus magister",
+    "category": "marine",
+    "facts": [
+      "Dungeness crabs can regenerate lost legs and claws.",
+      "They molt their shells up to 6 times in their first year.",
+      "These crabs can live for up to 10 years in the wild."
+    ],
+    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Dungeness%20Crab",
+    "imageAlt": "Dungeness crab",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw a wide, oval-shaped carapace with a hard shell and distinctive purple-brown coloring.",
+      "Add ten legs including two claws with pinchers and eight walking legs.",
+      "Show the crab from above with legs spread wide and claws held up in defensive posture."
+    ],
+    "bodyParts": [
+      "oval carapace",
+      "two claws",
+      "eight legs",
+      "hard shell",
+      "purple-brown color"
+    ]
+  },
+  {
+    "id": "insect_021",
+    "commonName": "Paper Wasp",
+    "scientificName": "Polistes dominula",
+    "category": "insects",
+    "facts": [
+      "Paper wasps build nests from wood fibers mixed with saliva, creating paper-like material.",
+      "They are social insects living in colonies with a queen and workers.",
+      "Wasps are important pollinators and pest controllers in gardens."
+    ],
+    "imageUrl": "https://images.pexels.com/photos/3070870/pexels-photo-3070870.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageAlt": "European paper wasp",
+    "drawingDifficulty": "easy",
+    "drawingTips": [
+      "Draw a slender body with distinctive yellow and black stripes and a narrow waist.",
+      "Add transparent wings, long legs that dangle in flight, and prominent antennae.",
+      "Show the smooth, hairless body and the characteristic hovering or nest-building posture."
+    ],
+    "bodyParts": [
+      "striped body",
+      "narrow waist",
+      "transparent wings",
+      "long legs",
+      "antennae"
+    ]
+  },
+  {
+    "id": "insect_022",
+    "commonName": "Bald-faced Hornet",
+    "scientificName": "Dolichovespula maculata",
+    "category": "insects",
+    "facts": [
+      "Despite their name, bald-faced hornets are actually a type of yellowjacket wasp.",
+      "They can remember faces and will aggressively defend their nests.",
+      "A single colony can contain 400-700 workers."
+    ],
+    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Bald-faced%20Hornet",
+    "imageAlt": "Bald-faced hornet",
+    "drawingDifficulty": "medium",
+    "drawingTips": [
+      "Draw a robust body with distinctive black and white coloring, including a white face.",
+      "Add large compound eyes, transparent wings, and a powerful stinger at the abdomen tip.",
+      "Show the aggressive posture with wings spread and the characteristic white markings on face and thorax."
+    ],
+    "bodyParts": [
+      "white face",
+      "black body",
+      "white markings",
+      "transparent wings",
+      "powerful stinger"
+    ]
+  },
+  {
+    "id": "insect_023",
+    "commonName": "Field Cricket",
+    "scientificName": "Gryllus pennsylvanicus",
+    "category": "insects",
+    "facts": [
+      "Male crickets chirp by rubbing their wings together to attract females.",
+      "The frequency of chirps can indicate the temperature.",
+      "Crickets have ears on their front legs."
+    ],
+    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Field%20Cricket",
+    "imageAlt": "Field cricket",
+    "drawingDifficulty": "easy",
+    "drawingTips": [
+      "Draw a compact, cylindrical body with shiny black or dark brown coloring.",
+      "Add long antennae, powerful hind legs for jumping, and wings folded flat over the back.",
+      "Show the cricket in a side view with distinctive long cerci at the tail end."
+    ],
+    "bodyParts": [
+      "long antennae",
+      "powerful hind legs",
+      "folded wings",
+      "cylindrical body",
+      "long cerci"
+    ]
+  },
+  {
+    "id": "insect_024",
+    "commonName": "Woolly Bear Caterpillar",
+    "scientificName": "Pyrrharctia isabella",
+    "category": "insects",
+    "facts": [
+      "Woolly bear caterpillars can survive being frozen solid during winter.",
+      "The width of the brown band is said to predict winter severity, though this is folklore.",
+      "They curl into a ball when threatened to protect their soft underside."
+    ],
+    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Woolly%20Bear%20Caterpillar",
+    "imageAlt": "Woolly bear caterpillar",
+    "drawingDifficulty": "easy",
+    "drawingTips": [
+      "Draw a fuzzy, segmented body with distinctive black ends and a reddish-brown middle band.",
+      "Add dense, bristly hairs covering the entire body giving a woolly appearance.",
+      "Show the caterpillar crawling or curled into a defensive ball with multiple legs visible."
+    ],
+    "bodyParts": [
+      "fuzzy body",
+      "black ends",
+      "brown middle",
+      "bristly hairs",
+      "segmented form"
+    ]
   }
 ]

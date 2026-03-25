@@ -8,8 +8,8 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://randomanimalgenerat
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Random Animal Generator - Educational Wildlife Discovery Tool",
-  description: "Generate random animals with fascinating facts and high-quality images. Perfect for educators, students, artists, and wildlife enthusiasts. Explore mammals, birds, reptiles, marine life, and insects instantly.",
+  title: "Random Animal Generator for Drawing - Free Practice Tool with Tips & Difficulty Levels",
+  description: "Random animal generator designed for artists and drawing practice. Get animals with difficulty ratings (Easy/Medium/Hard), drawing tips, and challenge modes. Perfect for daily art practice, skill building, and creative inspiration.",
   icons: {
     icon: [
       {
@@ -22,26 +22,26 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: "Random Animal Generator - Educational Wildlife Discovery Tool",
-    description: "Discover fascinating wildlife with our educational animal generator. Perfect for teachers, students, and animal lovers. Generate random animals from 5 categories with facts and images.",
+    title: "Random Animal Generator for Drawing - Free Practice Tool",
+    description: "Random animal generator for artists with difficulty ratings, drawing tips, and challenge modes. Perfect for daily drawing practice and skill building.",
     type: "website",
     url: siteUrl,
-    siteName: "Random Animal Generator",
+    siteName: "Random Animal Generator for Drawing",
     images: [
       {
-        url: '/RandomAnimalGenerator-UseCasesSection.png',
-        width: 2560,
+        url: '/RandomAnimalGenerator-hero.png',
+        width: 1920,
         height: 1080,
-        alt: 'Educational classroom scene with students learning about animals',
+        alt: 'Random animal generator for drawing practice with diverse wildlife',
       },
     ],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Random Animal Generator - Educational Wildlife Discovery Tool",
-    description: "Generate random animals with facts and images. Perfect for educators, students, and wildlife enthusiasts.",
-    images: ['/RandomAnimalGenerator-UseCasesSection.png'],
+    title: "Random Animal Generator for Drawing",
+    description: "Get random animals with difficulty ratings and drawing tips. Perfect for daily art practice and skill building.",
+    images: ['/RandomAnimalGenerator-hero.png'],
     creator: '@randomanimals',
   },
   robots: {

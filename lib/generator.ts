@@ -1,4 +1,4 @@
-import { Animal, ANIMAL_DATABASE, CategoryKey } from './animals';
+import { Animal, ANIMAL_DATABASE, CategoryKey, DrawingDifficulty } from './animals';
 
 export class AnimalGenerator {
   private database: Animal[];
@@ -7,15 +7,21 @@ export class AnimalGenerator {
     this.database = database;
   }
 
-  generate(count: number, category?: CategoryKey | null): Animal[] {
+  generate(count: number, category?: CategoryKey | null, difficulty?: DrawingDifficulty | null): Animal[] {
     let availableAnimals = this.database;
 
+    // Apply category filter
     if (category) {
-      availableAnimals = this.database.filter(animal => animal.category === category);
+      availableAnimals = availableAnimals.filter(animal => animal.category === category);
+    }
+
+    // Apply difficulty filter
+    if (difficulty) {
+      availableAnimals = availableAnimals.filter(animal => animal.drawingDifficulty === difficulty);
     }
 
     if (availableAnimals.length < count) {
-      throw new Error(`Only ${availableAnimals.length} animals available in this category`);
+      throw new Error(`Only ${availableAnimals.length} animals available with the selected filters`);
     }
 
     // Shuffle and select unique animals
@@ -23,11 +29,41 @@ export class AnimalGenerator {
     return shuffled.slice(0, count);
   }
 
-  getCategoryCounts(): Record<CategoryKey, number> {
+  getCategoryCounts(difficulty?: DrawingDifficulty | null): Record<CategoryKey, number> {
     const counts = {} as Record<CategoryKey, number>;
-    
-    this.database.forEach(animal => {
+
+    let animalsToCount = this.database;
+
+    // Apply difficulty filter if provided
+    if (difficulty) {
+      animalsToCount = animalsToCount.filter(animal => animal.drawingDifficulty === difficulty);
+    }
+
+    animalsToCount.forEach(animal => {
       counts[animal.category] = (counts[animal.category] || 0) + 1;
+    });
+
+    return counts;
+  }
+
+  getDifficultyCounts(category?: CategoryKey | null): Record<DrawingDifficulty, number> {
+    const counts = {
+      easy: 0,
+      medium: 0,
+      hard: 0
+    } as Record<DrawingDifficulty, number>;
+
+    let animalsToCount = this.database;
+
+    // Apply category filter if provided
+    if (category) {
+      animalsToCount = animalsToCount.filter(animal => animal.category === category);
+    }
+
+    animalsToCount.forEach(animal => {
+      if (animal.drawingDifficulty) {
+        counts[animal.drawingDifficulty]++;
+      }
     });
 
     return counts;
@@ -37,3 +73,4 @@ export class AnimalGenerator {
     return this.database.length;
   }
 }
+
