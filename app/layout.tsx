@@ -8,12 +8,12 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://randomanimalgenerat
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Random Animal Generator for Drawing - Free Practice Tool with Tips & Difficulty Levels",
-  description: "Random animal generator designed for artists and drawing practice. Get animals with difficulty ratings (Easy/Medium/Hard), drawing tips, and challenge modes. Perfect for daily art practice, skill building, and creative inspiration.",
+  title: "Random Animal Generator for Drawing - Free Practice Tool",
+  description: "Free random animal generator for artists. Get animals with difficulty ratings, drawing tips, and challenges. Perfect for daily art practice.",
   icons: {
     icon: [
       {
-        url: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">🦁</text></svg>',
+        url: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" fill="%234F46E5"/><text x="50" y="68" font-size="50" text-anchor="middle" fill="white">🐾</text></svg>',
         type: 'image/svg+xml',
       },
     ],
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Random Animal Generator for Drawing - Free Practice Tool",
-    description: "Random animal generator for artists with difficulty ratings, drawing tips, and challenge modes. Perfect for daily drawing practice and skill building.",
+    description: "Free random animal generator for artists. Get animals with difficulty ratings, drawing tips, and challenges. Perfect for daily art practice.",
     type: "website",
     url: siteUrl,
     siteName: "Random Animal Generator for Drawing",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: "Random Animal Generator for Drawing",
-    description: "Get random animals with difficulty ratings and drawing tips. Perfect for daily art practice and skill building.",
+    description: "Free random animal generator for artists. Get animals with difficulty ratings, drawing tips, and challenges.",
     images: ['/RandomAnimalGenerator-hero.png'],
     creator: '@randomanimals',
   },
