@@ -82,6 +82,10 @@ export default function RootLayout({
             `,
           }}
         />
+        <meta name="pinterest" content="nopin" />
+        <meta name="pinterest-rich-pin" content="true" />
+        <meta property="og:description" content="Free random animal generator for artists with drawing tips, difficulty ratings, and challenge modes." />
+        <meta property="og:type" content="website" />
       </head>
       <body className={inter.className}>{children}</body>
     </html>

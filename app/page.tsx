@@ -8,12 +8,16 @@ import { GeneratorControls } from '@/components/generator-controls';
 import { ChallengePanel } from '@/components/challenge-panel';
 import { TimerDisplay } from '@/components/timer-display';
 import { HybridAnimalCard } from '@/components/hybrid-animal-card';
+import { HistoryPanel } from '@/components/history-panel';
+import { CompatibilityNotice } from '@/components/compatibility-notice';
 import { AnimalGenerator } from '@/lib/generator';
 import { ChallengeManager, HybridAnimal, ChallengeMode } from '@/lib/challenge-manager';
+import { HistoryManager, HistoryEntry } from '@/lib/history-manager';
 import { Animal, CategoryKey, DrawingDifficulty } from '@/lib/animals';
 
 const generator = new AnimalGenerator();
 const challengeManager = new ChallengeManager();
+const historyManager = new HistoryManager();
 
 function HomeContent() {
   const [animals, setAnimals] = useState<Animal[]>([]);
@@ -30,6 +34,17 @@ function HomeContent() {
     setIsDailyCompleted(challengeManager.isDailyCompleted());
   }, []);
 
+  const handleSelectHistoryEntry = (entry: HistoryEntry) => {
+    setAnimals(entry.animals);
+    setHybridAnimal(null);
+    setChallengeMode(entry.challengeMode as ChallengeMode || null);
+    scrollToResults();
+  };
+
+  const handleClearHistory = () => {
+    // History is already cleared by HistoryPanel, just refresh UI if needed
+  };
+
   const handleGenerate = (quantity: number, category: CategoryKey | null, difficulty: DrawingDifficulty | null) => {
     try {
       // Clear any active challenge mode
@@ -38,6 +53,10 @@ function HomeContent() {
       const generated = generator.generate(quantity, category, difficulty);
       setAnimals(generated);
       setHybridAnimal(null);
+      setChallengeMode(null);
+      
+      // Save to history
+      historyManager.addToHistory(generated, category, difficulty, null);
       
       // Update URL state with difficulty parameter
       const params = new URLSearchParams();
@@ -77,6 +96,9 @@ function HomeContent() {
       setHybridAnimal(null);
       setChallengeMode('daily');
       
+      // Save to history
+      historyManager.addToHistory([animal], null, animal.drawingDifficulty, 'daily');
+      
       // Update URL
       router.push('?mode=daily', { scroll: false });
       
@@ -103,11 +125,15 @@ function HomeContent() {
         }
       });
       
-      setAnimals([challenge.animal as Animal]);
+      const animal = challenge.animal as Animal;
+      setAnimals([animal]);
       setHybridAnimal(null);
       setChallengeMode('timed');
       setIsTimerActive(true);
       setTimerSeconds(600);
+      
+      // Save to history
+      historyManager.addToHistory([animal], null, animal.drawingDifficulty, 'timed');
       
       // Update URL
       router.push('?mode=timed', { scroll: false });
@@ -126,6 +152,9 @@ function HomeContent() {
       setHybridAnimal(null);
       setChallengeMode('hard');
       
+      // Save to history
+      historyManager.addToHistory([animal], null, 'hard', 'hard');
+      
       // Update URL
       router.push('?mode=hard', { scroll: false });
       
@@ -142,6 +171,11 @@ function HomeContent() {
       setHybridAnimal(hybrid);
       setAnimals([]);
       setChallengeMode('hybrid');
+      
+      // Save hybrid components to history (use first animal for difficulty filter)
+      if (hybrid.sourceAnimals.length > 0) {
+        historyManager.addToHistory(hybrid.sourceAnimals, null, hybrid.sourceAnimals[0].drawingDifficulty, 'hybrid');
+      }
       
       // Update URL
       router.push('?mode=hybrid', { scroll: false });
@@ -215,42 +249,93 @@ function HomeContent() {
       {/* Timer Display for Timed Challenge */}
       <TimerDisplay remainingSeconds={timerSeconds} isActive={isTimerActive} />
       
+      {/* Browser Compatibility Notice */}
+      <CompatibilityNotice />
+      
       {/* JSON-LD Structured Data for SEO */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebApplication",
-            "name": "Random Animal Generator for Drawing",
-            "applicationCategory": "DesignApplication",
-            "description": "Random animal generator designed for artists with difficulty ratings, drawing tips, and challenge modes. Perfect for daily drawing practice, skill building, and creative inspiration.",
-            "url": "https://randomanimalgenerator.online",
-            "offers": {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "USD"
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "WebApplication",
+              "name": "Random Animal Generator for Drawing",
+              "applicationCategory": "DesignApplication",
+              "description": "Random animal generator designed for artists with difficulty ratings, drawing tips, and challenge modes. Perfect for daily drawing practice, skill building, and creative inspiration.",
+              "url": "https://randomanimalgenerator.online",
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+              },
+              "featureList": [
+                "Generate 1-10 random animals for drawing practice",
+                "Difficulty ratings: Easy, Medium, Hard",
+                "2-3 drawing tips per animal",
+                "Challenge modes: Daily, Timed, Hard Mode, Hybrid",
+                "Filter by 5 categories: Mammals, Birds, Reptiles, Marine, Insects",
+                "High-quality reference images",
+                "History tracking for practice subjects",
+                "Mobile responsive design",
+                "Free to use"
+              ],
+              "audience": {
+                "@type": "Audience",
+                "audienceType": ["artists", "illustrators", "art students", "art teachers"]
+              },
+              "provider": {
+                "@type": "Organization",
+                "name": "Random Animal Generator for Drawing"
+              }
             },
-            "featureList": [
-              "Generate 1-10 random animals for drawing practice",
-              "Difficulty ratings: Easy, Medium, Hard",
-              "2-3 drawing tips per animal",
-              "Challenge modes: Daily, Timed, Hard Mode, Hybrid",
-              "Filter by 5 categories: Mammals, Birds, Reptiles, Marine, Insects",
-              "High-quality reference images",
-              "History tracking for practice subjects",
-              "Mobile responsive design",
-              "Free to use"
-            ],
-            "audience": {
-              "@type": "Audience",
-              "audienceType": ["artists", "illustrators", "art students", "art teachers"]
-            },
-            "provider": {
-              "@type": "Organization",
-              "name": "Random Animal Generator for Drawing"
+            {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "How does the random animal generator for drawing work?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Our drawing-focused generator randomly selects from 100+ animals with difficulty ratings (Easy/Medium/Hard) and drawing tips. Choose 1-10 animals, filter by category or difficulty level, and get instant reference images with actionable drawing guidance to improve your art skills."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What are the difficulty levels for drawing?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Animals are classified as Easy (simple shapes, minimal details), Medium (moderate complexity), or Hard (intricate textures and details). This helps artists practice at their skill level and progressively challenge themselves as they improve."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What drawing tips are included?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Each animal includes 2-3 actionable drawing tips (10-15 words each) focusing on key features, shape simplification, and texture techniques. These tips help you capture the essence of each animal and improve your drawing skills."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is the random animal generator free for artists?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes! Our random animal generator for drawing is completely free with no registration required. We provide drawing practice resources accessible to all artists, students, and creative learners."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can I use this for daily drawing practice?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolutely! Use our Daily Drawing Challenge mode for consistent practice. The same animal is shown to all users each day, creating a community challenge. Track your progress with the history feature."
+                  }
+                }
+              ]
             }
-          })
+          ])
         }}
       />
       
@@ -288,6 +373,10 @@ function HomeContent() {
               onHardMode={handleHardMode}
               onHybridMode={handleHybridMode}
               isDailyCompleted={isDailyCompleted}
+            />
+            <HistoryPanel
+              onSelectEntry={handleSelectHistoryEntry}
+              onClearHistory={handleClearHistory}
             />
           </section>
 
@@ -519,7 +608,13 @@ function HomeContent() {
           <div className="inline-block px-6 py-3 bg-white/60 backdrop-blur-sm rounded-full border border-emerald-200 mb-4">
             <p className="font-medium">&copy; 2026 Random Animal Generator for Drawing</p>
           </div>
-          <p className="text-gray-600">Free drawing practice tool for artists and creative learners</p>
+          <p className="text-gray-600 mb-4">Free drawing practice tool for artists and creative learners</p>
+          <div className="inline-block px-4 py-2 bg-emerald-50 rounded-lg border border-emerald-200 text-sm">
+            <p className="text-emerald-800">
+              <span className="font-semibold">Privacy:</span> All data is stored locally on your device. 
+              No personal information is collected or transmitted.
+            </p>
+          </div>
         </footer>
       </div>
     </div>

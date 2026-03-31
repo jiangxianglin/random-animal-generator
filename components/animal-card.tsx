@@ -4,6 +4,7 @@ import { Animal } from '@/lib/animals';
 import { useState } from 'react';
 import { DifficultyBadge } from './difficulty-badge';
 import { DrawingTips } from './drawing-tips';
+import { ShareButtons } from './share-buttons';
 
 interface AnimalCardProps {
   animal: Animal;
@@ -136,6 +137,11 @@ export function AnimalCard({ animal }: AnimalCardProps) {
             )}
           </button>
         )}
+        
+        {/* Share Buttons */}
+        <div className="mt-4 pt-4 border-t border-gray-100">
+          <ShareButtons animal={animal} />
+        </div>
       </div>
     </div>
 

@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { HybridAnimal } from '@/lib/challenge-manager';
 import { DifficultyBadge } from './difficulty-badge';
 import { DrawingTips } from './drawing-tips';
+import { ShareButtons } from './share-buttons';
 
 interface HybridAnimalCardProps {
   hybrid: HybridAnimal;
@@ -131,6 +132,11 @@ export function HybridAnimalCard({ hybrid }: HybridAnimalCardProps) {
             ))}
           </div>
         )}
+
+        {/* Share Buttons */}
+        <div className="mt-4 pt-4 border-t border-purple-200">
+          <ShareButtons hybrid={hybrid} />
+        </div>
       </div>
     </div>
   );
