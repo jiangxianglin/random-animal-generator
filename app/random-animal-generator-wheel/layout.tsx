@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://randomanimalgenerator.online';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.randomanimalgenerator.online';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -21,12 +21,12 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: '/random-animal-generator-wheel',
+    canonical: 'https://www.randomanimalgenerator.online/random-animal-generator-wheel/',
   },
   openGraph: {
     title: "Random Animal Generator Wheel - Free Spinner for Games",
     description: "Use our free Random Animal Generator Wheel to pick animals randomly for games and education. 90+ animals, instant results!",
-    url: `${siteUrl}/random-animal-generator-wheel`,
+    url: 'https://www.randomanimalgenerator.online/random-animal-generator-wheel/',
     siteName: "Random Animal Generator",
     images: [
       {
@@ -86,7 +86,7 @@ export default function WheelLayout({
               "@type": "WebApplication",
               "name": "Random Animal Generator Wheel",
               "description": "A free online spinning wheel tool that randomly selects animals from a database of 90+ species. Perfect for games, education, and creative writing.",
-              "url": `${siteUrl}/random-animal-generator-wheel`,
+              "url": "https://www.randomanimalgenerator.online/random-animal-generator-wheel/",
               "applicationCategory": "UtilityApplication",
               "operatingSystem": "Any",
               "browserRequirements": "Requires modern web browser",

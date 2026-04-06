@@ -263,7 +263,7 @@ function HomeContent() {
               "name": "Random Animal Generator for Drawing",
               "applicationCategory": "DesignApplication",
               "description": "Random animal generator designed for artists with difficulty ratings, drawing tips, and challenge modes. Perfect for daily drawing practice, skill building, and creative inspiration.",
-              "url": "https://randomanimalgenerator.online",
+              "url": "https://www.randomanimalgenerator.online/",
               "offers": {
                 "@type": "Offer",
                 "price": "0",

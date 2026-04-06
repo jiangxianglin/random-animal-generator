@@ -18,7 +18,7 @@ export interface HybridShareData {
 }
 
 export class ShareManager {
-  private readonly BASE_URL = 'https://randomanimalgenerator.online';
+  private readonly BASE_URL = 'https://www.randomanimalgenerator.online/';
 
   generateShareLink(animalId: string): string {
     return `${this.BASE_URL}?shared=${encodeURIComponent(animalId)}`;

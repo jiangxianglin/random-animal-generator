@@ -5,7 +5,7 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://randomanimalgenerator.online';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.randomanimalgenerator.online';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -20,13 +20,13 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: '/',
+    canonical: 'https://www.randomanimalgenerator.online/',
   },
   openGraph: {
     title: "Random Animal Generator for Drawing - Free Practice Tool",
     description: "Free random animal generator for artists. Get animals with difficulty ratings, drawing tips, and challenges. Perfect for daily art practice.",
     type: "website",
-    url: siteUrl,
+    url: 'https://www.randomanimalgenerator.online/',
     siteName: "Random Animal Generator for Drawing",
     images: [
       {

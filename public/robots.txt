@@ -9,7 +9,7 @@ Allow: /
 # Disallow: /api/
 
 # Sitemap location
-Sitemap: https://randomanimalgenerator.online/sitemap.xml
+Sitemap: https://www.randomanimalgenerator.online/sitemap.xml
 
 # Crawl-delay for specific bots (optional)
 User-agent: Googlebot
