@@ -9,23 +9,19 @@ export function DrawingTips({ tips, className = '' }: DrawingTipsProps) {
   }
 
   return (
-    <div className={`bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-4 border border-purple-100 ${className}`}>
-      <div className="flex items-center gap-2 mb-3">
-        <span className="text-xl">🎨</span>
-        <h4 className="text-sm font-bold text-gray-800 uppercase tracking-wide">
-          Drawing Tips
-        </h4>
+    <div className={`rounded-xl border border-purple-100 bg-gradient-to-br from-purple-50 to-pink-50 p-4 ${className}`}>
+      <div className="mb-3 flex items-center gap-2">
+        <span className="text-sm font-semibold uppercase tracking-[0.2em] text-purple-700">Tips</span>
+        <h4 className="text-sm font-bold uppercase tracking-wide text-gray-800">Drawing Tips</h4>
       </div>
-      
+
       <ul className="space-y-2">
         {tips.map((tip, index) => (
-          <li key={index} className="flex gap-2 items-start">
-            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center mt-0.5">
-              <span className="text-white text-xs font-bold">{index + 1}</span>
+          <li key={index} className="flex items-start gap-2">
+            <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-purple-500 to-pink-500 text-xs font-bold text-white">
+              {index + 1}
             </span>
-            <p className="text-sm text-gray-700 leading-relaxed flex-1">
-              {tip}
-            </p>
+            <p className="flex-1 text-sm leading-relaxed text-gray-700">{tip}</p>
           </li>
         ))}
       </ul>

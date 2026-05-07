@@ -24,8 +24,12 @@ export class AnimalGenerator {
       throw new Error(`Only ${availableAnimals.length} animals available with the selected filters`);
     }
 
-    // Shuffle and select unique animals
-    const shuffled = [...availableAnimals].sort(() => Math.random() - 0.5);
+    // Fisher-Yates avoids the weak randomness of sort(() => Math.random() - 0.5)
+    const shuffled = [...availableAnimals];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
     return shuffled.slice(0, count);
   }
 

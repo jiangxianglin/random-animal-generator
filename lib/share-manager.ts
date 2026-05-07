@@ -132,7 +132,7 @@ export class ShareManager {
 
   private buildHybridPinterestDescription(hybrid: HybridAnimal): string {
     const names = hybrid.sourceAnimals.map(a => a.commonName).join(' + ');
-    const tips = hybrid.combinedTips.slice(0, 2).join('. ') + '.';
+    const tips = hybrid.drawingTips.slice(0, 2).join('. ') + '.';
     return `Hybrid creature: ${names}. Tips: ${tips} #HybridAnimal #CreatureDesign #ArtPractice`;
   }
 

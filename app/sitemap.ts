@@ -1,20 +1,11 @@
-import { MetadataRoute } from 'next';
+import { MetadataRoute } from "next";
+import { CORE_SITE_ROUTES, LAST_MAJOR_UPDATE, SITE_URL } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.randomanimalgenerator.online';
-  
-  return [
-    {
-      url: `${baseUrl}/`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 1.0,
-    },
-    {
-      url: `${baseUrl}/random-animal-generator-wheel/`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-  ];
+  return CORE_SITE_ROUTES.map((route) => ({
+    url: `${SITE_URL}${route.path}`,
+    lastModified: LAST_MAJOR_UPDATE,
+    changeFrequency: route.path === "/" ? "daily" : "weekly",
+    priority: route.priority,
+  }));
 }
