@@ -11,7 +11,7 @@
 | 第一阶段：基础清理 | 1.5 sitemap 与索引策略升级 | 已完成 | sitemap 已改为基于共享路由配置生成，后续可继续扩展 |
 | 第一阶段：基础清理 | 1.6 共享 SEO 工具抽取 | 已完成 | 已抽取共享 metadata 和 schema 生成函数，首页与 wheel 页已接入复用 |
 | 第一阶段：基础清理 | 1.7 生成器交互与文案修复 | 已完成 | 已修复首页生成器、结果卡片、挑战面板和 wheel 关键组件中的坏文案、硬编码统计、随机逻辑，并补齐生成器状态同步与重置能力 |
-| 第二阶段：核心工具页扩展 | 2.1 Name Generator | 已完成 | 已新增独立的 `random animal name generator` 页面，包含可用工具、独立 metadata、FAQ、结构化数据，以及首页与 sitemap 入口；后续已完成首版视觉重构，并按搜索意图补强了默认结果、快速预设、可复制输出、多用途输出模式、supporting content、正文配图，以及 title / description / robots / sitemap / Twitter Card 优化 |
+| 第二阶段：核心工具页扩展 | 2.1 Name Generator | 已完成 | 已新增独立的 `random animal name generator` 页面，包含可用工具、独立 metadata、FAQ、结构化数据，以及首页与 sitemap 入口；后续已完成首版视觉重构，并按搜索意图补强了默认结果、快速预设、可复制输出、多用途输出模式、supporting content、正文配图，以及 title / description / robots / sitemap / Twitter Card 优化，并已增加 IndexNow key 文件与提交接口支持 |
 | 第二阶段：核心工具页扩展 | 2.2 Sea Animal Generator | 未开始 | 待开发 |
 | 第二阶段：核心工具页扩展 | 2.3 Drawing Generator | 未开始 | 待开发 |
 | 第二阶段：核心工具页扩展 | 2.4 Mythical Generator | 未开始 | 待开发 |
