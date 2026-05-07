@@ -15,7 +15,7 @@ import { Animal, CategoryKey, DrawingDifficulty } from '@/lib/animals';
 import { ChallengeManager, ChallengeMode, HybridAnimal } from '@/lib/challenge-manager';
 import { AnimalGenerator } from '@/lib/generator';
 import { HistoryEntry, HistoryManager } from '@/lib/history-manager';
-import { buildFaqSchema, buildWebAppSchema } from '@/lib/seo';
+import { buildBreadcrumbSchema, buildFaqSchema, buildHowToSchema, buildWebAppSchema } from '@/lib/seo';
 import { SITE_NAME } from '@/lib/site';
 
 const generator = new AnimalGenerator();
@@ -102,6 +102,29 @@ const CORE_TOOLS = [
     title: 'Random Animal Generator Wheel',
     description:
       'Spin a playful wheel to pick a random animal for classroom rounds, games, and icebreakers.',
+  },
+] as const;
+
+const HOME_QUICK_LINKS = [
+  { href: '#generator', label: 'Use the generator' },
+  { href: '#about-tool', label: 'About the tool' },
+  { href: '#use-cases', label: 'Popular use cases' },
+  { href: '#related-tools', label: 'Related tools' },
+  { href: '#faq', label: 'FAQ' },
+] as const;
+
+const HOME_HOW_TO_STEPS = [
+  {
+    name: 'Choose your filters',
+    text: 'Select how many animals you want, then narrow the results by category or drawing difficulty.',
+  },
+  {
+    name: 'Generate random animals',
+    text: 'Click the generator button to get random animal results instantly from the site database.',
+  },
+  {
+    name: 'Use the results',
+    text: 'Open the generated animal cards for facts, images, and prompts you can use for drawing, games, lessons, or writing.',
   },
 ] as const;
 
@@ -398,6 +421,15 @@ function HomeContent() {
         audienceType: ['artists', 'teachers', 'students', 'families', 'game players'],
       },
     },
+    buildBreadcrumbSchema([
+      { name: 'Home', path: '/' },
+    ]),
+    buildHowToSchema(
+      'How to use the random animal generator',
+      'A short guide for generating random animals with category and difficulty filters.',
+      '/',
+      HOME_HOW_TO_STEPS,
+    ),
     buildFaqSchema(HOME_FAQS),
   ];
 
@@ -434,7 +466,18 @@ function HomeContent() {
             </p>
           </header>
 
-          <section className="mx-auto mb-8 flex w-full max-w-2xl flex-col gap-4">
+          <section id="generator" className="mx-auto mb-8 scroll-mt-24 flex w-full max-w-3xl flex-col gap-4">
+            <div className="flex flex-wrap justify-center gap-3">
+              {HOME_QUICK_LINKS.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="rounded-full border border-emerald-200 bg-white/85 px-4 py-2 text-sm font-semibold text-emerald-800 shadow-sm transition hover:border-emerald-400 hover:bg-white"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
             <GeneratorControls
               quantity={selectedQuantity}
               category={selectedCategory}
@@ -555,7 +598,10 @@ function HomeContent() {
           </section>
         )}
 
-        <section className="mb-8 rounded-2xl border border-emerald-100 bg-white/95 p-8 shadow-2xl backdrop-blur-sm md:p-10">
+        <section
+          id="about-tool"
+          className="mb-8 scroll-mt-24 rounded-2xl border border-emerald-100 bg-white/95 p-8 shadow-2xl backdrop-blur-sm md:p-10"
+        >
           <div className="mb-6 flex items-start gap-4">
             <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500 to-green-600">
               <svg className="h-7 w-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -595,10 +641,24 @@ function HomeContent() {
               facts, and difficulty-based context so the site can support both general random
               selection and more intentional use cases.
             </p>
+            <p>
+              If your main goal is a copy-ready list of names, use the{' '}
+              <Link href="/random-animal-name-generator" className="font-semibold text-emerald-700 underline underline-offset-4">
+                Random Animal Name Generator
+              </Link>
+              . If you want a one-at-a-time picker for games or classroom rounds, switch to the{' '}
+              <Link href="/random-animal-generator-wheel" className="font-semibold text-emerald-700 underline underline-offset-4">
+                Random Animal Generator Wheel
+              </Link>
+              .
+            </p>
           </div>
         </section>
 
-        <section className="mb-8 rounded-2xl border border-amber-100 bg-white/95 p-8 shadow-2xl backdrop-blur-sm md:p-10">
+        <section
+          id="use-cases"
+          className="mb-8 scroll-mt-24 rounded-2xl border border-amber-100 bg-white/95 p-8 shadow-2xl backdrop-blur-sm md:p-10"
+        >
           <div className="mb-8 flex items-center gap-4">
             <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-amber-500 to-orange-600">
               <svg className="h-7 w-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -641,7 +701,10 @@ function HomeContent() {
           </div>
         </section>
 
-        <section className="mb-8 rounded-2xl border border-sky-100 bg-white/95 p-8 shadow-2xl backdrop-blur-sm md:p-10">
+        <section
+          id="related-tools"
+          className="mb-8 scroll-mt-24 rounded-2xl border border-sky-100 bg-white/95 p-8 shadow-2xl backdrop-blur-sm md:p-10"
+        >
           <div className="mb-8 flex items-center gap-4">
             <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-sky-500 to-cyan-600">
               <svg className="h-7 w-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -674,7 +737,10 @@ function HomeContent() {
           </div>
         </section>
 
-        <section className="mb-8 rounded-2xl border border-green-100 bg-white/95 p-8 shadow-2xl backdrop-blur-sm md:p-10">
+        <section
+          id="faq"
+          className="mb-8 scroll-mt-24 rounded-2xl border border-green-100 bg-white/95 p-8 shadow-2xl backdrop-blur-sm md:p-10"
+        >
           <div className="mb-8 flex items-center gap-4">
             <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-green-500 to-emerald-600">
               <svg className="h-7 w-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">

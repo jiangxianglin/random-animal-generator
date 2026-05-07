@@ -22,6 +22,16 @@ type WebAppSchemaInput = {
   featureList?: string[];
 };
 
+type BreadcrumbItem = {
+  name: string;
+  path: string;
+};
+
+type HowToStep = {
+  name: string;
+  text: string;
+};
+
 export function buildPageMetadata({
   title,
   description,
@@ -119,5 +129,69 @@ export function buildWebAppSchema({
       "@type": "Organization",
       name: SITE_NAME,
     },
+  };
+}
+
+export function buildOrganizationSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: SITE_NAME,
+    url: SITE_URL,
+  };
+}
+
+export function buildWebSiteSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: SITE_NAME,
+    url: SITE_URL,
+    publisher: {
+      "@type": "Organization",
+      name: SITE_NAME,
+    },
+  };
+}
+
+export function buildBreadcrumbSchema(items: readonly BreadcrumbItem[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => {
+      const canonical = item.path.startsWith("/") ? item.path : `/${item.path}`;
+      const fullUrl = canonical === "/" ? SITE_URL : `${SITE_URL}${canonical}`;
+
+      return {
+        "@type": "ListItem",
+        position: index + 1,
+        name: item.name,
+        item: fullUrl,
+      };
+    }),
+  };
+}
+
+export function buildHowToSchema(
+  name: string,
+  description: string,
+  path: string,
+  steps: readonly HowToStep[],
+) {
+  const canonical = path.startsWith("/") ? path : `/${path}`;
+  const fullUrl = canonical === "/" ? SITE_URL : `${SITE_URL}${canonical}`;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name,
+    description,
+    url: fullUrl,
+    step: steps.map((step, index) => ({
+      "@type": "HowToStep",
+      position: index + 1,
+      name: step.name,
+      text: step.text,
+    })),
   };
 }

@@ -4,7 +4,8 @@ import Image from 'next/image';
 import { useMemo, useState } from 'react';
 import { AnimalWheelSpinner } from '@/components/animal-wheel-spinner';
 import { ANIMAL_DATABASE, Animal } from '@/lib/animals';
-import { buildFaqSchema, buildWebAppSchema } from '@/lib/seo';
+import Link from 'next/link';
+import { buildBreadcrumbSchema, buildFaqSchema, buildHowToSchema, buildWebAppSchema } from '@/lib/seo';
 
 const WHEEL_COLORS = [
   '#6366F1',
@@ -102,6 +103,21 @@ const FAQS = [
   },
 ] as const;
 
+const HOW_TO_STEPS = [
+  {
+    name: 'Choose a category',
+    text: 'Select all animals or narrow the wheel to mammals, birds, reptiles, marine animals, or insects.',
+  },
+  {
+    name: 'Spin the wheel',
+    text: 'Click the wheel spinner and wait for the pointer to stop on a random animal.',
+  },
+  {
+    name: 'Use the result',
+    text: 'Review the selected animal and use it for games, classroom activities, or creative prompts.',
+  },
+] as const;
+
 export default function RandomAnimalGeneratorWheel() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedAnimal, setSelectedAnimal] = useState<Animal | null>(null);
@@ -148,6 +164,16 @@ export default function RandomAnimalGeneratorWheel() {
         'Works on desktop and mobile devices',
       ],
     }),
+    buildBreadcrumbSchema([
+      { name: 'Home', path: '/' },
+      { name: 'Random Animal Generator Wheel', path: '/random-animal-generator-wheel/' },
+    ]),
+    buildHowToSchema(
+      'How to use the random animal generator wheel',
+      'A short guide for spinning the wheel and using the selected animal.',
+      '/random-animal-generator-wheel/',
+      HOW_TO_STEPS,
+    ),
     buildFaqSchema(FAQS),
   ];
 
@@ -234,7 +260,7 @@ export default function RandomAnimalGeneratorWheel() {
                   <div className="mb-4 space-y-2">
                     {selectedAnimal.facts.slice(0, 2).map((fact, index) => (
                       <div key={index} className="flex items-start gap-2">
-                        <span className="text-xl">•</span>
+                        <span className="text-xl" aria-hidden="true">*</span>
                         <p className="text-sm text-gray-700">{fact}</p>
                       </div>
                     ))}
@@ -280,6 +306,17 @@ export default function RandomAnimalGeneratorWheel() {
               It is useful for teachers, parents, game masters, writers, and anyone who needs a
               fast and entertaining way to pick random animals. No registration is required and no
               downloads are needed.
+            </p>
+            <p className="mt-3 text-sm text-gray-700">
+              If you want a broader generator with animal cards and filters, use the{' '}
+              <Link href="/" className="font-semibold text-indigo-700 underline underline-offset-4">
+                main Random Animal Generator
+              </Link>
+              . If you need a copy-ready list of names instead of a spinner, try the{' '}
+              <Link href="/random-animal-name-generator" className="font-semibold text-indigo-700 underline underline-offset-4">
+                Random Animal Name Generator
+              </Link>
+              .
             </p>
           </div>
         </section>

@@ -9,7 +9,7 @@ import {
   CategoryKey,
   DrawingDifficulty,
 } from '@/lib/animals';
-import { buildFaqSchema, buildWebAppSchema } from '@/lib/seo';
+import { buildBreadcrumbSchema, buildFaqSchema, buildHowToSchema, buildWebAppSchema } from '@/lib/seo';
 
 type NameFormat = 'common' | 'scientific' | 'both';
 type OutputMode = 'list' | 'writing' | 'study' | 'game';
@@ -126,6 +126,21 @@ const QUICK_PRESETS: Array<{
     mode: 'game',
   },
 ];
+
+const HOW_TO_STEPS = [
+  {
+    name: 'Set the format',
+    text: 'Choose whether you want common names, scientific names, or both in the final output.',
+  },
+  {
+    name: 'Pick quantity and category',
+    text: 'Decide how many names you need and optionally narrow the results to one animal category.',
+  },
+  {
+    name: 'Generate and copy',
+    text: 'Generate the list, review the output, and copy the results for writing prompts, games, or classroom use.',
+  },
+] as const;
 
 function shuffle<T>(items: T[]) {
   const copy = [...items];
@@ -356,6 +371,16 @@ export default function RandomAnimalNameGeneratorPage() {
         'Copy generated animal name lists instantly',
       ],
     }),
+    buildBreadcrumbSchema([
+      { name: 'Home', path: '/' },
+      { name: 'Random Animal Name Generator', path: '/random-animal-name-generator/' },
+    ]),
+    buildHowToSchema(
+      'How to use the random animal name generator',
+      'A short guide for generating and copying random animal name lists.',
+      '/random-animal-name-generator/',
+      HOW_TO_STEPS,
+    ),
     buildFaqSchema(FAQS),
   ];
 
@@ -600,6 +625,17 @@ export default function RandomAnimalNameGeneratorPage() {
                 The homepage generator is better for discovery. This page is for users who already
                 know they want names, and want them with as little friction as possible. The output
                 mode layer also lets one page serve multiple intents without turning into a generic blob.
+              </p>
+              <p className="mt-3 text-base leading-7 text-slate-700">
+                If you want animal cards, images, and broader filtering, go back to the{' '}
+                <Link href="/" className="font-semibold text-amber-700 underline underline-offset-4">
+                  main Random Animal Generator
+                </Link>
+                . If you want a one-at-a-time picker instead of a list, use the{' '}
+                <Link href="/random-animal-generator-wheel" className="font-semibold text-amber-700 underline underline-offset-4">
+                  Random Animal Generator Wheel
+                </Link>
+                .
               </p>
               <div className="mt-5 space-y-3">
                 {USE_CASES.map((item) => (

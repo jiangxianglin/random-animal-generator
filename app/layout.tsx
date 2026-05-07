@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Link from "next/link";
-import { buildPageMetadata } from "@/lib/seo";
+import { buildOrganizationSchema, buildPageMetadata, buildWebSiteSchema } from "@/lib/seo";
 import {
   PRIMARY_NAV_ITEMS,
   SITE_DESCRIPTION,
@@ -11,17 +11,19 @@ import {
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+const rootStructuredData = [buildOrganizationSchema(), buildWebSiteSchema()];
 
 export const metadata: Metadata = {
   ...buildPageMetadata({
-    title: `${SITE_NAME} - Free Online Random Animal Tool`,
-    description: SITE_DESCRIPTION,
+    title: `Random Animal Generator for Drawing, Games & Classrooms`,
+    description:
+      "Generate random animals online with category filters, drawing difficulty, challenge modes, and classroom-friendly prompts.",
     path: "/",
     image: "/RandomAnimalGenerator-hero.png",
     imageAlt: "Random animal generator interface with wildlife examples",
   }),
   title: {
-    default: `${SITE_NAME} - Free Online Random Animal Tool`,
+    default: `Random Animal Generator for Drawing, Games & Classrooms`,
     template: `%s | ${SITE_NAME}`,
   },
   icons: {
@@ -55,6 +57,10 @@ export default function RootLayout({
         <meta name="msvalidate.01" content="43187DC780902969FDD60090285A833A" />
         <meta name="pinterest" content="nopin" />
         <meta name="pinterest-rich-pin" content="true" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(rootStructuredData) }}
+        />
       </head>
       <body className={inter.className}>
         <nav className="sticky top-0 z-50 bg-indigo-600 text-white shadow-lg">

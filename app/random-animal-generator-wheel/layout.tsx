@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Random Animal Generator Wheel - Free Spinner for Games",
+  title: "Random Animal Generator Wheel for Games, Classrooms & Prompts",
   description:
-    "Use our free random animal generator wheel to pick animals for games, classroom activities, and creative prompts.",
+    "Spin a random animal generator wheel online for games, classroom activities, creative prompts, and quick one-at-a-time picks.",
   path: "/random-animal-generator-wheel/",
   image: "/og-random-animal-generator-wheel.png",
   imageAlt: "Random Animal Generator Wheel interface preview",
