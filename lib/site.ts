@@ -14,8 +14,9 @@ export const PRIMARY_NAV_ITEMS = [
 
 export const CORE_SITE_ROUTES = [
   { path: "/", priority: 1.0 },
-  { path: "/random-animal-generator-wheel/", priority: 0.9 },
-  { path: "/random-animal-name-generator/", priority: 0.9 },
+  { path: "/random-animal-generator-wheel", priority: 0.9 },
+  { path: "/random-animal-name-generator", priority: 0.9 },
+  { path: "/random-animal-generator-for-drawing", priority: 0.85 },
 ] as const;
 
 export const LAST_MAJOR_UPDATE = new Date("2026-05-07T00:00:00.000Z");

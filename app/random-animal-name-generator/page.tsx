@@ -363,7 +363,7 @@ export default function RandomAnimalNameGeneratorPage() {
       name: 'Random Animal Name Generator',
       description:
         'Generate random animal names with category filters and common or scientific formats for writing, classroom use, and games.',
-      path: '/random-animal-name-generator/',
+      path: '/random-animal-name-generator',
       featureList: [
         'Generate 1 to 12 random animal names',
         'Common name, scientific name, or combined display',
@@ -373,12 +373,12 @@ export default function RandomAnimalNameGeneratorPage() {
     }),
     buildBreadcrumbSchema([
       { name: 'Home', path: '/' },
-      { name: 'Random Animal Name Generator', path: '/random-animal-name-generator/' },
+      { name: 'Random Animal Name Generator', path: '/random-animal-name-generator' },
     ]),
     buildHowToSchema(
       'How to use the random animal name generator',
       'A short guide for generating and copying random animal name lists.',
-      '/random-animal-name-generator/',
+      '/random-animal-name-generator',
       HOW_TO_STEPS,
     ),
     buildFaqSchema(FAQS),
@@ -406,6 +406,17 @@ export default function RandomAnimalNameGeneratorPage() {
                 Generate animal names that are ready to copy in seconds. This page is built for
                 people who want a clean list output first, whether the goal is writing prompts,
                 classroom practice, or fast game setup.
+              </p>
+              <p className="mt-4 max-w-2xl text-base leading-7 text-slate-200/90 md:text-lg">
+                Need a one-at-a-time picker for games? Try the{' '}
+                <Link href="/random-animal-generator-wheel" className="font-semibold underline underline-offset-4">
+                  random animal wheel spinner
+                </Link>
+                . Want images, facts, and filters instead of just names? Use the{' '}
+                <Link href="/" className="font-semibold underline underline-offset-4">
+                  random animal generator
+                </Link>
+                .
               </p>
 
               <div className="mt-8 flex flex-wrap gap-3">

@@ -464,6 +464,30 @@ function HomeContent() {
             <p className="mx-auto max-w-xl text-sm text-gray-600 md:text-base">
               Free online animal tool with category filters, challenge modes, and difficulty-based discovery
             </p>
+            <p className="mx-auto mt-4 max-w-2xl text-sm text-gray-700 md:text-base">
+              Prefer a one-at-a-time picker? Use the{' '}
+              <Link
+                href="/random-animal-generator-wheel"
+                className="font-semibold text-emerald-800 underline underline-offset-4"
+              >
+                random animal wheel spinner
+              </Link>
+              . Need a copy-ready list? Use the{' '}
+              <Link
+                href="/random-animal-name-generator"
+                className="font-semibold text-emerald-800 underline underline-offset-4"
+              >
+                random animal name generator
+              </Link>
+              . Want prompts specifically for art practice? Try the{' '}
+              <Link
+                href="/random-animal-generator-for-drawing"
+                className="font-semibold text-emerald-800 underline underline-offset-4"
+              >
+                random animal generator for drawing
+              </Link>
+              .
+            </p>
           </header>
 
           <section id="generator" className="mx-auto mb-8 scroll-mt-24 flex w-full max-w-3xl flex-col gap-4">

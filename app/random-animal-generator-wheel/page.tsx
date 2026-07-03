@@ -156,7 +156,7 @@ export default function RandomAnimalGeneratorWheel() {
       name: 'Random Animal Generator Wheel',
       description:
         'A free online spinning wheel that randomly selects animals for games, education, and creative prompts.',
-      path: '/random-animal-generator-wheel/',
+      path: '/random-animal-generator-wheel',
       featureList: [
         'Random animal selection via spinning wheel',
         'Category filtering for mammals, birds, reptiles, marine animals, and insects',
@@ -166,12 +166,12 @@ export default function RandomAnimalGeneratorWheel() {
     }),
     buildBreadcrumbSchema([
       { name: 'Home', path: '/' },
-      { name: 'Random Animal Generator Wheel', path: '/random-animal-generator-wheel/' },
+      { name: 'Random Animal Generator Wheel', path: '/random-animal-generator-wheel' },
     ]),
     buildHowToSchema(
       'How to use the random animal generator wheel',
       'A short guide for spinning the wheel and using the selected animal.',
-      '/random-animal-generator-wheel/',
+      '/random-animal-generator-wheel',
       HOW_TO_STEPS,
     ),
     buildFaqSchema(FAQS),
@@ -191,6 +191,21 @@ export default function RandomAnimalGeneratorWheel() {
           </h1>
           <p className="text-sm text-gray-600 md:text-base">
             Free online tool - {ANIMAL_DATABASE.length}+ animals - instant results
+          </p>
+          <p className="mx-auto mt-3 max-w-3xl text-sm text-gray-600 md:text-base">
+            Use this <strong>animal wheel spinner</strong> when you need a quick random pick for
+            games or lessons. For a full-page generator with cards and filters, try the{' '}
+            <Link href="/" className="font-semibold text-indigo-700 underline underline-offset-4">
+              random animal generator
+            </Link>
+            . For a copy-ready list output, use the{' '}
+            <Link
+              href="/random-animal-name-generator"
+              className="font-semibold text-indigo-700 underline underline-offset-4"
+            >
+              random animal name generator
+            </Link>
+            .
           </p>
         </div>
 
