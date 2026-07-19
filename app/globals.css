@@ -74,12 +74,22 @@ body {
   letter-spacing: -0.02em;
   line-height: 1.2;
   color: var(--ink);
+  text-align: center;
+  max-width: 40rem;
+  margin-inline: auto;
 }
 
 .home-prose {
   font-size: 1.0625rem;
   line-height: 1.75;
   color: var(--ink-muted);
+  max-width: 42rem;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.home-prose.home-prose-start {
+  text-align: left;
 }
 
 .home-prose a {

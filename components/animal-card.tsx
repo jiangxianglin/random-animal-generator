@@ -1,7 +1,7 @@
 'use client';
 
 import { Animal } from '@/lib/animals';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { DifficultyBadge } from './difficulty-badge';
 import { DrawingTips } from './drawing-tips';
 import { ShareButtons } from './share-buttons';
@@ -30,24 +30,46 @@ export function AnimalCard({ animal }: AnimalCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isImageModalOpen, setIsImageModalOpen] = useState(false);
 
+  useEffect(() => {
+    if (!isImageModalOpen) {
+      return;
+    }
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setIsImageModalOpen(false);
+      }
+    };
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', onKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener('keydown', onKeyDown);
+    };
+  }, [isImageModalOpen]);
+
   return (
     <>
       <div className="group overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-lg transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
         <div
-          className="relative flex h-56 w-full cursor-pointer items-center justify-center overflow-hidden bg-gradient-to-br from-stone-100 via-amber-50 to-emerald-50"
+          className="relative flex h-56 w-full cursor-pointer items-center justify-center overflow-hidden bg-[var(--paper-deep)]"
           onClick={() => setIsImageModalOpen(true)}
         >
           <img
             src={animal.imageUrl}
             alt={animal.imageAlt}
-            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+            className="h-full w-full object-contain p-1 transition-opacity duration-300 group-hover:opacity-95"
             loading="lazy"
             onError={(e) => {
               e.currentTarget.style.display = 'none';
               const parent = e.currentTarget.parentElement;
               if (parent && !parent.querySelector('.placeholder-content')) {
                 const placeholder = document.createElement('div');
-                placeholder.className = 'placeholder-content absolute inset-0 flex flex-col items-center justify-center p-6 text-center';
+                placeholder.className =
+                  'placeholder-content absolute inset-0 flex flex-col items-center justify-center p-6 text-center';
                 placeholder.innerHTML = `
                   <div class="text-xs font-semibold uppercase tracking-[0.2em] text-gray-500 mb-3">${categoryLabels[animal.category]}</div>
                   <div class="text-2xl font-bold text-gray-700">${animal.commonName}</div>
@@ -57,10 +79,12 @@ export function AnimalCard({ animal }: AnimalCardProps) {
               }
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
           <div className="absolute right-4 top-4 z-10">
-            <span className={`inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r px-3 py-1.5 text-xs font-semibold text-white shadow-lg backdrop-blur-sm sm:px-4 sm:py-2 sm:text-sm ${categoryColors[animal.category]}`}>
+            <span
+              className={`inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r px-3 py-1.5 text-xs font-semibold text-white shadow-lg backdrop-blur-sm sm:px-4 sm:py-2 sm:text-sm ${categoryColors[animal.category]}`}
+            >
               <span className="hidden sm:inline">{categoryLabels[animal.category]}</span>
               <span className="sm:hidden">{categoryLabels[animal.category].slice(0, 3)}</span>
             </span>
@@ -83,12 +107,18 @@ export function AnimalCard({ animal }: AnimalCardProps) {
             <DrawingTips tips={animal.drawingTips} className="mb-4" />
           )}
 
-          <div className={`space-y-3 transition-all duration-300 ${isExpanded ? 'max-h-96' : 'max-h-32 overflow-hidden'}`}>
+          <div
+            className={`space-y-3 transition-all duration-300 ${isExpanded ? 'max-h-96' : 'max-h-32 overflow-hidden'}`}
+          >
             {animal.facts.map((fact, index) => (
               <div key={index} className="flex items-start gap-3">
                 <div className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-green-600">
                   <svg className="h-3 w-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    <path
+                      fillRule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clipRule="evenodd"
+                    />
                   </svg>
                 </div>
                 <p className="flex-1 text-sm leading-relaxed text-gray-700">{fact}</p>
@@ -130,41 +160,60 @@ export function AnimalCard({ animal }: AnimalCardProps) {
 
       {isImageModalOpen && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm"
+          className="fixed inset-0 z-[100] flex flex-col bg-[rgba(28,26,23,0.92)]"
+          role="dialog"
+          aria-modal="true"
+          aria-label={`${animal.commonName} image`}
           onClick={() => setIsImageModalOpen(false)}
         >
-          <button
-            onClick={() => setIsImageModalOpen(false)}
-            className="absolute right-4 top-4 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white/90 shadow-lg transition-all hover:scale-110 hover:bg-white"
-            aria-label="Close"
+          <div
+            className="flex shrink-0 items-center justify-between gap-4 border-b border-white/10 px-4 py-3 sm:px-6"
+            onClick={(e) => e.stopPropagation()}
           >
-            <svg className="h-6 w-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-
-          <div className="absolute left-4 top-4 z-10 max-w-sm rounded-2xl bg-white/95 p-4 shadow-xl backdrop-blur-sm">
-            <div className="mb-2 flex flex-wrap items-center gap-3">
-              <span className={`inline-flex items-center gap-2 rounded-full bg-gradient-to-r px-3 py-1.5 text-sm font-semibold text-white ${categoryColors[animal.category]}`}>
-                <span>{categoryLabels[animal.category]}</span>
-              </span>
-              <DifficultyBadge difficulty={animal.drawingDifficulty} />
+            <div className="min-w-0">
+              <div className="mb-1 flex flex-wrap items-center gap-2">
+                <span
+                  className={`inline-flex items-center rounded-full bg-gradient-to-r px-2.5 py-1 text-xs font-semibold text-white ${categoryColors[animal.category]}`}
+                >
+                  {categoryLabels[animal.category]}
+                </span>
+                <DifficultyBadge difficulty={animal.drawingDifficulty} />
+              </div>
+              <h3 className="truncate font-display text-lg font-semibold text-white sm:text-xl">
+                {animal.commonName}
+              </h3>
+              <p className="truncate text-sm italic text-white/70">{animal.scientificName}</p>
             </div>
-            <h3 className="text-xl font-bold text-gray-900">{animal.commonName}</h3>
-            <p className="text-sm italic text-gray-600">{animal.scientificName}</p>
+
+            <button
+              type="button"
+              onClick={() => setIsImageModalOpen(false)}
+              className="inline-flex shrink-0 items-center gap-2 rounded-[var(--radius-sm)] bg-white px-4 py-2.5 text-sm font-semibold text-[var(--ink)] shadow-lg transition hover:bg-[var(--paper)]"
+              aria-label="Close image"
+            >
+              <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+              <span>Close</span>
+            </button>
           </div>
 
-          <div className="relative flex h-full w-full max-h-[90vh] max-w-7xl items-center justify-center" onClick={(e) => e.stopPropagation()}>
+          <div
+            className="flex min-h-0 flex-1 items-center justify-center p-4 sm:p-8"
+            onClick={() => setIsImageModalOpen(false)}
+          >
             <img
               src={animal.imageUrl}
               alt={animal.imageAlt}
-              className="max-h-full max-w-full rounded-lg object-contain shadow-2xl"
+              className="max-h-full max-w-full rounded-lg bg-black/20 object-contain shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
               onError={(e) => {
                 e.currentTarget.style.display = 'none';
                 const parent = e.currentTarget.parentElement;
                 if (parent && !parent.querySelector('.placeholder-content')) {
                   const placeholder = document.createElement('div');
-                  placeholder.className = 'placeholder-content rounded-lg bg-gradient-to-br from-stone-100 via-amber-50 to-emerald-50 p-12 text-center';
+                  placeholder.className =
+                    'placeholder-content rounded-lg bg-[var(--paper)] p-12 text-center';
                   placeholder.innerHTML = `
                     <div class="text-xs font-semibold uppercase tracking-[0.2em] text-gray-500 mb-4">${categoryLabels[animal.category]}</div>
                     <div class="text-4xl font-bold text-gray-700 mb-2">${animal.commonName}</div>
@@ -175,6 +224,10 @@ export function AnimalCard({ animal }: AnimalCardProps) {
               }}
             />
           </div>
+
+          <p className="shrink-0 pb-4 text-center text-xs text-white/50">
+            Press Esc or click outside the image to close
+          </p>
         </div>
       )}
     </>

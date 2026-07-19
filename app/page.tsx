@@ -208,7 +208,7 @@ export default function Home() {
           sizes="100vw"
         />
         <div
-          className="absolute inset-0 bg-gradient-to-t from-[rgba(28,26,23,0.88)] via-[rgba(28,26,23,0.55)] to-[rgba(28,26,23,0.35)]"
+          className="absolute inset-0 bg-gradient-to-t from-[rgba(28,26,23,0.72)] via-[rgba(28,26,23,0.32)] to-[rgba(28,26,23,0.12)]"
           aria-hidden="true"
         />
         <div className="relative z-10 mx-auto flex min-h-[calc(100svh-4rem)] max-w-7xl flex-col justify-end px-4 pb-14 pt-20 md:pb-20 md:pt-24">
@@ -243,7 +243,7 @@ export default function Home() {
         <article>
           <section id="how-it-works" className="home-section scroll-mt-24">
             <h2 className="home-section-title">How the Random Animal Generator Works</h2>
-            <div className="home-prose mt-6 max-w-3xl space-y-4">
+            <div className="home-prose mt-6 space-y-4">
               <p>
                 A <strong className="font-semibold text-[var(--ink)]">random animal generator</strong> should
                 do one job well: give you a useful animal prompt in seconds. This page does that with a
@@ -268,7 +268,7 @@ export default function Home() {
               </p>
             </div>
 
-            <ol className="mt-10 grid list-none gap-8 md:grid-cols-3 md:gap-10">
+            <ol className="mx-auto mt-10 grid max-w-5xl list-none gap-8 text-center md:grid-cols-3 md:gap-10 md:text-left">
               {HOME_HOW_TO_STEPS.map((step, index) => (
                 <li key={step.name} className="border-t border-[var(--line)] pt-5">
                   <div className="font-display text-sm font-medium text-[var(--olive)]">
@@ -298,7 +298,7 @@ export default function Home() {
                 loading="lazy"
               />
             </div>
-            <div className="home-prose max-w-3xl space-y-4">
+            <div className="home-prose space-y-4">
               <p>
                 Many random animal tools stop at a name. This site is built around real use cases: drawing
                 practice, classroom activities, and light game play. That is why filters, difficulty
@@ -325,13 +325,13 @@ export default function Home() {
 
           <section id="drawing-challenges" className="home-section scroll-mt-24">
             <h2 className="home-section-title">Drawing Challenge Ideas with Random Animals</h2>
-            <p className="home-prose mt-4 max-w-3xl">
+            <p className="home-prose mt-4">
               Artists search for a random animal generator when they want a prompt that removes decision
               fatigue. Use these challenge formats to turn a single click into a full practice session.
               Pair them with the difficulty filter so beginners stay motivated and advanced drawers still
               feel stretched.
             </p>
-            <div className="mt-10 grid gap-8 md:grid-cols-2">
+            <div className="mx-auto mt-10 grid max-w-5xl gap-8 text-left md:grid-cols-2">
               {DRAWING_CHALLENGE_IDEAS.map((idea) => (
                 <div key={idea.title} className="border-t border-[var(--line)] pt-5">
                   <h3 className="font-display text-xl font-semibold text-[var(--ink)]">{idea.title}</h3>
@@ -339,7 +339,7 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <p className="home-prose mt-8 max-w-3xl">
+            <p className="home-prose mt-8">
               For a spin-the-wheel drawing challenge with pictures, open the{' '}
               <Link href="/random-animal-generator-wheel">random animal generator wheel</Link> and let the
               group watch the pointer land. That format works especially well for live streams, art club
@@ -349,12 +349,12 @@ export default function Home() {
 
           <section id="classroom-uses" className="home-section scroll-mt-24">
             <h2 className="home-section-title">Classroom Uses for a Random Animal Generator</h2>
-            <p className="home-prose mt-4 max-w-3xl">
+            <p className="home-prose mt-4">
               Teachers and homeschool parents need tools that are fast, filterable, and free of login
               friction. This generator supports short activities that fit into a warmup, station rotation,
               or end-of-class closer without requiring preparation time.
             </p>
-            <div className="mt-10 grid gap-8 md:grid-cols-2">
+            <div className="mx-auto mt-10 grid max-w-5xl gap-8 text-left md:grid-cols-2">
               {CLASSROOM_ACTIVITIES.map((activity) => (
                 <div key={activity.title} className="border-t border-[var(--line)] pt-5">
                   <h3 className="font-display text-xl font-semibold text-[var(--ink)]">
@@ -364,7 +364,7 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <p className="home-prose mt-8 max-w-3xl">
+            <p className="home-prose mt-8">
               Because results include facts and images, students can move from a random pick to a short
               research note without opening five different tabs. For language or science naming practice,
               generate a list with the{' '}
@@ -386,7 +386,7 @@ export default function Home() {
                 loading="lazy"
               />
             </div>
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 text-left md:grid-cols-2 lg:grid-cols-3">
               {HOME_USE_CASES.map((useCase) => (
                 <div key={useCase.title} className="border-t border-[var(--line)] pt-5">
                   <div className="text-sm font-medium text-[var(--olive)]">{useCase.label}</div>
@@ -401,7 +401,7 @@ export default function Home() {
 
           <section className="home-section">
             <h2 className="home-section-title">Games, Icebreakers, and Party Rounds</h2>
-            <div className="home-prose mt-6 max-w-3xl space-y-4">
+            <div className="home-prose mt-6 space-y-4">
               <p>
                 Random animal picks are a natural fit for icebreakers, charades, Pictionary-style rounds,
                 and “who goes first” decisions. Generate three animals and ask each player to act one out,
@@ -424,7 +424,7 @@ export default function Home() {
 
           <section className="home-section">
             <h2 className="home-section-title">Challenge Modes That Encourage Return Visits</h2>
-            <div className="home-prose mt-6 max-w-3xl space-y-4">
+            <div className="home-prose mt-6 space-y-4">
               <p>
                 A one-click generator is useful once. Challenge modes turn it into a habit. The daily
                 challenge gives you a single featured animal so artists and classrooms can share the same
@@ -442,12 +442,12 @@ export default function Home() {
 
           <section id="related-tools" className="home-section scroll-mt-24">
             <h2 className="home-section-title">Explore Related Tools</h2>
-            <p className="home-prose mt-4 max-w-3xl">
+            <p className="home-prose mt-4">
               The homepage targets the core query{' '}
               <strong className="font-semibold text-[var(--ink)]">random animal generator</strong>. Related
               tools cover narrower intents so visitors and search engines both get a clear path.
             </p>
-            <ul className="mt-10 divide-y divide-[var(--line)] border-y border-[var(--line)]">
+            <ul className="mx-auto mt-10 max-w-5xl divide-y divide-[var(--line)] border-y border-[var(--line)] text-left">
               {CORE_TOOLS.map((tool) => (
                 <li key={tool.href}>
                   <Link
@@ -472,7 +472,7 @@ export default function Home() {
 
           <section id="faq" className="home-section scroll-mt-24">
             <h2 className="home-section-title">Frequently Asked Questions</h2>
-            <div className="mt-8 divide-y divide-[var(--line)] border-y border-[var(--line)]">
+            <div className="mx-auto mt-8 max-w-3xl divide-y divide-[var(--line)] border-y border-[var(--line)] text-left">
               {HOME_FAQS.map((faq) => (
                 <div key={faq.question} className="py-6">
                   <h3 className="font-display text-lg font-semibold text-[var(--ink)] md:text-xl">

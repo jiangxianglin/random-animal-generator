@@ -136,7 +136,7 @@ export function AnimalWheelSpinner({ animals, onSpinComplete }: AnimalWheelSpinn
               src={selectedAnimal.imageUrl}
               alt={selectedAnimal.imageAlt}
               fill
-              className="object-cover"
+              className="object-contain"
               sizes="(max-width: 768px) 100vw, 448px"
             />
           </div>

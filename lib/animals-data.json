@@ -9,7 +9,7 @@
       "They can communicate using infrasound that travels several kilometers through the ground.",
       "Elephants have excellent memory and can recognize up to 30 relatives by their calls."
     ],
-    "imageUrl": "https://images.pexels.com/photos/3850526/pexels-photo-3850526.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/172043765/large.jpg",
     "imageAlt": "African elephant in savanna",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -35,7 +35,7 @@
       "They have a false thumb to help them grip branches while climbing.",
       "Red pandas can rotate their ankles to descend trees headfirst."
     ],
-    "imageUrl": "https://images.pexels.com/photos/148182/pexels-photo-148182.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/62922939/large.jpg",
     "imageAlt": "Red panda in tree",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -61,7 +61,7 @@
       "Tigers can leap distances of up to 10 meters in a single bound.",
       "They are excellent swimmers and often cool off in water during hot days."
     ],
-    "imageUrl": "https://images.pexels.com/photos/516541/pexels-photo-516541.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/24026671/large.jpeg",
     "imageAlt": "Bengal tiger",
     "drawingDifficulty": "hard",
     "drawingTips": [
@@ -87,7 +87,7 @@
       "Despite being carnivores, 99% of their diet consists of bamboo.",
       "They have an extra 'thumb' that helps them grip bamboo stems."
     ],
-    "imageUrl": "https://images.pexels.com/photos/3608263/pexels-photo-3608263.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://static.inaturalist.org/photos/41712282/large.jpeg",
     "imageAlt": "Giant panda eating bamboo",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -113,7 +113,7 @@
       "A wolf's howl can be heard from up to 10 km away.",
       "Wolf packs have a complex social structure led by an alpha pair."
     ],
-    "imageUrl": "https://images.pexels.com/photos/69350/pexels-photo-69350.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/3272959/large.jpg",
     "imageAlt": "Gray wolf in snow",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -139,7 +139,7 @@
       "They can accelerate from 0 to 96 km/h in just 3 seconds.",
       "Unlike other big cats, cheetahs cannot roar but they can purr."
     ],
-    "imageUrl": "https://images.pexels.com/photos/9765280/pexels-photo-9765280.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/350833012/large.jpeg",
     "imageAlt": "Cheetah running",
     "drawingDifficulty": "hard",
     "drawingTips": [
@@ -165,7 +165,7 @@
       "Their tongues can be up to 50 cm long and are prehensile.",
       "Despite their long necks, giraffes have the same number of neck vertebrae as humans - seven."
     ],
-    "imageUrl": "https://images.pexels.com/photos/34098/south-africa-hluhluwe-giraffes-pattern.jpg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/357193977/large.jpeg",
     "imageAlt": "Giraffe in savanna",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -191,7 +191,7 @@
       "They can swim continuously for days, covering distances over 600 km.",
       "A polar bear's sense of smell is so acute it can detect seals nearly 1 km away."
     ],
-    "imageUrl": "https://images.pexels.com/photos/598966/pexels-photo-598966.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://static.inaturalist.org/photos/230358710/large.jpeg",
     "imageAlt": "Polar bear on ice",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -217,7 +217,7 @@
       "They cannot walk backwards, which is why they're on the Australian coat of arms.",
       "Female kangaroos can pause their pregnancy if environmental conditions are unfavorable."
     ],
-    "imageUrl": "https://images.pexels.com/photos/2560510/pexels-photo-2560510.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/42086614/large.jpeg",
     "imageAlt": "Red kangaroo",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -243,7 +243,7 @@
       "They have fingerprints that are remarkably similar to human fingerprints.",
       "Koalas eat only eucalyptus leaves, which are toxic to most other animals."
     ],
-    "imageUrl": "https://images.pexels.com/photos/146083/pexels-photo-146083.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/127373180/large.jpg",
     "imageAlt": "Koala in eucalyptus tree",
     "drawingDifficulty": "easy",
     "drawingTips": [
@@ -269,7 +269,7 @@
       "They can learn sign language and communicate with humans.",
       "Adult male gorillas can weigh up to 220 kg and are incredibly strong."
     ],
-    "imageUrl": "https://images.pexels.com/photos/33535/primate-ape-thinking-mimic.jpg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://static.inaturalist.org/photos/179603434/large.jpeg",
     "imageAlt": "Mountain gorilla",
     "drawingDifficulty": "hard",
     "drawingTips": [
@@ -295,7 +295,7 @@
       "They have an arm span of up to 2.3 meters, perfect for swinging through trees.",
       "Orangutans use tools and have been observed making umbrellas from leaves."
     ],
-    "imageUrl": "https://images.pexels.com/photos/2083277/pexels-photo-2083277.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/274958590/large.jpg",
     "imageAlt": "Orangutan in rainforest",
     "drawingDifficulty": "hard",
     "drawingTips": [
@@ -321,7 +321,7 @@
       "They only defecate once a week and can lose up to 30% of their body weight.",
       "Sloths can hold their breath for up to 40 minutes underwater."
     ],
-    "imageUrl": "https://images.pexels.com/photos/26690591/pexels-photo-26690591.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/60587910/large.jpg",
     "imageAlt": "Three-toed sloth",
     "drawingDifficulty": "easy",
     "drawingTips": [
@@ -347,7 +347,7 @@
       "Despite their bulk, they can run at speeds up to 30 km/h on land.",
       "Hippos secrete a red, oily substance that acts as sunscreen and antibiotic."
     ],
-    "imageUrl": "https://images.pexels.com/photos/35995/hippo-mammal-wildlife-nature.jpg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/13072970/large.jpg",
     "imageAlt": "Hippopotamus in water",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -373,7 +373,7 @@
       "Zebras can run at speeds up to 65 km/h to escape predators.",
       "Their stripes may help confuse predators and regulate body temperature."
     ],
-    "imageUrl": "https://images.pexels.com/photos/1524628/pexels-photo-1524628.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/166322704/large.jpg",
     "imageAlt": "Plains zebra",
     "drawingDifficulty": "hard",
     "drawingTips": [
@@ -399,7 +399,7 @@
       "Despite their size, rhinos can run at speeds up to 50 km/h.",
       "They have poor eyesight but excellent hearing and sense of smell."
     ],
-    "imageUrl": "https://images.pexels.com/photos/631317/pexels-photo-631317.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://static.inaturalist.org/photos/293366618/large.jpg",
     "imageAlt": "White rhinoceros",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -425,7 +425,7 @@
       "They are excellent swimmers and sometimes hunt fish and crabs.",
       "Leopards can leap 6 meters horizontally and 3 meters vertically."
     ],
-    "imageUrl": "https://images.pexels.com/photos/145939/pexels-photo-145939.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/83216650/large.jpeg",
     "imageAlt": "Leopard in tree",
     "drawingDifficulty": "hard",
     "drawingTips": [
@@ -451,7 +451,7 @@
       "They have dark patches around their eyes that reduce glare from the sun.",
       "Meerkats are immune to certain types of venom, including scorpion stings."
     ],
-    "imageUrl": "https://images.pexels.com/photos/389962/pexels-photo-389962.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://static.inaturalist.org/photos/318136739/large.jpg",
     "imageAlt": "Meerkat standing guard",
     "drawingDifficulty": "easy",
     "drawingTips": [
@@ -477,7 +477,7 @@
       "Males have venomous spurs on their hind legs.",
       "They use electroreception to detect prey underwater with their eyes closed."
     ],
-    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Platypus",
+    "imageUrl": "https://static.inaturalist.org/photos/278342378/large.jpg",
     "imageAlt": "Platypus swimming",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -503,7 +503,7 @@
       "They can remember solutions to tasks for up to three years.",
       "Raccoons 'wash' their food to examine it better, not to clean it."
     ],
-    "imageUrl": "https://images.pexels.com/photos/10767665/pexels-photo-10767665.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://static.inaturalist.org/photos/50807110/large.jpg",
     "imageAlt": "Raccoon",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -529,7 +529,7 @@
       "They can dive at speeds up to 160 km/h when hunting.",
       "Eagles mate for life and return to the same nest each year."
     ],
-    "imageUrl": "https://images.pexels.com/photos/3877512/pexels-photo-3877512.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/107638203/large.jpg",
     "imageAlt": "Bald eagle in flight",
     "drawingDifficulty": "hard",
     "drawingTips": [
@@ -555,7 +555,7 @@
       "They can hold their breath for up to 22 minutes underwater.",
       "Penguins huddle together to stay warm in temperatures as low as -40°C."
     ],
-    "imageUrl": "https://images.pexels.com/photos/1823704/pexels-photo-1823704.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/6000054/large.jpg",
     "imageAlt": "Emperor penguin",
     "drawingDifficulty": "easy",
     "drawingTips": [
@@ -581,7 +581,7 @@
       "They are the only birds that can fly backwards and upside down.",
       "Their hearts beat up to 1,200 times per minute during flight."
     ],
-    "imageUrl": "https://images.pexels.com/photos/4793432/pexels-photo-4793432.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/239401590/large.jpg",
     "imageAlt": "Ruby-throated hummingbird",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -607,7 +607,7 @@
       "Their specialized feathers allow them to fly almost silently.",
       "Owls have three eyelids: one for blinking, one for sleeping, and one for keeping the eye clean."
     ],
-    "imageUrl": "https://images.pexels.com/photos/106685/pexels-photo-106685.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/35240981/large.jpg",
     "imageAlt": "Great horned owl",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -633,7 +633,7 @@
       "The 'eyes' on their tail feathers are called ocelli.",
       "Only male peafowl are called peacocks; females are called peahens."
     ],
-    "imageUrl": "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://static.inaturalist.org/photos/28617120/large.jpg",
     "imageAlt": "Peacock displaying feathers",
     "drawingDifficulty": "hard",
     "drawingTips": [
@@ -659,7 +659,7 @@
       "They can stand on one leg for hours without getting tired.",
       "Flamingos are born with gray feathers that turn pink as they mature."
     ],
-    "imageUrl": "https://images.pexels.com/photos/1327405/pexels-photo-1327405.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/187242272/large.jpg",
     "imageAlt": "Greater flamingo",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -685,7 +685,7 @@
       "They are one of the few animals that can mimic human speech.",
       "Parrots use their feet like hands to hold and examine objects."
     ],
-    "imageUrl": "https://images.pexels.com/photos/1059823/pexels-photo-1059823.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://static.inaturalist.org/photos/52480147/large.jpg",
     "imageAlt": "Scarlet macaw",
     "drawingDifficulty": "hard",
     "drawingTips": [
@@ -711,7 +711,7 @@
       "Despite its size, the bill is very light due to its hollow structure.",
       "Toucans use their bills to regulate body temperature."
     ],
-    "imageUrl": "https://images.pexels.com/photos/4468188/pexels-photo-4468188.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/243841806/large.jpg",
     "imageAlt": "Toco toucan",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -737,7 +737,7 @@
       "They can fly for hours without flapping their wings.",
       "Albatrosses can live for over 50 years and mate for life."
     ],
-    "imageUrl": "https://images.pexels.com/photos/31307997/pexels-photo-31307997.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/91529090/large.jpeg",
     "imageAlt": "Wandering albatross",
     "drawingDifficulty": "hard",
     "drawingTips": [
@@ -763,7 +763,7 @@
       "They have excellent vision and can see prey underwater.",
       "Kingfishers beat their catch against branches to kill it before swallowing."
     ],
-    "imageUrl": "https://images.pexels.com/photos/459449/pexels-photo-459449.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/12584278/large.jpg",
     "imageAlt": "Common kingfisher",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -789,7 +789,7 @@
       "They can mimic human speech and other sounds.",
       "Ravens mate for life and can live for over 20 years."
     ],
-    "imageUrl": "https://images.pexels.com/photos/59850/crow-corvus-frugilegus-rook-raven-bird-59850.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/344773724/large.jpeg",
     "imageAlt": "Common raven",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -815,7 +815,7 @@
       "Their skulls have special shock absorbers to protect their brains.",
       "They have barbed tongues to extract insects from tree bark."
     ],
-    "imageUrl": "https://images.pexels.com/photos/4621165/pexels-photo-4621165.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://static.inaturalist.org/photos/88453249/large.jpg",
     "imageAlt": "Pileated woodpecker",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -841,7 +841,7 @@
       "They have over 25,000 feathers on their bodies.",
       "Swans can fly at speeds up to 95 km/h."
     ],
-    "imageUrl": "https://images.pexels.com/photos/7372338/pexels-photo-7372338.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/13096818/large.jpg",
     "imageAlt": "Mute swan",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -867,7 +867,7 @@
       "They dive from heights up to 20 meters to catch fish.",
       "Pelicans can live for over 25 years in the wild."
     ],
-    "imageUrl": "https://images.pexels.com/photos/61157/pelicans-pelican-water-bird-australian-pelican-61157.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/22392604/large.jpeg",
     "imageAlt": "Brown pelican",
     "drawingDifficulty": "hard",
     "drawingTips": [
@@ -893,7 +893,7 @@
       "They can live for over 60 years.",
       "Cranes migrate thousands of kilometers each year."
     ],
-    "imageUrl": "https://images.pexels.com/photos/45853/grey-crowned-crane-bird-crane-animal-45853.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/13096699/large.jpg",
     "imageAlt": "Red-crowned crane",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -919,7 +919,7 @@
       "They lay eggs that are 20% of their body weight.",
       "Kiwis have nostrils at the end of their beaks, unique among birds."
     ],
-    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Kiwi",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/109188742/large.jpeg",
     "imageAlt": "North Island brown kiwi",
     "drawingDifficulty": "easy",
     "drawingTips": [
@@ -945,7 +945,7 @@
       "They can flap their wings up to 400 times per minute.",
       "Puffins mate for life and return to the same burrow each year."
     ],
-    "imageUrl": "https://images.pexels.com/photos/1661536/pexels-photo-1661536.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/63139388/large.jpg",
     "imageAlt": "Atlantic puffin",
     "drawingDifficulty": "easy",
     "drawingTips": [
@@ -971,7 +971,7 @@
       "They can run at speeds up to 70 km/h.",
       "Ostrich eggs are the largest of any bird, weighing up to 1.4 kg."
     ],
-    "imageUrl": "https://images.pexels.com/photos/3551227/pexels-photo-3551227.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://static.inaturalist.org/photos/250854923/large.jpg",
     "imageAlt": "Common ostrich",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -997,7 +997,7 @@
       "They have venomous bites that prevent blood clotting in their prey.",
       "Komodo dragons can eat up to 80% of their body weight in one meal."
     ],
-    "imageUrl": "https://images.pexels.com/photos/2664272/pexels-photo-2664272.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/1892238/large.jpg",
     "imageAlt": "Komodo dragon",
     "drawingDifficulty": "hard",
     "drawingTips": [
@@ -1023,7 +1023,7 @@
       "They can migrate over 2,600 km to reach nesting beaches.",
       "Sea turtles have been around for over 100 million years."
     ],
-    "imageUrl": "https://images.pexels.com/photos/847393/pexels-photo-847393.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/6483342/large.jpg",
     "imageAlt": "Green sea turtle swimming",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -1049,7 +1049,7 @@
       "Their tongues can extend to twice their body length in milliseconds.",
       "They change color based on mood, temperature, and communication, not just camouflage."
     ],
-    "imageUrl": "https://images.pexels.com/photos/45868/chameleon-reptile-lizard-green-45868.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/435564528/large.jpg",
     "imageAlt": "Veiled chameleon",
     "drawingDifficulty": "hard",
     "drawingTips": [
@@ -1075,7 +1075,7 @@
       "They can 'stand up' and raise one-third of their body off the ground.",
       "King cobras are the only snakes that build nests for their eggs."
     ],
-    "imageUrl": "https://images.pexels.com/photos/7256324/pexels-photo-7256324.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://static.inaturalist.org/photos/92982867/large.jpeg",
     "imageAlt": "King cobra",
     "drawingDifficulty": "hard",
     "drawingTips": [
@@ -1101,7 +1101,7 @@
       "They can hold their breath underwater for up to 2 hours.",
       "Crocodiles have been around for over 200 million years, surviving the dinosaurs."
     ],
-    "imageUrl": "https://images.pexels.com/photos/31591512/pexels-photo-31591512.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/13983120/large.jpeg",
     "imageAlt": "Nile crocodile",
     "drawingDifficulty": "hard",
     "drawingTips": [
@@ -1127,7 +1127,7 @@
       "They have a third eye on top of their head that detects light and movement.",
       "Iguanas are excellent swimmers and can hold their breath for up to 30 minutes."
     ],
-    "imageUrl": "https://images.pexels.com/photos/927497/pexels-photo-927497.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://static.inaturalist.org/photos/282911149/large.jpg",
     "imageAlt": "Green iguana",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -1153,7 +1153,7 @@
       "Most geckos don't have eyelids and lick their eyes to keep them clean.",
       "They can detach their tails when threatened and regrow new ones."
     ],
-    "imageUrl": "https://images.pexels.com/photos/5475191/pexels-photo-5475191.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/104000974/large.jpeg",
     "imageAlt": "Tokay gecko",
     "drawingDifficulty": "easy",
     "drawingTips": [
@@ -1179,7 +1179,7 @@
       "They can go months without eating after consuming a large meal.",
       "Pythons have heat-sensing pits that help them detect warm-blooded prey."
     ],
-    "imageUrl": "https://images.pexels.com/photos/1394938/pexels-photo-1394938.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/275496872/large.jpg",
     "imageAlt": "Reticulated python",
     "drawingDifficulty": "hard",
     "drawingTips": [
@@ -1205,7 +1205,7 @@
       "They have 80 teeth that are constantly replaced throughout their lives.",
       "Alligators can run at speeds up to 35 km/h on land for short distances."
     ],
-    "imageUrl": "https://images.pexels.com/photos/326116/pexels-photo-326116.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/336529607/large.gif",
     "imageAlt": "American alligator",
     "drawingDifficulty": "hard",
     "drawingTips": [
@@ -1231,7 +1231,7 @@
       "They can go without food or water for up to a year.",
       "Tortoises can weigh up to 400 kg, making them the largest tortoises on Earth."
     ],
-    "imageUrl": "https://images.pexels.com/photos/1201431/pexels-photo-1201431.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://static.inaturalist.org/photos/44199582/large.jpg",
     "imageAlt": "Galápagos tortoise",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -1257,7 +1257,7 @@
       "They can hold their breath underwater for up to 10 minutes.",
       "Anacondas give birth to live young rather than laying eggs."
     ],
-    "imageUrl": "https://images.pexels.com/photos/751691/pexels-photo-751691.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://static.inaturalist.org/photos/387608320/large.jpg",
     "imageAlt": "Green anaconda",
     "drawingDifficulty": "hard",
     "drawingTips": [
@@ -1283,7 +1283,7 @@
       "They wave their arms to communicate with other dragons.",
       "Bearded dragons can live for 10-15 years in captivity."
     ],
-    "imageUrl": "https://images.pexels.com/photos/6002806/pexels-photo-6002806.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/73946101/large.jpeg",
     "imageAlt": "Central bearded dragon",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -1309,7 +1309,7 @@
       "They have forked tongues like snakes to smell their environment.",
       "Some species can grow over 2 meters long."
     ],
-    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Monitor%20Lizard",
+    "imageUrl": "https://static.inaturalist.org/photos/87261401/large.jpeg",
     "imageAlt": "Water monitor lizard",
     "drawingDifficulty": "hard",
     "drawingTips": [
@@ -1335,7 +1335,7 @@
       "They can sense heat from prey using special pit organs.",
       "Rattlesnakes can strike at speeds up to 2.4 meters per second."
     ],
-    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Rattlesnake",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/404291640/large.jpeg",
     "imageAlt": "Western diamondback rattlesnake",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -1361,7 +1361,7 @@
       "Their neck frill can expand to make them appear larger.",
       "They spend most of their time in trees."
     ],
-    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Frilled%20Lizard",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/1148305/large.jpg",
     "imageAlt": "Frilled lizard",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -1387,7 +1387,7 @@
       "They can live for over 20 years in captivity.",
       "These lizards give birth to live young rather than laying eggs."
     ],
-    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Blue-tongued%20Skink",
+    "imageUrl": "https://static.inaturalist.org/photos/102528095/large.jpeg",
     "imageAlt": "Eastern blue-tongued skink",
     "drawingDifficulty": "easy",
     "drawingTips": [
@@ -1413,7 +1413,7 @@
       "They can eat up to one-third of their body weight in one meal.",
       "Gila monsters can go months without eating."
     ],
-    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Gila%20Monster",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/114044636/large.jpeg",
     "imageAlt": "Gila monster",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -1439,7 +1439,7 @@
       "They can swim at speeds up to 56 km/h in short bursts.",
       "Great whites can live for over 70 years."
     ],
-    "imageUrl": "https://images.pexels.com/photos/11179780/pexels-photo-11179780.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/12222987/large.png",
     "imageAlt": "Great white shark",
     "drawingDifficulty": "hard",
     "drawingTips": [
@@ -1465,7 +1465,7 @@
       "They can recognize themselves in mirrors, showing self-awareness.",
       "Dolphins use echolocation to navigate and hunt in murky water."
     ],
-    "imageUrl": "https://images.pexels.com/photos/225869/pexels-photo-225869.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://static.inaturalist.org/photos/67380747/large.jpeg",
     "imageAlt": "Bottlenose dolphin",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -1491,7 +1491,7 @@
       "Their hearts can weigh as much as a car and beat only 2 times per minute when diving.",
       "A blue whale's tongue alone can weigh as much as an elephant."
     ],
-    "imageUrl": "https://images.pexels.com/photos/831084/pexels-photo-831084.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://static.inaturalist.org/photos/194385336/large.jpg",
     "imageAlt": "Blue whale",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -1517,7 +1517,7 @@
       "They can change color and texture in milliseconds for camouflage.",
       "Octopuses are highly intelligent and can solve complex puzzles."
     ],
-    "imageUrl": "https://images.pexels.com/photos/2902860/pexels-photo-2902860.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/185851919/large.jpg",
     "imageAlt": "Common octopus",
     "drawingDifficulty": "hard",
     "drawingTips": [
@@ -1543,7 +1543,7 @@
       "They are 95% water and have no brain, heart, or bones.",
       "Some jellyfish species are biologically immortal."
     ],
-    "imageUrl": "https://images.pexels.com/photos/2166916/pexels-photo-2166916.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/449938393/large.jpeg",
     "imageAlt": "Moon jellyfish",
     "drawingDifficulty": "easy",
     "drawingTips": [
@@ -1569,7 +1569,7 @@
       "They can move each eye independently to watch for predators and prey.",
       "Seahorses mate for life and greet each other every morning with a dance."
     ],
-    "imageUrl": "https://images.pexels.com/photos/23459294/pexels-photo-23459294.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://static.inaturalist.org/photos/5853911/large.jpg",
     "imageAlt": "Yellow seahorse",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -1595,7 +1595,7 @@
       "They can grow up to 7 meters wide from fin tip to fin tip.",
       "Manta rays are filter feeders and eat up to 30 kg of plankton per day."
     ],
-    "imageUrl": "https://images.pexels.com/photos/27402085/pexels-photo-27402085.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/114808086/large.jpg",
     "imageAlt": "Giant manta ray",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -1621,7 +1621,7 @@
       "All clownfish are born male, and some change to female when needed.",
       "They form symbiotic relationships with sea anemones for protection."
     ],
-    "imageUrl": "https://images.pexels.com/photos/6023997/pexels-photo-6023997.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/10288037/large.jpeg",
     "imageAlt": "Clownfish in anemone",
     "drawingDifficulty": "easy",
     "drawingTips": [
@@ -1647,7 +1647,7 @@
       "They have complex social structures and unique dialects.",
       "Orcas can swim at speeds up to 56 km/h."
     ],
-    "imageUrl": "https://images.pexels.com/photos/3695720/pexels-photo-3695720.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/282690764/large.jpeg",
     "imageAlt": "Orca whale",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -1673,7 +1673,7 @@
       "They have no brain or blood, using filtered seawater instead.",
       "Starfish can push their stomachs out of their mouths to digest food externally."
     ],
-    "imageUrl": "https://images.pexels.com/photos/9613659/pexels-photo-9613659.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://static.inaturalist.org/photos/413182783/large.jpg",
     "imageAlt": "Common starfish",
     "drawingDifficulty": "easy",
     "drawingTips": [
@@ -1699,7 +1699,7 @@
       "They have the densest fur of any animal.",
       "Sea otters eat 25% of their body weight in food each day."
     ],
-    "imageUrl": "https://images.pexels.com/photos/1661541/pexels-photo-1661541.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/216290669/large.jpeg",
     "imageAlt": "Sea otter",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -1725,7 +1725,7 @@
       "Their unique head shape helps them detect electrical signals from prey.",
       "They can grow up to 6 meters in length."
     ],
-    "imageUrl": "https://images.pexels.com/photos/4781942/pexels-photo-4781942.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://static.inaturalist.org/photos/132664765/large.jpg",
     "imageAlt": "Great hammerhead shark",
     "drawingDifficulty": "hard",
     "drawingTips": [
@@ -1751,7 +1751,7 @@
       "They contain tetrodotoxin, one of the most poisonous substances in nature.",
       "Some species create intricate circular patterns in sand to attract mates."
     ],
-    "imageUrl": "https://images.pexels.com/photos/3990830/pexels-photo-3990830.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/57186472/large.jpg",
     "imageAlt": "Pufferfish",
     "drawingDifficulty": "easy",
     "drawingTips": [
@@ -1777,7 +1777,7 @@
       "They can eat up to 10% of their body weight in vegetation daily.",
       "Manatees can hold their breath for up to 20 minutes."
     ],
-    "imageUrl": "https://images.pexels.com/photos/10962931/pexels-photo-10962931.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://static.inaturalist.org/photos/9301585/large.jpg",
     "imageAlt": "West Indian manatee",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -1803,8 +1803,8 @@
       "They have up to 90 tentacles without suckers.",
       "Nautiluses can live for over 20 years."
     ],
-    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Nautilus",
-    "imageAlt": "Chambered nautilus",
+    "imageUrl": "https://static.inaturalist.org/photos/58051104/large.jpg",
+    "imageAlt": "Chambered nautilus swimming",
     "drawingDifficulty": "medium",
     "drawingTips": [
       "Draw the beautiful spiral shell with distinctive striped pattern of orange-brown and white chambers.",
@@ -1829,7 +1829,7 @@
       "They can weigh up to 1,700 kg.",
       "Walruses use their tusks to haul themselves onto ice."
     ],
-    "imageUrl": "https://images.pexels.com/photos/3164498/pexels-photo-3164498.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/207443116/large.jpg",
     "imageAlt": "Atlantic walrus",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -1855,7 +1855,7 @@
       "They are invasive species in many parts of the world.",
       "Lionfish can eat prey up to half their own size."
     ],
-    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Lionfish",
+    "imageUrl": "https://static.inaturalist.org/photos/29368079/large.jpg",
     "imageAlt": "Red lionfish",
     "drawingDifficulty": "hard",
     "drawingTips": [
@@ -1881,7 +1881,7 @@
       "They have W-shaped pupils and can see polarized light.",
       "Cuttlefish have three hearts and blue-green blood."
     ],
-    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Cuttlefish",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/63623021/large.jpg",
     "imageAlt": "Common cuttlefish",
     "drawingDifficulty": "hard",
     "drawingTips": [
@@ -1907,7 +1907,7 @@
       "They can taste with their feet to identify plants.",
       "Monarchs are poisonous to predators due to toxins from milkweed plants."
     ],
-    "imageUrl": "https://images.pexels.com/photos/2629027/pexels-photo-2629027.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://static.inaturalist.org/photos/345693191/large.jpeg",
     "imageAlt": "Monarch butterfly",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -1933,7 +1933,7 @@
       "They communicate through a 'waggle dance' to share food locations.",
       "A single bee produces only 1/12 of a teaspoon of honey in its lifetime."
     ],
-    "imageUrl": "https://images.pexels.com/photos/3070870/pexels-photo-3070870.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/883733/large.jpg",
     "imageAlt": "Honeybee on flower",
     "drawingDifficulty": "easy",
     "drawingTips": [
@@ -1959,7 +1959,7 @@
       "They secrete a foul-smelling liquid from their legs to deter predators.",
       "Ladybugs can live for up to 3 years."
     ],
-    "imageUrl": "https://images.pexels.com/photos/32288295/pexels-photo-32288295.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/56064341/large.jpg",
     "imageAlt": "Seven-spotted ladybug",
     "drawingDifficulty": "easy",
     "drawingTips": [
@@ -1985,7 +1985,7 @@
       "They have nearly 360-degree vision with 30,000 lenses in their compound eyes.",
       "Dragonflies can catch prey with a 95% success rate, the highest of any predator."
     ],
-    "imageUrl": "https://images.pexels.com/photos/762941/pexels-photo-762941.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/6384524/large.jpg",
     "imageAlt": "Common green darner dragonfly",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -2011,7 +2011,7 @@
       "They communicate using chemical signals called pheromones.",
       "Some ant colonies can have over 20 million individuals."
     ],
-    "imageUrl": "https://images.pexels.com/photos/12404843/pexels-photo-12404843.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/284616165/large.jpg",
     "imageAlt": "Red wood ant",
     "drawingDifficulty": "easy",
     "drawingTips": [
@@ -2037,7 +2037,7 @@
       "They are the only insects that have stereo vision.",
       "Female mantises sometimes eat the male after mating."
     ],
-    "imageUrl": "https://images.pexels.com/photos/1085542/pexels-photo-1085542.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/2301568/large.jpg",
     "imageAlt": "European mantis",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -2063,7 +2063,7 @@
       "Their light is the most efficient light in the world, with nearly 100% energy conversion.",
       "Different species have unique flash patterns to attract mates."
     ],
-    "imageUrl": "https://images.pexels.com/photos/17961741/pexels-photo-17961741.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/302090929/large.jpg",
     "imageAlt": "Common eastern firefly",
     "drawingDifficulty": "easy",
     "drawingTips": [
@@ -2089,7 +2089,7 @@
       "They 'hear' through organs on their abdomen, not their heads.",
       "Some grasshopper species can form devastating locust swarms."
     ],
-    "imageUrl": "https://images.pexels.com/photos/17853677/pexels-photo-17853677.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://static.inaturalist.org/photos/62044948/large.jpg",
     "imageAlt": "Desert locust",
     "drawingDifficulty": "easy",
     "drawingTips": [
@@ -2115,7 +2115,7 @@
       "Hercules beetles can lift 850 times their own weight.",
       "Some beetles can survive being frozen solid and thaw out alive."
     ],
-    "imageUrl": "https://images.pexels.com/photos/53988/stag-beetle-great-stag-beetle-lucanus-cervus-beetle-53988.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/18333696/large.jpeg",
     "imageAlt": "Hercules beetle",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -2141,7 +2141,7 @@
       "Mosquitoes can detect carbon dioxide from up to 50 meters away.",
       "They are considered the deadliest animals to humans due to disease transmission."
     ],
-    "imageUrl": "https://images.pexels.com/photos/86722/tiger-mosquito-mosquito-asian-tigermucke-sting-86722.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/240782173/large.jpg",
     "imageAlt": "Anopheles mosquito",
     "drawingDifficulty": "easy",
     "drawingTips": [
@@ -2167,7 +2167,7 @@
       "They use over 60 different gestures to communicate.",
       "Chimps can make and use tools, showing advanced problem-solving skills."
     ],
-    "imageUrl": "https://images.pexels.com/photos/50582/chimpanzee-monkey-animal-portrait-50582.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/13592027/large.jpg",
     "imageAlt": "Chimpanzee",
     "drawingDifficulty": "hard",
     "drawingTips": [
@@ -2193,7 +2193,7 @@
       "Their large paws act like snowshoes in deep snow.",
       "Lynx are solitary hunters and excellent climbers."
     ],
-    "imageUrl": "https://images.pexels.com/photos/792381/pexels-photo-792381.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/5713928/large.png",
     "imageAlt": "Eurasian lynx",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -2219,7 +2219,7 @@
       "They use rocks as tools to crack open shellfish.",
       "Otters hold hands while sleeping to avoid drifting apart."
     ],
-    "imageUrl": "https://images.pexels.com/photos/11870769/pexels-photo-11870769.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/415602249/large.jpeg",
     "imageAlt": "European otter",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -2245,7 +2245,7 @@
       "They can jump vertically up to 1.8 meters.",
       "Bison are North America's largest land mammals."
     ],
-    "imageUrl": "https://images.pexels.com/photos/158251/bison-animal-wildlife-nature-158251.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/297311770/large.jpeg",
     "imageAlt": "American bison",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -2271,7 +2271,7 @@
       "They can dive up to 6 meters underwater to feed on aquatic plants.",
       "Male moose antlers can span up to 1.8 meters wide."
     ],
-    "imageUrl": "https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://static.inaturalist.org/photos/107155355/large.jpg",
     "imageAlt": "Moose",
     "drawingDifficulty": "hard",
     "drawingTips": [
@@ -2297,7 +2297,7 @@
       "They always give birth to identical quadruplets.",
       "Armadillos can jump 1 meter straight up when startled."
     ],
-    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Armadillo",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/528221418/large.jpg",
     "imageAlt": "Nine-banded armadillo",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -2323,7 +2323,7 @@
       "They can run up to 6 km/h.",
       "Hedgehogs are immune to many snake venoms."
     ],
-    "imageUrl": "https://images.pexels.com/photos/50577/hedgehog-animal-baby-cute-50577.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://static.inaturalist.org/photos/1264835/large.",
     "imageAlt": "European hedgehog",
     "drawingDifficulty": "easy",
     "drawingTips": [
@@ -2349,7 +2349,7 @@
       "They are highly social and live in groups of 10-20 individuals.",
       "Capybaras can stay underwater for up to 5 minutes."
     ],
-    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Capybara",
+    "imageUrl": "https://static.inaturalist.org/photos/215104636/large.jpg",
     "imageAlt": "Capybara",
     "drawingDifficulty": "easy",
     "drawingTips": [
@@ -2375,7 +2375,7 @@
       "They can regenerate lost legs during molting.",
       "Despite their fearsome appearance, most tarantulas are harmless to humans."
     ],
-    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Tarantula",
+    "imageUrl": "https://static.inaturalist.org/photos/16110718/large.jpg",
     "imageAlt": "Mexican redknee tarantula",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -2401,7 +2401,7 @@
       "They can survive for a year without food.",
       "Scorpions have existed for over 400 million years."
     ],
-    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Scorpion",
+    "imageUrl": "https://static.inaturalist.org/photos/169448714/large.jpg",
     "imageAlt": "Emperor scorpion",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -2427,7 +2427,7 @@
       "Some species can regenerate lost limbs.",
       "The longest stick insect recorded was over 60 cm long."
     ],
-    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Stick%20Insect",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/427000913/large.jpeg",
     "imageAlt": "Giant stick insect",
     "drawingDifficulty": "easy",
     "drawingTips": [
@@ -2453,7 +2453,7 @@
       "They are among the loudest insects, reaching 120 decibels.",
       "Cicadas emerge in massive synchronized swarms."
     ],
-    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Cicada",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/252946726/large.jpeg",
     "imageAlt": "Periodical cicada",
     "drawingDifficulty": "easy",
     "drawingTips": [
@@ -2479,7 +2479,7 @@
       "Adults don't have functional mouths and live only 1-2 weeks.",
       "Their wing tips resemble snake heads to deter predators."
     ],
-    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Atlas%20Moth",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/30051622/large.jpg",
     "imageAlt": "Atlas moth",
     "drawingDifficulty": "hard",
     "drawingTips": [
@@ -2505,7 +2505,7 @@
       "They farm fungus underground for food.",
       "Colonies can contain over 8 million ants."
     ],
-    "imageUrl": "https://images.pexels.com/photos/12404843/pexels-photo-12404843.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/400090210/large.jpeg",
     "imageAlt": "Leafcutter ant",
     "drawingDifficulty": "easy",
     "drawingTips": [
@@ -2531,7 +2531,7 @@
       "They navigate using the Milky Way.",
       "Dung beetles are important for soil health and nutrient cycling."
     ],
-    "imageUrl": "https://images.pexels.com/photos/53988/stag-beetle-great-stag-beetle-lucanus-cervus-beetle-53988.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://static.inaturalist.org/photos/197347961/large.jpeg",
     "imageAlt": "Sacred scarab beetle",
     "drawingDifficulty": "easy",
     "drawingTips": [
@@ -2557,7 +2557,7 @@
       "A termite queen can live for over 50 years.",
       "Termites digest wood with the help of gut microorganisms."
     ],
-    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Termite",
+    "imageUrl": "https://static.inaturalist.org/photos/346730467/large.jpeg",
     "imageAlt": "African termite",
     "drawingDifficulty": "easy",
     "drawingTips": [
@@ -2583,7 +2583,7 @@
       "They sway back and forth to mimic branches moving in the wind.",
       "Some species can reproduce without males through parthenogenesis."
     ],
-    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Walking%20Stick",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/224110804/large.jpeg",
     "imageAlt": "Northern walking stick",
     "drawingDifficulty": "easy",
     "drawingTips": [
@@ -2609,7 +2609,7 @@
       "The spray can reach temperatures of 100°C.",
       "They can aim their spray with remarkable accuracy."
     ],
-    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Bombardier%20Beetle",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/132211758/large.jpg",
     "imageAlt": "Bombardier beetle",
     "drawingDifficulty": "easy",
     "drawingTips": [
@@ -2635,7 +2635,7 @@
       "They use Earth's magnetic field to hunt prey hidden under snow.",
       "Foxes have whiskers on their legs to help them navigate."
     ],
-    "imageUrl": "https://images.pexels.com/photos/2295744/pexels-photo-2295744.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://static.inaturalist.org/photos/153063583/large.jpg",
     "imageAlt": "Red fox in nature",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -2661,7 +2661,7 @@
       "Their antlers are made of bone and grow up to 2.5 cm per day.",
       "White-tailed deer can swim at speeds up to 21 km/h."
     ],
-    "imageUrl": "https://images.pexels.com/photos/247502/pexels-photo-247502.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/22596815/large.jpg",
     "imageAlt": "White-tailed deer",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -2687,7 +2687,7 @@
       "They plant thousands of trees each year by forgetting where they buried acorns.",
       "Squirrels can rotate their ankles 180 degrees to climb down trees headfirst."
     ],
-    "imageUrl": "https://images.pexels.com/photos/47547/squirrel-animal-cute-rodents-47547.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/10185825/large.jpeg",
     "imageAlt": "Eastern gray squirrel",
     "drawingDifficulty": "easy",
     "drawingTips": [
@@ -2713,7 +2713,7 @@
       "A single bat can eat up to 1,000 mosquitoes in one hour.",
       "Bats use echolocation to navigate and hunt in complete darkness."
     ],
-    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Little%20Brown%20Bat",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/11540852/large.jpg",
     "imageAlt": "Little brown bat",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -2739,7 +2739,7 @@
       "They can survive without water for up to 10 days in the desert.",
       "A camel's hump stores fat, not water, which can be converted to energy."
     ],
-    "imageUrl": "https://images.pexels.com/photos/2295746/pexels-photo-2295746.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://static.inaturalist.org/photos/254331474/large.jpg",
     "imageAlt": "Dromedary camel",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -2765,7 +2765,7 @@
       "They can sing over 24 different songs.",
       "Cardinals mate for life and often sing duets together."
     ],
-    "imageUrl": "https://images.pexels.com/photos/1661537/pexels-photo-1661537.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/33033499/large.jpg",
     "imageAlt": "Northern cardinal",
     "drawingDifficulty": "easy",
     "drawingTips": [
@@ -2791,7 +2791,7 @@
       "They are highly intelligent and can use tools.",
       "Blue jays help plant oak trees by burying acorns and forgetting them."
     ],
-    "imageUrl": "https://images.pexels.com/photos/1661538/pexels-photo-1661538.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/112600766/large.jpg",
     "imageAlt": "Blue jay",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -2817,7 +2817,7 @@
       "They have specialized neck vertebrae that allow them to strike like lightning.",
       "These birds can fly at speeds up to 48 km/h."
     ],
-    "imageUrl": "https://images.pexels.com/photos/1661539/pexels-photo-1661539.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://static.inaturalist.org/photos/3101697/large.jpg",
     "imageAlt": "Great blue heron",
     "drawingDifficulty": "hard",
     "drawingTips": [
@@ -2843,7 +2843,7 @@
       "They drop shellfish from heights to crack them open.",
       "Gulls can live for over 30 years in the wild."
     ],
-    "imageUrl": "https://images.pexels.com/photos/1661540/pexels-photo-1661540.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/486255266/large.jpeg",
     "imageAlt": "Herring gull",
     "drawingDifficulty": "easy",
     "drawingTips": [
@@ -2869,7 +2869,7 @@
       "They secrete toxins from their skin as a defense mechanism.",
       "These amphibians can regenerate lost limbs and even parts of their heart."
     ],
-    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Fire%20Salamander",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/79399987/large.jpg",
     "imageAlt": "Fire salamander",
     "drawingDifficulty": "easy",
     "drawingTips": [
@@ -2895,7 +2895,7 @@
       "They can regenerate eyes, hearts, and limbs throughout their lives.",
       "The red eft stage is toxic and brightly colored to warn predators."
     ],
-    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Eastern%20Newt",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/154968135/large.jpeg",
     "imageAlt": "Eastern newt red eft",
     "drawingDifficulty": "easy",
     "drawingTips": [
@@ -2921,7 +2921,7 @@
       "They can change their skin color from bright green to dark brown.",
       "Their toe pads act like suction cups for climbing."
     ],
-    "imageUrl": "https://images.pexels.com/photos/70069/frog-macro-amphibian-green-70069.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/75547953/large.png",
     "imageAlt": "Red-eyed tree frog",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -2947,7 +2947,7 @@
       "They can sleep underwater and surface to breathe without waking.",
       "Seals have excellent underwater vision and sensitive whiskers to detect prey."
     ],
-    "imageUrl": "https://images.pexels.com/photos/105819/pexels-photo-105819.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/7517869/large.png",
     "imageAlt": "Harbor seal",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -2973,7 +2973,7 @@
       "They have the longest breeding cycle of any penguin, taking 14-16 months.",
       "King penguins don't build nests; they incubate eggs on their feet."
     ],
-    "imageUrl": "https://images.pexels.com/photos/1661543/pexels-photo-1661543.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://static.inaturalist.org/photos/71214348/large.jpeg",
     "imageAlt": "King penguin",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -2999,7 +2999,7 @@
       "They have blue blood due to copper-based hemocyanin.",
       "Lobsters can regenerate lost claws, legs, and antennae."
     ],
-    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=American%20Lobster",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/24119278/large.jpg",
     "imageAlt": "American lobster",
     "drawingDifficulty": "hard",
     "drawingTips": [
@@ -3025,7 +3025,7 @@
       "They molt their shells up to 6 times in their first year.",
       "These crabs can live for up to 10 years in the wild."
     ],
-    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Dungeness%20Crab",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/364057059/large.jpeg",
     "imageAlt": "Dungeness crab",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -3051,7 +3051,7 @@
       "They are social insects living in colonies with a queen and workers.",
       "Wasps are important pollinators and pest controllers in gardens."
     ],
-    "imageUrl": "https://images.pexels.com/photos/3070870/pexels-photo-3070870.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/102467968/large.jpeg",
     "imageAlt": "European paper wasp",
     "drawingDifficulty": "easy",
     "drawingTips": [
@@ -3077,7 +3077,7 @@
       "They can remember faces and will aggressively defend their nests.",
       "A single colony can contain 400-700 workers."
     ],
-    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Bald-faced%20Hornet",
+    "imageUrl": "https://static.inaturalist.org/photos/26542613/large.jpeg",
     "imageAlt": "Bald-faced hornet",
     "drawingDifficulty": "medium",
     "drawingTips": [
@@ -3103,7 +3103,7 @@
       "The frequency of chirps can indicate the temperature.",
       "Crickets have ears on their front legs."
     ],
-    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Field%20Cricket",
+    "imageUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/50663447/large.jpg",
     "imageAlt": "Field cricket",
     "drawingDifficulty": "easy",
     "drawingTips": [
@@ -3129,7 +3129,7 @@
       "The width of the brown band is said to predict winter severity, though this is folklore.",
       "They curl into a ball when threatened to protect their soft underside."
     ],
-    "imageUrl": "https://placehold.co/600x400/667eea/ffffff?text=Woolly%20Bear%20Caterpillar",
+    "imageUrl": "https://static.inaturalist.org/photos/52953216/large.jpg",
     "imageAlt": "Woolly bear caterpillar",
     "drawingDifficulty": "easy",
     "drawingTips": [

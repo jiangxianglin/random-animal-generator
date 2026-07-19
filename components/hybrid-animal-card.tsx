@@ -47,7 +47,7 @@ export function HybridAnimalCard({ hybrid }: HybridAnimalCardProps) {
                 src={imageUrl}
                 alt={`${hybrid.sourceAnimals[index].commonName} - Source ${index + 1}`}
                 fill
-                className="object-cover"
+                className="object-contain p-1"
                 sizes="(max-width: 768px) 50vw, 25vw"
                 onError={() => handleImageError(index as 0 | 1)}
               />
