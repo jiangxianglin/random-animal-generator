@@ -1,28 +1,246 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --paper: #eef1eb;
+  --paper-deep: #e2e7df;
+  --ink: #1c1a17;
+  --ink-muted: #4a4741;
+  --ink-faint: #6e6a63;
+  --olive: #3d5a45;
+  --olive-deep: #2f4a3c;
+  --olive-soft: #d5ddd6;
+  --line: rgba(28, 26, 23, 0.12);
+  --line-strong: rgba(28, 26, 23, 0.22);
+  --surface: #f7f8f5;
+  --surface-elevated: #ffffff;
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --shadow-soft: 0 1px 0 rgba(28, 26, 23, 0.04), 0 8px 24px rgba(28, 26, 23, 0.06);
+  --background: var(--paper);
+  --foreground: var(--ink);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-paper: var(--paper);
+  --color-paper-deep: var(--paper-deep);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-ink-faint: var(--ink-faint);
+  --color-olive: var(--olive);
+  --color-olive-deep: var(--olive-deep);
+  --color-olive-soft: var(--olive-soft);
+  --color-line: var(--line);
+  --color-surface: var(--surface);
+  --font-sans: var(--font-source-sans);
+  --font-display: var(--font-fraunces);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-source-sans), "Segoe UI", sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-fraunces), Georgia, "Times New Roman", serif;
+}
+
+/* Subtle paper grain + cool grid — atmosphere without flat fill */
+.paper-atmosphere {
+  background-color: var(--paper);
+  background-image:
+    radial-gradient(rgba(28, 26, 23, 0.035) 0.6px, transparent 0.6px),
+    linear-gradient(180deg, var(--paper) 0%, var(--paper-deep) 100%);
+  background-size: 3px 3px, 100% 100%;
+}
+
+.home-section {
+  border-top: 1px solid var(--line);
+  padding-block: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .home-section {
+    padding-block: 3.25rem;
+  }
+}
+
+.home-section-title {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-size: clamp(1.75rem, 3vw, 2.35rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+.home-prose {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--ink-muted);
+}
+
+.home-prose a {
+  color: var(--olive-deep);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 1px;
+}
+
+.home-prose a:hover {
+  color: var(--ink);
+}
+
+.home-link {
+  color: var(--olive-deep);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.home-link:hover {
+  color: var(--ink);
+}
+
+.home-surface {
+  background: var(--surface-elevated);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+}
+
+.home-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: var(--radius-sm);
+  background: var(--ink);
+  color: var(--paper);
+  font-weight: 600;
+  padding: 0.85rem 1.35rem;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.home-cta:hover {
+  background: var(--olive-deep);
+}
+
+.home-cta:active {
+  transform: scale(0.98);
+}
+
+.home-cta-light {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: var(--radius-sm);
+  background: var(--paper);
+  color: var(--ink);
+  font-weight: 600;
+  padding: 0.85rem 1.35rem;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.home-cta-light:hover {
+  background: #ffffff;
+}
+
+.home-cta-light:active {
+  transform: scale(0.98);
+}
+
+.home-cta-ghost {
+  display: inline-flex;
+  align-items: center;
+  color: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+  opacity: 0.92;
+  transition: opacity 0.2s ease;
+}
+
+.home-cta-ghost:hover {
+  opacity: 1;
+}
+
+.btn-ink {
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.btn-ink:hover {
+  background: var(--olive-deep);
+}
+
+.btn-ink:active {
+  transform: scale(0.98);
+}
+
+.btn-ink:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-outline-ink {
+  border: 1px solid var(--line-strong);
+  background: var(--surface-elevated);
+  color: var(--ink-muted);
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-outline-ink:hover {
+  border-color: var(--olive);
+  color: var(--olive-deep);
+  background: var(--olive-soft);
+}
+
+/* Motion: presence, not noise */
+@keyframes home-rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes home-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-home-rise {
+  animation: home-rise 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-home-fade {
+  animation: home-fade 0.8s ease-out both;
+}
+
+.animate-home-rise-delay {
+  animation: home-rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.12s both;
+}
+
+.animate-home-rise-delay-2 {
+  animation: home-rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.24s both;
 }
 
 @keyframes fadeIn {
@@ -38,4 +256,20 @@ body {
 
 .animate-fadeIn {
   animation: fadeIn 0.3s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-home-rise,
+  .animate-home-fade,
+  .animate-home-rise-delay,
+  .animate-home-rise-delay-2,
+  .animate-fadeIn {
+    animation: none !important;
+  }
+
+  .home-cta:active,
+  .home-cta-light:active,
+  .btn-ink:active {
+    transform: none;
+  }
 }

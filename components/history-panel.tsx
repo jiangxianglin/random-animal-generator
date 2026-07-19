@@ -42,44 +42,40 @@ export function HistoryPanel({ onSelectEntry, onClearHistory }: HistoryPanelProp
   };
 
   return (
-    <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl border border-emerald-200 overflow-hidden">
+    <div className="home-surface overflow-hidden">
       <button
+        type="button"
         onClick={toggleExpanded}
-        className="w-full px-6 py-4 flex items-center justify-between hover:bg-emerald-50 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-inset"
+        className="flex w-full items-center justify-between px-6 py-4 transition-colors duration-200 hover:bg-[var(--paper)] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[var(--olive-soft)]"
         aria-expanded={isExpanded}
         aria-controls="history-content"
       >
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center">
-            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-          </div>
-          <div className="text-left">
-            <h3 className="font-bold text-gray-900 text-lg">Drawing History</h3>
-            <p className="text-sm text-gray-600">
-              {stats ? `${stats.totalCount} animals practiced` : 'Loading...'}
-            </p>
-          </div>
+        <div className="text-left">
+          <h3 className="font-display text-lg font-semibold text-[var(--ink)]">Drawing History</h3>
+          <p className="text-sm text-[var(--ink-faint)]">
+            {stats ? `${stats.totalCount} animals practiced` : 'Loading...'}
+          </p>
         </div>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3">
           {history.length > 0 && (
             <button
+              type="button"
               onClick={(e) => {
                 e.stopPropagation();
                 handleClearClick();
               }}
-              className="px-3 py-1.5 text-sm text-red-600 hover:bg-red-50 rounded-lg transition-colors"
+              className="rounded-[var(--radius-sm)] px-3 py-1.5 text-sm font-medium text-[var(--ink-muted)] transition-colors hover:bg-[var(--paper-deep)] hover:text-[var(--ink)]"
               aria-label="Clear history"
             >
               Clear All
             </button>
           )}
           <svg
-            className={`w-6 h-6 text-gray-600 transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`}
+            className={`h-5 w-5 text-[var(--ink-muted)] transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`}
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
+            aria-hidden="true"
           >
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
           </svg>
@@ -87,29 +83,31 @@ export function HistoryPanel({ onSelectEntry, onClearHistory }: HistoryPanelProp
       </button>
 
       {isExpanded && (
-        <div id="history-content" className="border-t border-emerald-100">
+        <div id="history-content" className="border-t border-[var(--line)]">
           {stats && (
-            <div className="px-6 py-4 bg-gradient-to-r from-indigo-50 to-purple-50 border-b border-indigo-100">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+            <div className="border-b border-[var(--line)] bg-[var(--paper)] px-6 py-4">
+              <div className="grid grid-cols-2 gap-4 text-sm md:grid-cols-4">
                 <div>
-                  <p className="text-gray-600">Total Animals</p>
-                  <p className="font-bold text-gray-900 text-lg">{stats.totalCount}</p>
+                  <p className="text-[var(--ink-faint)]">Total Animals</p>
+                  <p className="font-display text-lg font-semibold text-[var(--ink)]">{stats.totalCount}</p>
                 </div>
                 {stats.mostCommonCategory && (
                   <div>
-                    <p className="text-gray-600">Most Practiced</p>
-                    <p className="font-bold text-gray-900 text-lg capitalize">{stats.mostCommonCategory}</p>
+                    <p className="text-[var(--ink-faint)]">Most Practiced</p>
+                    <p className="font-display text-lg font-semibold capitalize text-[var(--ink)]">
+                      {stats.mostCommonCategory}
+                    </p>
                   </div>
                 )}
                 <div>
-                  <p className="text-gray-600">Categories Used</p>
-                  <p className="font-bold text-gray-900 text-lg">
+                  <p className="text-[var(--ink-faint)]">Categories Used</p>
+                  <p className="font-display text-lg font-semibold text-[var(--ink)]">
                     {Object.entries(stats.categoryDistribution).filter(([, count]) => count > 0).length}
                   </p>
                 </div>
                 <div>
-                  <p className="text-gray-600">Sessions</p>
-                  <p className="font-bold text-gray-900 text-lg">{history.length}</p>
+                  <p className="text-[var(--ink-faint)]">Sessions</p>
+                  <p className="font-display text-lg font-semibold text-[var(--ink)]">{history.length}</p>
                 </div>
               </div>
             </div>
@@ -117,11 +115,12 @@ export function HistoryPanel({ onSelectEntry, onClearHistory }: HistoryPanelProp
 
           {history.length === 0 ? (
             <div className="px-6 py-8 text-center">
-              <div className="text-4xl mb-3">🎨</div>
-              <p className="text-gray-600">No history yet. Generate some animals to start practicing!</p>
+              <p className="text-[var(--ink-muted)]">
+                No history yet. Generate some animals to start practicing!
+              </p>
             </div>
           ) : (
-            <div className="px-6 py-4 max-h-96 overflow-y-auto">
+            <div className="max-h-96 overflow-y-auto px-6 py-4">
               <div className="space-y-3">
                 {history.map((entry) => (
                   <HistoryEntryCard
@@ -137,25 +136,26 @@ export function HistoryPanel({ onSelectEntry, onClearHistory }: HistoryPanelProp
       )}
 
       {showClearConfirm && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-2xl shadow-2xl p-6 max-w-sm w-full">
-            <div className="text-center mb-4">
-              <div className="text-5xl mb-3">⚠️</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Clear All History?</h3>
-              <p className="text-gray-600">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-[var(--ink)]/45 p-4">
+          <div className="home-surface w-full max-w-sm p-6">
+            <div className="mb-5 text-center">
+              <h3 className="font-display text-xl font-semibold text-[var(--ink)]">Clear All History?</h3>
+              <p className="mt-2 text-[var(--ink-muted)]">
                 This will remove all your drawing history. This action cannot be undone.
               </p>
             </div>
             <div className="flex gap-3">
               <button
+                type="button"
                 onClick={handleCancelClear}
-                className="flex-1 px-4 py-2.5 bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium rounded-xl transition-colors"
+                className="btn-outline-ink flex-1 px-4 py-2.5"
               >
                 Cancel
               </button>
               <button
+                type="button"
                 onClick={handleConfirmClear}
-                className="flex-1 px-4 py-2.5 bg-red-600 hover:bg-red-700 text-white font-medium rounded-xl transition-colors"
+                className="flex-1 rounded-[var(--radius-sm)] bg-[var(--ink)] px-4 py-2.5 font-semibold text-[var(--paper)] transition-colors hover:bg-[var(--olive-deep)]"
               >
                 Clear All
               </button>

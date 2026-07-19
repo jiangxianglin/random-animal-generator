@@ -1,32 +1,8 @@
-'use client';
-
 import Image from 'next/image';
-import { useMemo, useState } from 'react';
-import { AnimalWheelSpinner } from '@/components/animal-wheel-spinner';
-import { ANIMAL_DATABASE, Animal } from '@/lib/animals';
 import Link from 'next/link';
+import { AnimalWheelTool, ScrollToWheelButton } from '@/components/animal-wheel-tool';
+import { ANIMAL_DATABASE } from '@/lib/animals';
 import { buildBreadcrumbSchema, buildFaqSchema, buildHowToSchema, buildWebAppSchema } from '@/lib/seo';
-
-const WHEEL_COLORS = [
-  '#6366F1',
-  '#8B5CF6',
-  '#EC4899',
-  '#F59E0B',
-  '#10B981',
-  '#3B82F6',
-  '#EF4444',
-  '#14B8A6',
-  '#F97316',
-  '#84CC16',
-];
-
-interface WheelAnimal {
-  id: string;
-  commonName: string;
-  imageUrl: string;
-  imageAlt: string;
-  color: string;
-}
 
 const USE_CASES = [
   {
@@ -73,40 +49,35 @@ const TIPS = [
   'The pointer at the top shows your selected animal.',
   'Change categories to explore different animal groups.',
   'Share your results with friends or classmates.',
-];
+] as const;
 
 const FAQS = [
   {
     question: 'How does the Random Animal Generator Wheel work?',
     answer:
-      'When you click the spin button, the wheel selects one animal at random from the current category.',
+      'Choose a category, click spin, and wait for the pointer to land on a random animal. The result includes a name, image, and quick facts you can use right away.',
   },
   {
-    question: 'Can I use this Random Animal Generator Wheel for commercial purposes?',
+    question: 'Is this animal wheel spinner free?',
     answer:
-      'Yes. The wheel is free to use for educational, entertainment, and commercial purposes.',
+      'Yes. The random animal wheel is free to use with no signup, downloads, or premium unlock for the core spinner.',
   },
   {
-    question: 'How many animals are in the database?',
+    question: 'Can I filter the wheel by animal category?',
     answer:
-      `The current database includes ${ANIMAL_DATABASE.length}+ animals across mammals, birds, reptiles, marine animals, and insects.`,
+      'Yes. You can spin across all animals or focus on mammals, birds, reptiles, marine animals, or insects.',
   },
   {
-    question: 'Is the selection truly random?',
+    question: 'What is the difference between the wheel and the main generator?',
     answer:
-      'Yes. Each spin selects from the available animal set without a fixed pattern for the user.',
-  },
-  {
-    question: 'Is the Random Animal Generator Wheel mobile-friendly?',
-    answer:
-      'Yes. The tool is designed to work on smartphones, tablets, and desktop screens.',
+      'The wheel is best for one-at-a-time picks with a playful reveal. The homepage generator is better when you want multiple cards, difficulty filters, and challenge modes.',
   },
 ] as const;
 
 const HOW_TO_STEPS = [
   {
     name: 'Choose a category',
-    text: 'Select all animals or narrow the wheel to mammals, birds, reptiles, marine animals, or insects.',
+    text: 'Pick all animals or focus the wheel on mammals, birds, reptiles, marine animals, or insects.',
   },
   {
     name: 'Spin the wheel',
@@ -118,39 +89,7 @@ const HOW_TO_STEPS = [
   },
 ] as const;
 
-export default function RandomAnimalGeneratorWheel() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedAnimal, setSelectedAnimal] = useState<Animal | null>(null);
-
-  const categories = [
-    { value: 'all', label: 'All Animals', count: ANIMAL_DATABASE.length },
-    { value: 'mammals', label: 'Mammals', count: ANIMAL_DATABASE.filter((a) => a.category === 'mammals').length },
-    { value: 'birds', label: 'Birds', count: ANIMAL_DATABASE.filter((a) => a.category === 'birds').length },
-    { value: 'reptiles', label: 'Reptiles', count: ANIMAL_DATABASE.filter((a) => a.category === 'reptiles').length },
-    { value: 'marine', label: 'Marine', count: ANIMAL_DATABASE.filter((a) => a.category === 'marine').length },
-    { value: 'insects', label: 'Insects', count: ANIMAL_DATABASE.filter((a) => a.category === 'insects').length },
-  ];
-
-  const wheelAnimals = useMemo(() => {
-    const filtered =
-      selectedCategory === 'all'
-        ? ANIMAL_DATABASE
-        : ANIMAL_DATABASE.filter((a) => a.category === selectedCategory);
-
-    return filtered.slice(0, 12).map((animal, index): WheelAnimal => ({
-      id: animal.id,
-      commonName: animal.commonName,
-      imageUrl: animal.imageUrl,
-      imageAlt: animal.imageAlt,
-      color: WHEEL_COLORS[index % WHEEL_COLORS.length],
-    }));
-  }, [selectedCategory]);
-
-  const handleSpinComplete = (animal: WheelAnimal) => {
-    const fullAnimal = ANIMAL_DATABASE.find((entry) => entry.id === animal.id);
-    setSelectedAnimal(fullAnimal || null);
-  };
-
+export default function RandomAnimalGeneratorWheelPage() {
   const structuredData = [
     buildWebAppSchema({
       name: 'Random Animal Generator Wheel',
@@ -185,7 +124,7 @@ export default function RandomAnimalGeneratorWheel() {
       />
 
       <div className="mx-auto max-w-6xl px-4 py-6">
-        <div className="mb-6 text-center">
+        <header className="mb-6 text-center">
           <h1 className="mb-2 text-2xl font-bold text-gray-900 md:text-3xl">
             Random Animal Generator Wheel
           </h1>
@@ -207,96 +146,16 @@ export default function RandomAnimalGeneratorWheel() {
             </Link>
             .
           </p>
-        </div>
+        </header>
 
-        <section className="mb-6">
-          <div className="flex flex-col items-stretch gap-4 lg:flex-row">
-            <div className="w-full lg:w-3/5">
-              <AnimalWheelSpinner animals={wheelAnimals} onSpinComplete={handleSpinComplete} />
-            </div>
-
-            <div className="w-full lg:w-2/5">
-              <div className="h-full rounded-2xl bg-white p-4 shadow-lg">
-                <h2 className="mb-3 text-lg font-bold text-gray-900">Choose Your Category</h2>
-                <div className="grid grid-cols-2 gap-2">
-                  {categories.map((cat) => (
-                    <button
-                      key={cat.value}
-                      onClick={() => setSelectedCategory(cat.value)}
-                      className={`rounded-lg p-3 text-left text-sm transition-all ${
-                        selectedCategory === cat.value
-                          ? 'bg-indigo-600 text-white shadow-lg'
-                          : 'bg-gray-50 text-gray-700 hover:bg-indigo-50'
-                      }`}
-                    >
-                      <div className="font-semibold">{cat.label}</div>
-                      <div
-                        className={`text-xs ${
-                          selectedCategory === cat.value ? 'text-indigo-200' : 'text-gray-500'
-                        }`}
-                      >
-                        {cat.count} animals
-                      </div>
-                    </button>
-                  ))}
-                </div>
-
-                <div className="mt-4 rounded-lg bg-indigo-50 p-3">
-                  <p className="text-xs text-indigo-800">
-                    <strong>Tip:</strong> The wheel shows up to 12 animals. Select a category to
-                    focus the results.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {selectedAnimal && (
-          <section className="mb-6">
-            <div className="mx-auto max-w-4xl rounded-2xl bg-white p-6 shadow-xl">
-              <div className="flex flex-col gap-6 md:flex-row">
-                <div className="relative h-64 overflow-hidden rounded-xl bg-gray-100 md:w-1/2">
-                  <Image
-                    src={selectedAnimal.imageUrl}
-                    alt={selectedAnimal.imageAlt}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
-                </div>
-                <div className="md:w-1/2">
-                  <h2 className="mb-1 text-2xl font-bold text-gray-900">
-                    {selectedAnimal.commonName}
-                  </h2>
-                  <p className="mb-3 text-base italic text-indigo-600">
-                    {selectedAnimal.scientificName}
-                  </p>
-                  <div className="mb-4 space-y-2">
-                    {selectedAnimal.facts.slice(0, 2).map((fact, index) => (
-                      <div key={index} className="flex items-start gap-2">
-                        <span className="text-xl" aria-hidden="true">*</span>
-                        <p className="text-sm text-gray-700">{fact}</p>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="rounded-full bg-indigo-100 px-3 py-1 text-xs font-medium text-indigo-700">
-                      {selectedAnimal.category.charAt(0).toUpperCase() + selectedAnimal.category.slice(1)}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        )}
+        <AnimalWheelTool />
 
         <section className="mb-16">
           <div className="rounded-2xl bg-gradient-to-r from-indigo-600 to-purple-600 p-8 text-white shadow-xl">
             <h2 className="mb-6 text-center text-3xl font-bold">How to Use the Random Animal Wheel</h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {TIPS.map((tip, index) => (
-                <div key={index} className="flex items-start gap-3 rounded-xl bg-white/10 p-4">
+                <div key={tip} className="flex items-start gap-3 rounded-xl bg-white/10 p-4">
                   <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-white font-bold text-indigo-600">
                     {index + 1}
                   </span>
@@ -318,8 +177,8 @@ export default function RandomAnimalGeneratorWheel() {
               and quick decision making.
             </p>
             <p className="text-sm text-gray-700">
-              It is useful for teachers, parents, game masters, writers, and anyone who needs a
-              fast and entertaining way to pick random animals. No registration is required and no
+              It is useful for teachers, parents, game masters, writers, and anyone who needs a fast
+              and entertaining way to pick random animals. No registration is required and no
               downloads are needed.
             </p>
             <p className="mt-3 text-sm text-gray-700">
@@ -328,7 +187,10 @@ export default function RandomAnimalGeneratorWheel() {
                 main Random Animal Generator
               </Link>
               . If you need a copy-ready list of names instead of a spinner, try the{' '}
-              <Link href="/random-animal-name-generator" className="font-semibold text-indigo-700 underline underline-offset-4">
+              <Link
+                href="/random-animal-name-generator"
+                className="font-semibold text-indigo-700 underline underline-offset-4"
+              >
                 Random Animal Name Generator
               </Link>
               .
@@ -382,8 +244,8 @@ export default function RandomAnimalGeneratorWheel() {
               <div>
                 <div className="relative mb-6 h-64 overflow-hidden rounded-xl shadow-lg">
                   <Image
-                    src="/RandomAnimalGenerator-BiodiversityShowcase.png"
-                    alt="Animal biodiversity showcase featuring mammals, birds, marine animals, and insects"
+                    src="/home-biodiversity-field-guide.png"
+                    alt="Field guide style showcase of mammal, bird, reptile, marine animal, and insect"
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 50vw"
@@ -442,12 +304,7 @@ export default function RandomAnimalGeneratorWheel() {
             <p className="mx-auto mb-6 max-w-2xl text-xl text-indigo-100">
               Start exploring the animal kingdom with our interactive Random Animal Generator Wheel.
             </p>
-            <button
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="transform rounded-full bg-white px-8 py-4 text-lg font-bold text-indigo-600 shadow-lg transition-all hover:scale-105 hover:bg-indigo-50"
-            >
-              Back to the Wheel
-            </button>
+            <ScrollToWheelButton />
           </div>
         </section>
 
@@ -455,32 +312,49 @@ export default function RandomAnimalGeneratorWheel() {
           <div className="rounded-2xl bg-white p-8 shadow-xl">
             <h2 className="mb-6 text-3xl font-bold text-gray-900">Related Tools</h2>
             <div className="grid gap-6 md:grid-cols-3">
-              <div className="rounded-xl border border-gray-200 p-6 transition-all hover:border-indigo-300 hover:shadow-lg">
-                <div className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-indigo-600">Decide</div>
-                <h3 className="mb-2 text-lg font-semibold text-gray-900">Decision Maker Wheel</h3>
+              <Link
+                href="/"
+                className="rounded-xl border border-gray-200 p-6 transition-all hover:border-indigo-300 hover:shadow-lg"
+              >
+                <div className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-indigo-600">
+                  Home
+                </div>
+                <h3 className="mb-2 text-lg font-semibold text-gray-900">Random Animal Generator</h3>
                 <p className="mb-4 text-sm text-gray-600">
-                  Can&apos;t make a decision? Let a general decision wheel help you choose.
+                  Use the main generator for cards, filters, and challenge modes.
                 </p>
-                <span className="text-sm font-medium text-indigo-600">Coming Soon -&gt;</span>
-              </div>
+                <span className="text-sm font-medium text-indigo-600">Open tool -&gt;</span>
+              </Link>
 
-              <div className="rounded-xl border border-gray-200 p-6 transition-all hover:border-indigo-300 hover:shadow-lg">
-                <div className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-indigo-600">Food</div>
-                <h3 className="mb-2 text-lg font-semibold text-gray-900">Food Randomizer</h3>
+              <Link
+                href="/random-animal-name-generator"
+                className="rounded-xl border border-gray-200 p-6 transition-all hover:border-indigo-300 hover:shadow-lg"
+              >
+                <div className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-indigo-600">
+                  Names
+                </div>
+                <h3 className="mb-2 text-lg font-semibold text-gray-900">
+                  Random Animal Name Generator
+                </h3>
                 <p className="mb-4 text-sm text-gray-600">
-                  Not sure what to eat? Spin a wheel to decide your next meal.
+                  Generate a copy-ready list of animal names for writing or class.
                 </p>
-                <span className="text-sm font-medium text-indigo-600">Coming Soon -&gt;</span>
-              </div>
+                <span className="text-sm font-medium text-indigo-600">Open tool -&gt;</span>
+              </Link>
 
-              <div className="rounded-xl border border-gray-200 p-6 transition-all hover:border-indigo-300 hover:shadow-lg">
-                <div className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-indigo-600">Teams</div>
-                <h3 className="mb-2 text-lg font-semibold text-gray-900">Team Generator</h3>
+              <Link
+                href="/random-animal-generator-for-drawing"
+                className="rounded-xl border border-gray-200 p-6 transition-all hover:border-indigo-300 hover:shadow-lg"
+              >
+                <div className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-indigo-600">
+                  Drawing
+                </div>
+                <h3 className="mb-2 text-lg font-semibold text-gray-900">Drawing Prompt Generator</h3>
                 <p className="mb-4 text-sm text-gray-600">
-                  Need to split into teams? A team generator can make it fast and fair.
+                  Get animal drawing prompts with difficulty filters for sketch practice.
                 </p>
-                <span className="text-sm font-medium text-indigo-600">Coming Soon -&gt;</span>
-              </div>
+                <span className="text-sm font-medium text-indigo-600">Open tool -&gt;</span>
+              </Link>
             </div>
           </div>
         </section>
@@ -489,9 +363,7 @@ export default function RandomAnimalGeneratorWheel() {
           <p className="mb-2">
             Random Animal Generator Wheel - A free online tool for games, education, and fun.
           </p>
-          <p className="text-sm">
-            &copy; {new Date().getFullYear()} Random Animal Generator. All rights reserved.
-          </p>
+          <p className="text-sm">&copy; 2026 Random Animal Generator. All rights reserved.</p>
         </footer>
       </div>
     </main>

@@ -6,7 +6,7 @@ export const metadata: Metadata = buildPageMetadata({
   description:
     'Generate random animals for drawing prompts with difficulty and category filters. Free, fast, and built for sketch practice, art challenges, and classroom activities.',
   path: '/random-animal-generator-for-drawing',
-  image: '/RandomAnimalGenerator-hero.png',
+  image: '/home-hero-field-atelier.png',
   imageAlt: 'Random animal generator for drawing prompts preview',
 });
 

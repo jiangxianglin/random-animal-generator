@@ -1,14 +1,6 @@
-'use client';
-
 import Link from 'next/link';
-import { useMemo, useState } from 'react';
-import { Animal, CategoryKey, DrawingDifficulty } from '@/lib/animals';
-import { AnimalGenerator } from '@/lib/generator';
-import { AnimalCard } from '@/components/animal-card';
-import { GeneratorControls } from '@/components/generator-controls';
+import { DrawingGeneratorTool } from '@/components/drawing-generator-tool';
 import { buildBreadcrumbSchema, buildFaqSchema, buildHowToSchema, buildWebAppSchema } from '@/lib/seo';
-
-const generator = new AnimalGenerator();
 
 const FAQS = [
   {
@@ -48,68 +40,36 @@ const HOW_TO_STEPS = [
   },
 ] as const;
 
-function scrollToResults() {
-  if (typeof document === 'undefined') {
-    return;
-  }
-
-  const resultsSection = document.getElementById('drawing-results');
-  if (resultsSection) {
-    resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
-}
-
 export default function RandomAnimalGeneratorForDrawingPage() {
-  const [animals, setAnimals] = useState<Animal[]>([]);
-  const [selectedQuantity, setSelectedQuantity] = useState(3);
-  const [selectedCategory, setSelectedCategory] = useState<CategoryKey | null>(null);
-  const [selectedDifficulty, setSelectedDifficulty] = useState<DrawingDifficulty | null>('medium');
-
-  const structuredData = useMemo(() => {
-    return [
-      buildWebAppSchema({
+  const structuredData = [
+    buildWebAppSchema({
+      name: 'Random Animal Generator for Drawing',
+      description:
+        'A free random animal generator built for drawing prompts with difficulty and category filters.',
+      path: '/random-animal-generator-for-drawing',
+      featureList: [
+        'Instant random animal drawing prompts',
+        'Difficulty filters: Easy, Medium, Hard',
+        'Category filters: Mammals, Birds, Reptiles, Marine, Insects',
+        'Reference images and drawing tips in each animal card',
+        'Free to use with no signup',
+      ],
+    }),
+    buildBreadcrumbSchema([
+      { name: 'Home', path: '/' },
+      {
         name: 'Random Animal Generator for Drawing',
-        description:
-          'A free random animal generator built for drawing prompts with difficulty and category filters.',
         path: '/random-animal-generator-for-drawing',
-        featureList: [
-          'Instant random animal drawing prompts',
-          'Difficulty filters: Easy, Medium, Hard',
-          'Category filters: Mammals, Birds, Reptiles, Marine, Insects',
-          'Reference images and drawing tips in each animal card',
-          'Free to use with no signup',
-        ],
-      }),
-      buildBreadcrumbSchema([
-        { name: 'Home', path: '/' },
-        { name: 'Random Animal Generator for Drawing', path: '/random-animal-generator-for-drawing' },
-      ]),
-      buildHowToSchema(
-        'How to generate random animals for drawing',
-        'A short guide for generating animal drawing prompts with filters.',
-        '/random-animal-generator-for-drawing',
-        HOW_TO_STEPS,
-      ),
-      buildFaqSchema(FAQS),
-    ];
-  }, []);
-
-  const handleReset = () => {
-    setSelectedQuantity(3);
-    setSelectedCategory(null);
-    setSelectedDifficulty('medium');
-    setAnimals([]);
-  };
-
-  const handleGenerate = () => {
-    try {
-      const generated = generator.generate(selectedQuantity, selectedCategory, selectedDifficulty);
-      setAnimals(generated);
-      setTimeout(scrollToResults, 0);
-    } catch (error) {
-      alert(error instanceof Error ? error.message : 'An error occurred');
-    }
-  };
+      },
+    ]),
+    buildHowToSchema(
+      'How to generate random animals for drawing',
+      'A short guide for generating animal drawing prompts with filters.',
+      '/random-animal-generator-for-drawing',
+      HOW_TO_STEPS,
+    ),
+    buildFaqSchema(FAQS),
+  ];
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-emerald-50 via-amber-50 to-orange-50">
@@ -148,44 +108,12 @@ export default function RandomAnimalGeneratorForDrawingPage() {
           </div>
         </header>
 
-        <section className="mx-auto mb-10 w-full max-w-3xl">
-          <GeneratorControls
-            quantity={selectedQuantity}
-            category={selectedCategory}
-            difficulty={selectedDifficulty}
-            onQuantityChange={setSelectedQuantity}
-            onCategoryChange={setSelectedCategory}
-            onDifficultyChange={setSelectedDifficulty}
-            onGenerate={handleGenerate}
-            onReset={handleReset}
-          />
-        </section>
-
-        <section id="drawing-results" className="mb-12 scroll-mt-12">
-          {animals.length > 0 ? (
-            <>
-              <div className="mb-6 text-center">
-                <h2 className="text-2xl font-bold text-gray-900 md:text-3xl">Drawing Prompts</h2>
-                <p className="mt-2 text-sm text-gray-600 md:text-base">
-                  Click a card to view details, then draw the animal using the reference image and tips.
-                </p>
-              </div>
-              <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-                {animals.map((animal) => (
-                  <AnimalCard key={animal.id} animal={animal} />
-                ))}
-              </div>
-            </>
-          ) : (
-            <div className="rounded-2xl border border-dashed border-emerald-200 bg-white/80 p-8 text-center text-gray-600 shadow-sm">
-              <p className="text-lg font-medium text-gray-800">No drawing prompts yet.</p>
-              <p className="mt-2 text-sm">Pick filters and generate a set of random animals to draw.</p>
-            </div>
-          )}
-        </section>
+        <DrawingGeneratorTool />
 
         <section className="mb-10 rounded-2xl border border-emerald-100 bg-white/95 p-8 shadow-2xl backdrop-blur-sm md:p-10">
-          <h2 className="text-2xl font-bold text-gray-900 md:text-3xl">How to Use These Drawing Prompts</h2>
+          <h2 className="text-2xl font-bold text-gray-900 md:text-3xl">
+            How to Use These Drawing Prompts
+          </h2>
           <div className="mt-6 grid gap-4 md:grid-cols-3">
             {HOW_TO_STEPS.map((step, index) => (
               <div
@@ -222,18 +150,18 @@ export default function RandomAnimalGeneratorForDrawingPage() {
             <p className="font-medium">Free drawing prompts from random animals</p>
           </div>
           <p className="text-sm text-gray-600">
-            Explore more: {' '}
+            Explore more:{' '}
             <Link href="/" className="font-semibold text-emerald-800 underline underline-offset-4">
               random animal generator
             </Link>
-            , {' '}
+            ,{' '}
             <Link
               href="/random-animal-generator-wheel"
               className="font-semibold text-emerald-800 underline underline-offset-4"
             >
               animal wheel spinner
             </Link>
-            , {' '}
+            ,{' '}
             <Link
               href="/random-animal-name-generator"
               className="font-semibold text-emerald-800 underline underline-offset-4"
@@ -247,4 +175,3 @@ export default function RandomAnimalGeneratorForDrawingPage() {
     </main>
   );
 }
-

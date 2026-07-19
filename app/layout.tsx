@@ -1,16 +1,26 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Fraunces, Source_Sans_3 } from "next/font/google";
 import Link from "next/link";
 import { buildOrganizationSchema, buildPageMetadata, buildWebSiteSchema } from "@/lib/seo";
 import {
   PRIMARY_NAV_ITEMS,
-  SITE_DESCRIPTION,
   SITE_NAME,
   SITE_TWITTER,
 } from "@/lib/site";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const sourceSans = Source_Sans_3({
+  subsets: ["latin"],
+  variable: "--font-source-sans",
+  display: "swap",
+});
+
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-fraunces",
+  display: "swap",
+});
+
 const rootStructuredData = [buildOrganizationSchema(), buildWebSiteSchema()];
 
 export const metadata: Metadata = {
@@ -19,8 +29,8 @@ export const metadata: Metadata = {
     description:
       "Generate random animals online with category filters, drawing difficulty, challenge modes, and classroom-friendly prompts.",
     path: "/",
-    image: "/RandomAnimalGenerator-hero.png",
-    imageAlt: "Random animal generator interface with wildlife examples",
+    image: "/home-hero-field-atelier.png",
+    imageAlt: "Misty woodland wildlife scene for random animal drawing prompts",
   }),
   title: {
     default: `Random Animal Generator for Drawing, Games & Classrooms`,
@@ -41,7 +51,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${sourceSans.variable} ${fraunces.variable}`}>
       <head>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-MMH4GLMQTR"></script>
         <script
@@ -62,35 +72,34 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(rootStructuredData) }}
         />
       </head>
-      <body className={inter.className}>
-        <nav className="sticky top-0 z-50 bg-indigo-600 text-white shadow-lg">
+      <body className={`${sourceSans.className} antialiased`}>
+        <nav className="sticky top-0 z-50 border-b border-[var(--line)] bg-[var(--ink)] text-[var(--paper)]">
           <div className="mx-auto max-w-7xl px-4">
             <div className="flex h-16 items-center justify-between">
-              <div className="flex items-center space-x-8">
-                <Link href="/" className="flex items-center space-x-2 transition-opacity hover:opacity-90">
-                  <span aria-hidden="true" className="text-xs font-semibold uppercase tracking-[0.3em]">
-                    RA
+              <div className="flex items-center gap-8">
+                <Link href="/" className="group flex items-baseline gap-2 transition-opacity hover:opacity-90">
+                  <span className="font-display text-xl font-semibold tracking-tight md:text-2xl">
+                    {SITE_NAME}
                   </span>
-                  <span className="text-lg font-bold">{SITE_NAME}</span>
                 </Link>
-                <div className="hidden items-center space-x-6 md:flex">
+                <div className="hidden items-center gap-1 md:flex">
                   {PRIMARY_NAV_ITEMS.map((item) => (
                     <Link
                       key={item.href}
                       href={item.href}
-                      className="rounded-lg px-4 py-2 transition-colors hover:bg-indigo-700"
+                      className="rounded-[var(--radius-sm)] px-3 py-2 text-sm font-medium text-[var(--paper)]/85 transition-colors hover:bg-white/10 hover:text-[var(--paper)]"
                     >
                       {item.label}
                     </Link>
                   ))}
                 </div>
               </div>
-              <div className="flex items-center space-x-4">
+              <div className="flex items-center">
                 <a
                   href={`https://twitter.com/${SITE_TWITTER.replace("@", "")}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="rounded-lg px-3 py-2 transition-colors hover:bg-indigo-700"
+                  className="rounded-[var(--radius-sm)] px-3 py-2 text-[var(--paper)]/85 transition-colors hover:bg-white/10 hover:text-[var(--paper)]"
                   aria-label="Follow us on Twitter"
                 >
                   <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
@@ -100,13 +109,13 @@ export default function RootLayout({
               </div>
             </div>
           </div>
-          <div className="border-t border-indigo-500 md:hidden">
-            <div className="space-y-2 px-4 py-3">
+          <div className="border-t border-white/10 md:hidden">
+            <div className="flex flex-wrap gap-1 px-4 py-2">
               {PRIMARY_NAV_ITEMS.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="block rounded-lg px-3 py-2 transition-colors hover:bg-indigo-700"
+                  className="rounded-[var(--radius-sm)] px-3 py-2 text-sm font-medium text-[var(--paper)]/85 transition-colors hover:bg-white/10"
                 >
                   {item.label}
                 </Link>

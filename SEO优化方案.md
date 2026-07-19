@@ -227,3 +227,17 @@
 - 预期验证（建议用 28 天窗口）：
   - Search Console → Pages：新页是否进入“已索引”
   - Search Console → Queries：drawing 相关查询是否开始出现展示
+
+### 变更 #003（2026-07-19）
+- 范围：`/`、`/random-animal-generator-wheel`、`/random-animal-name-generator`、`/random-animal-generator-for-drawing`
+- 改动：SSR/SSG 内容可见性、H1、正文扩写、生成器拆为客户端岛屿
+- 目的：修复谷歌首轮抓取只看到 CSR 空壳（Loading... / 无 H1 / ~16 词）的致命问题
+- 具体内容：
+  - 首页改为 Server Component：H1「Random Animal Generator」与 How it works / Drawing / Classroom / FAQ 等正文在 HTML 源码中直接可见
+  - `useSearchParams` 仅包裹在 `HomeGenerator` 的 Suspense 岛屿内，不再让整页 fallback 成 Loading...
+  - Wheel / Drawing 页同样拆成服务端正文 + 客户端工具
+  - Name 页增加服务端 H1/首段，结构化数据移到 Server Component
+- 预期验证：
+  - 查看网页源代码：应出现 H1 与大量正文，而不是只有 Loading...
+  - 部署后用 URL 检查 / onpage_audit 复查正文词数与 H 标签
+  - 14–28 天后看 GSC 展示是否开始回升

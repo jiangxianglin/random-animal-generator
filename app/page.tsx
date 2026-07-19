@@ -1,51 +1,40 @@
-'use client';
-
 import Image from 'next/image';
 import Link from 'next/link';
-import { Suspense, useEffect, useState } from 'react';
-import { useRouter, useSearchParams } from 'next/navigation';
-import { AnimalCard } from '@/components/animal-card';
-import { ChallengePanel } from '@/components/challenge-panel';
-import { CompatibilityNotice } from '@/components/compatibility-notice';
-import { GeneratorControls } from '@/components/generator-controls';
-import { HistoryPanel } from '@/components/history-panel';
-import { HybridAnimalCard } from '@/components/hybrid-animal-card';
-import { TimerDisplay } from '@/components/timer-display';
-import { Animal, CategoryKey, DrawingDifficulty } from '@/lib/animals';
-import { ChallengeManager, ChallengeMode, HybridAnimal } from '@/lib/challenge-manager';
-import { AnimalGenerator } from '@/lib/generator';
-import { HistoryEntry, HistoryManager } from '@/lib/history-manager';
+import { Suspense } from 'react';
+import { HomeGenerator, HomeGeneratorFallback } from '@/components/home-generator';
 import { buildBreadcrumbSchema, buildFaqSchema, buildHowToSchema, buildWebAppSchema } from '@/lib/seo';
 import { SITE_NAME } from '@/lib/site';
-
-const generator = new AnimalGenerator();
-const challengeManager = new ChallengeManager();
-const historyManager = new HistoryManager();
 
 const HOME_FAQS = [
   {
     question: 'How does the random animal generator work?',
     answer:
-      'The generator selects animals at random from a curated database of 100+ species. You can control quantity, category, and difficulty, then use the results for prompts, learning, or games.',
+      'The generator selects animals at random from a curated database of 100+ species. You can control quantity, category, and drawing difficulty, then use the results for prompts, learning, or games. Nothing is stored on a server—generation happens in your browser.',
   },
   {
     question: 'Can I filter by category or difficulty?',
     answer:
-      'Yes. You can filter by major animal groups and by drawing difficulty, which makes the tool useful for both general discovery and more structured practice.',
+      'Yes. Filter by mammals, birds, reptiles, marine animals, or insects, and by easy, medium, or hard drawing difficulty so beginners and advanced artists can both find useful prompts.',
   },
   {
     question: 'What information comes with each result?',
     answer:
-      'Each result includes the animal name, image, category, facts, and difficulty context. Many entries also include drawing tips and challenge-friendly presentation.',
+      'Each result includes the animal name, image, category, facts, and difficulty context. Many entries also include drawing tips so you can start sketching without leaving the page.',
   },
   {
     question: 'Is the random animal generator free to use?',
-    answer: 'Yes. The generator is free to use with no registration required.',
+    answer:
+      'Yes. The generator is free to use with no registration, no signup wall, and no premium unlock for core features.',
   },
   {
     question: 'Does the site offer more than simple random picks?',
     answer:
-      'Yes. The site also includes daily, timed, hard mode, and hybrid generation for users who want more structured prompts.',
+      'Yes. Daily, timed, hard mode, and hybrid generation give structured challenges. You can also open the animal wheel spinner for one-at-a-time picks or the name generator for copy-ready lists.',
+  },
+  {
+    question: 'Can teachers use this in a classroom?',
+    answer:
+      'Yes. Teachers often use it for biology warmups, vocabulary drills, discussion starters, and timed drawing rounds. Category filters help keep lessons focused on mammals, birds, marine life, and more.',
   },
 ] as const;
 
@@ -103,14 +92,13 @@ const CORE_TOOLS = [
     description:
       'Spin a playful wheel to pick a random animal for classroom rounds, games, and icebreakers.',
   },
-] as const;
-
-const HOME_QUICK_LINKS = [
-  { href: '#generator', label: 'Use the generator' },
-  { href: '#about-tool', label: 'About the tool' },
-  { href: '#use-cases', label: 'Popular use cases' },
-  { href: '#related-tools', label: 'Related tools' },
-  { href: '#faq', label: 'FAQ' },
+  {
+    href: '/random-animal-generator-for-drawing',
+    label: 'Drawing',
+    title: 'Random Animal Generator for Drawing',
+    description:
+      'Get animal drawing prompts with difficulty filters built for sketch practice and art challenges.',
+  },
 ] as const;
 
 const HOME_HOW_TO_STEPS = [
@@ -128,275 +116,45 @@ const HOME_HOW_TO_STEPS = [
   },
 ] as const;
 
-function HomeContent() {
-  const [animals, setAnimals] = useState<Animal[]>([]);
-  const [hybridAnimal, setHybridAnimal] = useState<HybridAnimal | null>(null);
-  const [challengeMode, setChallengeMode] = useState<ChallengeMode | null>(null);
-  const [timerSeconds, setTimerSeconds] = useState<number>(0);
-  const [isTimerActive, setIsTimerActive] = useState<boolean>(false);
-  const [isDailyCompleted, setIsDailyCompleted] = useState<boolean>(false);
-  const [shouldScrollToResults, setShouldScrollToResults] = useState(false);
-  const [selectedQuantity, setSelectedQuantity] = useState(3);
-  const [selectedCategory, setSelectedCategory] = useState<CategoryKey | null>(null);
-  const [selectedDifficulty, setSelectedDifficulty] = useState<DrawingDifficulty | null>(null);
-  const searchParams = useSearchParams();
-  const router = useRouter();
+const DRAWING_CHALLENGE_IDEAS = [
+  {
+    title: 'Five-minute silhouette warmups',
+    text: 'Generate an easy animal and draw only the outline in five minutes. Focus on proportions and gesture instead of detail.',
+  },
+  {
+    title: 'Texture study rounds',
+    text: 'Pick a medium or hard animal and spend one session on fur, scales, feathers, or shell patterns from the reference image.',
+  },
+  {
+    title: 'Category lock challenges',
+    text: 'Filter to birds or marine animals only, then generate three subjects and complete a mini series in one sitting.',
+  },
+  {
+    title: 'Hybrid imagination drills',
+    text: 'Use hybrid mode to invent a creature from two animals, then sketch a believable anatomy pass before adding style.',
+  },
+] as const;
 
-  useEffect(() => {
-    setIsDailyCompleted(challengeManager.isDailyCompleted());
-  }, []);
+const CLASSROOM_ACTIVITIES = [
+  {
+    title: 'Biology vocabulary starters',
+    text: 'Generate one animal per student group. Ask each group to name the habitat, diet type, and one adaptation before sharing with the class.',
+  },
+  {
+    title: 'Compare-and-contrast cards',
+    text: 'Generate two animals from different categories and have students list shared traits versus unique traits on a simple chart.',
+  },
+  {
+    title: 'Timed observation sketches',
+    text: 'Run a ten-minute timed challenge. Students sketch from the generated image, then write two factual notes underneath.',
+  },
+  {
+    title: 'Name and classify practice',
+    text: 'Pair this page with the name generator so students practice common names, scientific names, and category labels together.',
+  },
+] as const;
 
-  const clearChallengeMode = () => {
-    challengeManager.stopTimer();
-    challengeManager.clearChallenge();
-    setChallengeMode(null);
-    setIsTimerActive(false);
-    setTimerSeconds(0);
-  };
-
-  const handleSelectHistoryEntry = (entry: HistoryEntry) => {
-    setAnimals(entry.animals);
-    setHybridAnimal(null);
-    setChallengeMode((entry.challengeMode as ChallengeMode) || null);
-    setSelectedQuantity(entry.filters.quantity);
-    setSelectedCategory(entry.filters.category);
-    setSelectedDifficulty(entry.filters.difficulty);
-    setShouldScrollToResults(true);
-  };
-
-  const handleClearHistory = () => {};
-
-  const handleResetFilters = () => {
-    clearChallengeMode();
-    setSelectedQuantity(3);
-    setSelectedCategory(null);
-    setSelectedDifficulty(null);
-    router.push('/', { scroll: false });
-  };
-
-  const handleGenerate = () => {
-    try {
-      clearChallengeMode();
-      const generated = generator.generate(
-        selectedQuantity,
-        selectedCategory,
-        selectedDifficulty,
-      );
-      setAnimals(generated);
-      setHybridAnimal(null);
-      setChallengeMode(null);
-      setShouldScrollToResults(true);
-      historyManager.addToHistory(
-        generated,
-        selectedCategory,
-        selectedDifficulty,
-        null,
-      );
-
-      const params = new URLSearchParams();
-      if (selectedCategory) params.set('category', selectedCategory);
-      if (selectedDifficulty) params.set('difficulty', selectedDifficulty);
-      if (selectedQuantity !== 3) params.set('quantity', selectedQuantity.toString());
-      const queryString = params.toString();
-      router.push(queryString ? `?${queryString}` : '/', { scroll: false });
-    } catch (error) {
-      alert(error instanceof Error ? error.message : 'An error occurred');
-    }
-  };
-
-  const handleDailyChallenge = () => {
-    try {
-      clearChallengeMode();
-      const animal = challengeManager.getDailyChallenge();
-      setAnimals([animal]);
-      setHybridAnimal(null);
-      setChallengeMode('daily');
-      setSelectedQuantity(1);
-      setSelectedCategory(animal.category);
-      setSelectedDifficulty(animal.drawingDifficulty);
-      setShouldScrollToResults(true);
-      historyManager.addToHistory([animal], null, animal.drawingDifficulty, 'daily');
-      router.push('?mode=daily', { scroll: false });
-      challengeManager.markDailyCompleted();
-      setIsDailyCompleted(true);
-    } catch (error) {
-      alert(error instanceof Error ? error.message : 'An error occurred');
-    }
-  };
-
-  const handleTimedChallenge = () => {
-    try {
-      clearChallengeMode();
-      const challenge = challengeManager.startTimedChallenge(600, null, {
-        onTick: (remainingSeconds) => setTimerSeconds(remainingSeconds),
-        onComplete: () => {
-          setIsTimerActive(false);
-          alert("Time's up! Challenge complete!");
-        },
-      });
-
-      const animal = challenge.animal as Animal;
-      setAnimals([animal]);
-      setHybridAnimal(null);
-      setChallengeMode('timed');
-      setIsTimerActive(true);
-      setTimerSeconds(600);
-      setSelectedQuantity(1);
-      setSelectedCategory(animal.category);
-      setSelectedDifficulty(animal.drawingDifficulty);
-      setShouldScrollToResults(true);
-      historyManager.addToHistory([animal], null, animal.drawingDifficulty, 'timed');
-      router.push('?mode=timed', { scroll: false });
-    } catch (error) {
-      alert(error instanceof Error ? error.message : 'An error occurred');
-    }
-  };
-
-  const handleHardMode = () => {
-    try {
-      clearChallengeMode();
-      const animal = challengeManager.generateHardMode();
-      setAnimals([animal]);
-      setHybridAnimal(null);
-      setChallengeMode('hard');
-      setSelectedQuantity(1);
-      setSelectedCategory(animal.category);
-      setSelectedDifficulty(animal.drawingDifficulty);
-      setShouldScrollToResults(true);
-      historyManager.addToHistory([animal], null, 'hard', 'hard');
-      router.push('?mode=hard', { scroll: false });
-    } catch (error) {
-      alert(error instanceof Error ? error.message : 'An error occurred');
-    }
-  };
-
-  const handleHybridMode = () => {
-    try {
-      clearChallengeMode();
-      const hybrid = challengeManager.generateHybridAnimal();
-      setHybridAnimal(hybrid);
-      setAnimals([]);
-      setChallengeMode('hybrid');
-      setSelectedQuantity(2);
-      setSelectedCategory(null);
-      setSelectedDifficulty(hybrid.difficulty);
-      setShouldScrollToResults(true);
-
-      if (hybrid.sourceAnimals.length > 0) {
-        historyManager.addToHistory(
-          hybrid.sourceAnimals,
-          null,
-          hybrid.sourceAnimals[0].drawingDifficulty,
-          'hybrid',
-        );
-      }
-
-      router.push('?mode=hybrid', { scroll: false });
-    } catch (error) {
-      alert(error instanceof Error ? error.message : 'An error occurred');
-    }
-  };
-
-  useEffect(() => {
-    const mode = searchParams.get('mode') as ChallengeMode | null;
-    const hasFilters =
-      searchParams.has('category') ||
-      searchParams.has('difficulty') ||
-      searchParams.has('quantity');
-
-    if (mode === 'daily') {
-      const animal = challengeManager.getDailyChallenge();
-      setAnimals([animal]);
-      setChallengeMode('daily');
-      challengeManager.markDailyCompleted();
-      setIsDailyCompleted(true);
-      setSelectedQuantity(1);
-      setSelectedCategory(animal.category);
-      setSelectedDifficulty(animal.drawingDifficulty);
-      return;
-    }
-
-    if (mode === 'timed') {
-      const challenge = challengeManager.startTimedChallenge(600, null, {
-        onTick: (remainingSeconds) => setTimerSeconds(remainingSeconds),
-        onComplete: () => {
-          setIsTimerActive(false);
-          alert("Time's up! Challenge complete!");
-        },
-      });
-      const animal = challenge.animal as Animal;
-      setAnimals([animal]);
-      setChallengeMode('timed');
-      setIsTimerActive(true);
-      setTimerSeconds(600);
-      setSelectedQuantity(1);
-      setSelectedCategory(animal.category);
-      setSelectedDifficulty(animal.drawingDifficulty);
-      return;
-    }
-
-    if (mode === 'hard') {
-      const animal = challengeManager.generateHardMode();
-      setAnimals([animal]);
-      setChallengeMode('hard');
-      setSelectedQuantity(1);
-      setSelectedCategory(animal.category);
-      setSelectedDifficulty(animal.drawingDifficulty);
-      return;
-    }
-
-    if (mode === 'hybrid') {
-      const hybrid = challengeManager.generateHybridAnimal();
-      setHybridAnimal(hybrid);
-      setChallengeMode('hybrid');
-      setSelectedQuantity(2);
-      setSelectedCategory(null);
-      setSelectedDifficulty(hybrid.difficulty);
-      return;
-    }
-
-    if (!hasFilters) {
-      setAnimals([]);
-      setHybridAnimal(null);
-      setChallengeMode(null);
-      setSelectedQuantity(3);
-      setSelectedCategory(null);
-      setSelectedDifficulty(null);
-      return;
-    }
-
-    const category = searchParams.get('category') as CategoryKey | null;
-    const difficulty = searchParams.get('difficulty') as DrawingDifficulty | null;
-    const quantity = parseInt(searchParams.get('quantity') || '3', 10);
-    setSelectedQuantity(quantity);
-    setSelectedCategory(category);
-    setSelectedDifficulty(difficulty);
-    setAnimals(generator.generate(quantity, category, difficulty));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  useEffect(() => {
-    return () => {
-      challengeManager.stopTimer();
-    };
-  }, []);
-
-  useEffect(() => {
-    if (!shouldScrollToResults) {
-      return;
-    }
-
-    if (animals.length === 0 && !hybridAnimal) {
-      return;
-    }
-
-    const resultsSection = document.getElementById('results');
-    if (resultsSection) {
-      resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-    setShouldScrollToResults(false);
-  }, [animals, hybridAnimal, shouldScrollToResults]);
-
+export default function Home() {
   const structuredData = [
     {
       ...buildWebAppSchema({
@@ -421,9 +179,7 @@ function HomeContent() {
         audienceType: ['artists', 'teachers', 'students', 'families', 'game players'],
       },
     },
-    buildBreadcrumbSchema([
-      { name: 'Home', path: '/' },
-    ]),
+    buildBreadcrumbSchema([{ name: 'Home', path: '/' }]),
     buildHowToSchema(
       'How to use the random animal generator',
       'A short guide for generating random animals with category and difficulty filters.',
@@ -434,401 +190,314 @@ function HomeContent() {
   ];
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-gradient-to-br from-emerald-50 via-amber-50 to-orange-50">
-      <TimerDisplay remainingSeconds={timerSeconds} isActive={isTimerActive} />
-      <CompatibilityNotice />
-
+    <div className="paper-atmosphere relative min-h-screen">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
 
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute left-10 top-20 h-72 w-72 animate-pulse rounded-full bg-emerald-300/15 blur-3xl" />
-        <div className="absolute bottom-20 right-10 h-96 w-96 animate-pulse rounded-full bg-amber-300/15 blur-3xl delay-1000" />
-        <div className="absolute left-1/2 top-1/2 h-80 w-80 animate-pulse rounded-full bg-orange-300/10 blur-3xl delay-500" />
-      </div>
-
-      <div className="relative z-10 mx-auto max-w-7xl px-4 py-6">
-        <div className="flex min-h-screen flex-col justify-center py-8">
-          <header className="mb-8 text-center">
-            <div className="mb-4 inline-block">
-              <div className="text-6xl font-bold md:text-7xl">RA</div>
-            </div>
-            <h1 className="mb-4 bg-gradient-to-r from-emerald-700 via-green-600 to-amber-600 bg-clip-text text-4xl font-extrabold text-transparent drop-shadow-lg md:text-6xl">
-              Random Animal Generator
-            </h1>
-            <p className="mx-auto mb-2 max-w-2xl text-lg font-medium text-gray-700 md:text-xl">
-              Generate random animals for drawing prompts, classroom activities, games, and creative inspiration
-            </p>
-            <p className="mx-auto max-w-xl text-sm text-gray-600 md:text-base">
-              Free online animal tool with category filters, challenge modes, and difficulty-based discovery
-            </p>
-            <p className="mx-auto mt-4 max-w-2xl text-sm text-gray-700 md:text-base">
-              Prefer a one-at-a-time picker? Use the{' '}
-              <Link
-                href="/random-animal-generator-wheel"
-                className="font-semibold text-emerald-800 underline underline-offset-4"
-              >
-                random animal wheel spinner
-              </Link>
-              . Need a copy-ready list? Use the{' '}
-              <Link
-                href="/random-animal-name-generator"
-                className="font-semibold text-emerald-800 underline underline-offset-4"
-              >
-                random animal name generator
-              </Link>
-              . Want prompts specifically for art practice? Try the{' '}
-              <Link
-                href="/random-animal-generator-for-drawing"
-                className="font-semibold text-emerald-800 underline underline-offset-4"
-              >
-                random animal generator for drawing
-              </Link>
-              .
-            </p>
-          </header>
-
-          <section id="generator" className="mx-auto mb-8 scroll-mt-24 flex w-full max-w-3xl flex-col gap-4">
-            <div className="flex flex-wrap justify-center gap-3">
-              {HOME_QUICK_LINKS.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="rounded-full border border-emerald-200 bg-white/85 px-4 py-2 text-sm font-semibold text-emerald-800 shadow-sm transition hover:border-emerald-400 hover:bg-white"
-                >
-                  {link.label}
-                </a>
-              ))}
-            </div>
-            <GeneratorControls
-              quantity={selectedQuantity}
-              category={selectedCategory}
-              difficulty={selectedDifficulty}
-              onQuantityChange={setSelectedQuantity}
-              onCategoryChange={setSelectedCategory}
-              onDifficultyChange={setSelectedDifficulty}
-              onGenerate={handleGenerate}
-              onReset={handleResetFilters}
-            />
-            <ChallengePanel
-              onDailyChallenge={handleDailyChallenge}
-              onTimedChallenge={handleTimedChallenge}
-              onHardMode={handleHardMode}
-              onHybridMode={handleHybridMode}
-              isDailyCompleted={isDailyCompleted}
-            />
-            <HistoryPanel
-              onSelectEntry={handleSelectHistoryEntry}
-              onClearHistory={handleClearHistory}
-            />
-          </section>
-
-          <section className="mx-auto mb-8 grid w-full max-w-5xl gap-4 md:grid-cols-2">
-            {CORE_TOOLS.map((tool) => (
-              <Link
-                key={tool.href}
-                href={tool.href}
-                className="group flex min-h-40 flex-col justify-between rounded-3xl border border-sky-200 bg-gradient-to-br from-sky-600 via-cyan-600 to-emerald-600 p-7 text-white shadow-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
-              >
-                <div className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-sky-100">
-                  {tool.label}
-                </div>
-                <div>
-                  <h2 className="mb-3 text-3xl font-extrabold leading-tight md:text-4xl">
-                    {tool.title}
-                  </h2>
-                  <p className="max-w-md text-base leading-7 text-sky-50">{tool.description}</p>
-                </div>
-                <div className="mt-6 inline-flex items-center text-base font-semibold text-white">
-                  Open tool
-                  <span className="ml-2 transition-transform duration-300 group-hover:translate-x-1">
-                    -&gt;
-                  </span>
-                </div>
-              </Link>
-            ))}
-          </section>
-
-          <div className="relative mx-auto mt-8 w-full max-w-3xl overflow-hidden rounded-xl shadow-xl opacity-90">
-            <Image
-              src="/RandomAnimalGenerator-hero.png"
-              alt="Random Animal Generator homepage showing wildlife examples from multiple categories"
-              width={1920}
-              height={1080}
-              priority
-              className="h-auto max-h-48 w-full object-cover"
-              title="Explore random animals for games, learning, and creative prompts"
-            />
-          </div>
-
-          <div className="mt-8 text-center">
-            <div className="inline-flex flex-col items-center gap-2 text-gray-500">
-              <span className="text-sm font-medium">Choose filters and click Generate Animals to start</span>
-              <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M19 14l-7 7m0 0l-7-7m7 7V3"
-                />
-              </svg>
-            </div>
+      {/* Full-bleed hero: brand + one line + CTA + wildlife image */}
+      <header className="relative isolate min-h-[calc(100svh-4rem)] overflow-hidden text-[var(--paper)]">
+        <Image
+          src="/home-hero-field-atelier.png"
+          alt="Misty woodland wildlife scene with deer, fox, and heron for random animal drawing prompts"
+          fill
+          priority
+          className="object-cover animate-home-fade"
+          title="Explore random animals for games, learning, and creative prompts"
+          sizes="100vw"
+        />
+        <div
+          className="absolute inset-0 bg-gradient-to-t from-[rgba(28,26,23,0.88)] via-[rgba(28,26,23,0.55)] to-[rgba(28,26,23,0.35)]"
+          aria-hidden="true"
+        />
+        <div className="relative z-10 mx-auto flex min-h-[calc(100svh-4rem)] max-w-7xl flex-col justify-end px-4 pb-14 pt-20 md:pb-20 md:pt-24">
+          <h1 className="font-display animate-home-rise max-w-4xl text-5xl font-semibold tracking-tight md:text-7xl lg:text-8xl">
+            Random Animal Generator
+          </h1>
+          <p className="animate-home-rise-delay mt-5 max-w-xl text-lg leading-relaxed text-[var(--paper)]/90 md:text-xl">
+            Free animal prompts for drawing, classrooms, and games—filters, difficulty, no signup.
+          </p>
+          <div className="animate-home-rise-delay-2 mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
+            <a href="#generator" className="home-cta-light">
+              Open generator
+            </a>
+            <Link href="/random-animal-generator-for-drawing" className="home-cta-ghost">
+              Drawing
+            </Link>
+            <Link href="/random-animal-generator-wheel" className="home-cta-ghost">
+              Wheel
+            </Link>
+            <Link href="/random-animal-name-generator" className="home-cta-ghost">
+              Names
+            </Link>
           </div>
         </div>
+      </header>
 
-        {(animals.length > 0 || hybridAnimal) && (
-          <section className="mb-12 scroll-mt-8" id="results">
-            <div className="mb-8 text-center">
-              <h2 className="text-3xl font-bold text-gray-800 drop-shadow-sm md:text-4xl">
-                {challengeMode === 'daily' && 'Daily Challenge'}
-                {challengeMode === 'timed' && 'Timed Challenge'}
-                {challengeMode === 'hard' && 'Hard Mode Challenge'}
-                {challengeMode === 'hybrid' && 'Hybrid Animal Challenge'}
-                {!challengeMode && 'Your Generated Animals'}
-              </h2>
-              <p className="mt-2 text-lg text-gray-600">
-                {challengeMode === 'daily' && "Try today's featured animal challenge."}
-                {challengeMode === 'timed' && 'Race the timer and see what animal you get.'}
-                {challengeMode === 'hard' && 'Test yourself with a more difficult animal prompt.'}
-                {challengeMode === 'hybrid' && 'Create a unique hybrid creature from multiple animals.'}
-                {!challengeMode && 'Click on any card to learn more.'}
+      <div className="relative z-10 mx-auto max-w-7xl px-4 py-10 md:py-14">
+        <Suspense fallback={<HomeGeneratorFallback />}>
+          <HomeGenerator />
+        </Suspense>
+
+        <article>
+          <section id="how-it-works" className="home-section scroll-mt-24">
+            <h2 className="home-section-title">How the Random Animal Generator Works</h2>
+            <div className="home-prose mt-6 max-w-3xl space-y-4">
+              <p>
+                A <strong className="font-semibold text-[var(--ink)]">random animal generator</strong> should
+                do one job well: give you a useful animal prompt in seconds. This page does that with a
+                curated wildlife database, clear filters, and result cards that include images and facts.
+                You choose how many animals you want, optionally narrow by category or drawing difficulty,
+                then generate a fresh set for drawing, games, lessons, or writing.
+              </p>
+              <p>
+                Unlike a blank random list, each result is built for reuse. Artists get difficulty context
+                and reference images. Teachers get category control for lesson planning. Families and game
+                hosts get a fast, fair way to pick animals without arguing over the next subject. The same
+                database powers the{' '}
+                <Link href="/random-animal-generator-wheel">animal wheel spinner</Link> and the{' '}
+                <Link href="/random-animal-name-generator">random animal name generator</Link>, so you can
+                switch tools without starting from zero.
+              </p>
+              <p>
+                Generation happens instantly in the browser. There is no account wall and no download step.
+                If you want a more structured session, open a challenge mode: daily for a single featured
+                animal, timed for a countdown sketch or quiz round, hard mode for tougher subjects, or
+                hybrid mode when you want a creative mashup of two animals.
               </p>
             </div>
 
-            {hybridAnimal && (
-              <div className="mx-auto max-w-2xl">
-                <HybridAnimalCard hybrid={hybridAnimal} />
-              </div>
-            )}
-
-            {animals.length > 0 && (
-              <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-                {animals.map((animal) => (
-                  <AnimalCard key={animal.id} animal={animal} />
-                ))}
-              </div>
-            )}
+            <ol className="mt-10 grid list-none gap-8 md:grid-cols-3 md:gap-10">
+              {HOME_HOW_TO_STEPS.map((step, index) => (
+                <li key={step.name} className="border-t border-[var(--line)] pt-5">
+                  <div className="font-display text-sm font-medium text-[var(--olive)]">
+                    {String(index + 1).padStart(2, '0')}
+                  </div>
+                  <h3 className="mt-2 font-display text-xl font-semibold text-[var(--ink)]">
+                    {step.name}
+                  </h3>
+                  <p className="mt-2 text-[var(--ink-muted)] leading-relaxed">{step.text}</p>
+                </li>
+              ))}
+            </ol>
           </section>
-        )}
 
-        {animals.length === 0 && !hybridAnimal && !challengeMode && (
-          <section className="mb-12 rounded-2xl border border-dashed border-emerald-200 bg-white/80 p-8 text-center text-gray-600 shadow-sm">
-            <p className="text-lg font-medium text-gray-800">No animals generated yet.</p>
-            <p className="mt-2 text-sm">
-              Pick a quantity, category, or difficulty, then click <strong>Generate Animals</strong>.
+          <section id="about-tool" className="home-section scroll-mt-24">
+            <h2 className="home-section-title">
+              What Makes This Tool Useful for Drawing, Games & Classrooms
+            </h2>
+            <div className="relative mx-auto my-8 w-full max-w-2xl overflow-hidden">
+              <Image
+                src="/home-biodiversity-field-guide.png"
+                alt="Field guide style showcase of mammal, bird, reptile, marine animal, and insect"
+                width={1200}
+                height={1200}
+                className="h-auto max-h-96 w-full object-contain"
+                title="Five categories of wildlife"
+                loading="lazy"
+              />
+            </div>
+            <div className="home-prose max-w-3xl space-y-4">
+              <p>
+                Many random animal tools stop at a name. This site is built around real use cases: drawing
+                practice, classroom activities, and light game play. That is why filters, difficulty
+                ratings, challenge modes, and related tools sit next to the generator instead of being
+                buried in a separate blog post.
+              </p>
+              <p>
+                The database covers more than 100 curated species across mammals, birds, reptiles, marine
+                animals, and insects. Each entry combines a common name, scientific name, category label,
+                facts, and a reference image. When you are practicing art, difficulty labels help you
+                decide whether to warm up with a simple shape or push into complex anatomy. When you are
+                teaching, category filters keep a mammal unit from drifting into unrelated animals.
+              </p>
+              <p>
+                If your goal is pure drawing prompts, the dedicated{' '}
+                <Link href="/random-animal-generator-for-drawing">
+                  random animal generator for drawing
+                </Link>{' '}
+                page keeps the workflow focused on sketch practice. If you need a list you can paste into a
+                worksheet or chat, switch to names. If the group wants a theatrical reveal, spin the wheel.
+              </p>
+            </div>
+          </section>
+
+          <section id="drawing-challenges" className="home-section scroll-mt-24">
+            <h2 className="home-section-title">Drawing Challenge Ideas with Random Animals</h2>
+            <p className="home-prose mt-4 max-w-3xl">
+              Artists search for a random animal generator when they want a prompt that removes decision
+              fatigue. Use these challenge formats to turn a single click into a full practice session.
+              Pair them with the difficulty filter so beginners stay motivated and advanced drawers still
+              feel stretched.
+            </p>
+            <div className="mt-10 grid gap-8 md:grid-cols-2">
+              {DRAWING_CHALLENGE_IDEAS.map((idea) => (
+                <div key={idea.title} className="border-t border-[var(--line)] pt-5">
+                  <h3 className="font-display text-xl font-semibold text-[var(--ink)]">{idea.title}</h3>
+                  <p className="mt-3 leading-relaxed text-[var(--ink-muted)]">{idea.text}</p>
+                </div>
+              ))}
+            </div>
+            <p className="home-prose mt-8 max-w-3xl">
+              For a spin-the-wheel drawing challenge with pictures, open the{' '}
+              <Link href="/random-animal-generator-wheel">random animal generator wheel</Link> and let the
+              group watch the pointer land. That format works especially well for live streams, art club
+              nights, and classroom warmups where the reveal is part of the fun.
             </p>
           </section>
-        )}
 
-        <section
-          id="about-tool"
-          className="mb-8 scroll-mt-24 rounded-2xl border border-emerald-100 bg-white/95 p-8 shadow-2xl backdrop-blur-sm md:p-10"
-        >
-          <div className="mb-6 flex items-start gap-4">
-            <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500 to-green-600">
-              <svg className="h-7 w-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M13 10V3L4 14h7v7l9-11h-7z"
-                />
-              </svg>
-            </div>
-            <h2 className="text-3xl font-bold text-gray-900 md:text-4xl">About This Random Animal Tool</h2>
-          </div>
-
-          <div className="relative mx-auto mb-8 w-full max-w-2xl overflow-hidden rounded-xl shadow-lg">
-            <Image
-              src="/RandomAnimalGenerator-BiodiversityShowcase.png"
-              alt="Animal biodiversity showcase featuring mammals, birds, reptiles, marine life, and insects"
-              width={1200}
-              height={1200}
-              className="h-auto max-h-96 w-full object-contain"
-              title="Five categories of wildlife"
-              loading="lazy"
-            />
-          </div>
-
-          <div className="space-y-4 text-lg leading-relaxed text-gray-700">
-            <p>
-              <strong>Random Animal Generator</strong> is a flexible online tool for anyone who
-              needs a quick animal prompt. You can use it to discover animals at random, narrow
-              results by category, or generate more focused prompts for drawing, classroom
-              activities, games, and creative projects.
+          <section id="classroom-uses" className="home-section scroll-mt-24">
+            <h2 className="home-section-title">Classroom Uses for a Random Animal Generator</h2>
+            <p className="home-prose mt-4 max-w-3xl">
+              Teachers and homeschool parents need tools that are fast, filterable, and free of login
+              friction. This generator supports short activities that fit into a warmup, station rotation,
+              or end-of-class closer without requiring preparation time.
             </p>
-            <p>
-              The current database includes more than 100 curated species across mammals, birds,
-              reptiles, marine animals, and insects. Each result combines visual reference, quick
-              facts, and difficulty-based context so the site can support both general random
-              selection and more intentional use cases.
-            </p>
-            <p>
-              If your main goal is a copy-ready list of names, use the{' '}
-              <Link href="/random-animal-name-generator" className="font-semibold text-emerald-700 underline underline-offset-4">
-                Random Animal Name Generator
-              </Link>
-              . If you want a one-at-a-time picker for games or classroom rounds, switch to the{' '}
-              <Link href="/random-animal-generator-wheel" className="font-semibold text-emerald-700 underline underline-offset-4">
-                Random Animal Generator Wheel
-              </Link>
-              .
-            </p>
-          </div>
-        </section>
-
-        <section
-          id="use-cases"
-          className="mb-8 scroll-mt-24 rounded-2xl border border-amber-100 bg-white/95 p-8 shadow-2xl backdrop-blur-sm md:p-10"
-        >
-          <div className="mb-8 flex items-center gap-4">
-            <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-amber-500 to-orange-600">
-              <svg className="h-7 w-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
-                />
-              </svg>
-            </div>
-            <h2 className="text-3xl font-bold text-gray-900 md:text-4xl">Popular Ways to Use the Generator</h2>
-          </div>
-
-          <div className="relative mx-auto mb-8 w-full max-w-4xl overflow-hidden rounded-xl shadow-lg">
-            <Image
-              src="/RandomAnimalGenerator-UseCasesSection.png"
-              alt="Students and teachers using the random animal generator tool"
-              width={2560}
-              height={1080}
-              className="h-auto w-full"
-              title="Use cases for classrooms, prompts, and games"
-              loading="lazy"
-            />
-          </div>
-
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {HOME_USE_CASES.map((useCase) => (
-              <div
-                key={useCase.title}
-                className="group rounded-xl border-2 border-emerald-200 bg-gradient-to-br from-emerald-50 to-amber-50 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-400 hover:shadow-lg"
-              >
-                <div className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-emerald-700">
-                  {useCase.label}
+            <div className="mt-10 grid gap-8 md:grid-cols-2">
+              {CLASSROOM_ACTIVITIES.map((activity) => (
+                <div key={activity.title} className="border-t border-[var(--line)] pt-5">
+                  <h3 className="font-display text-xl font-semibold text-[var(--ink)]">
+                    {activity.title}
+                  </h3>
+                  <p className="mt-3 leading-relaxed text-[var(--ink-muted)]">{activity.text}</p>
                 </div>
-                <h3 className="mb-3 text-xl font-bold text-gray-900">{useCase.title}</h3>
-                <p className="leading-relaxed text-gray-700">{useCase.description}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section
-          id="related-tools"
-          className="mb-8 scroll-mt-24 rounded-2xl border border-sky-100 bg-white/95 p-8 shadow-2xl backdrop-blur-sm md:p-10"
-        >
-          <div className="mb-8 flex items-center gap-4">
-            <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-sky-500 to-cyan-600">
-              <svg className="h-7 w-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 6v6l4 2m6-2a10 10 0 11-20 0 10 10 0 0120 0z"
-                />
-              </svg>
+              ))}
             </div>
-            <h2 className="text-3xl font-bold text-gray-900 md:text-4xl">Explore Related Tools</h2>
-          </div>
+            <p className="home-prose mt-8 max-w-3xl">
+              Because results include facts and images, students can move from a random pick to a short
+              research note without opening five different tabs. For language or science naming practice,
+              generate a list with the{' '}
+              <Link href="/random-animal-name-generator">random animal name generator</Link> so every
+              student gets a clean copy-ready output.
+            </p>
+          </section>
 
-          <div className="grid gap-6 md:grid-cols-2">
-            {CORE_TOOLS.map((tool) => (
-              <Link
-                key={tool.href}
-                href={tool.href}
-                className="group rounded-2xl border border-sky-100 bg-gradient-to-br from-sky-50 to-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-sky-300 hover:shadow-lg"
-              >
-                <div className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-sky-700">
-                  {tool.label}
+          <section id="use-cases" className="home-section scroll-mt-24">
+            <h2 className="home-section-title">Popular Ways to Use the Generator</h2>
+            <div className="relative mx-auto my-8 w-full max-w-4xl overflow-hidden">
+              <Image
+                src="/home-usecases-atelier.png"
+                alt="Teacher and students sketching animals from a reference prompt in a classroom atelier"
+                width={2560}
+                height={1080}
+                className="h-auto w-full"
+                title="Use cases for classrooms, prompts, and games"
+                loading="lazy"
+              />
+            </div>
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+              {HOME_USE_CASES.map((useCase) => (
+                <div key={useCase.title} className="border-t border-[var(--line)] pt-5">
+                  <div className="text-sm font-medium text-[var(--olive)]">{useCase.label}</div>
+                  <h3 className="mt-1 font-display text-xl font-semibold text-[var(--ink)]">
+                    {useCase.title}
+                  </h3>
+                  <p className="mt-3 leading-relaxed text-[var(--ink-muted)]">{useCase.description}</p>
                 </div>
-                <h3 className="mb-3 text-2xl font-bold text-gray-900">{tool.title}</h3>
-                <p className="text-gray-700">{tool.description}</p>
-                <div className="mt-5 text-sm font-semibold text-sky-700">Open tool -&gt;</div>
-              </Link>
-            ))}
-          </div>
-        </section>
-
-        <section
-          id="faq"
-          className="mb-8 scroll-mt-24 rounded-2xl border border-green-100 bg-white/95 p-8 shadow-2xl backdrop-blur-sm md:p-10"
-        >
-          <div className="mb-8 flex items-center gap-4">
-            <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-green-500 to-emerald-600">
-              <svg className="h-7 w-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
+              ))}
             </div>
-            <h2 className="text-3xl font-bold text-gray-900 md:text-4xl">Frequently Asked Questions</h2>
-          </div>
+          </section>
 
-          <div className="space-y-4">
-            {HOME_FAQS.map((faq) => (
-              <div
-                key={faq.question}
-                className="rounded-xl border border-gray-200 bg-gradient-to-r from-gray-50 to-emerald-50 p-6 transition-all duration-300 hover:border-emerald-300 hover:shadow-md"
-              >
-                <h3 className="mb-3 flex items-start gap-3 text-lg font-bold text-gray-900">
-                  <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-emerald-600 text-sm font-bold text-white">
-                    Q
-                  </span>
-                  {faq.question}
-                </h3>
-                <p className="pl-9 leading-relaxed text-gray-700">{faq.answer}</p>
-              </div>
-            ))}
-          </div>
-        </section>
+          <section className="home-section">
+            <h2 className="home-section-title">Games, Icebreakers, and Party Rounds</h2>
+            <div className="home-prose mt-6 max-w-3xl space-y-4">
+              <p>
+                Random animal picks are a natural fit for icebreakers, charades, Pictionary-style rounds,
+                and “who goes first” decisions. Generate three animals and ask each player to act one out,
+                describe it without saying the name, or draw it for the group. If you want more suspense,
+                use the wheel so everyone watches the spin together.
+              </p>
+              <p>
+                For longer game nights, combine modes: start with a wheel pick, then use hard mode for a
+                bonus round, then finish with hybrid mode for a creative creature contest. Because the tool
+                works on phones and laptops, it fits classroom projectors, living room TVs, and remote
+                hangouts equally well.
+              </p>
+              <p>
+                Looking for land animals only, marine animals, or insects? Use the category filter before
+                you generate. That keeps a “random land animal generator” style activity focused without
+                needing a separate page for every niche request.
+              </p>
+            </div>
+          </section>
 
-        <footer className="py-10 text-center text-gray-700">
-          <div className="mb-4 inline-block rounded-full border border-emerald-200 bg-white/60 px-6 py-3 backdrop-blur-sm">
-            <p className="font-medium">&copy; 2026 Random Animal Generator</p>
-          </div>
-          <p className="mb-4 text-gray-600">
+          <section className="home-section">
+            <h2 className="home-section-title">Challenge Modes That Encourage Return Visits</h2>
+            <div className="home-prose mt-6 max-w-3xl space-y-4">
+              <p>
+                A one-click generator is useful once. Challenge modes turn it into a habit. The daily
+                challenge gives you a single featured animal so artists and classrooms can share the same
+                prompt. Timed mode adds urgency for sketch sprints and quiz rounds. Hard mode surfaces
+                tougher subjects when easy animals feel too familiar. Hybrid mode invents a new creature
+                from two source animals for writing and concept art.
+              </p>
+              <p>
+                These modes are intentional product choices, not decoration. They give people a reason to
+                come back tomorrow, keep a classroom routine consistent, and support the kind of engagement
+                signals that matter once the page content is already visible to search engines.
+              </p>
+            </div>
+          </section>
+
+          <section id="related-tools" className="home-section scroll-mt-24">
+            <h2 className="home-section-title">Explore Related Tools</h2>
+            <p className="home-prose mt-4 max-w-3xl">
+              The homepage targets the core query{' '}
+              <strong className="font-semibold text-[var(--ink)]">random animal generator</strong>. Related
+              tools cover narrower intents so visitors and search engines both get a clear path.
+            </p>
+            <ul className="mt-10 divide-y divide-[var(--line)] border-y border-[var(--line)]">
+              {CORE_TOOLS.map((tool) => (
+                <li key={tool.href}>
+                  <Link
+                    href={tool.href}
+                    className="group flex flex-col gap-1 py-6 transition-colors md:flex-row md:items-baseline md:justify-between md:gap-8"
+                  >
+                    <div>
+                      <div className="text-sm font-medium text-[var(--olive)]">{tool.label}</div>
+                      <h3 className="font-display text-xl font-semibold text-[var(--ink)] group-hover:text-[var(--olive-deep)] md:text-2xl">
+                        {tool.title}
+                      </h3>
+                      <p className="mt-2 max-w-xl text-[var(--ink-muted)] md:mt-1">{tool.description}</p>
+                    </div>
+                    <span className="mt-2 shrink-0 text-sm font-semibold text-[var(--olive-deep)] md:mt-0">
+                      Open tool →
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <section id="faq" className="home-section scroll-mt-24">
+            <h2 className="home-section-title">Frequently Asked Questions</h2>
+            <div className="mt-8 divide-y divide-[var(--line)] border-y border-[var(--line)]">
+              {HOME_FAQS.map((faq) => (
+                <div key={faq.question} className="py-6">
+                  <h3 className="font-display text-lg font-semibold text-[var(--ink)] md:text-xl">
+                    {faq.question}
+                  </h3>
+                  <p className="mt-3 leading-relaxed text-[var(--ink-muted)]">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        </article>
+
+        <footer className="home-section border-b-0 pb-4 text-center">
+          <p className="font-display text-lg font-medium text-[var(--ink)]">
+            &copy; 2026 Random Animal Generator
+          </p>
+          <p className="mt-2 text-sm text-[var(--ink-faint)]">
             Free online tool for random animal prompts, games, and category-based discovery
           </p>
-          <div className="inline-block rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-2 text-sm">
-            <p className="text-emerald-800">
-              <span className="font-semibold">Privacy:</span> All data is stored locally on your
-              device. No personal information is collected or transmitted.
-            </p>
-          </div>
+          <p className="mx-auto mt-6 max-w-lg text-sm leading-relaxed text-[var(--ink-muted)]">
+            <span className="font-semibold text-[var(--ink)]">Privacy:</span> All data is stored locally
+            on your device. No personal information is collected or transmitted.
+          </p>
         </footer>
       </div>
     </div>
-  );
-}
-
-export default function Home() {
-  return (
-    <Suspense
-      fallback={
-        <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-emerald-50 via-amber-50 to-orange-50">
-          <div className="text-center">
-            <div className="mb-4 text-6xl font-bold">RA</div>
-            <p className="text-xl font-medium text-gray-700">Loading...</p>
-          </div>
-        </div>
-      }
-    >
-      <HomeContent />
-    </Suspense>
   );
 }

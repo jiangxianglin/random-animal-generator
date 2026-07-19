@@ -19,4 +19,4 @@ export const CORE_SITE_ROUTES = [
   { path: "/random-animal-generator-for-drawing", priority: 0.85 },
 ] as const;
 
-export const LAST_MAJOR_UPDATE = new Date("2026-05-07T00:00:00.000Z");
+export const LAST_MAJOR_UPDATE = new Date("2026-07-19T00:00:00.000Z");

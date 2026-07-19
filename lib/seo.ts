@@ -36,7 +36,7 @@ export function buildPageMetadata({
   title,
   description,
   path,
-  image = "/RandomAnimalGenerator-hero.png",
+  image = "/home-hero-field-atelier.png",
   imageAlt = `${SITE_NAME} preview image`,
 }: MetadataInput): Metadata {
   const canonical = path.startsWith("/") ? path : `/${path}`;
