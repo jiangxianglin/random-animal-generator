@@ -89,7 +89,14 @@ export default function RandomAnimalGeneratorForDrawingPage() {
               classroom activities. Filter by difficulty to control how challenging the prompts feel.
             </p>
             <p className="mx-auto mt-4 max-w-2xl text-sm text-gray-700 md:text-base">
-              Prefer a one-at-a-time picker? Use the{' '}
+              Searching for a broader{' '}
+              <Link
+                href="/drawing-prompt-generator"
+                className="font-semibold text-emerald-800 underline underline-offset-4"
+              >
+                drawing prompt generator
+              </Link>
+              ? That page focuses on art ideas and challenges. Prefer a one-at-a-time picker? Use the{' '}
               <Link
                 href="/random-animal-generator-wheel"
                 className="font-semibold text-emerald-800 underline underline-offset-4"
@@ -153,6 +160,13 @@ export default function RandomAnimalGeneratorForDrawingPage() {
             Explore more:{' '}
             <Link href="/" className="font-semibold text-emerald-800 underline underline-offset-4">
               random animal generator
+            </Link>
+            ,{' '}
+            <Link
+              href="/drawing-prompt-generator"
+              className="font-semibold text-emerald-800 underline underline-offset-4"
+            >
+              drawing prompt generator
             </Link>
             ,{' '}
             <Link

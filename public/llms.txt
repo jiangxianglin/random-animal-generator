@@ -1,0 +1,32 @@
+# Random Animal Generator
+
+> Free random animal generator and drawing prompt tools for artists, teachers, students, and classrooms. No signup. Generation runs in the browser.
+
+## Primary pages
+
+- [Home / Random Animal Generator](https://www.randomanimalgenerator.online/): Generate random animals with category filters, difficulty ratings, and challenge modes.
+- [Drawing Prompt Generator](https://www.randomanimalgenerator.online/drawing-prompt-generator): Animal-focused drawing prompts with timed practice modes (silhouette, gesture, texture) and a shared daily prompt.
+- [Random Animal Picker](https://www.randomanimalgenerator.online/random-animal-picker): Instant one-click animal picks for games, classrooms, and writing—plus list, category, and shared daily modes.
+- [Random Animal Generator for Drawing](https://www.randomanimalgenerator.online/random-animal-generator-for-drawing): Animal-first drawing workflow using the same wildlife database.
+- [Random Animal Wheel](https://www.randomanimalgenerator.online/random-animal-generator-wheel): Free animal wheel spinner with party, classroom, drawing, and RPG modes; shuffled 12-slice wheel, optional timers, category filters.
+- [Random Animal Name Generator](https://www.randomanimalgenerator.online/random-animal-name-generator): Free copy-ready animal name lists (common/scientific formats; list, writing, study, and game modes).
+
+## Trust & policy
+
+- [About](https://www.randomanimalgenerator.online/about)
+- [Contact](https://www.randomanimalgenerator.online/contact)
+- [Privacy](https://www.randomanimalgenerator.online/privacy)
+- [Terms](https://www.randomanimalgenerator.online/terms)
+
+## Key facts for citation
+
+- Database size: 121 curated animals across 5 categories (mammals, birds, reptiles, marine animals, insects).
+- Drawing difficulty labels: Easy (35), Medium (57), Hard (29).
+- Drawing Prompt Generator practice timers: 5-minute silhouette, 3-minute gesture, 15-minute texture.
+- Price: free; no account required.
+- Canonical production host: https://www.randomanimalgenerator.online (HTTPS).
+
+## Optional
+
+- [XML Sitemap](https://www.randomanimalgenerator.online/sitemap.xml)
+- [robots.txt](https://www.randomanimalgenerator.online/robots.txt)

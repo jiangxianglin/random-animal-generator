@@ -18,6 +18,7 @@ interface GeneratorControlsProps {
   onDifficultyChange: (difficulty: DrawingDifficulty | null) => void;
   onGenerate: () => void;
   onReset: () => void;
+  generateLabel?: string;
 }
 
 const generator = new AnimalGenerator();
@@ -31,6 +32,7 @@ export function GeneratorControls({
   onDifficultyChange,
   onGenerate,
   onReset,
+  generateLabel = 'Generate Animals',
 }: GeneratorControlsProps) {
   const [isGenerating, setIsGenerating] = useState(false);
 
@@ -150,7 +152,7 @@ export function GeneratorControls({
             ) : availableCount < quantity ? (
               <span className="text-base">Not enough animals for this filter</span>
             ) : (
-              <span>Generate Animals</span>
+              <span>{generateLabel}</span>
             )}
           </button>
 

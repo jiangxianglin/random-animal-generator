@@ -1,115 +1,163 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { AnimalWheelTool, ScrollToWheelButton } from '@/components/animal-wheel-tool';
-import { ANIMAL_DATABASE } from '@/lib/animals';
-import { buildBreadcrumbSchema, buildFaqSchema, buildHowToSchema, buildWebAppSchema } from '@/lib/seo';
+import { AnimalWheelTool } from '@/components/animal-wheel-tool';
+import {
+  buildBreadcrumbSchema,
+  buildFaqSchema,
+  buildHowToSchema,
+  buildWebAppSchema,
+  buildWebPageSchema,
+} from '@/lib/seo';
+import {
+  LAST_MAJOR_UPDATE,
+  SITE_AUTHOR,
+  SITE_NAME,
+} from '@/lib/site';
 
-const USE_CASES = [
-  {
-    label: 'Play',
-    title: 'Party Games & Decision Making',
-    description:
-      'Let the Random Animal Generator Wheel decide who goes first, who picks the movie, or settle friendly disputes with a fun random selector.',
-  },
-  {
-    label: 'Learn',
-    title: 'Educational Activities',
-    description:
-      'Teachers and parents can use this animal wheel spinner to create engaging animal-themed lessons. Perfect for biology classes, nature studies, and wildlife education.',
-  },
-  {
-    label: 'Write',
-    title: 'Creative Writing Prompts',
-    description:
-      'Use the wheel picker to select an animal for your next story character, setting inspiration, or plot element.',
-  },
-  {
-    label: 'RPG',
-    title: 'Role-Playing Games',
-    description:
-      'Perfect for tabletop RPGs, classroom activities, or family game nights where random animal selection is needed.',
-  },
-  {
-    label: 'Team',
-    title: 'Team Building Activities',
-    description:
-      'Split into teams randomly, assign animal roles, or create animal-themed group challenges with the wheel.',
-  },
-  {
-    label: 'Draw',
-    title: 'Art & Drawing Challenges',
-    description:
-      'Artists can use the wheel as a prompt generator for sketch sessions and quick drawing challenges.',
-  },
-] as const;
-
-const TIPS = [
-  'Click the spin button and watch the wheel rotate.',
-  'Wait for the wheel to stop completely.',
-  'The pointer at the top shows your selected animal.',
-  'Change categories to explore different animal groups.',
-  'Share your results with friends or classmates.',
-] as const;
+const PAGE_PUBLISHED = '2026-07-02T00:00:00.000Z';
+const PAGE_MODIFIED = LAST_MAJOR_UPDATE.toISOString();
 
 const FAQS = [
   {
-    question: 'How does the Random Animal Generator Wheel work?',
+    question: 'What is a random animal wheel?',
     answer:
-      'Choose a category, click spin, and wait for the pointer to land on a random animal. The result includes a name, image, and quick facts you can use right away.',
+      'A random animal wheel is a free spinning tool that lands on one animal at a time. It is built for games, classrooms, icebreakers, and live reveals where the spin is part of the fun.',
   },
   {
-    question: 'Is this animal wheel spinner free?',
+    question: 'Who should use this animal wheel spinner?',
     answer:
-      'Yes. The random animal wheel is free to use with no signup, downloads, or premium unlock for the core spinner.',
+      'Party hosts, teachers, artists, and RPG groups who want a theatrical one-at-a-time pick—with modes and timers matched to icebreakers, classroom rounds, sketch reveals, and encounter rolls.',
   },
   {
-    question: 'Can I filter the wheel by animal category?',
+    question: 'What are the spin modes on this random animal wheel?',
     answer:
-      'Yes. You can spin across all animals or focus on mammals, birds, reptiles, marine animals, or insects.',
+      'Free spin for open play; Party icebreaker for shared reveals; Classroom round with a 60-second response timer; Drawing reveal with a 3-minute sketch timer; and RPG encounter for story seeds.',
   },
   {
-    question: 'What is the difference between the wheel and the main generator?',
+    question: 'How is the wheel different from the random animal picker?',
     answer:
-      'The wheel is best for one-at-a-time picks with a playful reveal. The homepage generator is better when you want multiple cards, difficulty filters, and challenge modes.',
+      'The wheel emphasizes the spin animation and live reveal. The random animal picker is faster for instant picks, multi-animal lists, and a shared daily animal when you do not need the show.',
+  },
+  {
+    question: 'Can I filter the random animal wheel by category?',
+    answer:
+      'Yes. Spin across all animals or focus on mammals, birds, reptiles, marine animals, or insects. The wheel shows up to 12 animals from the active pool.',
+  },
+  {
+    question: 'Is this random animal wheel spinner free?',
+    answer:
+      'Yes. It runs in your browser with no signup, downloads, or premium unlock for the core spinner.',
+  },
+  {
+    question: 'Can artists use the wheel for drawing challenges?',
+    answer:
+      'Yes. Spin for a subject, then open the drawing prompt generator if you want timed silhouette, gesture, or texture practice modes.',
   },
 ] as const;
 
 const HOW_TO_STEPS = [
   {
-    name: 'Choose a category',
-    text: 'Pick all animals or focus the wheel on mammals, birds, reptiles, marine animals, or insects.',
+    name: 'Pick a spin mode',
+    text: 'Start with Free spin, or choose Party, Classroom, Drawing reveal, or RPG encounter.',
   },
   {
     name: 'Spin the wheel',
-    text: 'Click the wheel spinner and wait for the pointer to stop on a random animal.',
+    text: 'Confirm the category if needed, then click spin and wait for the pointer to stop.',
   },
   {
     name: 'Use the result',
-    text: 'Review the selected animal and use it for games, classroom activities, or creative prompts.',
+    text: 'Copy the animal, run the optional timer, or open drawing prompts for a timed sketch.',
   },
 ] as const;
 
+const PERSONAS = [
+  {
+    title: 'Party & game hosts',
+    text: 'Use Party icebreaker mode so the room watches one fair reveal, then share a fact, sound, or memory.',
+  },
+  {
+    title: 'Teachers & classrooms',
+    text: 'Classroom round locks mammals and starts a 60-second response timer after the pointer stops.',
+  },
+  {
+    title: 'Artists & art clubs',
+    text: 'Drawing reveal mode spins a subject, starts a 3-minute sketch timer, and links to timed drawing prompts.',
+  },
+  {
+    title: 'Writers & RPG tables',
+    text: 'RPG encounter mode treats the landed animal as a creature, familiar, omen, or wilderness seed.',
+  },
+] as const;
+
+const USE_IDEAS = [
+  {
+    title: 'Icebreaker spins',
+    text: 'Spin once, then ask each person to share a fact, sound, or memory tied to the animal.',
+  },
+  {
+    title: 'Live classroom rounds',
+    text: 'Category-lock mammals or birds, spin, and give students sixty seconds to respond.',
+  },
+  {
+    title: 'Drawing challenge reveal',
+    text: 'Spin for the subject, then start a short sketch timer for the whole group.',
+  },
+  {
+    title: 'RPG encounter rolls',
+    text: 'Spin when the party needs a creature, familiar, or wilderness encounter without looking it up.',
+  },
+] as const;
+
+const STATS = [
+  { value: '121', label: 'Curated animals' },
+  { value: '5', label: 'Spin modes' },
+  { value: '12', label: 'Shuffled wheel slices' },
+  { value: '0', label: 'Signup required' },
+] as const;
+
+const FEATURE_LIST = [
+  'Spinning random animal wheel with a clear pointer reveal',
+  'Persona spin modes: party, classroom, drawing, RPG, and free spin',
+  'Category filters with a freshly shuffled 12-animal wheel each time',
+  'Optional response / sketch timers after the reveal',
+  'Copyable result card with name, image, and quick facts—no signup',
+] as const;
+
+function formatDisplayDate(iso: string) {
+  return new Date(iso).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    timeZone: 'UTC',
+  });
+}
+
 export default function RandomAnimalGeneratorWheelPage() {
   const structuredData = [
-    buildWebAppSchema({
-      name: 'Random Animal Generator Wheel',
+    buildWebPageSchema({
+      name: 'Random Animal Wheel',
       description:
-        'A free online spinning wheel that randomly selects animals for games, education, and creative prompts.',
+        'A free random animal wheel spinner with party, classroom, drawing, and RPG modes for live one-at-a-time animal picks.',
       path: '/random-animal-generator-wheel',
-      featureList: [
-        'Random animal selection via spinning wheel',
-        'Category filtering for mammals, birds, reptiles, marine animals, and insects',
-        'Instant results with animal facts and images',
-        'Works on desktop and mobile devices',
-      ],
+      datePublished: PAGE_PUBLISHED,
+      dateModified: PAGE_MODIFIED,
+    }),
+    buildWebAppSchema({
+      name: 'Random Animal Wheel',
+      description:
+        'A free random animal wheel spinner with party, classroom, drawing, and RPG modes for live one-at-a-time animal picks.',
+      path: '/random-animal-generator-wheel',
+      datePublished: PAGE_PUBLISHED,
+      dateModified: PAGE_MODIFIED,
+      featureList: [...FEATURE_LIST],
     }),
     buildBreadcrumbSchema([
       { name: 'Home', path: '/' },
-      { name: 'Random Animal Generator Wheel', path: '/random-animal-generator-wheel' },
+      { name: 'Random Animal Wheel', path: '/random-animal-generator-wheel' },
     ]),
     buildHowToSchema(
-      'How to use the random animal generator wheel',
-      'A short guide for spinning the wheel and using the selected animal.',
+      'How to use the random animal wheel',
+      'Spin the animal wheel spinner and use the result for games or lessons.',
       '/random-animal-generator-wheel',
       HOW_TO_STEPS,
     ),
@@ -117,255 +165,450 @@ export default function RandomAnimalGeneratorWheelPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+    <div className="paper-atmosphere relative min-h-screen">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
 
-      <div className="mx-auto max-w-6xl px-4 py-6">
-        <header className="mb-6 text-center">
-          <h1 className="mb-2 text-2xl font-bold text-gray-900 md:text-3xl">
-            Random Animal Generator Wheel
+      <header className="relative isolate min-h-[calc(100svh-4rem)] overflow-hidden text-[var(--paper)]">
+        <Image
+          src="/random-animal-wheel-hero-v2.webp"
+          alt="Friends gathered around a wooden random animal wheel at a cozy game night"
+          fill
+          priority
+          className="object-cover animate-home-fade"
+          sizes="100vw"
+        />
+        <div
+          className="absolute inset-0 bg-gradient-to-t from-[rgba(28,26,23,0.78)] via-[rgba(28,26,23,0.38)] to-[rgba(28,26,23,0.14)]"
+          aria-hidden="true"
+        />
+        <div className="relative z-10 mx-auto flex min-h-[calc(100svh-4rem)] max-w-7xl flex-col justify-end px-4 pb-14 pt-20 md:pb-20 md:pt-24">
+          <p className="animate-home-rise text-sm font-semibold uppercase tracking-[0.22em] text-[var(--paper)]/80">
+            Free animal wheel spinner
+          </p>
+          <h1 className="font-display animate-home-rise-delay mt-3 max-w-4xl text-5xl font-semibold tracking-tight md:text-7xl">
+            Random Animal Wheel
           </h1>
-          <p className="text-sm text-gray-600 md:text-base">
-            Free online tool - {ANIMAL_DATABASE.length}+ animals - instant results
+          <p className="animate-home-rise-delay-2 mt-5 max-w-xl text-lg leading-relaxed text-[var(--paper)]/90 md:text-xl">
+            A random animal wheel is a free spinner that lands on one animal at a time—with party,
+            classroom, drawing, and RPG modes so the reveal matches how your group actually uses it.
           </p>
-          <p className="mx-auto mt-3 max-w-3xl text-sm text-gray-600 md:text-base">
-            Use this <strong>animal wheel spinner</strong> when you need a quick random pick for
-            games or lessons. For a full-page generator with cards and filters, try the{' '}
-            <Link href="/" className="font-semibold text-indigo-700 underline underline-offset-4">
-              random animal generator
+          <div className="animate-home-rise-delay-2 mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
+            <a href="#generator" className="home-cta-light">
+              Spin the wheel
+            </a>
+            <a href="#what-is" className="home-cta-ghost">
+              What it is
+            </a>
+            <Link href="/random-animal-picker" className="home-cta-ghost">
+              Prefer instant pick?
             </Link>
-            . For a copy-ready list output, use the{' '}
-            <Link
-              href="/random-animal-name-generator"
-              className="font-semibold text-indigo-700 underline underline-offset-4"
-            >
-              random animal name generator
-            </Link>
-            .
-          </p>
-        </header>
+          </div>
+        </div>
+      </header>
+
+      <div className="relative z-10 mx-auto max-w-7xl px-4 py-10 md:py-14">
+        <p className="mb-8 text-center text-sm text-[var(--ink-faint)]">
+          By{' '}
+          <Link href={SITE_AUTHOR.url} className="home-link">
+            {SITE_AUTHOR.name}
+          </Link>
+          {' · '}
+          <time dateTime={PAGE_PUBLISHED}>Published {formatDisplayDate(PAGE_PUBLISHED)}</time>
+          {' · '}
+          <time dateTime={PAGE_MODIFIED}>Updated {formatDisplayDate(PAGE_MODIFIED)}</time>
+        </p>
 
         <AnimalWheelTool />
 
-        <section className="mb-16">
-          <div className="rounded-2xl bg-gradient-to-r from-indigo-600 to-purple-600 p-8 text-white shadow-xl">
-            <h2 className="mb-6 text-center text-3xl font-bold">How to Use the Random Animal Wheel</h2>
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {TIPS.map((tip, index) => (
-                <div key={tip} className="flex items-start gap-3 rounded-xl bg-white/10 p-4">
-                  <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-white font-bold text-indigo-600">
-                    {index + 1}
-                  </span>
-                  <p className="text-white/90">{tip}</p>
+        <article>
+          <section id="what-is" className="home-section scroll-mt-24">
+            <h2 className="home-section-title">What Is a Random Animal Wheel?</h2>
+            <p className="home-prose mt-4">
+              A <strong className="font-semibold text-[var(--ink)]">random animal wheel</strong> (also
+              called an animal wheel spinner) is a spinning selector that reveals one animal with a
+              pointer stop. This page is built for moments when the process matters as much as the
+              result—classroom rounds, party games, and live challenges.
+            </p>
+            <ul className="mx-auto mt-8 max-w-2xl list-disc space-y-2 pl-5 text-[var(--ink-muted)]">
+              {FEATURE_LIST.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </section>
+
+          <section className="home-section scroll-mt-24">
+            <h2 className="home-section-title">Random Animal Wheel Stats</h2>
+            <p className="home-prose mt-4">
+              Concrete numbers help you judge whether the spinner fits a 30-second icebreaker or a
+              projected classroom activity.
+            </p>
+            <div className="mx-auto mt-8 grid max-w-4xl grid-cols-2 gap-6 md:grid-cols-4">
+              {STATS.map((stat) => (
+                <div key={stat.label} className="border-t border-[var(--line)] pt-4 text-center">
+                  <div className="font-display text-3xl font-semibold text-[var(--ink)]">
+                    {stat.value}
+                  </div>
+                  <div className="mt-1 text-sm text-[var(--ink-faint)]">{stat.label}</div>
                 </div>
               ))}
             </div>
-          </div>
-        </section>
+            <ul className="mx-auto mt-8 max-w-2xl list-disc space-y-2 pl-5 text-sm text-[var(--ink-muted)]">
+              <li>Category counts: 33 mammals · 22 birds · 20 reptiles · 22 marine · 24 insects</li>
+              <li>
+                Wheel slices: 12 animals reshuffled from the active pool (Reshuffle wheel anytime)
+              </li>
+              <li>
+                Modes with timers: Classroom round (60s) · Drawing reveal (3 min sketch)
+              </li>
+              <li>
+                Search focus: this page owns{' '}
+                <strong className="font-semibold text-[var(--ink)]">random animal wheel</strong> /
+                spinner intent; instant picks go to the{' '}
+                <Link href="/random-animal-picker" className="home-link">
+                  random animal picker
+                </Link>
+                .
+              </li>
+            </ul>
+          </section>
 
-        <section className="mb-6">
-          <div className="mx-auto max-w-4xl rounded-2xl bg-white p-6 shadow-lg">
-            <h2 className="mb-3 text-xl font-bold text-gray-900">
-              What is the Random Animal Generator Wheel?
-            </h2>
-            <p className="mb-2 text-sm text-gray-700">
-              The <strong>Random Animal Generator Wheel</strong> is a free online spinning tool
-              designed to help you pick animals for games, educational activities, creative writing,
-              and quick decision making.
+          <section className="home-section scroll-mt-24">
+            <h2 className="home-section-title">Who Should Use This Tool?</h2>
+            <p className="home-prose mt-4">
+              This random animal wheel is for people who want a shared, visible spin—not a silent
+              backend random number. Use it when the room should watch the result land.
             </p>
-            <p className="text-sm text-gray-700">
-              It is useful for teachers, parents, game masters, writers, and anyone who needs a fast
-              and entertaining way to pick random animals. No registration is required and no
-              downloads are needed.
-            </p>
-            <p className="mt-3 text-sm text-gray-700">
-              If you want a broader generator with animal cards and filters, use the{' '}
-              <Link href="/" className="font-semibold text-indigo-700 underline underline-offset-4">
-                main Random Animal Generator
-              </Link>
-              . If you need a copy-ready list of names instead of a spinner, try the{' '}
-              <Link
-                href="/random-animal-name-generator"
-                className="font-semibold text-indigo-700 underline underline-offset-4"
-              >
-                Random Animal Name Generator
-              </Link>
-              .
-            </p>
-          </div>
-        </section>
-
-        <section className="mb-6">
-          <h2 className="mb-8 text-center text-3xl font-bold text-gray-900">Popular Use Cases</h2>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {USE_CASES.map((useCase) => (
-              <div
-                key={useCase.title}
-                className="rounded-xl bg-white p-6 shadow-lg transition-shadow hover:shadow-xl"
-              >
-                <div className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-indigo-600">
-                  {useCase.label}
+            <div className="mx-auto mt-10 grid max-w-5xl gap-8 md:grid-cols-2">
+              {PERSONAS.map((persona) => (
+                <div key={persona.title} className="border-t border-[var(--line)] pt-5">
+                  <h3 className="font-display text-xl font-semibold text-[var(--ink)]">
+                    {persona.title}
+                  </h3>
+                  <p className="mt-3 leading-relaxed text-[var(--ink-muted)]">{persona.text}</p>
                 </div>
-                <h3 className="mb-2 text-xl font-bold text-gray-900">{useCase.title}</h3>
-                <p className="text-gray-600">{useCase.description}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="mb-16">
-          <div className="rounded-2xl bg-white p-8 shadow-xl">
-            <h2 className="mb-6 text-3xl font-bold text-gray-900">
-              Why Use Our Random Animal Generator Wheel?
-            </h2>
-            <div className="grid gap-8 md:grid-cols-2">
-              <div>
-                <h3 className="mb-3 text-xl font-semibold text-indigo-600">Instant & Easy to Use</h3>
-                <p className="mb-4 text-gray-700">
-                  No registration required. No downloads needed. Just open the page, select a
-                  category, and spin.
-                </p>
-
-                <h3 className="mb-3 text-xl font-semibold text-indigo-600">Works Everywhere</h3>
-                <p className="mb-4 text-gray-700">
-                  The wheel is designed to work on desktop, tablet, and mobile devices.
-                </p>
-
-                <h3 className="mb-3 text-xl font-semibold text-indigo-600">Diverse Animal Collection</h3>
-                <p className="text-gray-700">
-                  The database includes {ANIMAL_DATABASE.length}+ animals across mammals, birds,
-                  reptiles, marine animals, and insects.
-                </p>
-              </div>
-
-              <div>
-                <div className="relative mb-6 h-64 overflow-hidden rounded-xl shadow-lg">
-                  <Image
-                    src="/home-biodiversity-field-guide.png"
-                    alt="Field guide style showcase of mammal, bird, reptile, marine animal, and insect"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
-                </div>
-
-                <h3 className="mb-3 text-xl font-semibold text-indigo-600">Fun & Engaging</h3>
-                <p className="mb-4 text-gray-700">
-                  The spinning animation adds excitement to random selection for games, learning,
-                  and creative prompts.
-                </p>
-
-                <h3 className="mb-3 text-xl font-semibold text-indigo-600">Completely Free</h3>
-                <p className="mb-4 text-gray-700">
-                  The tool is free to use with no hidden costs, premium gates, or login steps.
-                </p>
-
-                <h3 className="mb-3 text-xl font-semibold text-indigo-600">Regular Updates</h3>
-                <p className="text-gray-700">
-                  The project can expand over time with more animals, more tool variations, and
-                  better category coverage.
-                </p>
-              </div>
+              ))}
             </div>
-          </div>
-        </section>
+          </section>
 
-        <section className="mb-16">
-          <div className="rounded-2xl bg-gradient-to-br from-green-50 to-blue-50 p-8 shadow-xl">
-            <div className="relative mb-8 h-64 overflow-hidden rounded-xl shadow-lg md:h-80">
+          <section id="how-to-use" className="home-section scroll-mt-24">
+            <h2 className="home-section-title">How to Use This Random Animal Wheel</h2>
+            <p className="home-prose mt-4">
+              To use this random animal wheel, pick a spin mode, confirm the category, spin, then use
+              the result card—copy it, run the timer, or jump into a drawing prompt.
+            </p>
+            <ol className="mx-auto mt-10 grid max-w-5xl list-none gap-8 text-center md:grid-cols-3 md:gap-10 md:text-left">
+              {HOW_TO_STEPS.map((step, index) => (
+                <li key={step.name} className="border-t border-[var(--line)] pt-5">
+                  <div className="font-display text-sm font-medium text-[var(--olive)]">
+                    {String(index + 1).padStart(2, '0')}
+                  </div>
+                  <h3 className="mt-2 font-display text-xl font-semibold text-[var(--ink)]">
+                    {step.name}
+                  </h3>
+                  <p className="mt-2 leading-relaxed text-[var(--ink-muted)]">{step.text}</p>
+                </li>
+              ))}
+            </ol>
+          </section>
+
+          <section className="home-section scroll-mt-24">
+            <h2 className="home-section-title">Wheel vs Picker vs Name List</h2>
+            <p className="home-prose mt-4">
+              Use the wheel for live reveals, the picker for speed, and the name generator when you
+              only need pasteable text.
+            </p>
+            <div className="mx-auto mt-8 max-w-4xl overflow-x-auto">
+              <table className="w-full min-w-[36rem] border-collapse text-left text-sm">
+                <caption className="sr-only">
+                  Comparison of random animal wheel versus picker and name list tools
+                </caption>
+                <thead>
+                  <tr className="border-b border-[var(--line-strong)]">
+                    <th scope="col" className="py-3 pr-4 font-semibold text-[var(--ink)]">
+                      Need
+                    </th>
+                    <th scope="col" className="py-3 pr-4 font-semibold text-[var(--ink)]">
+                      This wheel
+                    </th>
+                    <th scope="col" className="py-3 font-semibold text-[var(--ink)]">
+                      Picker / names
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="text-[var(--ink-muted)]">
+                  <tr className="border-b border-[var(--line)]">
+                    <th scope="row" className="py-3 pr-4 font-medium text-[var(--ink)]">
+                      Live showmanship
+                    </th>
+                    <td className="py-3 pr-4">Spin animation + pointer stop</td>
+                    <td className="py-3">Picker is instant; names are text-only</td>
+                  </tr>
+                  <tr className="border-b border-[var(--line)]">
+                    <th scope="row" className="py-3 pr-4 font-medium text-[var(--ink)]">
+                      Speed
+                    </th>
+                    <td className="py-3 pr-4">Seconds for the spin</td>
+                    <td className="py-3">Picker wins for one-click picks</td>
+                  </tr>
+                  <tr className="border-b border-[var(--line)]">
+                    <th scope="row" className="py-3 pr-4 font-medium text-[var(--ink)]">
+                      Multi-result lists
+                    </th>
+                    <td className="py-3 pr-4">One animal per spin</td>
+                    <td className="py-3">Picker lists / name generator excel</td>
+                  </tr>
+                  <tr className="border-b border-[var(--line)]">
+                    <th scope="row" className="py-3 pr-4 font-medium text-[var(--ink)]">
+                      Classroom projection
+                    </th>
+                    <td className="py-3 pr-4">Strong—everyone watches the wheel</td>
+                    <td className="py-3">Picker works; less theatrical</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" className="py-3 pr-4 font-medium text-[var(--ink)]">
+                      Cost / signup
+                    </th>
+                    <td className="py-3 pr-4">Free, no account</td>
+                    <td className="py-3">Same on related tools</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section id="use-ideas" className="home-section scroll-mt-24">
+            <h2 className="home-section-title">Ways to Use a Random Animal Wheel</h2>
+            <p className="home-prose mt-4">
+              The fastest way to use an animal wheel spinner is one clear rule before you spin: one
+              animal for the room, one category for the unit, or one sketch challenge for the club.
+            </p>
+            <div className="relative mx-auto my-8 w-full max-w-3xl overflow-hidden">
               <Image
-                src="/random-animal-wheel-interface-preview.png"
-                alt="Random Animal Generator Wheel interface preview showing the spinner and category filters"
-                fill
-                className="object-cover"
-                sizes="100vw"
+                src="/random-animal-wheel-interface-v2.webp"
+                alt="Wooden animal spinning wheel on an atelier desk with sketchbook and category cards"
+                width={1400}
+                height={1050}
+                className="h-auto w-full object-cover"
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 768px"
               />
             </div>
-            <h2 className="mb-6 text-center text-3xl font-bold text-gray-900">
-              Frequently Asked Questions
-            </h2>
-            <div className="mx-auto max-w-4xl space-y-6">
-              {FAQS.map((faq) => (
-                <div key={faq.question} className="rounded-xl bg-white p-6">
-                  <h3 className="mb-2 text-lg font-semibold text-gray-900">{faq.question}</h3>
-                  <p className="text-gray-700">{faq.answer}</p>
+            <div className="mx-auto mt-10 grid max-w-5xl gap-8 text-left md:grid-cols-2">
+              {USE_IDEAS.map((idea) => (
+                <div key={idea.title} className="border-t border-[var(--line)] pt-5">
+                  <h3 className="font-display text-xl font-semibold text-[var(--ink)]">{idea.title}</h3>
+                  <p className="mt-3 leading-relaxed text-[var(--ink-muted)]">{idea.text}</p>
                 </div>
               ))}
             </div>
-          </div>
-        </section>
+          </section>
 
-        <section className="mb-16">
-          <div className="rounded-2xl bg-indigo-600 p-8 text-center text-white shadow-xl">
-            <h2 className="mb-4 text-3xl font-bold">Ready to Spin?</h2>
-            <p className="mx-auto mb-6 max-w-2xl text-xl text-indigo-100">
-              Start exploring the animal kingdom with our interactive Random Animal Generator Wheel.
+          <section className="home-section scroll-mt-24">
+            <h2 className="home-section-title">Classroom & Live Challenge Tips</h2>
+            <p className="home-prose mt-4">
+              For classrooms and livestreams, announce the category first, spin once, and keep that
+              animal as the shared prompt for the round.
             </p>
-            <ScrollToWheelButton />
-          </div>
-        </section>
-
-        <section className="mb-16">
-          <div className="rounded-2xl bg-white p-8 shadow-xl">
-            <h2 className="mb-6 text-3xl font-bold text-gray-900">Related Tools</h2>
-            <div className="grid gap-6 md:grid-cols-3">
-              <Link
-                href="/"
-                className="rounded-xl border border-gray-200 p-6 transition-all hover:border-indigo-300 hover:shadow-lg"
-              >
-                <div className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-indigo-600">
-                  Home
-                </div>
-                <h3 className="mb-2 text-lg font-semibold text-gray-900">Random Animal Generator</h3>
-                <p className="mb-4 text-sm text-gray-600">
-                  Use the main generator for cards, filters, and challenge modes.
-                </p>
-                <span className="text-sm font-medium text-indigo-600">Open tool -&gt;</span>
-              </Link>
-
-              <Link
-                href="/random-animal-name-generator"
-                className="rounded-xl border border-gray-200 p-6 transition-all hover:border-indigo-300 hover:shadow-lg"
-              >
-                <div className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-indigo-600">
-                  Names
-                </div>
-                <h3 className="mb-2 text-lg font-semibold text-gray-900">
-                  Random Animal Name Generator
-                </h3>
-                <p className="mb-4 text-sm text-gray-600">
-                  Generate a copy-ready list of animal names for writing or class.
-                </p>
-                <span className="text-sm font-medium text-indigo-600">Open tool -&gt;</span>
-              </Link>
-
-              <Link
-                href="/random-animal-generator-for-drawing"
-                className="rounded-xl border border-gray-200 p-6 transition-all hover:border-indigo-300 hover:shadow-lg"
-              >
-                <div className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-indigo-600">
-                  Drawing
-                </div>
-                <h3 className="mb-2 text-lg font-semibold text-gray-900">Drawing Prompt Generator</h3>
-                <p className="mb-4 text-sm text-gray-600">
-                  Get animal drawing prompts with difficulty filters for sketch practice.
-                </p>
-                <span className="text-sm font-medium text-indigo-600">Open tool -&gt;</span>
-              </Link>
+            <div className="relative mx-auto my-8 w-full max-w-3xl overflow-hidden">
+              <Image
+                src="/random-animal-wheel-classroom-v2.webp"
+                alt="Teacher and students watching a projected random animal wheel reveal in class"
+                width={1400}
+                height={1050}
+                className="h-auto w-full object-cover"
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 768px"
+              />
             </div>
-          </div>
-        </section>
+            <div className="home-prose home-prose-start mx-auto max-w-3xl space-y-4">
+              <p>
+                Need speed without the spin? Open the{' '}
+                <Link href="/random-animal-picker">random animal picker</Link>. Want timed art
+                practice after the reveal? Use the{' '}
+                <Link href="/drawing-prompt-generator">drawing prompt generator</Link>. Need only
+                names to paste? Try the{' '}
+                <Link href="/random-animal-name-generator">random animal name generator</Link>.
+              </p>
+            </div>
+          </section>
 
-        <footer className="border-t border-gray-200 py-8 text-center text-gray-600">
-          <p className="mb-2">
-            Random Animal Generator Wheel - A free online tool for games, education, and fun.
+          <section className="home-section scroll-mt-24">
+            <h2 className="home-section-title">Why a Visible Spin Works</h2>
+            <p className="home-prose mt-4">
+              A visible spin works because groups trust outcomes they can watch—especially in
+              classrooms and games where fairness and shared attention matter.
+            </p>
+            <blockquote className="mx-auto mt-8 max-w-3xl border-l-2 border-[var(--olive)] pl-5 text-left">
+              <p className="text-lg leading-relaxed text-[var(--ink)]">
+                &quot;Randomization is the process of making something random… Randomization is used
+                when a sample is needed that is representative of a larger population, or when fairness
+                or unpredictability is desired.&quot;
+              </p>
+              <footer className="mt-3 text-sm text-[var(--ink-faint)]">
+                —{' '}
+                <cite>
+                  <a
+                    href="https://en.wikipedia.org/wiki/Randomization"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="home-link"
+                  >
+                    Randomization, Wikipedia
+                  </a>
+                </cite>
+              </footer>
+            </blockquote>
+            <blockquote className="mx-auto mt-8 max-w-3xl border-l-2 border-[var(--olive)] pl-5 text-left">
+              <p className="text-lg leading-relaxed text-[var(--ink)]">
+                &quot;An icebreaker is a facilitation exercise intended to help members of a group begin
+                the process of forming themselves into a team.&quot;
+              </p>
+              <footer className="mt-3 text-sm text-[var(--ink-faint)]">
+                —{' '}
+                <cite>
+                  <a
+                    href="https://en.wikipedia.org/wiki/Icebreaker_(facilitation)"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="home-link"
+                  >
+                    Icebreaker (facilitation), Wikipedia
+                  </a>
+                </cite>
+              </footer>
+            </blockquote>
+            <p className="home-prose mt-8">
+              That is why this tool ships a wheel spinner instead of only a silent pick: the reveal
+              itself becomes the icebreaker moment.
+            </p>
+          </section>
+
+          <section className="home-section scroll-mt-24">
+            <h2 className="home-section-title">Sources & Citations</h2>
+            <p className="home-prose mt-4">
+              The fairness and facilitation framing on this page is grounded in public references.
+              Key sources:
+            </p>
+            <ol className="mx-auto mt-6 max-w-3xl list-decimal space-y-3 pl-5 text-[var(--ink-muted)]">
+              <li>
+                <a
+                  href="https://en.wikipedia.org/wiki/Randomization"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="home-link"
+                >
+                  Wikipedia: Randomization
+                </a>{' '}
+                — impartial random selection for fairness and unpredictability.
+              </li>
+              <li>
+                <a
+                  href="https://en.wikipedia.org/wiki/Icebreaker_(facilitation)"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="home-link"
+                >
+                  Wikipedia: Icebreaker (facilitation)
+                </a>{' '}
+                — group warmups that benefit from a shared, unexpected prompt.
+              </li>
+              <li>
+                Internal product data ({SITE_NAME}, 2026): 121-animal database with published category
+                counts and a 12-slice wheel display on this page.
+              </li>
+            </ol>
+          </section>
+
+          <section className="home-section scroll-mt-24">
+            <h2 className="home-section-title">Frequently Asked Questions</h2>
+            <div className="mx-auto mt-10 max-w-3xl space-y-6">
+              {FAQS.map((faq) => (
+                <article key={faq.question} className="border-t border-[var(--line)] pt-5">
+                  <h3 className="font-display text-xl font-semibold text-[var(--ink)]">
+                    {faq.question}
+                  </h3>
+                  <p className="mt-3 leading-relaxed text-[var(--ink-muted)]">{faq.answer}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="home-section scroll-mt-24">
+            <h2 className="home-section-title">Related Tools</h2>
+            <p className="home-prose mt-4">
+              Related tools on {SITE_NAME} share the same wildlife database so you can switch formats
+              without restarting your brief.
+            </p>
+            <ul className="mx-auto mt-8 max-w-3xl list-disc space-y-3 pl-5 text-[var(--ink-muted)]">
+              <li>
+                <Link href="/" className="home-link">
+                  Random Animal Generator
+                </Link>{' '}
+                — full generator with filters and challenge modes.
+              </li>
+              <li>
+                <Link href="/random-animal-picker" className="home-link">
+                  Random Animal Picker
+                </Link>{' '}
+                — instant picks when you want speed over a spin.
+              </li>
+              <li>
+                <Link href="/drawing-prompt-generator" className="home-link">
+                  Drawing Prompt Generator
+                </Link>{' '}
+                — timed animal art prompts after the reveal.
+              </li>
+              <li>
+                <Link href="/random-animal-name-generator" className="home-link">
+                  Random Animal Name Generator
+                </Link>{' '}
+                — copy-ready name lists.
+              </li>
+            </ul>
+          </section>
+        </article>
+
+        <footer className="home-section text-center">
+          <p className="font-display text-lg font-semibold text-[var(--ink)]">
+            Free random animal wheel—no signup
           </p>
-          <p className="text-sm">&copy; 2026 Random Animal Generator. All rights reserved.</p>
+          <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-[var(--ink-muted)]">
+            <Link href="/about" className="home-link">
+              About
+            </Link>
+            {' · '}
+            <Link href="/contact" className="home-link">
+              Contact
+            </Link>
+            {' · '}
+            <Link href="/privacy" className="home-link">
+              Privacy
+            </Link>
+            {' · '}
+            <Link href="/terms" className="home-link">
+              Terms
+            </Link>
+          </p>
+          <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-[var(--ink-muted)]">
+            Explore more:{' '}
+            <Link href="/" className="home-link">
+              random animal generator
+            </Link>
+            ,{' '}
+            <Link href="/random-animal-picker" className="home-link">
+              random animal picker
+            </Link>
+            ,{' '}
+            <Link href="/drawing-prompt-generator" className="home-link">
+              drawing prompt generator
+            </Link>
+            .
+          </p>
         </footer>
       </div>
-    </main>
+    </div>
   );
 }

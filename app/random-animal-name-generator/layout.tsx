@@ -1,13 +1,21 @@
 import type { Metadata } from 'next';
 import { buildPageMetadata } from '@/lib/seo';
 
+// Title ≤60 (absolute); Description ≤160 — exact keyword "random animal name generator"
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Random Animal Name Generator (Copy-Ready List)',
+  title: 'Random Animal Name Generator: Free List',
   description:
-    'Generate random animal names with a copy-ready list in seconds. Filter by category and choose common, scientific, or combined formats for writing, games, and classroom use.',
+    'Random animal name generator for free copy-ready lists—common or scientific names. Writer, class, and party presets—no signup.',
   path: '/random-animal-name-generator',
-  image: '/random-animal-name-generator-HERO.png',
-  imageAlt: 'Random Animal Name Generator hero illustration',
+  image: '/og-random-animal-name-generator.png',
+  imageAlt: 'Naturalist desk mood for a free random animal name generator',
+  imageWidth: 1200,
+  imageHeight: 630,
+  imageType: 'image/png',
+  datePublished: '2026-07-02T00:00:00.000Z',
+  dateModified: '2026-07-26T12:00:00.000Z',
+  ogType: 'article',
+  absoluteTitle: true,
 });
 
 export default function RandomAnimalNameGeneratorLayout({

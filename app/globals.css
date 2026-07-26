@@ -268,6 +268,13 @@ body {
   animation: fadeIn 0.3s ease-out;
 }
 
+/* Wheel tool island — presence without card clutter on the spinner itself */
+.wheel-ring {
+  box-shadow:
+    0 0 0 1px var(--line),
+    0 16px 36px rgba(28, 26, 23, 0.14);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-home-rise,
   .animate-home-fade,
@@ -282,4 +289,62 @@ body {
   .btn-ink:active {
     transform: none;
   }
+}
+
+/* Name tool island — tactile controls without card clutter */
+.name-tool .name-chip:focus-visible,
+.name-results button:focus-visible {
+  outline: 2px solid var(--olive);
+  outline-offset: 2px;
+}
+
+.name-check {
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 0.2rem;
+  background: var(--surface-elevated);
+  display: inline-grid;
+  place-content: center;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.name-check:checked {
+  border-color: var(--ink);
+  background: var(--ink);
+}
+
+.name-check:checked::after {
+  content: "";
+  width: 0.35rem;
+  height: 0.55rem;
+  border: solid var(--paper);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg) translateY(-1px);
+}
+
+.name-output {
+  border-radius: var(--radius-sm);
+  box-shadow: inset 0 0 0 1px rgba(238, 241, 235, 0.08);
+}
+
+.name-result-item {
+  transition: border-color 0.2s ease;
+}
+
+.name-result-item:hover {
+  border-color: var(--olive);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }

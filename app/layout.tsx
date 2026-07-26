@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Fraunces, Source_Sans_3 } from "next/font/google";
 import Link from "next/link";
+import { SiteFooter } from "@/components/site-footer";
 import { buildOrganizationSchema, buildPageMetadata, buildWebSiteSchema } from "@/lib/seo";
 import {
   PRIMARY_NAV_ITEMS,
@@ -124,6 +125,7 @@ export default function RootLayout({
           </div>
         </nav>
         {children}
+        <SiteFooter />
       </body>
     </html>
   );

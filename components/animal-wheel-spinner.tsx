@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 
 interface WheelAnimal {
@@ -17,16 +16,24 @@ interface AnimalWheelSpinnerProps {
 }
 
 function getAnimalLabel(animalName: string): string {
-  return animalName.length > 12 ? `${animalName.substring(0, 10)}..` : animalName;
+  return animalName.length > 11 ? `${animalName.substring(0, 9)}…` : animalName;
 }
 
 export function AnimalWheelSpinner({ animals, onSpinComplete }: AnimalWheelSpinnerProps) {
   const [isSpinning, setIsSpinning] = useState(false);
   const [rotation, setRotation] = useState(0);
   const [selectedAnimal, setSelectedAnimal] = useState<WheelAnimal | null>(null);
+  const [spinDurationMs, setSpinDurationMs] = useState(4500);
   const wheelRef = useRef<HTMLDivElement>(null);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const segmentAngle = 360 / animals.length;
+  const segmentAngle = animals.length > 0 ? 360 / animals.length : 360;
+
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
+  }, []);
 
   const spinWheel = () => {
     if (isSpinning || animals.length === 0) return;
@@ -34,14 +41,16 @@ export function AnimalWheelSpinner({ animals, onSpinComplete }: AnimalWheelSpinn
     setIsSpinning(true);
     setSelectedAnimal(null);
 
-    const spinDuration = 4000 + Math.random() * 2000;
+    const duration = 4000 + Math.random() * 2000;
     const extraRotations = 5 + Math.random() * 5;
     const randomAngle = Math.random() * 360;
     const totalRotation = rotation + extraRotations * 360 + randomAngle;
 
+    setSpinDurationMs(duration);
     setRotation(totalRotation);
 
-    setTimeout(() => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    timeoutRef.current = setTimeout(() => {
       setIsSpinning(false);
       const normalizedRotation = totalRotation % 360;
       const pointerAngle = (360 - normalizedRotation + 90) % 360;
@@ -49,24 +58,38 @@ export function AnimalWheelSpinner({ animals, onSpinComplete }: AnimalWheelSpinn
       const result = animals[selectedIndex];
       setSelectedAnimal(result);
       onSpinComplete?.(result);
-    }, spinDuration);
+    }, duration);
   };
 
   useEffect(() => {
-    if (wheelRef.current) {
-      wheelRef.current.style.transition = isSpinning
-        ? 'transform 4s cubic-bezier(0.17, 0.67, 0.12, 0.99)'
-        : 'none';
-      wheelRef.current.style.transform = `rotate(${rotation}deg)`;
-    }
-  }, [rotation, isSpinning]);
+    if (!wheelRef.current) return;
+    wheelRef.current.style.transition = isSpinning
+      ? `transform ${spinDurationMs}ms cubic-bezier(0.17, 0.67, 0.12, 0.99)`
+      : 'none';
+    wheelRef.current.style.transform = `rotate(${rotation}deg)`;
+  }, [rotation, isSpinning, spinDurationMs]);
+
+  if (animals.length === 0) {
+    return (
+      <div className="flex min-h-[20rem] w-full flex-col items-center justify-center px-4 text-center">
+        <p className="font-display text-xl font-semibold text-[var(--ink)]">Preparing the wheel…</p>
+        <p className="mt-2 max-w-sm text-sm text-[var(--ink-muted)]">
+          Shuffle a category to load twelve animals onto the spinner.
+        </p>
+      </div>
+    );
+  }
 
   return (
-    <div className="flex flex-col items-center gap-8">
+    <div className="flex w-full flex-col items-center gap-7">
       <div className="relative">
         <div
+          className="absolute -inset-3 rounded-full border border-[var(--line)] bg-[var(--paper-deep)]/70"
+          aria-hidden="true"
+        />
+        <div
           ref={wheelRef}
-          className="relative h-80 w-80 overflow-hidden rounded-full border-8 border-white shadow-2xl md:h-96 md:w-96"
+          className="wheel-ring relative h-72 w-72 overflow-hidden rounded-full border-[10px] border-[var(--surface-elevated)] md:h-96 md:w-96"
           style={{
             background: `conic-gradient(${animals
               .map(
@@ -74,15 +97,13 @@ export function AnimalWheelSpinner({ animals, onSpinComplete }: AnimalWheelSpinn
                   `${animal.color} ${i * (100 / animals.length)}% ${(i + 1) * (100 / animals.length)}%`,
               )
               .join(', ')})`,
-            transition: 'transform 4s cubic-bezier(0.17, 0.67, 0.12, 0.99)',
           }}
         >
           {animals.map((animal, index) => {
             const angle = index * segmentAngle;
-
             return (
               <div
-                key={animal.id}
+                key={`${animal.id}-${index}`}
                 className="absolute inset-0"
                 style={{
                   clipPath: `polygon(50% 50%, 50% 0%, ${100 - 50 / animals.length}% 0%, ${100 - 50 / animals.length}% 100%, ${50 / animals.length}% 100%, ${50 / animals.length}% 0%)`,
@@ -90,56 +111,53 @@ export function AnimalWheelSpinner({ animals, onSpinComplete }: AnimalWheelSpinn
                 }}
               >
                 <div
-                  className="absolute flex h-full w-full flex-col items-center justify-start pt-8 md:pt-12"
+                  className="absolute flex h-full w-full flex-col items-center justify-start pt-7 md:pt-10"
                   style={{ transform: `rotate(${segmentAngle / 2}deg)` }}
                 >
-                  <div className="flex flex-col items-center gap-1">
-                    <div className="rounded bg-black/10 px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-white md:text-xs">
-                      Pick
-                    </div>
-                    <div className="rounded bg-black/20 px-1 text-center text-xs font-bold whitespace-nowrap text-white drop-shadow-lg md:text-sm">
-                      {getAnimalLabel(animal.commonName)}
-                    </div>
-                  </div>
+                  <span className="max-w-[4.5rem] text-center text-[11px] font-semibold leading-tight text-[var(--paper)] drop-shadow-[0_1px_2px_rgba(28,26,23,0.55)] md:max-w-[5.5rem] md:text-sm">
+                    {getAnimalLabel(animal.commonName)}
+                  </span>
                 </div>
               </div>
             );
           })}
         </div>
 
-        <div className="absolute left-1/2 top-0 z-20 -translate-x-1/2 -translate-y-2 transform">
-          <div className="h-0 w-0 border-l-8 border-r-8 border-t-12 border-l-transparent border-r-transparent border-t-indigo-600 drop-shadow-lg" />
+        <div
+          className="absolute left-1/2 top-0 z-20 -translate-x-1/2 -translate-y-1"
+          aria-hidden="true"
+        >
+          <div className="h-0 w-0 border-l-[9px] border-r-[9px] border-t-[14px] border-l-transparent border-r-transparent border-t-[var(--ink)]" />
         </div>
 
-        <div className="absolute inset-0 z-10 flex items-center justify-center">
-          <div className="flex h-16 w-16 items-center justify-center rounded-full border-4 border-white bg-gradient-to-br from-indigo-500 to-purple-600 text-xs font-bold uppercase tracking-[0.2em] text-white shadow-lg md:h-20 md:w-20">
+        <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none">
+          <div className="flex h-14 w-14 items-center justify-center rounded-full border-4 border-[var(--surface-elevated)] bg-[var(--ink)] text-[10px] font-bold uppercase tracking-[0.18em] text-[var(--paper)] md:h-[4.5rem] md:w-[4.5rem] md:text-xs">
             Spin
           </div>
         </div>
       </div>
 
       <button
+        type="button"
         onClick={spinWheel}
         disabled={isSpinning}
-        className="transform rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 px-8 py-4 text-lg font-bold text-white shadow-lg transition-all hover:scale-105 hover:from-indigo-700 hover:to-purple-700 active:scale-95 disabled:cursor-not-allowed disabled:opacity-50"
+        className="btn-ink px-8 py-4 text-lg disabled:cursor-not-allowed disabled:opacity-50"
+        aria-busy={isSpinning}
       >
-        {isSpinning ? 'Spinning...' : 'Spin the Wheel'}
+        {isSpinning ? 'Spinning…' : 'Spin the Wheel'}
       </button>
 
       {selectedAnimal && (
-        <div className="mt-6 w-full max-w-md rounded-2xl bg-gradient-to-br from-indigo-50 to-purple-50 p-6 shadow-lg">
-          <h3 className="mb-4 text-center text-2xl font-bold text-indigo-600">
-            You Got: {selectedAnimal.commonName}
+        <div className="w-full max-w-md border-t border-[var(--line)] pt-5 text-center">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--olive)]">
+            Pointer landed on
+          </p>
+          <h3 className="mt-2 font-display text-2xl font-semibold text-[var(--ink)]">
+            {selectedAnimal.commonName}
           </h3>
-          <div className="relative h-48 w-full overflow-hidden rounded-lg bg-gray-100">
-            <Image
-              src={selectedAnimal.imageUrl}
-              alt={selectedAnimal.imageAlt}
-              fill
-              className="object-contain"
-              sizes="(max-width: 768px) 100vw, 448px"
-            />
-          </div>
+          <p className="mt-2 text-sm text-[var(--ink-muted)]">
+            Full photo and details are below—tap the image to view large.
+          </p>
         </div>
       )}
     </div>

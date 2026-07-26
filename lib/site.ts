@@ -5,18 +5,46 @@ export const SITE_NAME = "Random Animal Generator";
 export const SITE_DESCRIPTION =
   "Free random animal generator with category filters, wheel mode, and drawing prompts.";
 export const SITE_TWITTER = "@randomanimals";
+export const SITE_EMAIL = "hello@randomanimalgenerator.online";
+
+export const SITE_SAME_AS = [
+  `https://twitter.com/${SITE_TWITTER.replace("@", "")}`,
+  `https://x.com/${SITE_TWITTER.replace("@", "")}`,
+] as const;
+
+/** Visible publisher / author entity for E-E-A-T + GEO provenance */
+export const SITE_AUTHOR = {
+  name: SITE_NAME,
+  url: `${SITE_URL}/about`,
+} as const;
 
 export const PRIMARY_NAV_ITEMS = [
   { href: "/", label: "Home" },
+  { href: "/drawing-prompt-generator", label: "Drawing Prompts" },
+  { href: "/random-animal-picker", label: "Picker" },
   { href: "/random-animal-generator-wheel", label: "Wheel Tool" },
   { href: "/random-animal-name-generator", label: "Name Tool" },
+] as const;
+
+export const TRUST_NAV_ITEMS = [
+  { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
+  { href: "/privacy", label: "Privacy" },
+  { href: "/terms", label: "Terms" },
 ] as const;
 
 export const CORE_SITE_ROUTES = [
   { path: "/", priority: 1.0 },
   { path: "/random-animal-generator-wheel", priority: 0.9 },
   { path: "/random-animal-name-generator", priority: 0.9 },
+  { path: "/drawing-prompt-generator", priority: 0.9 },
+  { path: "/random-animal-picker", priority: 0.9 },
   { path: "/random-animal-generator-for-drawing", priority: 0.85 },
+  { path: "/about", priority: 0.4 },
+  { path: "/contact", priority: 0.4 },
+  { path: "/privacy", priority: 0.3 },
+  { path: "/terms", priority: 0.3 },
 ] as const;
 
-export const LAST_MAJOR_UPDATE = new Date("2026-07-19T00:00:00.000Z");
+export const SITE_DATE_PUBLISHED = "2026-07-19T00:00:00.000Z";
+export const LAST_MAJOR_UPDATE = new Date("2026-07-26T00:00:00.000Z");

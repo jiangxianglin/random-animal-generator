@@ -79,6 +79,13 @@ const HOME_USE_CASES = [
 
 const CORE_TOOLS = [
   {
+    href: '/random-animal-picker',
+    label: 'Picker',
+    title: 'Random Animal Picker',
+    description:
+      'Instant one-click animal picks for games, classrooms, and writing—with list and daily modes.',
+  },
+  {
     href: '/random-animal-name-generator',
     label: 'Names',
     title: 'Random Animal Name Generator',
@@ -93,11 +100,11 @@ const CORE_TOOLS = [
       'Spin a playful wheel to pick a random animal for classroom rounds, games, and icebreakers.',
   },
   {
-    href: '/random-animal-generator-for-drawing',
+    href: '/drawing-prompt-generator',
     label: 'Drawing',
-    title: 'Random Animal Generator for Drawing',
+    title: 'Drawing Prompt Generator',
     description:
-      'Get animal drawing prompts with difficulty filters built for sketch practice and art challenges.',
+      'Get animal drawing prompts with difficulty filters and timed practice modes.',
   },
 ] as const;
 
@@ -340,7 +347,9 @@ export default function Home() {
               ))}
             </div>
             <p className="home-prose mt-8">
-              For a spin-the-wheel drawing challenge with pictures, open the{' '}
+              For focused art ideas, open the{' '}
+              <Link href="/drawing-prompt-generator">drawing prompt generator</Link>. For a
+              spin-the-wheel drawing challenge with pictures, open the{' '}
               <Link href="/random-animal-generator-wheel">random animal generator wheel</Link> and let the
               group watch the pointer land. That format works especially well for live streams, art club
               nights, and classroom warmups where the reveal is part of the fun.
