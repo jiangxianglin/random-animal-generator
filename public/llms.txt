@@ -7,7 +7,7 @@
 - [Home / Random Animal Generator](https://www.randomanimalgenerator.online/): Generate random animals with category filters, difficulty ratings, and challenge modes.
 - [Drawing Prompt Generator](https://www.randomanimalgenerator.online/drawing-prompt-generator): Animal-focused drawing prompts with timed practice modes (silhouette, gesture, texture) and a shared daily prompt.
 - [Random Animal Picker](https://www.randomanimalgenerator.online/random-animal-picker): Instant one-click animal picks for games, classrooms, and writing—plus list, category, and shared daily modes.
-- [Random Animal Generator for Drawing](https://www.randomanimalgenerator.online/random-animal-generator-for-drawing): Animal-first drawing workflow using the same wildlife database.
+- [Random Animal Generator for Drawing](https://www.randomanimalgenerator.online/random-animal-generator-for-drawing): Animal-first drawing subjects with difficulty filters and reference tips (long-tail sibling to Drawing Prompt Generator).
 - [Random Animal Wheel](https://www.randomanimalgenerator.online/random-animal-generator-wheel): Free animal wheel spinner with party, classroom, drawing, and RPG modes; shuffled 12-slice wheel, optional timers, category filters.
 - [Random Animal Name Generator](https://www.randomanimalgenerator.online/random-animal-name-generator): Free copy-ready animal name lists (common/scientific formats; list, writing, study, and game modes).
 

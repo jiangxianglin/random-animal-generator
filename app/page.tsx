@@ -29,7 +29,7 @@ const HOME_FAQS = [
   {
     question: 'Does the site offer more than simple random picks?',
     answer:
-      'Yes. Daily, timed, hard mode, and hybrid generation give structured challenges. You can also open the animal wheel spinner for one-at-a-time picks or the name generator for copy-ready lists.',
+      'Yes. You can open related tools for narrower jobs: the cute animal generator, random animal picker, name generator, drawing prompts, or the animal wheel spinner—each page keeps one clear intent.',
   },
   {
     question: 'Can teachers use this in a classroom?',
@@ -64,12 +64,6 @@ const HOME_USE_CASES = [
       'Writers can use random animal results to inspire characters, story ideas, worldbuilding, and scene prompts.',
   },
   {
-    label: 'Mode',
-    title: 'Challenge Modes',
-    description:
-      'Daily, timed, hard mode, and hybrid generation give you more structured ways to use the same animal database.',
-  },
-  {
     label: 'Browse',
     title: 'Category Exploration',
     description:
@@ -78,6 +72,13 @@ const HOME_USE_CASES = [
 ] as const;
 
 const CORE_TOOLS = [
+  {
+    href: '/cute-animal-generator',
+    label: 'Cute',
+    title: 'Cute Animal Generator',
+    description:
+      'Generate adorable animals with optional action, emotion, and location for kids, stories, and soft art prompts.',
+  },
   {
     href: '/random-animal-picker',
     label: 'Picker',
@@ -93,18 +94,18 @@ const CORE_TOOLS = [
       'Generate clean animal name lists with common names, scientific names, and category filters.',
   },
   {
-    href: '/random-animal-generator-wheel',
-    label: 'Wheel',
-    title: 'Random Animal Generator Wheel',
-    description:
-      'Spin a playful wheel to pick a random animal for classroom rounds, games, and icebreakers.',
-  },
-  {
     href: '/drawing-prompt-generator',
     label: 'Drawing',
     title: 'Drawing Prompt Generator',
     description:
       'Get animal drawing prompts with difficulty filters and timed practice modes.',
+  },
+  {
+    href: '/random-animal-generator-wheel',
+    label: 'Wheel',
+    title: 'Random Animal Generator Wheel',
+    description:
+      'Spin a playful wheel to pick a random animal for classroom rounds, games, and icebreakers.',
   },
 ] as const;
 
@@ -173,7 +174,7 @@ export default function Home() {
           'Generate 1-10 random animals instantly',
           'Difficulty ratings: Easy, Medium, Hard',
           'Drawing prompts and tips for each animal',
-          'Challenge modes: Daily, Timed, Hard Mode, Hybrid',
+          'Related tools for cute, picker, names, drawing, and wheel intents',
           'Filter by 5 categories: Mammals, Birds, Reptiles, Marine, Insects',
           'High-quality reference images',
           'History tracking for generated animals',
@@ -229,14 +230,14 @@ export default function Home() {
             <a href="#generator" className="home-cta-light">
               Open generator
             </a>
-            <Link href="/random-animal-generator-for-drawing" className="home-cta-ghost">
+            <Link href="/cute-animal-generator" className="home-cta-ghost">
+              Cute
+            </Link>
+            <Link href="/random-animal-picker" className="home-cta-ghost">
+              Picker
+            </Link>
+            <Link href="/drawing-prompt-generator" className="home-cta-ghost">
               Drawing
-            </Link>
-            <Link href="/random-animal-generator-wheel" className="home-cta-ghost">
-              Wheel
-            </Link>
-            <Link href="/random-animal-name-generator" className="home-cta-ghost">
-              Names
             </Link>
           </div>
         </div>
@@ -269,9 +270,8 @@ export default function Home() {
               </p>
               <p>
                 Generation happens instantly in the browser. There is no account wall and no download step.
-                If you want a more structured session, open a challenge mode: daily for a single featured
-                animal, timed for a countdown sketch or quiz round, hard mode for tougher subjects, or
-                hybrid mode when you want a creative mashup of two animals.
+                When you need a narrower job—cute prompts, a fair picker, names, or a wheel reveal—use the
+                dedicated tool pages linked below so each search intent stays on its own URL.
               </p>
             </div>
 
@@ -418,33 +418,15 @@ export default function Home() {
                 use the wheel so everyone watches the spin together.
               </p>
               <p>
-                For longer game nights, combine modes: start with a wheel pick, then use hard mode for a
-                bonus round, then finish with hybrid mode for a creative creature contest. Because the tool
-                works on phones and laptops, it fits classroom projectors, living room TVs, and remote
-                hangouts equally well.
+                For longer game nights, start with a wheel pick, then switch to the{' '}
+                <Link href="/cute-animal-generator">cute animal generator</Link> for a gentler bonus round,
+                or the picker when the group only needs a fair choice. Because the tools work on phones and
+                laptops, they fit classroom projectors, living room TVs, and remote hangouts equally well.
               </p>
               <p>
                 Looking for land animals only, marine animals, or insects? Use the category filter before
                 you generate. That keeps a “random land animal generator” style activity focused without
                 needing a separate page for every niche request.
-              </p>
-            </div>
-          </section>
-
-          <section className="home-section">
-            <h2 className="home-section-title">Challenge Modes That Encourage Return Visits</h2>
-            <div className="home-prose mt-6 space-y-4">
-              <p>
-                A one-click generator is useful once. Challenge modes turn it into a habit. The daily
-                challenge gives you a single featured animal so artists and classrooms can share the same
-                prompt. Timed mode adds urgency for sketch sprints and quiz rounds. Hard mode surfaces
-                tougher subjects when easy animals feel too familiar. Hybrid mode invents a new creature
-                from two source animals for writing and concept art.
-              </p>
-              <p>
-                These modes are intentional product choices, not decoration. They give people a reason to
-                come back tomorrow, keep a classroom routine consistent, and support the kind of engagement
-                signals that matter once the page content is already visible to search engines.
               </p>
             </div>
           </section>

@@ -544,26 +544,32 @@ export default function RandomAnimalGeneratorWheelPage() {
             </p>
             <ul className="mx-auto mt-8 max-w-3xl list-disc space-y-3 pl-5 text-[var(--ink-muted)]">
               <li>
-                <Link href="/" className="home-link">
-                  Random Animal Generator
+                <Link href="/cute-animal-generator" className="home-link">
+                  cute animal generator
                 </Link>{' '}
-                — full generator with filters and challenge modes.
+                — soft animal prompts with action, emotion, and location.
+              </li>
+              <li>
+                <Link href="/" className="home-link">
+                  random animal generator
+                </Link>{' '}
+                — full generator with category filters.
               </li>
               <li>
                 <Link href="/random-animal-picker" className="home-link">
-                  Random Animal Picker
+                  random animal picker
                 </Link>{' '}
                 — instant picks when you want speed over a spin.
               </li>
               <li>
                 <Link href="/drawing-prompt-generator" className="home-link">
-                  Drawing Prompt Generator
+                  animal prompt generator
                 </Link>{' '}
                 — timed animal art prompts after the reveal.
               </li>
               <li>
                 <Link href="/random-animal-name-generator" className="home-link">
-                  Random Animal Name Generator
+                  random animal name generator
                 </Link>{' '}
                 — copy-ready name lists.
               </li>

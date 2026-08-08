@@ -52,7 +52,7 @@
 | `/` | random animal generator | 首页大气层视觉参考 |
 | `/random-animal-generator-wheel` | random animal wheel / spinner | 金标准已迁（变更 #007） |
 | `/random-animal-name-generator` | random animal name generator | 金标准已迁（变更 #008） |
-| `/random-animal-generator-for-drawing` | random animal generator for drawing | animal-first 长尾 |
+| `/random-animal-generator-for-drawing` | random animal generator for drawing | 金标准已迁（变更 #010）· animal-first 长尾 |
 | `/drawing-prompt-generator` | drawing prompt generator | **金标准样板页（第 13 章）** |
 | `/random-animal-picker` | random animal picker | 金标准落地（变更 #005） |
 | `/about` `/contact` `/privacy` `/terms` | 信任 / E-E-A-T | 全站页脚入口 |
@@ -286,7 +286,7 @@
 参考实现优先级：
 1. **金标准**：`app/drawing-prompt-generator/`
 2. Home：`app/page.tsx`（视觉大气层参考）
-3. 旧子页（Wheel / Name / for-drawing）：后续有改版时再对齐金标准，勿混用旧 emerald 模板新建
+3. 核心子页已金标准化（Wheel / Name / for-drawing / picker / drawing-prompt）；新建页勿回退旧 emerald 模板
 
 ---
 
@@ -445,6 +445,18 @@
   - 插图：Hero 自然学家书桌 / Writing 创作桌 / Classroom 学名练习（WebP）；OG 1200×630 重裁
   - CSS：`.name-tool` chip focus、checkbox、output 内阴影、结果 hover
 - 预期验证（14–28 天）：工具互动深度；Name 页 CTR
+- 结果回顾（到期后填）：
+
+### 变更 #010（2026-07-26）· for-drawing 金标准迁移
+- 范围：`/random-animal-generator-for-drawing`；复用 `DrawingGeneratorTool`；llms
+- 改动：去掉 emerald 卡片堆；视觉 + GEO + TDK/OG + Schema
+- 目的：承接 animal-first 长尾；与 `/drawing-prompt-generator` 继续分工不互抢
+- 具体内容：
+  - Title：`Random Animal Generator for Drawing: Free`（`absoluteTitle`）
+  - H1：精确主词；paper Hero + byline + Stats / Personas / 对比表 / Citations / FAQ
+  - 对比表明确 vs drawing prompt generator 的词职责
+  - OG：`og-random-animal-generator-for-drawing.png` 1200×630；Hero/内容 WebP
+- 预期验证（14–28 天）：for-drawing 长尾展示；与 drawing-prompt 是否消歧成功
 - 结果回顾（到期后填）：
 
 ---
@@ -615,7 +627,7 @@ Canonical 指向生产域是**有意设计**（避免 AI 引用 localhost）。
 不必一次改完全站。优先级：
 
 1. **新建页** → 直接套金标准（picker 已按此交付）  
-2. **主推改版页**：Wheel ✅（#007）· Name ✅（#008）→ 下一轮 **for-drawing**  
+2. **主推改版页**：Wheel ✅（#007）· Name ✅（#008/#009）· for-drawing ✅（#010）→ 下一阶段 **外链 / CTR 观察**  
 3. **低优先级旧页** → 至少先修 TDK 限长 + OG 1200×630 + 内链；视觉可下一轮  
 4. **外链并行**（阶段 D）：目录站 + Reddit/IH，优先指向 Home / drawing-prompt / picker
 

@@ -560,32 +560,38 @@ export default function DrawingPromptGeneratorPage() {
             </p>
             <ul className="mx-auto mt-8 max-w-3xl list-disc space-y-3 pl-5 text-[var(--ink-muted)]">
               <li>
-                <Link href="/" className="home-link">
-                  Random Animal Generator
+                <Link href="/cute-animal-generator" className="home-link">
+                  cute animal generator
                 </Link>{' '}
-                — filters, challenge modes, classroom-friendly picks.
+                — adorable animals with story-style scene options.
+              </li>
+              <li>
+                <Link href="/" className="home-link">
+                  random animal generator
+                </Link>{' '}
+                — filters and classroom-friendly picks.
               </li>
               <li>
                 <Link href="/random-animal-picker" className="home-link">
-                  Random Animal Picker
+                  random animal picker
                 </Link>{' '}
                 — instant picks for games and fair classroom choices.
               </li>
               <li>
                 <Link href="/random-animal-generator-for-drawing" className="home-link">
-                  Random Animal Generator for Drawing
+                  random animal generator for drawing
                 </Link>{' '}
                 — animal-first long-tail drawing page.
               </li>
               <li>
                 <Link href="/random-animal-generator-wheel" className="home-link">
-                  Random Animal Wheel
+                  random animal generator wheel
                 </Link>{' '}
                 — one-at-a-time spin reveal.
               </li>
               <li>
                 <Link href="/random-animal-name-generator" className="home-link">
-                  Random Animal Name Generator
+                  random animal name generator
                 </Link>{' '}
                 — copy-ready name lists.
               </li>
