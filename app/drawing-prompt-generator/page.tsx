@@ -11,12 +11,51 @@ import {
 import {
   LAST_MAJOR_UPDATE,
   SITE_AUTHOR,
-  SITE_DATE_PUBLISHED,
   SITE_NAME,
 } from '@/lib/site';
 
 const PAGE_PUBLISHED = '2026-07-25T00:00:00.000Z';
 const PAGE_MODIFIED = LAST_MAJOR_UPDATE.toISOString();
+
+const EXAMPLE_SIMPLE = [
+  'Red Fox (easy)',
+  'Snow Leopard (hard)',
+  'Atlantic Puffin (medium)',
+  'Green Sea Turtle (medium)',
+  'Barn Owl (easy)',
+] as const;
+
+const EXAMPLE_COMPLEX = [
+  'red fox | mid-stride with weight shifting forward | alert | in tall dry grass at golden hour',
+  'snow leopard | crouching low before a leap | focused | on sunlit rocky outcrops',
+  'atlantic puffin | landing after a short hop | curious | beside a reflective tide pool',
+  'green sea turtle | stretching after rest | serene | under a stormy sky',
+  'barn owl | turning to look over its shoulder | wary | against a simple charcoal backdrop',
+] as const;
+
+const HASHTAGS = [
+  '#DrawingPrompt',
+  '#AnimalDrawing',
+  '#DrawingChallenge',
+  '#WildlifeArt',
+  '#GestureDrawing',
+  '#ArtWarmup',
+] as const;
+
+const CHALLENGE_CALENDAR = [
+  {
+    title: 'Daily animal sketch',
+    text: 'Use Today’s prompt once a day for a shared animal drawing challenge—same subject, different interpretations.',
+  },
+  {
+    title: 'Timed warmup week',
+    text: 'Run 5-minute silhouette or 3-minute gesture modes for seven days and keep every page dated.',
+  },
+  {
+    title: 'Scene study month',
+    text: 'Turn on Action, Emotion, and Location to build complex combinations for Inktober-style animal drawing challenges.',
+  },
+] as const;
 
 const FAQS = [
   {
@@ -37,7 +76,12 @@ const FAQS = [
   {
     question: 'Can I use these prompts for a daily drawing challenge?',
     answer:
-      "Yes. Use Today's prompt for one shared animal each day, or run 5-minute silhouette and 3-minute gesture modes when you want a quick studio warmup.",
+      "Yes. Use Today's prompt for one shared animal each day, or run 5-minute silhouette and 3-minute gesture modes when you want a quick studio warmup. Pair results with the hashtag ideas below for public animal drawing challenges.",
+  },
+  {
+    question: 'How do Action, Emotion, and Location options work?',
+    answer:
+      'They are optional scene builders. Leave them off for a clean animal subject with difficulty. Turn them on when you want a fuller drawing prompt—pose, mood, and setting—then copy the simple or complex line into your sketch plan.',
   },
   {
     question: 'Do I need to sign up to use the drawing prompt generator?',
@@ -58,11 +102,11 @@ const HOW_TO_STEPS = [
   },
   {
     name: 'Generate drawing prompts',
-    text: 'Set quantity, category, and difficulty, then generate. Timed modes start a countdown automatically.',
+    text: 'Set quantity, category, and difficulty, then generate. Optionally add Action, Emotion, and Location. Timed modes start a countdown automatically.',
   },
   {
     name: 'Sketch from the results',
-    text: 'Open a card for reference images and tips, copy the prompt list, and draw until the timer ends.',
+    text: 'Open a card for reference images and tips, copy the prompt list (including scene briefs), and draw until the timer ends.',
   },
 ] as const;
 
@@ -114,6 +158,7 @@ const STATS = [
 const FEATURE_LIST = [
   'Random animal drawing prompts with reference images',
   'Practice modes: free, 5-min silhouette, 3-min gesture, 15-min texture, daily',
+  'Optional Action, Emotion, and Location scene builders for complex prompts',
   'Difficulty filters: Easy (35), Medium (57), Hard (29)',
   'Category filters: mammals, birds, reptiles, marine animals, insects',
   'Copyable prompt lists for sketchbooks, Discord, or classroom handouts',
@@ -289,6 +334,17 @@ export default function DrawingPromptGeneratorPage() {
               animals, then sketch from the reference card until the timer ends—or copy the prompt
               list into your sketchbook plan.
             </p>
+            <div className="relative mx-auto my-8 w-full max-w-3xl overflow-hidden">
+              <Image
+                src="/drawing-prompt-howto-flow.webp"
+                alt="Barn owl prompt card, sketchbook study, and five-minute timer on a drawing desk"
+                width={1536}
+                height={1024}
+                className="h-auto w-full object-cover"
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 768px"
+              />
+            </div>
             <ol className="mx-auto mt-10 grid max-w-5xl list-none gap-8 text-center md:grid-cols-3 md:gap-10 md:text-left">
               {HOW_TO_STEPS.map((step, index) => (
                 <li key={step.name} className="border-t border-[var(--line)] pt-5">
@@ -302,6 +358,47 @@ export default function DrawingPromptGeneratorPage() {
                 </li>
               ))}
             </ol>
+          </section>
+
+          <section id="prompt-examples" className="home-section scroll-mt-24">
+            <h2 className="home-section-title">Simple Prompts & Complex Combinations</h2>
+            <p className="home-prose mt-4">
+              Start with a simple animal subject, or turn on Action, Emotion, and Location for a
+              scene-ready drawing prompt. These examples mirror what the tool can return.
+            </p>
+            <div className="relative mx-auto my-8 w-full max-w-3xl overflow-hidden">
+              <Image
+                src="/drawing-prompt-simple-complex.webp"
+                alt="Sketchbook comparing a simple red fox subject study with a complex fox-in-grass scene prompt"
+                width={1536}
+                height={1024}
+                className="h-auto w-full object-cover"
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 768px"
+              />
+            </div>
+            <div className="mx-auto mt-10 grid max-w-5xl gap-10 md:grid-cols-2">
+              <div className="border-t border-[var(--line)] pt-5">
+                <h3 className="font-display text-xl font-semibold text-[var(--ink)]">
+                  Simple prompts
+                </h3>
+                <ul className="mt-4 list-disc space-y-2 pl-5 text-[var(--ink-muted)]">
+                  {EXAMPLE_SIMPLE.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="border-t border-[var(--line)] pt-5">
+                <h3 className="font-display text-xl font-semibold text-[var(--ink)]">
+                  Complex combinations
+                </h3>
+                <ul className="mt-4 list-disc space-y-2 pl-5 text-[var(--ink-muted)]">
+                  {EXAMPLE_COMPLEX.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </section>
 
           <section className="home-section scroll-mt-24">
@@ -429,12 +526,43 @@ export default function DrawingPromptGeneratorPage() {
             </div>
           </section>
 
+          <section id="hashtags-challenges" className="home-section scroll-mt-24">
+            <h2 className="home-section-title">Hashtags & Challenge Calendar</h2>
+            <p className="home-prose mt-4">
+              Pair this drawing prompt generator with art hashtags when you post an animal drawing
+              challenge. Specific tags help classmates and other artists find timed warmups on
+              Instagram, TikTok, ArtStation, and Pinterest.
+            </p>
+            <p className="home-prose mx-auto mt-6 max-w-3xl text-center">
+              {HASHTAGS.join(' · ')}
+            </p>
+            <div className="mx-auto mt-10 grid max-w-5xl gap-8 text-left md:grid-cols-3">
+              {CHALLENGE_CALENDAR.map((item) => (
+                <div key={item.title} className="border-t border-[var(--line)] pt-5">
+                  <h3 className="font-display text-xl font-semibold text-[var(--ink)]">{item.title}</h3>
+                  <p className="mt-3 leading-relaxed text-[var(--ink-muted)]">{item.text}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
           <section className="home-section scroll-mt-24">
             <h2 className="home-section-title">Why Timed Animal Prompts Work</h2>
             <p className="home-prose mt-4">
               Timed prompts work because short sketch intervals train observation and decision-making
               before detail addiction sets in—especially for gesture and silhouette practice.
             </p>
+            <div className="relative mx-auto my-8 w-full max-w-3xl overflow-hidden">
+              <Image
+                src="/drawing-prompt-timed-gesture.webp"
+                alt="Charcoal gesture sketches of deer, foxes, and birds with a practice timer and drawing tools"
+                width={1536}
+                height={1024}
+                className="h-auto w-full object-cover"
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 768px"
+              />
+            </div>
             <blockquote className="mx-auto mt-8 max-w-3xl border-l-2 border-[var(--olive)] pl-5 text-left">
               <p className="text-lg leading-relaxed text-[var(--ink)]">
                 &quot;Gesture drawing is a method of training hands to quickly sketch what the eye

@@ -1,4 +1,4 @@
-import { SITE_URL } from '@/lib/site';
+import { CORE_SITE_ROUTES, SITE_URL } from '@/lib/site';
 
 export const INDEXNOW_KEY = 'd9b6e4a1-6f7b-4b0c-9f3d-8f1a2c7b5e91';
 export const INDEXNOW_ENDPOINT = 'https://api.indexnow.org/indexnow';
@@ -13,6 +13,13 @@ function normalizeUrl(url: string) {
 
 export function getIndexNowKeyLocation() {
   return `${SITE_URL}/${INDEXNOW_KEY}.txt`;
+}
+
+/** All public pages from the shared sitemap route list. */
+export function getAllIndexNowUrls() {
+  return CORE_SITE_ROUTES.map((route) =>
+    route.path === '/' ? `${SITE_URL}/` : `${SITE_URL}${route.path}`,
+  );
 }
 
 export async function submitToIndexNow({ urls }: SubmitIndexNowInput) {
@@ -49,4 +56,8 @@ export async function submitToIndexNow({ urls }: SubmitIndexNowInput) {
     text: await response.text(),
     submittedUrls: normalizedUrls,
   };
+}
+
+export async function submitAllSiteUrlsToIndexNow() {
+  return submitToIndexNow({ urls: getAllIndexNowUrls() });
 }

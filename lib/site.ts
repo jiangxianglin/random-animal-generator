@@ -42,7 +42,7 @@ export const TOOL_NAV_ITEMS = [
     href: "/drawing-prompt-generator",
     label: "Drawing Prompt Generator",
     shortLabel: "Drawing",
-    keyword: "animal prompt generator",
+    keyword: "drawing prompt generator",
   },
   {
     href: "/random-animal-generator-wheel",

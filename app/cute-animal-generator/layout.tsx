@@ -7,7 +7,7 @@ export const metadata: Metadata = buildPageMetadata({
   description:
     'Free cute animal generator—tap once for an adorable animal. Optional action, emotion, and location for kids, drawing, and games. No signup.',
   path: '/cute-animal-generator',
-  image: '/home-hero-field-atelier.png',
+  image: '/og-cute-animal-generator.png',
   imageAlt: 'Cute animal generator — soft wildlife prompts for kids, drawing, and games',
   imageWidth: 1200,
   imageHeight: 630,

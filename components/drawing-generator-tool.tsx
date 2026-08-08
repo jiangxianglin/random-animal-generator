@@ -3,6 +3,14 @@
 import { useEffect, useRef, useState } from 'react';
 import { Animal, CategoryKey, DrawingDifficulty } from '@/lib/animals';
 import { ChallengeManager } from '@/lib/challenge-manager';
+import {
+  buildDrawingPromptBriefs,
+  DRAWING_ACTIONS,
+  DRAWING_EMOTIONS,
+  DRAWING_LOCATIONS,
+  type DrawingPromptBrief,
+  type DrawingStoryOptions,
+} from '@/lib/drawing-story-bits';
 import { AnimalGenerator } from '@/lib/generator';
 import { ShareManager } from '@/lib/share-manager';
 import { AnimalCard } from '@/components/animal-card';
@@ -81,11 +89,14 @@ function formatTime(totalSeconds: number) {
   return `${minutes}:${String(seconds).padStart(2, '0')}`;
 }
 
-function buildPromptText(animals: Animal[], mode: PracticeMode) {
+function buildPromptText(briefs: DrawingPromptBrief[], mode: PracticeMode) {
   const modeLabel = PRACTICE_MODES.find((item) => item.id === mode)?.label ?? 'Free practice';
-  const lines = animals.map((animal, index) => {
-    const tips = animal.drawingTips?.slice(0, 2).join(' ') ?? '';
-    return `${index + 1}. Draw a ${animal.commonName} (${animal.drawingDifficulty}) — ${animal.category}. ${tips}`.trim();
+  const lines = briefs.map((brief, index) => {
+    const tips = brief.animal.drawingTips?.slice(0, 2).join(' ') ?? '';
+    const story = brief.hasStoryBits
+      ? ` Scene: ${brief.complexLine}.`
+      : '';
+    return `${index + 1}. ${brief.narrativeLine} (${brief.animal.drawingDifficulty}) — ${brief.animal.category}.${story} ${tips}`.trim();
   });
   return [`Drawing prompt session: ${modeLabel}`, ...lines].join('\n');
 }
@@ -98,6 +109,7 @@ export function DrawingGeneratorTool({
   generateLabel = 'Generate Drawing Prompts',
 }: DrawingGeneratorToolProps) {
   const [animals, setAnimals] = useState<Animal[]>([]);
+  const [briefs, setBriefs] = useState<DrawingPromptBrief[]>([]);
   const [selectedQuantity, setSelectedQuantity] = useState(3);
   const [selectedCategory, setSelectedCategory] = useState<CategoryKey | null>(null);
   const [selectedDifficulty, setSelectedDifficulty] = useState<DrawingDifficulty | null>('medium');
@@ -105,7 +117,18 @@ export function DrawingGeneratorTool({
   const [remainingSeconds, setRemainingSeconds] = useState<number | null>(null);
   const [timerFinished, setTimerFinished] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [showStoryOptions, setShowStoryOptions] = useState(false);
+  const [includeAction, setIncludeAction] = useState(false);
+  const [includeEmotion, setIncludeEmotion] = useState(false);
+  const [includeLocation, setIncludeLocation] = useState(false);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  const storyOptions: DrawingStoryOptions = {
+    includeAction,
+    includeEmotion,
+    includeLocation,
+  };
+  const anyStoryToggle = includeAction || includeEmotion || includeLocation;
 
   const clearTimer = () => {
     if (timerRef.current) {
@@ -159,6 +182,7 @@ export function DrawingGeneratorTool({
     setSelectedCategory(null);
     setSelectedDifficulty('medium');
     setAnimals([]);
+    setBriefs([]);
     clearTimer();
     setRemainingSeconds(null);
     setTimerFinished(false);
@@ -175,6 +199,7 @@ export function DrawingGeneratorTool({
       }
 
       setAnimals(generated);
+      setBriefs(buildDrawingPromptBriefs(generated, storyOptions));
       setCopied(false);
 
       const config = PRACTICE_MODES.find((item) => item.id === practiceMode);
@@ -192,9 +217,33 @@ export function DrawingGeneratorTool({
     }
   };
 
+  const remixScenes = () => {
+    if (animals.length === 0) {
+      setShowStoryOptions(true);
+      setIncludeAction(true);
+      setIncludeEmotion(true);
+      setIncludeLocation(true);
+      return;
+    }
+
+    const options: DrawingStoryOptions = anyStoryToggle
+      ? storyOptions
+      : { includeAction: true, includeEmotion: true, includeLocation: true };
+
+    if (!anyStoryToggle) {
+      setShowStoryOptions(true);
+      setIncludeAction(true);
+      setIncludeEmotion(true);
+      setIncludeLocation(true);
+    }
+
+    setBriefs(buildDrawingPromptBriefs(animals, options));
+    setCopied(false);
+  };
+
   const handleCopyPrompts = async () => {
-    if (animals.length === 0) return;
-    const ok = await shareManager.copyToClipboard(buildPromptText(animals, practiceMode));
+    if (briefs.length === 0) return;
+    const ok = await shareManager.copyToClipboard(buildPromptText(briefs, practiceMode));
     if (ok) {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
@@ -283,6 +332,81 @@ export function DrawingGeneratorTool({
             }
           />
         )}
+
+        <div className="home-surface mt-4 p-5 md:p-6">
+          <button
+            type="button"
+            onClick={() => setShowStoryOptions((open) => !open)}
+            className="flex w-full items-center justify-between gap-3 text-left"
+            aria-expanded={showStoryOptions}
+          >
+            <span>
+              <span className="block font-semibold text-[var(--ink)]">
+                Optional: scene options
+              </span>
+              <span className="mt-1 block text-sm text-[var(--ink-muted)]">
+                Action, emotion, and location for richer drawing prompts
+              </span>
+            </span>
+            <span className="text-sm font-medium text-[var(--olive)]">
+              {showStoryOptions ? 'Hide' : 'Show'}
+            </span>
+          </button>
+
+          {showStoryOptions ? (
+            <fieldset className="mt-4">
+              <legend className="sr-only">Drawing prompt scene options</legend>
+              <div className="grid gap-3 sm:grid-cols-3">
+                <label className="flex cursor-pointer items-start gap-3 rounded-[var(--radius-sm)] border border-[var(--line)] bg-[var(--surface-elevated)] px-4 py-3">
+                  <input
+                    type="checkbox"
+                    checked={includeAction}
+                    onChange={(event) => setIncludeAction(event.target.checked)}
+                    className="mt-1"
+                  />
+                  <span>
+                    <span className="block font-semibold text-[var(--ink)]">Action</span>
+                    <span className="mt-1 block text-sm text-[var(--ink-muted)]">
+                      Pose or activity ({DRAWING_ACTIONS.length})
+                    </span>
+                  </span>
+                </label>
+                <label className="flex cursor-pointer items-start gap-3 rounded-[var(--radius-sm)] border border-[var(--line)] bg-[var(--surface-elevated)] px-4 py-3">
+                  <input
+                    type="checkbox"
+                    checked={includeEmotion}
+                    onChange={(event) => setIncludeEmotion(event.target.checked)}
+                    className="mt-1"
+                  />
+                  <span>
+                    <span className="block font-semibold text-[var(--ink)]">Emotion</span>
+                    <span className="mt-1 block text-sm text-[var(--ink-muted)]">
+                      Expression / mood ({DRAWING_EMOTIONS.length})
+                    </span>
+                  </span>
+                </label>
+                <label className="flex cursor-pointer items-start gap-3 rounded-[var(--radius-sm)] border border-[var(--line)] bg-[var(--surface-elevated)] px-4 py-3">
+                  <input
+                    type="checkbox"
+                    checked={includeLocation}
+                    onChange={(event) => setIncludeLocation(event.target.checked)}
+                    className="mt-1"
+                  />
+                  <span>
+                    <span className="block font-semibold text-[var(--ink)]">Location</span>
+                    <span className="mt-1 block text-sm text-[var(--ink-muted)]">
+                      Setting for the scene ({DRAWING_LOCATIONS.length})
+                    </span>
+                  </span>
+                </label>
+              </div>
+              <p className="mt-3 text-sm text-[var(--ink-faint)]">
+                Options apply on the next generate. Use Remix scenes to re-roll beats on the same
+                animals.
+              </p>
+            </fieldset>
+          ) : null}
+        </div>
       </section>
 
       <section id="drawing-results" className="mb-12 scroll-mt-12">
@@ -297,18 +421,45 @@ export function DrawingGeneratorTool({
                   Open a card for reference images and drawing tips, then start the sketch.
                 </p>
               </div>
-              <button
-                type="button"
-                onClick={handleCopyPrompts}
-                className="btn-outline-ink shrink-0 px-4 py-2.5 text-sm"
-              >
-                {copied ? 'Copied' : 'Copy prompts'}
-              </button>
+              <div className="flex flex-wrap justify-center gap-2 sm:justify-end">
+                <button
+                  type="button"
+                  onClick={remixScenes}
+                  className="btn-outline-ink shrink-0 px-4 py-2.5 text-sm"
+                >
+                  {anyStoryToggle ? 'Remix scenes' : 'Add scene details'}
+                </button>
+                <button
+                  type="button"
+                  onClick={handleCopyPrompts}
+                  className="btn-outline-ink shrink-0 px-4 py-2.5 text-sm"
+                >
+                  {copied ? 'Copied' : 'Copy prompts'}
+                </button>
+              </div>
             </div>
             {timerFinished && (
               <p className="mb-4 rounded-[var(--radius-sm)] border border-[var(--line)] bg-[var(--olive-soft)] px-4 py-3 text-sm text-[var(--olive-deep)]">
                 Timer finished—step back, compare silhouettes, then generate the next round.
               </p>
+            )}
+            {briefs.some((brief) => brief.hasStoryBits) && (
+              <div className="mb-6 space-y-3 border border-[var(--line)] bg-[var(--surface)] px-4 py-4 md:px-5">
+                <p className="text-sm font-semibold text-[var(--ink)]">Scene briefs</p>
+                <ul className="space-y-2 text-sm leading-relaxed text-[var(--ink-muted)]">
+                  {briefs.map((brief) => (
+                    <li key={brief.animal.id}>
+                      <span className="font-medium text-[var(--ink)]">{brief.simpleLine}</span>
+                      {brief.hasStoryBits ? (
+                        <>
+                          {' — '}
+                          <span>{brief.complexLine}</span>
+                        </>
+                      ) : null}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             )}
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
               {animals.map((animal) => (
@@ -322,8 +473,8 @@ export function DrawingGeneratorTool({
               No prompts yet
             </p>
             <p className="mx-auto mt-2 max-w-md text-sm leading-relaxed text-[var(--ink-muted)]">
-              Choose a practice mode above, then generate. Silhouette and gesture modes start a timer
-              so you can work like a studio warmup.
+              Choose a practice mode above, then generate. Optional scene toggles add Action,
+              Emotion, and Location when you want a fuller brief.
             </p>
             <div className="mt-5 flex flex-wrap justify-center gap-2">
               {PRACTICE_MODES.filter((mode) => mode.id !== 'free').map((mode) => (

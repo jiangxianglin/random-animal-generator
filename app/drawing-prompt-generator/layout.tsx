@@ -14,7 +14,7 @@ export const metadata: Metadata = buildPageMetadata({
   imageHeight: 630,
   imageType: 'image/png',
   datePublished: '2026-07-25T00:00:00.000Z',
-  dateModified: '2026-07-26T00:00:00.000Z',
+  dateModified: '2026-08-08T00:00:00.000Z',
   ogType: 'article',
   absoluteTitle: true,
 });
