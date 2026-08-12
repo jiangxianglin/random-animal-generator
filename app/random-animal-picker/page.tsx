@@ -550,7 +550,7 @@ export default function RandomAnimalPickerPage() {
               </li>
               <li>
                 <Link href="/drawing-prompt-generator" className="home-link">
-                  animal prompt generator
+                  drawing prompt generator
                 </Link>{' '}
                 — timed animal art prompts.
               </li>

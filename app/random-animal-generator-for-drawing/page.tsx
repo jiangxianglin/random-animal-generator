@@ -544,7 +544,7 @@ export default function RandomAnimalGeneratorForDrawingPage() {
               </li>
               <li>
                 <Link href="/drawing-prompt-generator" className="home-link">
-                  animal prompt generator
+                  drawing prompt generator
                 </Link>{' '}
                 — exact-match page for drawing prompt generator searches.
               </li>

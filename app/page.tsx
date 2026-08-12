@@ -2,8 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Suspense } from 'react';
 import { HomeGenerator, HomeGeneratorFallback } from '@/components/home-generator';
-import { buildBreadcrumbSchema, buildFaqSchema, buildHowToSchema, buildWebAppSchema } from '@/lib/seo';
-import { SITE_NAME } from '@/lib/site';
+import { buildBreadcrumbSchema, buildFaqSchema, buildHowToSchema, buildWebAppSchema, buildWebPageSchema } from '@/lib/seo';
+import { LAST_MAJOR_UPDATE, SITE_NAME } from '@/lib/site';
 
 const HOME_FAQS = [
   {
@@ -101,6 +101,13 @@ const CORE_TOOLS = [
       'Get animal drawing prompts with difficulty filters and timed practice modes.',
   },
   {
+    href: '/random-animal-generator-for-drawing',
+    label: 'For Drawing',
+    title: 'Random Animal Generator for Drawing',
+    description:
+      'Animal-first drawing subjects with difficulty filters—long-tail sibling to the drawing prompt page.',
+  },
+  {
     href: '/random-animal-generator-wheel',
     label: 'Wheel',
     title: 'Random Animal Generator Wheel',
@@ -163,7 +170,16 @@ const CLASSROOM_ACTIVITIES = [
 ] as const;
 
 export default function Home() {
+  const pageModified = LAST_MAJOR_UPDATE.toISOString();
   const structuredData = [
+    buildWebPageSchema({
+      name: 'Random Animal Generator',
+      description:
+        'Free random animal generator with category filters, drawing difficulty, challenge modes, and classroom-friendly prompts.',
+      path: '/',
+      datePublished: '2026-07-19T00:00:00.000Z',
+      dateModified: pageModified,
+    }),
     {
       ...buildWebAppSchema({
         name: SITE_NAME,
@@ -181,6 +197,8 @@ export default function Home() {
           'Mobile responsive design',
           'Free to use',
         ],
+        datePublished: '2026-07-19T00:00:00.000Z',
+        dateModified: pageModified,
       }),
       audience: {
         '@type': 'Audience',

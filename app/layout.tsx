@@ -30,8 +30,11 @@ export const metadata: Metadata = {
     description:
       "Generate random animals online with category filters, drawing difficulty, challenge modes, and classroom-friendly prompts.",
     path: "/",
-    image: "/home-hero-field-atelier.png",
+    image: "/og-home.png",
     imageAlt: "Misty woodland wildlife scene for random animal drawing prompts",
+    imageWidth: 1200,
+    imageHeight: 630,
+    imageType: "image/png",
   }),
   title: {
     default: `Random Animal Generator for Drawing, Games & Classrooms`,

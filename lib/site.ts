@@ -45,6 +45,12 @@ export const TOOL_NAV_ITEMS = [
     keyword: "drawing prompt generator",
   },
   {
+    href: "/random-animal-generator-for-drawing",
+    label: "Random Animal Generator for Drawing",
+    shortLabel: "For Drawing",
+    keyword: "random animal generator for drawing",
+  },
+  {
     href: "/random-animal-generator-wheel",
     label: "Random Animal Generator Wheel",
     shortLabel: "Wheel",
@@ -83,4 +89,4 @@ export const CORE_SITE_ROUTES = [
 ] as const;
 
 export const SITE_DATE_PUBLISHED = "2026-07-19T00:00:00.000Z";
-export const LAST_MAJOR_UPDATE = new Date("2026-08-08T00:00:00.000Z");
+export const LAST_MAJOR_UPDATE = new Date("2026-08-12T00:00:00.000Z");

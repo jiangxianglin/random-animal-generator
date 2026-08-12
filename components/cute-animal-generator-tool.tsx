@@ -128,7 +128,7 @@ export function CuteAnimalGeneratorTool({ initialResult }: CuteAnimalGeneratorTo
   };
 
   return (
-    <section id="cute-generator" className="scroll-mt-24">
+    <section id="generator" className="scroll-mt-24">
       <div className="rounded-[var(--radius-md)] border border-[var(--line)] bg-[var(--surface)] p-5 shadow-[var(--shadow-soft)] md:p-8">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
