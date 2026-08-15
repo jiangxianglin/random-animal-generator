@@ -10,6 +10,7 @@ export const SITE_EMAIL = "hello@randomanimalgenerator.online";
 export const SITE_SAME_AS = [
   `https://twitter.com/${SITE_TWITTER.replace("@", "")}`,
   `https://x.com/${SITE_TWITTER.replace("@", "")}`,
+  "https://github.com/jiangxianglin/random-animal-generator",
 ] as const;
 
 /** Visible publisher / author entity for E-E-A-T + GEO provenance */
@@ -31,6 +32,18 @@ export const TOOL_NAV_ITEMS = [
     label: "Random Animal Picker",
     shortLabel: "Picker",
     keyword: "random animal picker",
+  },
+  {
+    href: "/give-me-a-random-animal",
+    label: "Give Me a Random Animal",
+    shortLabel: "Give Me",
+    keyword: "give me a random animal",
+  },
+  {
+    href: "/animal-randomizer",
+    label: "Animal Randomizer",
+    shortLabel: "Randomizer",
+    keyword: "animal randomizer",
   },
   {
     href: "/random-animal-name-generator",
@@ -78,6 +91,8 @@ export const CORE_SITE_ROUTES = [
   { path: "/", priority: 1.0 },
   { path: "/cute-animal-generator", priority: 0.95 },
   { path: "/random-animal-picker", priority: 0.9 },
+  { path: "/give-me-a-random-animal", priority: 0.9 },
+  { path: "/animal-randomizer", priority: 0.9 },
   { path: "/random-animal-name-generator", priority: 0.9 },
   { path: "/drawing-prompt-generator", priority: 0.9 },
   { path: "/random-animal-generator-wheel", priority: 0.9 },
@@ -89,4 +104,4 @@ export const CORE_SITE_ROUTES = [
 ] as const;
 
 export const SITE_DATE_PUBLISHED = "2026-07-19T00:00:00.000Z";
-export const LAST_MAJOR_UPDATE = new Date("2026-08-12T00:00:00.000Z");
+export const LAST_MAJOR_UPDATE = new Date("2026-08-15T00:00:00.000Z");

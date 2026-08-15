@@ -1,9 +1,16 @@
 const fs = require('fs');
 const path = require('path');
 const https = require('https');
+require('dotenv').config({ path: path.join(__dirname, '../.env.local') });
 
-// Pexels API key
-const PEXELS_API_KEY = 'REMOVED_PEXELS_KEY';
+const PEXELS_API_KEY =
+  process.env.PEXELS_API_KEY || process.env.NEXT_PUBLIC_PEXELS_API_KEY;
+
+if (!PEXELS_API_KEY) {
+  console.error('Error: PEXELS_API_KEY not found in .env.local');
+  console.error('Add: PEXELS_API_KEY=your_key_here');
+  process.exit(1);
+}
 
 // Animals that need images
 const missingAnimals = [

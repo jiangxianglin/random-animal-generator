@@ -87,6 +87,20 @@ const CORE_TOOLS = [
       'Instant one-click animal picks for games, classrooms, and writing—with list and daily modes.',
   },
   {
+    href: '/give-me-a-random-animal',
+    label: 'Give Me',
+    title: 'Give Me a Random Animal',
+    description:
+      'Conversational landing for “give me a random animal”—instant picks that beat stale Reddit threads.',
+  },
+  {
+    href: '/animal-randomizer',
+    label: 'Randomizer',
+    title: 'Animal Randomizer',
+    description:
+      'Synonym landing for animal randomizer searches—fair rolls with category filters and a daily pick.',
+  },
+  {
     href: '/random-animal-name-generator',
     label: 'Names',
     title: 'Random Animal Name Generator',

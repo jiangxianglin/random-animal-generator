@@ -62,16 +62,26 @@ function scrollToResults() {
   }
 }
 
-function buildPickerText(animals: Animal[], mode: PickerMode) {
+function buildPickerText(animals: Animal[], mode: PickerMode, productLabel: string) {
   const modeLabel = PICKER_MODES.find((item) => item.id === mode)?.label ?? 'Pick';
   const lines = animals.map(
     (animal, index) =>
       `${index + 1}. ${animal.commonName} (${animal.scientificName}) — ${animal.category}`,
   );
-  return [`Random animal picker: ${modeLabel}`, ...lines].join('\n');
+  return [`${productLabel}: ${modeLabel}`, ...lines].join('\n');
 }
 
-export function AnimalPickerTool() {
+type AnimalPickerToolProps = {
+  /** Visible H2 for the tool island (defaults to picker wording). */
+  heading?: string;
+  /** Label used in copied output lines. */
+  productLabel?: string;
+};
+
+export function AnimalPickerTool({
+  heading = 'Picker modes',
+  productLabel = 'Random animal picker',
+}: AnimalPickerToolProps = {}) {
   const [animals, setAnimals] = useState<Animal[]>([]);
   const [selectedQuantity, setSelectedQuantity] = useState(1);
   const [selectedCategory, setSelectedCategory] = useState<CategoryKey | null>(null);
@@ -120,7 +130,9 @@ export function AnimalPickerTool() {
 
   const handleCopy = async () => {
     if (animals.length === 0) return;
-    const ok = await shareManager.copyToClipboard(buildPickerText(animals, pickerMode));
+    const ok = await shareManager.copyToClipboard(
+      buildPickerText(animals, pickerMode, productLabel),
+    );
     if (ok) {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
@@ -133,7 +145,7 @@ export function AnimalPickerTool() {
         <div className="home-surface mb-4 p-5 md:p-6">
           <div className="border-b border-[var(--line)] pb-4">
             <h2 className="font-display text-xl font-semibold text-[var(--ink)] md:text-2xl">
-              Picker modes
+              {heading}
             </h2>
             <p className="mt-1 text-sm text-[var(--ink-muted)]">
               Built for a fair, fast pick—games, classrooms, writing, and quick decisions.

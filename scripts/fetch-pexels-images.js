@@ -3,11 +3,12 @@ const fs = require('fs');
 const path = require('path');
 require('dotenv').config({ path: path.join(__dirname, '../.env.local') });
 
-const PEXELS_API_KEY = process.env.NEXT_PUBLIC_PEXELS_API_KEY;
+const PEXELS_API_KEY =
+  process.env.PEXELS_API_KEY || process.env.NEXT_PUBLIC_PEXELS_API_KEY;
 
 if (!PEXELS_API_KEY) {
-  console.error('Error: NEXT_PUBLIC_PEXELS_API_KEY not found in .env.local');
-  console.error('Please create a .env.local file with your Pexels API key');
+  console.error('Error: PEXELS_API_KEY not found in .env.local');
+  console.error('Add: PEXELS_API_KEY=your_key_here');
   process.exit(1);
 }
 

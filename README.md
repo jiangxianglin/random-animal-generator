@@ -1,59 +1,58 @@
 # Random Animal Generator
 
-A modern, educational web application built with Next.js that generates random animals with fascinating facts and high-quality images.
+Free random animal generator for games, classrooms, drawing prompts, and writing—no signup.
+
+**Live site:** [https://www.randomanimalgenerator.online](https://www.randomanimalgenerator.online)
+
+## Try the tools
+
+| Tool | URL |
+|------|-----|
+| Random Animal Generator (home) | https://www.randomanimalgenerator.online/ |
+| Cute Animal Generator | https://www.randomanimalgenerator.online/cute-animal-generator |
+| Random Animal Picker | https://www.randomanimalgenerator.online/random-animal-picker |
+| Give Me a Random Animal | https://www.randomanimalgenerator.online/give-me-a-random-animal |
+| Animal Randomizer | https://www.randomanimalgenerator.online/animal-randomizer |
+| Drawing Prompt Generator | https://www.randomanimalgenerator.online/drawing-prompt-generator |
+| Random Animal Generator for Drawing | https://www.randomanimalgenerator.online/random-animal-generator-for-drawing |
+| Random Animal Wheel | https://www.randomanimalgenerator.online/random-animal-generator-wheel |
+| Random Animal Name Generator | https://www.randomanimalgenerator.online/random-animal-name-generator |
 
 ## Features
 
-- 🎲 Generate 1-10 random animals
-- 🦁 Filter by category (Mammals, Birds, Reptiles, Marine, Insects)
-- 📚 Educational facts for each animal
-- 🖼️ High-quality images from Unsplash
-- 📱 Fully responsive design
-- ⚡ Fast performance with Next.js
-- 🎨 Beautiful UI with Tailwind CSS
+- Generate 1–10 random animals from a 121-animal curated pool
+- Filter by category (Mammals, Birds, Reptiles, Marine, Insects)
+- Educational facts and reference images per animal
+- Wheel, picker, name list, cute, and drawing-prompt modes
+- SSR-first Next.js pages for SEO / GEO visibility
+- Fully responsive UI
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 18+
 - npm or yarn
 
 ### Installation
 
-1. Clone the repository:
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/jiangxianglin/random-animal-generator.git
 cd random-animal-generator
-```
-
-2. Install dependencies:
-```bash
 npm install
-```
-
-3. Run the development server:
-```bash
 npm run dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
+Open [http://localhost:3000](http://localhost:3000).
 
 ## Project Structure
 
 ```
 random-animal-generator/
-├── app/
-│   ├── layout.tsx          # Root layout with metadata
-│   ├── page.tsx            # Main page component
-│   └── globals.css         # Global styles
-├── components/
-│   ├── animal-card.tsx     # Animal card component
-│   └── generator-controls.tsx  # Control panel component
-├── lib/
-│   ├── animals.ts          # Animal database and types
-│   └── generator.ts        # Animal generator logic
-└── public/                 # Static assets
+├── app/                    # Next.js App Router pages + sitemap/robots
+├── components/             # Tool islands (client) + shared UI
+├── lib/                    # Animals data, generator, SEO helpers, site constants
+└── public/                 # OG images, heroes, llms.txt
 ```
 
 ## Building for Production
@@ -65,31 +64,15 @@ npm start
 
 ## Deployment
 
-This project can be deployed to:
-- Vercel (recommended for Next.js)
-- Netlify
-- Any platform supporting Next.js
+Deployed on Vercel at **https://www.randomanimalgenerator.online**.
 
-### Deploy to Vercel
-
-1. Push your code to GitHub
-2. Import your repository on [Vercel](https://vercel.com)
-3. Deploy with one click
-
-## Future Enhancements
-
-- [ ] Add more animals (expand to 200+)
-- [ ] Implement favorites system
-- [ ] Add social sharing
-- [ ] Conservation status badges
-- [ ] Wheel mode visualization
-- [ ] Animal detail pages
-- [ ] Search functionality
-- [ ] Multi-language support
+1. Push to GitHub
+2. Import the repo on [Vercel](https://vercel.com)
+3. Set `NEXT_PUBLIC_SITE_URL=https://www.randomanimalgenerator.online` if needed
 
 ## Tech Stack
 
-- **Framework**: Next.js 15
+- **Framework**: Next.js 15 (App Router)
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
 - **Images**: Next.js Image Optimization
@@ -97,8 +80,8 @@ This project can be deployed to:
 
 ## License
 
-MIT License - feel free to use this project for educational purposes.
+MIT License — feel free to use this project for educational purposes.
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome. Open a Pull Request against this repository.

@@ -11,112 +11,111 @@ import {
 import {
   LAST_MAJOR_UPDATE,
   SITE_AUTHOR,
-  SITE_DATE_PUBLISHED,
   SITE_NAME,
 } from '@/lib/site';
 
-const PAGE_PUBLISHED = '2026-07-26T00:00:00.000Z';
+const PAGE_PUBLISHED = '2026-08-15T00:00:00.000Z';
 const PAGE_MODIFIED = LAST_MAJOR_UPDATE.toISOString();
 
 const FAQS = [
   {
-    question: 'What is a random animal picker?',
+    question: 'What does “give me a random animal” mean as a search?',
     answer:
-      'A random animal picker is a free tool that selects one or more animals at random so you can make a fair choice for games, classrooms, writing, or quick decisions—without spinning a wheel or signing up.',
+      'People type “give me a random animal” when they want an instant wildlife pick—often after seeing a Reddit thread, Discord prompt, or classroom icebreaker—without downloading an app or signing up.',
   },
   {
-    question: 'Who should use this random animal picker?',
+    question: 'How do I get a random animal right now?',
     answer:
-      'It is built for party hosts, teachers, writers, RPG players, and anyone who needs a fast, unbiased animal pick with optional category filters.',
+      'Open the tool below, tap Pick one (or Today’s pick for a shared daily animal), and you get a name, category, facts, and a reference image you can copy or share.',
   },
   {
-    question: 'How is this different from the random animal wheel?',
+    question: 'Is this better than a Reddit “give me a random animal” post?',
     answer:
-      'The wheel is a theatrical one-at-a-time spin. This random animal picker is for instant picks, multi-animal lists, category locks, and a shared daily pick when speed matters more than animation.',
+      'Reddit threads go stale and depend on strangers commenting. This page is a permanent, fair randomizer with filters, a shared daily pick, and copy-ready results—no waiting on replies.',
   },
   {
-    question: 'Can everyone get the same animal?',
+    question: 'Can I filter the random animal I get?',
     answer:
-      "Yes. Use Today's pick for one shared animal each calendar day—useful for classrooms, family game night, or a Discord writing challenge.",
+      'Yes. Use Category pick to lock mammals, birds, reptiles, marine animals, or insects before you generate.',
   },
   {
-    question: 'Is the random animal picker free?',
+    question: 'Is “give me a random animal” free?',
     answer:
-      'Yes. It runs in your browser, requires no account, and does not gate the core picker behind a signup.',
+      'Yes. The tool runs in your browser, requires no account, and does not gate the core pick behind a signup.',
   },
   {
-    question: 'Can I filter picks by animal type?',
+    question: 'How is this different from the random animal picker?',
     answer:
-      'Yes. Use Category pick to lock mammals, birds, reptiles, marine animals, or insects before you pick.',
+      'Same instant-pick engine. This page owns the conversational phrase “give me a random animal” (Reddit-style intent). The picker page targets the shorter keyword “random animal picker.”',
   },
 ] as const;
 
 const HOW_TO_STEPS = [
   {
-    name: 'Choose a picker mode',
-    text: 'Start with Pick one, or switch to a list, category lock, or today’s shared animal.',
+    name: 'Ask for a pick',
+    text: 'Stay on this page and choose Pick one, a short list, a category lock, or today’s shared animal.',
   },
   {
-    name: 'Set optional filters',
-    text: 'Narrow by category or difficulty when you want controlled randomness instead of a fully open pick.',
+    name: 'Generate the animal',
+    text: 'Tap generate. You get a wildlife subject with facts and a reference image—no Reddit wait.',
   },
   {
-    name: 'Pick and use the result',
-    text: 'Reveal the animal card, copy the pick for chat or worksheets, then regenerate anytime.',
+    name: 'Use or share the result',
+    text: 'Copy the pick into chat, a worksheet, or a drawing brief, then regenerate anytime.',
   },
 ] as const;
 
 const PERSONAS = [
   {
-    title: 'Party & game hosts',
-    text: 'Settle “who goes first” or assign animal roles in seconds with a fair one-click pick.',
+    title: 'Reddit & Discord users',
+    text: 'Skip “comment and I’ll reply” threads. Get a fair animal in one click when someone says give me a random animal.',
   },
   {
-    title: 'Teachers & homeschoolers',
-    text: 'Give every student the same daily animal, or category-lock a mammal unit without preparation time.',
+    title: 'Teachers & facilitators',
+    text: 'Use Today’s pick so every student researches or draws the same animal without arguing.',
   },
   {
     title: 'Writers & RPG players',
-    text: 'Grab a creature for a character, encounter, or story seed with name, facts, and a reference image.',
+    text: 'Grab a creature seed with a name, facts, and a photo for characters or encounters.',
   },
   {
-    title: 'Quick decision makers',
-    text: 'Skip long lists and spin animations when you only need a clean random animal right now.',
+    title: 'Party & game hosts',
+    text: 'Settle animal roles or icebreakers instantly when someone asks for a random animal out loud.',
   },
 ] as const;
 
 const USE_IDEAS = [
   {
+    title: 'Replace stale threads',
+    text: 'Bookmark this URL when a community keeps asking “give me a random animal”—share one link instead of a dead post.',
+  },
+  {
     title: 'Icebreaker rounds',
     text: 'Pick one animal and ask each person to share a fact, sound, or memory tied to it.',
   },
   {
-    title: 'Team assignments',
-    text: 'Pick a short list and assign each animal to a team for scavenger hunts or trivia.',
+    title: 'Shared daily challenge',
+    text: 'Reveal Today’s pick once so the whole class or Discord channel works from the same animal.',
   },
   {
     title: 'Writing seeds',
-    text: 'Copy a pick into your notes and build a character, setting, or plot beat around it.',
-  },
-  {
-    title: 'Classroom fairness',
-    text: 'Reveal Today’s pick so every student researches or draws the same animal.',
+    text: 'Copy the result into your notes and build a character, setting, or plot beat around it.',
   },
 ] as const;
 
 const STATS = [
   { value: '121', label: 'Curated animals' },
   { value: '5', label: 'Wildlife categories' },
-  { value: '4', label: 'Picker modes' },
+  { value: '4', label: 'Pick modes' },
   { value: '0', label: 'Signup required' },
 ] as const;
 
 const FEATURE_LIST = [
-  'Instant random animal picks with reference images and facts',
-  'Picker modes: pick one, pick a list, category pick, today’s shared pick',
+  'One-click answer to “give me a random animal” with facts and a photo',
+  'Modes: pick one, pick a list, category pick, today’s shared pick',
   'Category filters: mammals, birds, reptiles, marine animals, insects',
-  'Optional difficulty filters when you also want drawing-ready subjects',
-  'Copyable pick lists for chat, slides, worksheets, or game night',
+  'Copyable results for chat, worksheets, or game night',
+  'Works offline from a local animal pool—no waiting on Reddit replies',
 ] as const;
 
 function formatDisplayDate(iso: string) {
@@ -128,33 +127,33 @@ function formatDisplayDate(iso: string) {
   });
 }
 
-export default function RandomAnimalPickerPage() {
+export default function GiveMeARandomAnimalPage() {
   const structuredData = [
     buildWebPageSchema({
-      name: 'Random Animal Picker',
+      name: 'Give Me a Random Animal',
       description:
-        'A free random animal picker for instant wildlife picks—games, classrooms, writing, and fair decisions.',
-      path: '/random-animal-picker',
+        'A free tool that answers “give me a random animal” with instant wildlife picks, facts, and photos—no signup.',
+      path: '/give-me-a-random-animal',
       datePublished: PAGE_PUBLISHED,
       dateModified: PAGE_MODIFIED,
     }),
     buildWebAppSchema({
-      name: 'Random Animal Picker',
+      name: 'Give Me a Random Animal',
       description:
-        'A free random animal picker for instant wildlife picks—games, classrooms, writing, and fair decisions.',
-      path: '/random-animal-picker',
+        'A free tool that answers “give me a random animal” with instant wildlife picks, facts, and photos—no signup.',
+      path: '/give-me-a-random-animal',
       datePublished: PAGE_PUBLISHED,
       dateModified: PAGE_MODIFIED,
       featureList: [...FEATURE_LIST],
     }),
     buildBreadcrumbSchema([
       { name: 'Home', path: '/' },
-      { name: 'Random Animal Picker', path: '/random-animal-picker' },
+      { name: 'Give Me a Random Animal', path: '/give-me-a-random-animal' },
     ]),
     buildHowToSchema(
-      'How to use the random animal picker',
-      'Pick a random animal in three steps for games, classrooms, or writing.',
-      '/random-animal-picker',
+      'How to get a random animal instantly',
+      'Answer “give me a random animal” in three steps—no Reddit wait.',
+      '/give-me-a-random-animal',
       HOW_TO_STEPS,
     ),
     buildFaqSchema(FAQS),
@@ -170,7 +169,7 @@ export default function RandomAnimalPickerPage() {
       <header className="relative isolate min-h-[calc(100svh-4rem)] overflow-hidden text-[var(--paper)]">
         <Image
           src="/random-animal-picker-hero.webp"
-          alt="Wildlife field guide spread with mammal, bird, and insect studies for a random animal picker"
+          alt="Wildlife field guide ready for a give me a random animal instant pick"
           fill
           priority
           className="object-cover animate-home-fade"
@@ -182,24 +181,24 @@ export default function RandomAnimalPickerPage() {
         />
         <div className="relative z-10 mx-auto flex min-h-[calc(100svh-4rem)] max-w-7xl flex-col justify-end px-4 pb-14 pt-20 md:pb-20 md:pt-24">
           <p className="animate-home-rise text-sm font-semibold uppercase tracking-[0.22em] text-[var(--paper)]/80">
-            Free · No signup · Instant pick
+            Free · No signup · Instant answer
           </p>
           <h1 className="font-display animate-home-rise-delay mt-3 max-w-4xl text-5xl font-semibold tracking-tight md:text-7xl">
-            Random Animal Picker
+            Give Me a Random Animal
           </h1>
           <p className="animate-home-rise-delay-2 mt-5 max-w-xl text-lg leading-relaxed text-[var(--paper)]/90 md:text-xl">
-            A random animal picker is a free tool that chooses a wildlife subject for you—so games,
-            classrooms, and writing sessions start without debate.
+            Give me a random animal is the conversational ask behind countless Reddit and Discord
+            threads—this page answers it in one click with facts and a photo.
           </p>
           <div className="animate-home-rise-delay-2 mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
             <a href="#generator" className="home-cta-light">
-              Open picker
+              Get a random animal
             </a>
             <a href="#what-is" className="home-cta-ghost">
-              What it is
+              Why this page
             </a>
-            <Link href="/random-animal-generator-wheel" className="home-cta-ghost">
-              Prefer the wheel?
+            <Link href="/random-animal-picker" className="home-cta-ghost">
+              Prefer the picker?
             </Link>
           </div>
         </div>
@@ -217,16 +216,20 @@ export default function RandomAnimalPickerPage() {
           <time dateTime={PAGE_MODIFIED}>Updated {formatDisplayDate(PAGE_MODIFIED)}</time>
         </p>
 
-        <AnimalPickerTool />
+        <AnimalPickerTool
+          heading="Give me a random animal"
+          productLabel="Give me a random animal"
+        />
 
         <article>
           <section id="what-is" className="home-section scroll-mt-24">
-            <h2 className="home-section-title">What Is a Random Animal Picker?</h2>
+            <h2 className="home-section-title">What “Give Me a Random Animal” Really Asks For</h2>
             <p className="home-prose mt-4">
-              A <strong className="font-semibold text-[var(--ink)]">random animal picker</strong> is a
-              tool that selects an animal at random so people do not argue over the choice. This page
-              focuses on speed and fairness: one-click picks, multi-animal lists, category locks, and a
-              shared daily animal.
+              When someone says{' '}
+              <strong className="font-semibold text-[var(--ink)]">give me a random animal</strong>, they
+              usually want a fair, unexpected wildlife subject right now—not a long quiz and not a
+              comment thread that dies overnight. This page fills that content vacuum with a permanent
+              tool: instant picks, category locks, and a shared daily animal.
             </p>
             <ul className="mx-auto mt-8 max-w-2xl list-disc space-y-2 pl-5 text-[var(--ink-muted)]">
               {FEATURE_LIST.map((item) => (
@@ -236,10 +239,9 @@ export default function RandomAnimalPickerPage() {
           </section>
 
           <section className="home-section scroll-mt-24">
-            <h2 className="home-section-title">Random Animal Picker Stats</h2>
+            <h2 className="home-section-title">Give Me a Random Animal — Stats</h2>
             <p className="home-prose mt-4">
-              Concrete numbers help you judge whether the picker fits a 30-second icebreaker or a
-              full classroom rotation.
+              Concrete numbers help you decide if one click beats waiting on a Reddit reply.
             </p>
             <div className="mx-auto mt-8 grid max-w-4xl grid-cols-2 gap-6 md:grid-cols-4">
               {STATS.map((stat) => (
@@ -255,18 +257,18 @@ export default function RandomAnimalPickerPage() {
               <li>Category counts: 33 mammals · 22 birds · 20 reptiles · 22 marine · 24 insects</li>
               <li>Difficulty labels available when needed: 35 easy · 57 medium · 29 hard</li>
               <li>
-                Search opportunity: keyword research flags{' '}
-                <strong className="font-semibold text-[var(--ink)]">random animal picker</strong> at a
-                low difficulty (~KD 9.4), which is why this page owns that exact phrase.
+                Intent note: conversational queries like{' '}
+                <strong className="font-semibold text-[var(--ink)]">give me a random animal</strong>{' '}
+                often rank thin Reddit threads—this page is the durable tool alternative.
               </li>
             </ul>
           </section>
 
           <section className="home-section scroll-mt-24">
-            <h2 className="home-section-title">Who Should Use This Tool?</h2>
+            <h2 className="home-section-title">Who Asks “Give Me a Random Animal”?</h2>
             <p className="home-prose mt-4">
-              This random animal picker is for people who need a fair animal choice—not a long quiz
-              and not a decorative spinner. Use it when the group wants a result now.
+              This page is for people who want an immediate animal answer—especially when a social
+              thread would otherwise be the only option.
             </p>
             <div className="mx-auto mt-10 grid max-w-5xl gap-8 md:grid-cols-2">
               {PERSONAS.map((persona) => (
@@ -281,10 +283,11 @@ export default function RandomAnimalPickerPage() {
           </section>
 
           <section id="how-to-use" className="home-section scroll-mt-24">
-            <h2 className="home-section-title">How to Use This Random Animal Picker</h2>
+            <h2 className="home-section-title">How to Use This Page</h2>
             <p className="home-prose mt-4">
-              To use this random animal picker, choose a mode, optionally filter by category, then
-              pick—copy the result if you need it on a slide or worksheet.
+              To answer{' '}
+              <strong className="font-semibold text-[var(--ink)]">give me a random animal</strong>, choose
+              a mode, optionally filter by category, then generate and copy the result.
             </p>
             <ol className="mx-auto mt-10 grid max-w-5xl list-none gap-8 text-center md:grid-cols-3 md:gap-10 md:text-left">
               {HOW_TO_STEPS.map((step, index) => (
@@ -302,15 +305,15 @@ export default function RandomAnimalPickerPage() {
           </section>
 
           <section className="home-section scroll-mt-24">
-            <h2 className="home-section-title">Random Animal Picker vs Wheel vs Name List</h2>
+            <h2 className="home-section-title">This Page vs Reddit Threads vs Wheel</h2>
             <p className="home-prose mt-4">
-              Use the picker for speed, the wheel for a live reveal, and the name generator when you
-              only need text to paste.
+              Use this page when you need a permanent answer to “give me a random animal.” Use Reddit
+              only for discussion; use the wheel when you want a theatrical spin.
             </p>
             <div className="mx-auto mt-8 max-w-4xl overflow-x-auto">
               <table className="w-full min-w-[36rem] border-collapse text-left text-sm">
                 <caption className="sr-only">
-                  Comparison of random animal picker versus wheel and name list tools
+                  Comparison of give me a random animal tool versus Reddit threads and wheel
                 </caption>
                 <thead>
                   <tr className="border-b border-[var(--line-strong)]">
@@ -318,10 +321,10 @@ export default function RandomAnimalPickerPage() {
                       Need
                     </th>
                     <th scope="col" className="py-3 pr-4 font-semibold text-[var(--ink)]">
-                      This picker
+                      This page
                     </th>
                     <th scope="col" className="py-3 font-semibold text-[var(--ink)]">
-                      Wheel / names
+                      Reddit / wheel
                     </th>
                   </tr>
                 </thead>
@@ -331,35 +334,35 @@ export default function RandomAnimalPickerPage() {
                       Speed
                     </th>
                     <td className="py-3 pr-4">Instant one-click pick</td>
-                    <td className="py-3">Wheel adds spin time; names skip images</td>
+                    <td className="py-3">Threads wait on replies; wheel adds spin time</td>
+                  </tr>
+                  <tr className="border-b border-[var(--line)]">
+                    <th scope="row" className="py-3 pr-4 font-medium text-[var(--ink)]">
+                      Durability
+                    </th>
+                    <td className="py-3 pr-4">Always-on tool URL</td>
+                    <td className="py-3">Posts go stale and unmoderated</td>
                   </tr>
                   <tr className="border-b border-[var(--line)]">
                     <th scope="row" className="py-3 pr-4 font-medium text-[var(--ink)]">
                       Fair shared result
                     </th>
                     <td className="py-3 pr-4">Today&apos;s pick (same animal all day)</td>
-                    <td className="py-3">Wheel is per-spin; names regenerate freely</td>
+                    <td className="py-3">Comments vary; wheel is per-spin</td>
                   </tr>
                   <tr className="border-b border-[var(--line)]">
                     <th scope="row" className="py-3 pr-4 font-medium text-[var(--ink)]">
-                      Multi-result lists
+                      Filters & facts
                     </th>
-                    <td className="py-3 pr-4">Pick a list mode</td>
-                    <td className="py-3">Name generator is strongest for long lists</td>
-                  </tr>
-                  <tr className="border-b border-[var(--line)]">
-                    <th scope="row" className="py-3 pr-4 font-medium text-[var(--ink)]">
-                      Live showmanship
-                    </th>
-                    <td className="py-3 pr-4">Minimal—result first</td>
-                    <td className="py-3">Wheel wins for theatrical reveals</td>
+                    <td className="py-3 pr-4">Category locks + educational facts</td>
+                    <td className="py-3">Usually name-only replies</td>
                   </tr>
                   <tr>
                     <th scope="row" className="py-3 pr-4 font-medium text-[var(--ink)]">
                       Cost / signup
                     </th>
                     <td className="py-3 pr-4">Free, no account</td>
-                    <td className="py-3">Same on related tools</td>
+                    <td className="py-3">Reddit needs an account; wheel is free here too</td>
                   </tr>
                 </tbody>
               </table>
@@ -367,15 +370,15 @@ export default function RandomAnimalPickerPage() {
           </section>
 
           <section id="use-ideas" className="home-section scroll-mt-24">
-            <h2 className="home-section-title">Ways to Use a Random Animal Picker</h2>
+            <h2 className="home-section-title">Ways to Use “Give Me a Random Animal”</h2>
             <p className="home-prose mt-4">
-              The fastest way to use a random animal picker is a clear constraint: one pick for the
-              group, a short list for teams, or a category lock for a themed lesson.
+              The fastest pattern is a clear constraint: one pick for the group, a short list for teams,
+              or a category lock for a themed lesson.
             </p>
             <div className="relative mx-auto my-8 w-full max-w-3xl overflow-hidden">
               <Image
                 src="/random-animal-picker-usecases.webp"
-                alt="Classroom and game-night scene using a random animal picker for fair wildlife picks"
+                alt="Classroom and game-night scene answering give me a random animal with a fair pick"
                 width={1400}
                 height={1050}
                 className="h-auto w-full object-cover"
@@ -394,15 +397,15 @@ export default function RandomAnimalPickerPage() {
           </section>
 
           <section className="home-section scroll-mt-24">
-            <h2 className="home-section-title">Classroom & Game Night Tips</h2>
+            <h2 className="home-section-title">Classroom & Community Tips</h2>
             <p className="home-prose mt-4">
-              For classrooms and game nights, reveal Today&apos;s pick once, then keep that animal as
+              For classrooms and community chats, reveal Today&apos;s pick once, then keep that animal as
               the shared subject for the whole session.
             </p>
             <div className="relative mx-auto my-8 w-full max-w-3xl overflow-hidden">
               <Image
                 src="/random-animal-picker-copy.webp"
-                alt="Copy-ready random animal picker results ready for worksheets and chat"
+                alt="Copy-ready give me a random animal results for worksheets and chat"
                 width={1400}
                 height={1050}
                 className="h-auto w-full object-cover"
@@ -412,21 +415,20 @@ export default function RandomAnimalPickerPage() {
             </div>
             <div className="home-prose home-prose-start mx-auto max-w-3xl space-y-4">
               <p>
-                Prefer a spinning reveal for livestreams or parties? Open the{' '}
-                <Link href="/random-animal-generator-wheel">random animal wheel</Link>. Need animal art
-                ideas instead of a picker? Use the{' '}
-                <Link href="/drawing-prompt-generator">drawing prompt generator</Link>. Want only names
-                to paste? Try the{' '}
-                <Link href="/random-animal-name-generator">random animal name generator</Link>.
+                Prefer a shorter keyword landing? Open the{' '}
+                <Link href="/random-animal-picker">random animal picker</Link>. Want a spin reveal? Use
+                the <Link href="/random-animal-generator-wheel">random animal wheel</Link>. Need a
+                synonym landing for “randomizer”? Try the{' '}
+                <Link href="/animal-randomizer">animal randomizer</Link>.
               </p>
             </div>
           </section>
 
           <section className="home-section scroll-mt-24">
-            <h2 className="home-section-title">Why a Fair Random Pick Matters</h2>
+            <h2 className="home-section-title">Why Instant Random Picks Beat Dead Threads</h2>
             <p className="home-prose mt-4">
-              A fair random animal picker matters because groups trust outcomes they did not negotiate—
-              especially in classrooms and games where perceived bias kills engagement.
+              Impartial randomness builds trust in groups—especially when the alternative is waiting on
+              strangers or arguing over favorites.
             </p>
             <blockquote className="mx-auto mt-8 max-w-3xl border-l-2 border-[var(--olive)] pl-5 text-left">
               <p className="text-lg leading-relaxed text-[var(--ink)]">
@@ -468,16 +470,16 @@ export default function RandomAnimalPickerPage() {
               </footer>
             </blockquote>
             <p className="home-prose mt-8">
-              That is why this tool ships Pick one and Today&apos;s pick instead of only long menus:
-              the outcome should feel impartial, fast, and easy to reuse in an icebreaker or lesson.
+              That is why this page ships Pick one and Today&apos;s pick: when someone says give me a
+              random animal, the outcome should feel fair, fast, and reusable.
             </p>
           </section>
 
           <section className="home-section scroll-mt-24">
             <h2 className="home-section-title">Sources & Citations</h2>
             <p className="home-prose mt-4">
-              The fairness and facilitation framing on this page is grounded in public references.
-              Key sources:
+              The fairness and facilitation framing on this page is grounded in public references. Key
+              sources:
             </p>
             <ol className="mx-auto mt-6 max-w-3xl list-decimal space-y-3 pl-5 text-[var(--ink-muted)]">
               <li>
@@ -489,7 +491,7 @@ export default function RandomAnimalPickerPage() {
                 >
                   Wikipedia: Randomization
                 </a>{' '}
-                — why impartial random selection supports fairness and representativeness.
+                — why impartial random selection supports fairness.
               </li>
               <li>
                 <a
@@ -531,22 +533,16 @@ export default function RandomAnimalPickerPage() {
             </p>
             <ul className="mx-auto mt-8 max-w-3xl list-disc space-y-3 pl-5 text-[var(--ink-muted)]">
               <li>
-                <Link href="/give-me-a-random-animal" className="home-link">
-                  give me a random animal
-                </Link>{' '}
-                — conversational / Reddit-style intent landing.
-              </li>
-              <li>
                 <Link href="/animal-randomizer" className="home-link">
                   animal randomizer
                 </Link>{' '}
-                — synonym landing for randomizer searches.
+                — synonym landing for randomizer-style searches.
               </li>
               <li>
-                <Link href="/cute-animal-generator" className="home-link">
-                  cute animal generator
+                <Link href="/random-animal-picker" className="home-link">
+                  random animal picker
                 </Link>{' '}
-                — adorable animals with action, emotion, and location prompts.
+                — short-keyword instant picks.
               </li>
               <li>
                 <Link href="/" className="home-link">
@@ -561,16 +557,10 @@ export default function RandomAnimalPickerPage() {
                 — spin reveal for live games.
               </li>
               <li>
-                <Link href="/drawing-prompt-generator" className="home-link">
-                  drawing prompt generator
+                <Link href="/cute-animal-generator" className="home-link">
+                  cute animal generator
                 </Link>{' '}
-                — timed animal art prompts.
-              </li>
-              <li>
-                <Link href="/random-animal-name-generator" className="home-link">
-                  random animal name generator
-                </Link>{' '}
-                — copy-ready name lists.
+                — adorable animals with story options.
               </li>
             </ul>
           </section>
@@ -578,7 +568,7 @@ export default function RandomAnimalPickerPage() {
 
         <footer className="home-section text-center">
           <p className="font-display text-lg font-semibold text-[var(--ink)]">
-            Free random animal picker—no signup
+            Give me a random animal—free, no signup
           </p>
           <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-[var(--ink-muted)]">
             <Link href="/about" className="home-link">
@@ -603,12 +593,12 @@ export default function RandomAnimalPickerPage() {
               random animal generator
             </Link>
             ,{' '}
-            <Link href="/random-animal-generator-wheel" className="home-link">
-              random animal wheel
+            <Link href="/animal-randomizer" className="home-link">
+              animal randomizer
             </Link>
             ,{' '}
-            <Link href="/drawing-prompt-generator" className="home-link">
-              drawing prompt generator
+            <Link href="/random-animal-picker" className="home-link">
+              random animal picker
             </Link>
             .
           </p>
