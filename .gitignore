@@ -24,6 +24,10 @@
 .DS_Store
 *.pem
 
+# private strategy / SEO notes (keep local only)
+网站优化指南*.md
+*优化指南*.md
+
 # debug
 npm-debug.log*
 yarn-debug.log*
