@@ -29,6 +29,8 @@ type MetadataInput = {
    * When true, metadata.title is emitted as `{ absolute: title }`.
    */
   absoluteTitle?: boolean;
+  /** Trust/legal pages: allow crawl, do not request indexing. */
+  noindex?: boolean;
 };
 
 type FaqItem = {
@@ -100,6 +102,7 @@ export function buildPageMetadata({
   dateModified = LAST_MAJOR_UPDATE.toISOString(),
   ogType = "website",
   absoluteTitle = false,
+  noindex = false,
 }: MetadataInput): Metadata {
   const canonical = path.startsWith("/") ? path : `/${path}`;
   const fullUrl = toAbsoluteUrl(path);
@@ -156,17 +159,26 @@ export function buildPageMetadata({
       "article:published_time": datePublished,
       "article:modified_time": dateModified,
     },
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        "max-video-preview": -1,
-        "max-image-preview": "large",
-        "max-snippet": -1,
-      },
-    },
+    robots: noindex
+      ? {
+          index: false,
+          follow: true,
+          googleBot: {
+            index: false,
+            follow: true,
+          },
+        }
+      : {
+          index: true,
+          follow: true,
+          googleBot: {
+            index: true,
+            follow: true,
+            "max-video-preview": -1,
+            "max-image-preview": "large",
+            "max-snippet": -1,
+          },
+        },
   };
 }
 

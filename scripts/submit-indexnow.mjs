@@ -18,14 +18,12 @@ const FALLBACK_PATHS = [
   '/',
   '/cute-animal-generator',
   '/random-animal-picker',
+  '/give-me-a-random-animal',
+  '/animal-randomizer',
   '/random-animal-name-generator',
   '/drawing-prompt-generator',
   '/random-animal-generator-wheel',
   '/random-animal-generator-for-drawing',
-  '/about',
-  '/contact',
-  '/privacy',
-  '/terms',
 ];
 
 function pathToUrl(path) {

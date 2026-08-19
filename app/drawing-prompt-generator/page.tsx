@@ -732,23 +732,6 @@ export default function DrawingPromptGeneratorPage() {
             Free animal drawing prompts—no signup
           </p>
           <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-[var(--ink-muted)]">
-            <Link href="/about" className="home-link">
-              About
-            </Link>
-            {' · '}
-            <Link href="/contact" className="home-link">
-              Contact
-            </Link>
-            {' · '}
-            <Link href="/privacy" className="home-link">
-              Privacy
-            </Link>
-            {' · '}
-            <Link href="/terms" className="home-link">
-              Terms
-            </Link>
-          </p>
-          <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-[var(--ink-muted)]">
             Explore more:{' '}
             <Link href="/" className="home-link">
               random animal generator

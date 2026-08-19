@@ -13,10 +13,11 @@ export const SITE_SAME_AS = [
   "https://github.com/jiangxianglin/random-animal-generator",
 ] as const;
 
-/** Visible publisher / author entity for E-E-A-T + GEO provenance */
+/** Visible publisher / author entity for E-E-A-T + GEO provenance.
+ *  Points at the homepage while trust routes are noindex (crawl-budget freeze). */
 export const SITE_AUTHOR = {
   name: SITE_NAME,
-  url: `${SITE_URL}/about`,
+  url: SITE_URL,
 } as const;
 
 /** Full tool matrix — footer + related-tool anchors use keyword labels. */
@@ -80,6 +81,7 @@ export const PRIMARY_NAV_ITEMS = [
   { href: "/random-animal-name-generator", label: "Names" },
 ] as const;
 
+/** Human/legal links only — noindex, omitted from sitemap (GSC 「已发现不抓取」). */
 export const TRUST_NAV_ITEMS = [
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
@@ -87,6 +89,7 @@ export const TRUST_NAV_ITEMS = [
   { href: "/terms", label: "Terms" },
 ] as const;
 
+/** Indexable routes only. Do not add trust pages or new landings during the crawl freeze. */
 export const CORE_SITE_ROUTES = [
   { path: "/", priority: 1.0 },
   { path: "/cute-animal-generator", priority: 0.95 },
@@ -97,11 +100,7 @@ export const CORE_SITE_ROUTES = [
   { path: "/drawing-prompt-generator", priority: 0.9 },
   { path: "/random-animal-generator-wheel", priority: 0.9 },
   { path: "/random-animal-generator-for-drawing", priority: 0.85 },
-  { path: "/about", priority: 0.4 },
-  { path: "/contact", priority: 0.4 },
-  { path: "/privacy", priority: 0.3 },
-  { path: "/terms", priority: 0.3 },
 ] as const;
 
 export const SITE_DATE_PUBLISHED = "2026-07-19T00:00:00.000Z";
-export const LAST_MAJOR_UPDATE = new Date("2026-08-15T00:00:00.000Z");
+export const LAST_MAJOR_UPDATE = new Date("2026-08-20T00:00:00.000Z");

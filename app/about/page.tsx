@@ -8,6 +8,7 @@ export const metadata: Metadata = buildPageMetadata({
   description:
     'Learn who builds Random Animal Generator, who the tools are for, and how we keep drawing prompts and classroom pickers free to use.',
   path: '/about',
+  noindex: true,
 });
 
 export default function AboutPage() {

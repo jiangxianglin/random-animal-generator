@@ -8,6 +8,7 @@ export const metadata: Metadata = buildPageMetadata({
   description:
     'Terms of use for Random Animal Generator free drawing prompt and animal picker tools.',
   path: '/terms',
+  noindex: true,
 });
 
 export default function TermsPage() {

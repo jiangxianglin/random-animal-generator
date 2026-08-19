@@ -8,6 +8,7 @@ export const metadata: Metadata = buildPageMetadata({
   description:
     'Contact Random Animal Generator for feedback, corrections, classroom questions, or partnership notes.',
   path: '/contact',
+  noindex: true,
 });
 
 export default function ContactPage() {

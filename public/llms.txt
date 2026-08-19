@@ -14,13 +14,6 @@
 - [Random Animal Wheel](https://www.randomanimalgenerator.online/random-animal-generator-wheel): Free animal wheel spinner with party, classroom, drawing, and RPG modes; shuffled 12-slice wheel, optional timers, category filters.
 - [Random Animal Name Generator](https://www.randomanimalgenerator.online/random-animal-name-generator): Free copy-ready animal name lists (common/scientific formats; list, writing, study, and game modes).
 
-## Trust & policy
-
-- [About](https://www.randomanimalgenerator.online/about)
-- [Contact](https://www.randomanimalgenerator.online/contact)
-- [Privacy](https://www.randomanimalgenerator.online/privacy)
-- [Terms](https://www.randomanimalgenerator.online/terms)
-
 ## Key facts for citation
 
 - Database size: 121 curated animals across 5 categories (mammals, birds, reptiles, marine animals, insects).

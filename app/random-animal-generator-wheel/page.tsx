@@ -21,7 +21,7 @@ const FAQS = [
   {
     question: 'What is a random animal wheel?',
     answer:
-      'A random animal wheel is a free spinning tool that lands on one animal at a time. It is built for games, classrooms, icebreakers, and live reveals where the spin is part of the fun.',
+      'A random animal wheel—also called a random animal generator wheel—is a free spinning tool that lands on one animal at a time. It is built for games, classrooms, icebreakers, and live reveals where the spin is part of the fun.',
   },
   {
     question: 'Who should use this animal wheel spinner?',
@@ -135,17 +135,17 @@ function formatDisplayDate(iso: string) {
 export default function RandomAnimalGeneratorWheelPage() {
   const structuredData = [
     buildWebPageSchema({
-      name: 'Random Animal Wheel',
+      name: 'Random Animal Wheel & Animal Generator',
       description:
-        'A free random animal wheel spinner with party, classroom, drawing, and RPG modes for live one-at-a-time animal picks.',
+        'Spin the random animal generator wheel for free party, classroom, drawing, and RPG reveals with category filters and timers.',
       path: '/random-animal-generator-wheel',
       datePublished: PAGE_PUBLISHED,
       dateModified: PAGE_MODIFIED,
     }),
     buildWebAppSchema({
-      name: 'Random Animal Wheel',
+      name: 'Random Animal Wheel & Animal Generator',
       description:
-        'A free random animal wheel spinner with party, classroom, drawing, and RPG modes for live one-at-a-time animal picks.',
+        'Spin the random animal generator wheel for free party, classroom, drawing, and RPG reveals with category filters and timers.',
       path: '/random-animal-generator-wheel',
       datePublished: PAGE_PUBLISHED,
       dateModified: PAGE_MODIFIED,
@@ -189,11 +189,11 @@ export default function RandomAnimalGeneratorWheelPage() {
             Free animal wheel spinner
           </p>
           <h1 className="font-display animate-home-rise-delay mt-3 max-w-4xl text-5xl font-semibold tracking-tight md:text-7xl">
-            Random Animal Wheel
+            Random Animal Wheel &amp; Animal Generator
           </h1>
           <p className="animate-home-rise-delay-2 mt-5 max-w-xl text-lg leading-relaxed text-[var(--paper)]/90 md:text-xl">
-            A random animal wheel is a free spinner that lands on one animal at a time—with party,
-            classroom, drawing, and RPG modes so the reveal matches how your group actually uses it.
+            Spin the random animal generator wheel for free party, classroom, drawing, and RPG
+            reveals—one animal at a time, with modes matched to how your group actually plays.
           </p>
           <div className="animate-home-rise-delay-2 mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
             <a href="#generator" className="home-cta-light">
@@ -228,8 +228,9 @@ export default function RandomAnimalGeneratorWheelPage() {
             <h2 className="home-section-title">What Is a Random Animal Wheel?</h2>
             <p className="home-prose mt-4">
               A <strong className="font-semibold text-[var(--ink)]">random animal wheel</strong> (also
-              called an animal wheel spinner) is a spinning selector that reveals one animal with a
-              pointer stop. This page is built for moments when the process matters as much as the
+              called a <strong className="font-semibold text-[var(--ink)]">random animal generator wheel</strong>{' '}
+              or animal wheel spinner) is a spinning selector that reveals one animal with a pointer
+              stop. This page is built for moments when the process matters as much as the
               result—classroom rounds, party games, and live challenges.
             </p>
             <ul className="mx-auto mt-8 max-w-2xl list-disc space-y-2 pl-5 text-[var(--ink-muted)]">
@@ -265,8 +266,9 @@ export default function RandomAnimalGeneratorWheelPage() {
               </li>
               <li>
                 Search focus: this page owns{' '}
-                <strong className="font-semibold text-[var(--ink)]">random animal wheel</strong> /
-                spinner intent; instant picks go to the{' '}
+                <strong className="font-semibold text-[var(--ink)]">random animal wheel</strong>,{' '}
+                <strong className="font-semibold text-[var(--ink)]">random animal generator wheel</strong>,
+                and spinner intent; instant picks go to the{' '}
                 <Link href="/random-animal-picker" className="home-link">
                   random animal picker
                 </Link>
@@ -580,23 +582,6 @@ export default function RandomAnimalGeneratorWheelPage() {
         <footer className="home-section text-center">
           <p className="font-display text-lg font-semibold text-[var(--ink)]">
             Free random animal wheel—no signup
-          </p>
-          <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-[var(--ink-muted)]">
-            <Link href="/about" className="home-link">
-              About
-            </Link>
-            {' · '}
-            <Link href="/contact" className="home-link">
-              Contact
-            </Link>
-            {' · '}
-            <Link href="/privacy" className="home-link">
-              Privacy
-            </Link>
-            {' · '}
-            <Link href="/terms" className="home-link">
-              Terms
-            </Link>
           </p>
           <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-[var(--ink-muted)]">
             Explore more:{' '}

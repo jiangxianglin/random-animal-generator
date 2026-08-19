@@ -8,6 +8,7 @@ export const metadata: Metadata = buildPageMetadata({
   description:
     'Privacy policy for Random Animal Generator: what we collect, how local browser storage works, and how to contact us.',
   path: '/privacy',
+  noindex: true,
 });
 
 export default function PrivacyPage() {
